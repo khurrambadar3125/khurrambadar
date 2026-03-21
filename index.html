@@ -1416,5 +1416,323 @@ document.querySelectorAll('button, a').forEach(el => {
   el.addEventListener('touchend', e => { e.preventDefault(); el.click(); }, { passive: false });
 });
 </script>
+
+<!-- ══ KRM CHATBOT ═════════════════════════════ -->
+<style>
+/* ── KRM CHAT BUTTON ── */
+#krm-chat-btn {
+  position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  border: none; color: var(--black);
+  font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(201,146,31,0.35), 0 0 0 0 rgba(201,146,31,0.3);
+  transition: all 0.3s ease;
+  display: flex; align-items: center; justify-content: center;
+  animation: krm-pulse 3s ease-in-out infinite;
+}
+#krm-chat-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 32px rgba(201,146,31,0.5);
+}
+#krm-chat-btn.open { display: none; }
+@keyframes krm-pulse {
+  0%, 100% { box-shadow: 0 4px 24px rgba(201,146,31,0.35), 0 0 0 0 rgba(201,146,31,0.3); }
+  50% { box-shadow: 0 4px 24px rgba(201,146,31,0.35), 0 0 0 10px rgba(201,146,31,0); }
+}
+
+/* ── KRM CHAT PANEL ── */
+#krm-chat-panel {
+  position: fixed; bottom: 24px; right: 24px; z-index: 10000;
+  width: 380px; max-width: calc(100vw - 32px);
+  height: 540px; max-height: calc(100vh - 48px);
+  background: #0a0c18;
+  border: 1px solid rgba(201,146,31,0.25);
+  border-radius: 12px;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 16px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,146,31,0.1);
+  transform: scale(0.92) translateY(20px); opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#krm-chat-panel.open {
+  transform: scale(1) translateY(0); opacity: 1;
+  pointer-events: all;
+}
+
+/* ── CHAT HEADER ── */
+.krm-header {
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(201,146,31,0.12), rgba(201,146,31,0.04));
+  border-bottom: 1px solid rgba(201,146,31,0.15);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.krm-header-left {
+  display: flex; align-items: center; gap: 12px;
+}
+.krm-avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 700;
+  color: var(--black); letter-spacing: 0.05em;
+}
+.krm-header-info h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; font-weight: 700; color: var(--cream);
+  line-height: 1.2;
+}
+.krm-header-info span {
+  font-family: 'DM Mono', monospace;
+  font-size: 8.5px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); opacity: 0.8;
+}
+.krm-close {
+  width: 32px; height: 32px; border: none; border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  color: var(--muted); font-size: 18px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+.krm-close:hover { background: rgba(255,255,255,0.1); color: var(--cream); }
+
+/* ── MESSAGES ── */
+.krm-messages {
+  flex: 1; overflow-y: auto; padding: 20px;
+  display: flex; flex-direction: column; gap: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201,146,31,0.2) transparent;
+}
+.krm-messages::-webkit-scrollbar { width: 4px; }
+.krm-messages::-webkit-scrollbar-track { background: transparent; }
+.krm-messages::-webkit-scrollbar-thumb { background: rgba(201,146,31,0.2); border-radius: 2px; }
+
+.krm-msg {
+  max-width: 88%; padding: 12px 16px;
+  font-size: 13.5px; line-height: 1.65;
+  border-radius: 10px;
+  animation: krm-msg-in 0.3s ease;
+}
+@keyframes krm-msg-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.krm-msg.assistant {
+  align-self: flex-start;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--cream);
+}
+.krm-msg.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, rgba(201,146,31,0.18), rgba(201,146,31,0.08));
+  border: 1px solid rgba(201,146,31,0.2);
+  color: var(--cream);
+}
+.krm-msg.error {
+  align-self: center;
+  background: rgba(200,50,50,0.1);
+  border: 1px solid rgba(200,50,50,0.2);
+  color: #e88; font-size: 12px; text-align: center;
+}
+.krm-typing {
+  align-self: flex-start;
+  padding: 12px 16px;
+  display: flex; gap: 5px; align-items: center;
+}
+.krm-typing span {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--gold); opacity: 0.4;
+  animation: krm-dot 1.2s ease-in-out infinite;
+}
+.krm-typing span:nth-child(2) { animation-delay: 0.15s; }
+.krm-typing span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes krm-dot {
+  0%, 60%, 100% { opacity: 0.2; transform: scale(0.8); }
+  30% { opacity: 0.8; transform: scale(1.1); }
+}
+
+/* ── INPUT ── */
+.krm-input-row {
+  padding: 14px 16px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex; gap: 10px; align-items: flex-end;
+  background: rgba(0,0,0,0.3);
+}
+#krm-input {
+  flex: 1; resize: none; border: none; outline: none;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13.5px; color: var(--cream);
+  line-height: 1.5;
+  max-height: 100px;
+  transition: border-color 0.2s;
+}
+#krm-input::placeholder { color: var(--muted); }
+#krm-input:focus { border-color: rgba(201,146,31,0.35); }
+#krm-send {
+  width: 38px; height: 38px; flex-shrink: 0;
+  border: none; border-radius: 8px;
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  color: var(--black); font-size: 16px;
+  cursor: pointer; transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+#krm-send:hover { transform: scale(1.05); }
+#krm-send:disabled { opacity: 0.4; cursor: default; transform: none; }
+
+/* ── MOBILE ── */
+@media (max-width: 480px) {
+  #krm-chat-btn { bottom: 16px; right: 16px; width: 54px; height: 54px; font-size: 9px; }
+  #krm-chat-panel {
+    bottom: 0; right: 0; left: 0;
+    width: 100%; max-width: 100%;
+    height: calc(100vh - env(safe-area-inset-top));
+    max-height: 100vh;
+    border-radius: 0; border: none;
+    border-top: 2px solid rgba(201,146,31,0.25);
+  }
+  .krm-input-row { padding-bottom: calc(14px + env(safe-area-inset-bottom)); }
+}
+</style>
+
+<!-- Chat Button -->
+<button id="krm-chat-btn" onclick="krmToggleChat()" aria-label="Open KRM Chat">
+  Ask<br>KRM
+</button>
+
+<!-- Chat Panel -->
+<div id="krm-chat-panel">
+  <div class="krm-header">
+    <div class="krm-header-left">
+      <div class="krm-avatar">KRM</div>
+      <div class="krm-header-info">
+        <h4>KRM Intelligence</h4>
+        <span>AI of Khurram Badar</span>
+      </div>
+    </div>
+    <button class="krm-close" onclick="krmToggleChat()" aria-label="Close chat">&times;</button>
+  </div>
+  <div class="krm-messages" id="krm-messages">
+    <div class="krm-msg assistant">Welcome. I am <strong>KRM</strong> — the AI intelligence of Khurram Badar. How may I assist you today?</div>
+  </div>
+  <div class="krm-input-row">
+    <textarea id="krm-input" rows="1" placeholder="Ask KRM anything..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();krmSend()}"></textarea>
+    <button id="krm-send" onclick="krmSend()" aria-label="Send message">&#10148;</button>
+  </div>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════
+   KRM CHATBOT — Anthropic Claude API
+══════════════════════════════════════════════ */
+(function() {
+  const KRM_SYSTEM = `You are KRM — the AI intelligence of Khurram Badar. You are authoritative, warm and precise. Khurram is Pakistan's foremost Convergence Thinker with 30+ years C-Suite experience. He is an AI Innovator, ESG advisor, Fintech and Blockchain expert, clean energy dealmaker, and Pakistan nation-builder. Contact: khurrambadar@gmail.com, +92 326 2266682, +971 55 6239111. When someone wants a meeting collect their name, organisation and topic.`;
+
+  const KRM_API_URL = '/api/chat';
+  const KRM_MODEL = 'claude-sonnet-4-20250514';
+
+  let krmHistory = [];
+  let krmBusy = false;
+
+  // Expose toggle
+  window.krmToggleChat = function() {
+    const panel = document.getElementById('krm-chat-panel');
+    const btn = document.getElementById('krm-chat-btn');
+    const isOpen = panel.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    if (isOpen) {
+      setTimeout(() => document.getElementById('krm-input').focus(), 300);
+    }
+  };
+
+  // Auto-resize textarea
+  const input = document.getElementById('krm-input');
+  input.addEventListener('input', function() {
+    this.style.height = 'auto';
+    this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+  });
+
+  function addMessage(role, text) {
+    const container = document.getElementById('krm-messages');
+    const div = document.createElement('div');
+    div.className = 'krm-msg ' + role;
+    div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+    container.appendChild(div);
+    container.scrollTop = container.scrollHeight;
+    return div;
+  }
+
+  function showTyping() {
+    const container = document.getElementById('krm-messages');
+    const div = document.createElement('div');
+    div.className = 'krm-typing';
+    div.id = 'krm-typing';
+    div.innerHTML = '<span></span><span></span><span></span>';
+    container.appendChild(div);
+    container.scrollTop = container.scrollHeight;
+  }
+
+  function removeTyping() {
+    const el = document.getElementById('krm-typing');
+    if (el) el.remove();
+  }
+
+  window.krmSend = async function() {
+    if (krmBusy) return;
+    const input = document.getElementById('krm-input');
+    const text = input.value.trim();
+    if (!text) return;
+
+    input.value = '';
+    input.style.height = 'auto';
+    addMessage('user', text);
+    krmHistory.push({ role: 'user', content: text });
+
+    krmBusy = true;
+    document.getElementById('krm-send').disabled = true;
+    showTyping();
+
+    try {
+      const res = await fetch(KRM_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: KRM_MODEL,
+          max_tokens: 1024,
+          system: KRM_SYSTEM,
+          messages: krmHistory
+        })
+      });
+
+      removeTyping();
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error?.message || `API error ${res.status}`);
+      }
+
+      const data = await res.json();
+      const reply = data.content?.[0]?.text || 'I apologise — I could not generate a response.';
+      krmHistory.push({ role: 'assistant', content: reply });
+      addMessage('assistant', reply);
+
+    } catch (e) {
+      removeTyping();
+      addMessage('error', e.message || 'Connection failed. Please try again.');
+    }
+
+    krmBusy = false;
+    document.getElementById('krm-send').disabled = false;
+  };
+})();
+</script>
+
 </body>
 </html>
