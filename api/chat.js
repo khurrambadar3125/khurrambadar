@@ -31,7 +31,7 @@ export default async function handler(req) {
     const body = await req.json();
 
     // Only allow the expected model
-    const allowed = ['claude-sonnet-4-20250514'];
+    const allowed = ['claude-haiku-4-5-20251001'];
     if (!allowed.includes(body.model)) {
       return new Response(JSON.stringify({ error: 'Model not allowed' }), {
         status: 400,

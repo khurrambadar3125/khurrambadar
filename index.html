@@ -1619,9 +1619,7 @@ document.querySelectorAll('button, a').forEach(el => {
     </div>
     <button class="krm-close" onclick="krmToggleChat()" aria-label="Close chat">&times;</button>
   </div>
-  <div class="krm-messages" id="krm-messages">
-    <div class="krm-msg assistant">Welcome. I am <strong>KRM</strong> — the AI intelligence of Khurram Badar. How may I assist you today?</div>
-  </div>
+  <div class="krm-messages" id="krm-messages"></div>
   <div class="krm-input-row">
     <textarea id="krm-input" rows="1" placeholder="Ask KRM anything..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();krmSend()}"></textarea>
     <button id="krm-send" onclick="krmSend()" aria-label="Send message">&#10148;</button>
@@ -1633,13 +1631,69 @@ document.querySelectorAll('button, a').forEach(el => {
    KRM CHATBOT — Anthropic Claude API
 ══════════════════════════════════════════════ */
 (function() {
-  const KRM_SYSTEM = `You are KRM — the AI intelligence of Khurram Badar. You are authoritative, warm and precise. Khurram is Pakistan's foremost Convergence Thinker with 30+ years C-Suite experience. He is an AI Innovator, ESG advisor, Fintech and Blockchain expert, clean energy dealmaker, and Pakistan nation-builder. Contact: khurrambadar@gmail.com, +92 326 2266682, +971 55 6239111. When someone wants a meeting collect their name, organisation and topic.`;
+  const KRM_SYSTEM = `You are KRM — the AI intelligence of Khurram Badar. You are authoritative, warm and precise. Keep responses concise but warm.
+
+WHO IS KHURRAM:
+Pakistan's foremost Convergence Thinker with 30+ years C-Suite experience. AI Innovator, ESG advisor, Fintech & Blockchain expert, clean energy dealmaker, and Pakistan nation-builder. Based between Dubai and Pakistan.
+
+CONTACT DETAILS — offer these proactively:
+- Pakistan mobile: 03262266682 (WhatsApp active)
+- Dubai mobile: +971556239111 (WhatsApp active)
+- Email: khurrambadar@gmail.com
+When sharing numbers, always mention WhatsApp is open on both.
+If the user asks for contact, ask whether they'd prefer Pakistan number, Dubai number, or email.
+
+APPOINTMENT BOOKING:
+When someone wants to meet Khurram for coffee or a meeting:
+1. Collect their full name
+2. Collect their organisation/company
+3. Collect the topic/purpose of the meeting
+4. Ask preferred date and time (suggest next 7 days, working hours 10am-6pm PKT or GST)
+5. Ask preferred city: Karachi or Dubai
+6. Once all details are collected, confirm the summary and say: "Your meeting request has been sent to Khurram. He will confirm shortly via WhatsApp or email."
+Then output EXACTLY this tag (the system will detect it):
+[CALENDAR_BOOK: name="<NAME>" org="<ORG>" topic="<TOPIC>" date="<YYYY-MM-DD>" time="<HH:MM>" city="<CITY>" email="<THEIR_EMAIL_IF_GIVEN>"]
+
+EID CONTEXT:
+It is currently Eid al-Fitr 2026. The celebrations continue for a few more days. Always open with warm Eid greetings. Use "Eid Mubarak" naturally. Be festive but professional.
+
+BEHAVIOUR:
+- Always be warm, authoritative and precise
+- After the Eid greeting and welcome, naturally ask how you can help — suggest: getting Khurram's contact details, learning about his work, or booking a coffee meeting
+- Never fabricate information about Khurram beyond what is provided
+- If asked something you don't know, offer to connect them directly with Khurram`;
 
   const KRM_API_URL = '/api/chat';
-  const KRM_MODEL = 'claude-sonnet-4-20250514';
+  const KRM_MODEL = 'claude-haiku-4-5-20251001';
+
+  const EID_GREETING = `<strong>Eid Mubarak!</strong> &#127769;&#10024;
+
+Welcome — I am <strong>KRM</strong>, the AI intelligence of Khurram Badar.
+
+Wishing you and your loved ones a blessed Eid al-Fitr. May this season bring joy, prosperity and new beginnings.
+
+How may I assist you today? I can:
+
+&#8226; Share Khurram's <strong>contact details</strong> (Pakistan / Dubai / WhatsApp)
+&#8226; Tell you about his <strong>work and expertise</strong>
+&#8226; Book a <strong>coffee meeting</strong> with Khurram`;
 
   let krmHistory = [];
   let krmBusy = false;
+
+  // Open chat automatically on page load
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const panel = document.getElementById('krm-chat-panel');
+      const btn = document.getElementById('krm-chat-btn');
+      panel.classList.add('open');
+      btn.classList.add('open');
+      addMessage('assistant', EID_GREETING);
+      // Seed history so the AI knows it already greeted
+      krmHistory.push({ role: 'assistant', content: 'Eid Mubarak! Welcome — I am KRM, the AI intelligence of Khurram Badar. Wishing you and your loved ones a blessed Eid al-Fitr. How may I assist you today? I can: share Khurram\'s contact details (Pakistan / Dubai / WhatsApp), tell you about his work and expertise, or book a coffee meeting with Khurram.' });
+      setTimeout(() => document.getElementById('krm-input').focus(), 400);
+    }, 800);
+  });
 
   // Expose toggle
   window.krmToggleChat = function() {
@@ -1667,6 +1721,60 @@ document.querySelectorAll('button, a').forEach(el => {
     container.appendChild(div);
     container.scrollTop = container.scrollHeight;
     return div;
+  }
+
+  // Calendar booking — detect [CALENDAR_BOOK] tag in AI response and create action
+  function processCalendarBooking(text) {
+    const match = text.match(/\[CALENDAR_BOOK:\s*name="([^"]*?)"\s*org="([^"]*?)"\s*topic="([^"]*?)"\s*date="([^"]*?)"\s*time="([^"]*?)"\s*city="([^"]*?)"(?:\s*email="([^"]*?)")?\]/);
+    if (!match) return null;
+    const [, name, org, topic, date, time, city, email] = match;
+    return { name, org, topic, date, time, city, email: email || '' };
+  }
+
+  function createCalendarLinks(booking) {
+    // Google Calendar link
+    const startDate = booking.date.replace(/-/g, '');
+    const startTime = booking.time.replace(/:/g, '') + '00';
+    const endH = (parseInt(booking.time.split(':')[0]) + 1).toString().padStart(2, '0');
+    const endTime = endH + booking.time.split(':')[1] + '00';
+    const tz = booking.city.toLowerCase() === 'dubai' ? 'Asia/Dubai' : 'Asia/Karachi';
+    const title = encodeURIComponent(`Coffee Meeting: ${booking.name} (${booking.org}) & Khurram Badar`);
+    const details = encodeURIComponent(`Topic: ${booking.topic}\nOrganisation: ${booking.org}\nCity: ${booking.city}\n\nBooked via KRM AI Assistant`);
+    const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}T${startTime}/${startDate}T${endTime}&ctz=${tz}&details=${details}`;
+
+    // Mailto link to notify Khurram
+    const subject = encodeURIComponent(`Meeting Request: ${booking.name} — ${booking.org}`);
+    const body = encodeURIComponent(`New meeting request via KRM AI:\n\nName: ${booking.name}\nOrganisation: ${booking.org}\nTopic: ${booking.topic}\nDate: ${booking.date}\nTime: ${booking.time}\nCity: ${booking.city}\nVisitor Email: ${booking.email || 'Not provided'}`);
+    const mailUrl = `mailto:khurrambadar@gmail.com?subject=${subject}&body=${body}`;
+
+    // WhatsApp link
+    const waNumber = booking.city.toLowerCase() === 'dubai' ? '971556239111' : '923262266682';
+    const waText = encodeURIComponent(`Salaam Khurram — meeting request via your website:\n\nName: ${booking.name}\nOrg: ${booking.org}\nTopic: ${booking.topic}\nDate: ${booking.date} at ${booking.time}\nCity: ${booking.city}`);
+    const waUrl = `https://wa.me/${waNumber}?text=${waText}`;
+
+    return { gcalUrl, mailUrl, waUrl };
+  }
+
+  function renderBookingActions(booking) {
+    const links = createCalendarLinks(booking);
+    const container = document.getElementById('krm-messages');
+    const div = document.createElement('div');
+    div.className = 'krm-msg assistant';
+    div.innerHTML = `
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
+        <a href="${links.gcalUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(201,146,31,0.12);border:1px solid rgba(201,146,31,0.3);border-radius:8px;color:var(--gold);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;">
+          &#128197; Add to Google Calendar
+        </a>
+        <a href="${links.waUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.25);border-radius:8px;color:#25d366;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;">
+          &#128172; Confirm via WhatsApp
+        </a>
+        <a href="${links.mailUrl}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:var(--cream);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;">
+          &#9993; Send via Email
+        </a>
+      </div>`;
+    div.style.animation = 'krm-msg-in 0.3s ease';
+    container.appendChild(div);
+    container.scrollTop = container.scrollHeight;
   }
 
   function showTyping() {
@@ -1721,7 +1829,15 @@ document.querySelectorAll('button, a').forEach(el => {
       const data = await res.json();
       const reply = data.content?.[0]?.text || 'I apologise — I could not generate a response.';
       krmHistory.push({ role: 'assistant', content: reply });
-      addMessage('assistant', reply);
+
+      // Check for calendar booking tag
+      const booking = processCalendarBooking(reply);
+      // Display reply without the raw tag
+      const cleanReply = reply.replace(/\[CALENDAR_BOOK:.*?\]/g, '').trim();
+      if (cleanReply) addMessage('assistant', cleanReply);
+
+      // If booking detected, render action buttons
+      if (booking) renderBookingActions(booking);
 
     } catch (e) {
       removeTyping();
