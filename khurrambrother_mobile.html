@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#070810">
+<title>Khurram Badar — The Convergence Thinker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;0,900;1,400;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════════
+   RESET & BASE — MOBILE FIRST
+══════════════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+}
+body {
+  background: #070810;
+  color: #EDE8DC;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ══════════════════════════════════════════════
+   CSS VARIABLES
+══════════════════════════════════════════════ */
+:root {
+  --black:  #070810;
+  --ink:    #0C0E1A;
+  --cream:  #EDE8DC;
+  --gold:   #C9921F;
+  --gold2:  #F0B840;
+  --muted:  #5B6370;
+  --rule:   rgba(201,146,31,0.18);
+  --glass:  rgba(7,8,16,0.94);
+  /* spacing */
+  --pad-mobile: 20px;
+  --pad-tablet: 40px;
+  --pad-desk:   56px;
+}
+
+/* ══════════════════════════════════════════════
+   TYPOGRAPHY HELPERS
+══════════════════════════════════════════════ */
+.serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+.mono  { font-family: 'DM Mono', 'Courier New', monospace; }
+
+/* ══════════════════════════════════════════════
+   NAV — MOBILE HAMBURGER + DESKTOP LINKS
+══════════════════════════════════════════════ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--pad-mobile);
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--gold2); letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+/* Desktop links hidden on mobile */
+.nav-links {
+  display: none;
+}
+/* Hamburger */
+.hamburger {
+  width: 40px; height: 40px;
+  background: none; border: none;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center; gap: 5px;
+  padding: 8px;
+}
+.hamburger span {
+  display: block; width: 22px; height: 1.5px;
+  background: var(--cream); border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile menu drawer */
+.nav-drawer {
+  position: fixed; top: 56px; left: 0; right: 0; bottom: 0;
+  background: rgba(7,8,16,0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: 999;
+  display: flex; flex-direction: column;
+  padding: 40px var(--pad-mobile);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-drawer.open { transform: translateX(0); }
+.nav-drawer a {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 700;
+  color: var(--cream); padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.2s;
+}
+.nav-drawer a:last-child { border-bottom: none; }
+.nav-drawer a:hover { color: var(--gold); }
+
+/* ── TABLET+ NAV ── */
+@media (min-width: 768px) {
+  nav { padding: 0 var(--pad-tablet); }
+  .hamburger { display: none; }
+  .nav-links {
+    display: flex; gap: 28px;
+  }
+  .nav-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+}
+@media (min-width: 1024px) {
+  nav { padding: 0 var(--pad-desk); }
+}
+
+/* ══════════════════════════════════════════════
+   SECTION BASE
+══════════════════════════════════════════════ */
+section { padding: 80px var(--pad-mobile); }
+.container { max-width: 1160px; margin: 0 auto; }
+.s-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); display: block; margin-bottom: 12px;
+}
+.s-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 8vw, 64px);
+  font-weight: 900; line-height: 1.0; letter-spacing: -0.02em;
+  color: var(--cream); margin-bottom: 40px;
+}
+.s-rule { height: 1px; background: var(--rule); margin: 56px 0; }
+.gold { color: var(--gold); }
+.italic { font-style: italic; }
+
+@media (min-width: 768px) {
+  section { padding: 100px var(--pad-tablet); }
+}
+@media (min-width: 1024px) {
+  section { padding: 120px var(--pad-desk); }
+}
+
+/* ══════════════════════════════════════════════
+   HERO
+══════════════════════════════════════════════ */
+#hero {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding-top: 80px;
+  padding-bottom: 48px;
+  background:
+    radial-gradient(ellipse 120% 60% at 100% 0%, rgba(36,85,164,0.08), transparent 60%),
+    radial-gradient(ellipse 100% 80% at 0% 100%, rgba(201,146,31,0.06), transparent 60%);
+}
+.hero-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px;
+  opacity: 0; animation: riseIn 0.8s 0.2s forwards;
+}
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 14vw, 120px);
+  font-weight: 300; line-height: 0.88; letter-spacing: -0.03em;
+  color: var(--cream);
+  opacity: 0; animation: riseIn 0.8s 0.4s forwards;
+}
+.hero-name-b {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 14vw, 120px);
+  font-weight: 700; font-style: italic; line-height: 0.88;
+  color: var(--gold); letter-spacing: -0.03em;
+  opacity: 0; animation: riseIn 0.8s 0.55s forwards;
+  display: block; margin-bottom: 28px;
+}
+.hero-divider {
+  width: 48px; height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin-bottom: 24px;
+  opacity: 0; animation: riseIn 0.8s 0.7s forwards;
+}
+.hero-statement {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(17px, 4.5vw, 28px);
+  font-weight: 300; line-height: 1.5;
+  color: var(--cream); max-width: 640px;
+  opacity: 0; animation: riseIn 0.8s 0.85s forwards;
+  margin-bottom: 24px;
+}
+.hero-statement strong { color: var(--gold); font-weight: 600; font-style: italic; }
+.hero-pills {
+  display: flex; flex-wrap: wrap; gap: 7px;
+  margin-bottom: 32px;
+  opacity: 0; animation: riseIn 0.8s 1.0s forwards;
+}
+.pill {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 5px 11px;
+  border: 1px solid var(--rule); color: var(--muted);
+}
+.hero-sign {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(15px, 4vw, 20px);
+  font-style: italic; color: var(--gold); line-height: 1.5;
+  opacity: 0; animation: riseIn 0.8s 1.15s forwards;
+}
+
+/* ══════════════════════════════════════════════
+   CONVERGENCE
+══════════════════════════════════════════════ */
+#convergence { background: rgba(255,255,255,0.015); }
+.conv-big-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 7vw, 52px);
+  font-weight: 600; line-height: 1.15; color: var(--cream);
+  margin-bottom: 24px;
+}
+.conv-big-q em { color: var(--gold); font-style: italic; }
+.pull-quote {
+  border-left: 2px solid var(--gold);
+  padding: 16px 20px;
+  background: rgba(201,146,31,0.04);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 4vw, 20px);
+  font-style: italic; line-height: 1.5; color: var(--gold);
+  margin: 24px 0 32px;
+}
+.body-text { font-size: 15px; line-height: 1.9; color: rgba(237,232,220,0.72); margin-bottom: 16px; }
+.body-text strong { color: var(--cream); font-weight: 500; }
+.body-text em { color: var(--gold); font-style: italic; }
+
+@media (min-width: 900px) {
+  .conv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+}
+
+/* ══════════════════════════════════════════════
+   8 DIMENSIONS
+══════════════════════════════════════════════ */
+#dimensions { background: rgba(255,255,255,0.01); }
+.dim-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+}
+.dim-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 28px 22px;
+  transition: background 0.3s;
+  /* iOS momentum scrolling fix */
+  -webkit-overflow-scrolling: touch;
+}
+.dim-card:active { background: rgba(201,146,31,0.06); }
+.dim-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.15em;
+  color: var(--gold); margin-bottom: 14px;
+}
+.dim-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--cream); margin-bottom: 10px; line-height: 1.2;
+}
+.dim-body { font-size: 13px; line-height: 1.75; color: var(--muted); }
+.dim-body strong { color: rgba(237,232,220,0.75); font-weight: 400; }
+.dim-proof {
+  margin-top: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.07em; color: var(--gold); opacity: 0.65;
+}
+@media (min-width: 600px) {
+  .dim-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  .dim-grid { grid-template-columns: repeat(4, 1fr); }
+  .dim-card:hover { background: rgba(201,146,31,0.06); transform: translateY(-3px); }
+}
+
+/* ══════════════════════════════════════════════
+   MARKETS
+══════════════════════════════════════════════ */
+#markets { background: linear-gradient(180deg, transparent, rgba(36,85,164,0.03)); }
+.ticker-list { display: flex; flex-direction: column; gap: 2px; margin-top: 28px; }
+.ticker-item {
+  padding: 16px 18px;
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.02);
+}
+.ticker-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 600; color: var(--cream);
+}
+.ticker-sub {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; color: var(--muted); margin-top: 2px; letter-spacing: 0.08em;
+}
+.ticker-insight { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+@media (min-width: 900px) {
+  .markets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .ticker-item { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .ticker-insight { text-align: right; max-width: 200px; margin-top: 0; }
+}
+
+/* ══════════════════════════════════════════════
+   ABUNDANCE
+══════════════════════════════════════════════ */
+#abundance {
+  background: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(26,107,74,0.05), transparent 70%);
+}
+.pillars-grid {
+  display: grid; grid-template-columns: 1fr; gap: 2px;
+}
+.pillar-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--rule);
+  border-top: 2px solid transparent;
+  padding: 28px 22px;
+  transition: all 0.3s;
+}
+.pillar-card:nth-child(1) { border-top-color: #2455A4; }
+.pillar-card:nth-child(2) { border-top-color: var(--gold); }
+.pillar-card:nth-child(3) { border-top-color: #1A6B4A; }
+.pillar-card:nth-child(4) { border-top-color: #9B3A1C; }
+.pillar-icon { font-size: 26px; margin-bottom: 14px; }
+.pillar-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px; font-weight: 700; color: var(--cream); margin-bottom: 10px;
+}
+.pillar-body { font-size: 13px; line-height: 1.75; color: var(--muted); }
+.pillar-prop {
+  margin-top: 16px; padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-style: italic; color: var(--gold); line-height: 1.5;
+}
+.abundance-closer {
+  margin-top: 48px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 5vw, 30px); font-weight: 600;
+  line-height: 1.4; color: var(--cream);
+}
+.abundance-closer em { color: var(--gold); font-style: italic; }
+@media (min-width: 600px) {
+  .pillars-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  .pillars-grid { grid-template-columns: repeat(4, 1fr); }
+  .pillar-card:hover { background: rgba(201,146,31,0.05); transform: translateY(-3px); }
+}
+
+/* ══════════════════════════════════════════════
+   ESG
+══════════════════════════════════════════════ */
+#esg { background: rgba(255,255,255,0.015); }
+.esg-facts { display: flex; flex-direction: column; gap: 2px; margin-top: 28px; }
+.esg-fact {
+  display: grid; grid-template-columns: 80px 1fr; gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.02);
+  align-items: center;
+}
+.esg-fact-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em; color: var(--gold);
+  line-height: 1.5;
+}
+.esg-fact-text { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+@media (min-width: 900px) {
+  .esg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .esg-facts { margin-top: 0; }
+}
+
+/* ══════════════════════════════════════════════
+   SCHOOL / CURRICULUM
+══════════════════════════════════════════════ */
+#school { background: linear-gradient(180deg, transparent, rgba(201,146,31,0.02)); }
+.school-hero {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 5vw, 32px); font-weight: 600;
+  line-height: 1.35; color: var(--cream); max-width: 680px;
+  margin-bottom: 40px;
+}
+.school-hero em { color: var(--gold); font-style: italic; }
+.tracks-grid {
+  display: grid; grid-template-columns: 1fr; gap: 2px;
+}
+.track-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--rule);
+  padding: 24px 20px;
+  transition: background 0.3s;
+}
+.track-card:active { background: rgba(201,146,31,0.06); }
+.track-num {
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.15em; color: var(--gold); margin-bottom: 8px;
+}
+.track-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 700; color: var(--cream); margin-bottom: 6px;
+}
+.track-domains { font-size: 12px; color: var(--muted); line-height: 1.7; }
+@media (min-width: 600px) {
+  .tracks-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  .tracks-grid { grid-template-columns: repeat(3, 1fr); }
+  .track-card:hover { background: rgba(201,146,31,0.06); }
+}
+.school-platform {
+  margin-top: 32px; padding: 24px 22px;
+  border: 1px solid var(--rule);
+  background: rgba(201,146,31,0.04);
+}
+.platform-label {
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 10px;
+}
+.platform-text { font-size: 14px; line-height: 1.8; color: rgba(237,232,220,0.72); }
+@media (min-width: 900px) {
+  .school-platform { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+
+/* ══════════════════════════════════════════════
+   PAKISTAN
+══════════════════════════════════════════════ */
+#pakistan {
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(36,85,164,0.07), transparent 70%);
+  text-align: center;
+}
+.pak-stat {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(56px, 18vw, 100px);
+  font-weight: 700; line-height: 1; color: var(--gold); margin-bottom: 8px;
+}
+.pak-stat-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 32px;
+}
+.pak-manifesto {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 5vw, 26px); font-weight: 300;
+  line-height: 1.6; color: var(--cream); margin-bottom: 32px;
+  max-width: 740px; margin-left: auto; margin-right: auto;
+}
+.pak-manifesto strong { color: var(--gold); font-weight: 600; font-style: italic; }
+.future-pillars {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 2px;
+  margin-top: 24px;
+}
+.fp {
+  padding: 10px 14px;
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.02);
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ══════════════════════════════════════════════
+   PORTFOLIO
+══════════════════════════════════════════════ */
+#portfolio { background: rgba(255,255,255,0.015); }
+.port-table { display: flex; flex-direction: column; gap: 2px; }
+.port-row {
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.02);
+}
+.port-cat {
+  padding: 12px 16px;
+  background: rgba(201,146,31,0.05);
+  border-bottom: 1px solid var(--rule);
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold);
+}
+.port-domains {
+  padding: 14px 16px;
+  display: flex; flex-wrap: wrap; gap: 7px;
+}
+.port-tag {
+  font-family: 'DM Mono', monospace; font-size: 10.5px;
+  color: rgba(237,232,220,0.5);
+  padding: 3px 8px; border: 1px solid rgba(255,255,255,0.07);
+}
+@media (min-width: 768px) {
+  .port-row { display: grid; grid-template-columns: 160px 1fr; }
+  .port-cat { border-bottom: none; border-right: 1px solid var(--rule); display: flex; align-items: center; }
+}
+.port-count {
+  margin-top: 36px; text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px; font-weight: 900; color: var(--gold); line-height: 1;
+}
+.port-count-sub {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); margin-top: 6px; text-align: center;
+}
+
+/* ══════════════════════════════════════════════
+   LUMINARIES / THE CONSTELLATION
+══════════════════════════════════════════════ */
+#luminaries {
+  background:
+    radial-gradient(ellipse 100% 50% at 0% 0%, rgba(201,146,31,0.04), transparent 60%),
+    radial-gradient(ellipse 80% 60% at 100% 100%, rgba(36,85,164,0.03), transparent 60%);
+}
+.section-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(15px, 4vw, 20px);
+  font-weight: 300; font-style: italic;
+  color: rgba(237,232,220,0.58);
+  max-width: 640px; line-height: 1.7;
+  margin-bottom: 40px;
+}
+/* Filter tabs — horizontally scrollable on mobile */
+.filter-row {
+  display: flex; gap: 6px; flex-wrap: nowrap;
+  overflow-x: auto; padding-bottom: 12px; margin-bottom: 32px;
+  scrollbar-width: none; -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+.filter-row::-webkit-scrollbar { display: none; }
+.filter-btn {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 7px 14px; flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: transparent; color: var(--muted);
+  transition: all 0.2s; border-radius: 2px;
+  white-space: nowrap;
+}
+.filter-btn.active, .filter-btn:active {
+  border-color: rgba(201,146,31,0.4);
+  color: var(--gold); background: rgba(201,146,31,0.06);
+}
+/* Cards */
+.luminaries-grid {
+  display: grid; grid-template-columns: 1fr; gap: 2px;
+}
+.lum-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 26px 20px;
+  transition: all 0.3s;
+}
+.lum-card:active { background: rgba(201,146,31,0.05); }
+.card-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase;
+  margin-bottom: 12px; display: inline-block;
+  padding: 3px 8px; border-radius: 2px;
+}
+.tag-music    { color: #E8A030; background: rgba(232,160,48,0.08); }
+.tag-gov      { color: #60A8D0; background: rgba(96,168,208,0.08); }
+.tag-business { color: #80C080; background: rgba(128,192,128,0.08); }
+.tag-media    { color: #D070A0; background: rgba(208,112,160,0.08); }
+.tag-sport    { color: #70B8A0; background: rgba(112,184,160,0.08); }
+.tag-humanity { color: #C09060; background: rgba(192,144,96,0.08); }
+.tag-film     { color: #A080C8; background: rgba(160,128,200,0.08); }
+.lum-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--cream); line-height: 1.1; margin-bottom: 3px;
+}
+.lum-role {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.09em;
+  color: var(--muted); margin-bottom: 12px; text-transform: uppercase;
+}
+.lum-story { font-size: 13px; line-height: 1.75; color: rgba(237,232,220,0.58); }
+.lum-story strong { color: rgba(237,232,220,0.82); font-weight: 500; }
+.lum-year {
+  margin-top: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; color: var(--gold); opacity: 0.6; letter-spacing: 0.09em;
+}
+/* placeholder card */
+.lum-card.placeholder {
+  border: 1px dashed rgba(201,146,31,0.18);
+  background: rgba(201,146,31,0.02);
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center; min-height: 180px;
+}
+.placeholder-plus { font-size: 24px; opacity: 0.35; margin-bottom: 10px; }
+.placeholder-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
+}
+@media (min-width: 600px) { .luminaries-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) {
+  .luminaries-grid { grid-template-columns: repeat(3, 1fr); }
+  .lum-card:hover { background: rgba(201,146,31,0.05); border-color: rgba(201,146,31,0.18); transform: translateY(-2px); }
+}
+/* Quote strip */
+.quote-strip {
+  margin-top: 56px; padding: 32px 22px;
+  border: 1px solid var(--rule);
+  background: rgba(201,146,31,0.03);
+  border-left: 3px solid var(--gold);
+}
+.quote-strip .qt {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 5vw, 26px);
+  font-weight: 300; font-style: italic; line-height: 1.5; color: var(--cream);
+  margin-bottom: 20px;
+}
+.quote-strip .qt em { color: var(--gold); font-style: normal; font-weight: 600; }
+.quote-strip .qb { font-size: 14px; line-height: 1.85; color: rgba(237,232,220,0.6); }
+.quote-strip .qb strong { color: var(--cream); font-weight: 500; }
+@media (min-width: 900px) {
+  .quote-strip { padding: 48px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .quote-strip .qt { margin-bottom: 0; }
+}
+
+/* ══════════════════════════════════════════════
+   LEGACY — MENTORS + WRITING
+══════════════════════════════════════════════ */
+#legacy { background: linear-gradient(180deg, transparent, rgba(201,146,31,0.02)); }
+.mentors-list { display: flex; flex-direction: column; gap: 2px; margin-bottom: 48px; }
+.mentor {
+  padding: 22px 18px; background: rgba(255,255,255,0.02);
+  border-left: 2px solid var(--gold); border: 1px solid var(--rule);
+  border-left: 2px solid var(--gold);
+}
+.mentor-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 700; font-style: italic;
+  color: var(--cream); margin-bottom: 3px;
+}
+.mentor-info {
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.1em; color: var(--gold); margin-bottom: 8px;
+}
+.mentor-lesson { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.writing-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 6vw, 36px); font-weight: 300; font-style: italic;
+  line-height: 1.35; color: var(--cream); margin-bottom: 24px;
+}
+.writing-quote strong { color: var(--gold); font-style: normal; font-weight: 700; }
+.pub-cards { display: flex; flex-direction: column; gap: 2px; }
+.pub-card {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 18px;
+  border: 1px solid var(--rule); background: rgba(255,255,255,0.02);
+}
+.pub-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 700; color: var(--cream);
+}
+.pub-sub { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); margin-top: 2px; }
+.pub-years { font-family: 'DM Mono', monospace; font-size: 9.5px; color: var(--gold); letter-spacing: 0.09em; }
+
+/* ══════════════════════════════════════════════
+   CONTACT
+══════════════════════════════════════════════ */
+#contact {
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(201,146,31,0.04), transparent 70%);
+  text-align: center;
+}
+.conn-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 7vw, 52px);
+  font-weight: 700; font-style: italic; line-height: 1.15;
+  color: var(--cream); margin-bottom: 20px;
+}
+.conn-title strong { color: var(--gold); font-style: normal; }
+.conn-subtitle { font-size: 14px; color: var(--muted); max-width: 560px; margin: 0 auto 36px; line-height: 1.8; }
+.conn-links {
+  display: flex; flex-direction: column; gap: 10px;
+  align-items: center; margin-bottom: 48px;
+}
+.conn-link {
+  font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em;
+  padding: 14px 24px; border: 1px solid var(--rule);
+  color: var(--cream); text-decoration: none;
+  transition: all 0.2s; width: 100%; max-width: 320px;
+  display: block; text-align: center;
+}
+.conn-link.primary {
+  background: var(--gold); color: var(--black);
+  border-color: var(--gold); font-weight: 500;
+}
+.conn-link:active { background: var(--gold); color: var(--black); border-color: var(--gold); }
+.signature {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(14px, 4vw, 18px); font-style: italic;
+  color: var(--muted); line-height: 1.8; max-width: 600px; margin: 0 auto;
+}
+.signature strong { color: var(--gold); font-style: normal; }
+@media (min-width: 600px) {
+  .conn-links { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .conn-link { width: auto; }
+}
+
+/* ══════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════ */
+footer {
+  padding: 24px var(--pad-mobile);
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+footer p {
+  font-family: 'DM Mono', monospace; font-size: 9.5px;
+  letter-spacing: 0.1em; color: var(--muted); margin-bottom: 4px;
+}
+footer span { color: var(--gold); }
+@media (min-width: 768px) {
+  footer {
+    padding: 24px var(--pad-tablet);
+    display: flex; justify-content: space-between; align-items: center;
+    text-align: left;
+  }
+  footer p { margin-bottom: 0; }
+}
+
+/* ══════════════════════════════════════════════
+   REVEAL ANIMATIONS
+══════════════════════════════════════════════ */
+@keyframes riseIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.in { opacity: 1; transform: none; }
+.d1 { transition-delay: 0.08s; }
+.d2 { transition-delay: 0.16s; }
+.d3 { transition-delay: 0.24s; }
+.d4 { transition-delay: 0.32s; }
+
+/* ══════════════════════════════════════════════
+   SCROLL TO TOP
+══════════════════════════════════════════════ */
+#scrolltop {
+  position: fixed; bottom: 24px; right: 20px; z-index: 500;
+  width: 44px; height: 44px;
+  background: rgba(201,146,31,0.15);
+  border: 1px solid rgba(201,146,31,0.3);
+  color: var(--gold);
+  font-size: 16px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; border-radius: 50%;
+  opacity: 0; transition: opacity 0.3s;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+#scrolltop.visible { opacity: 1; }
+</style>
+</head>
+<body>
+
+<!-- ══ NAV ══════════════════════════════════ -->
+<nav>
+  <a class="nav-logo serif" href="#hero">KB</a>
+  <nav class="nav-links">
+    <a href="#convergence">About</a>
+    <a href="#dimensions">Dimensions</a>
+    <a href="#abundance">Thesis</a>
+    <a href="#luminaries">Luminaries</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Connect</a>
+  </nav>
+  <button class="hamburger" id="ham" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="#convergence" onclick="closeMenu()">About</a>
+  <a href="#dimensions" onclick="closeMenu()">8 Dimensions</a>
+  <a href="#abundance" onclick="closeMenu()">The Thesis</a>
+  <a href="#luminaries" onclick="closeMenu()">Luminaries</a>
+  <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+  <a href="#pakistan" onclick="closeMenu()">Pakistan</a>
+  <a href="#contact" onclick="closeMenu()">Connect</a>
+</div>
+
+<!-- ══ HERO ══════════════════════════════════ -->
+<section id="hero">
+  <div class="container">
+    <p class="hero-label mono">Karachi · Dubai · The New World</p>
+    <h1 class="hero-name serif">Khurram</h1>
+    <span class="hero-name-b serif">Badar.</span>
+    <div class="hero-divider"></div>
+    <p class="hero-statement serif">
+      An AI Innovator who's seen every major wave —
+      <strong>blockchain, fintech, ESG, AI</strong> —
+      years before the mainstream did,
+      and has built proof of it online.
+    </p>
+    <div class="hero-pills">
+      <span class="pill mono">AI & Robotics</span>
+      <span class="pill mono">Precious Metals</span>
+      <span class="pill mono">Space Economy</span>
+      <span class="pill mono">ESG / Net Zero</span>
+      <span class="pill mono">Fintech</span>
+      <span class="pill mono">Pakistan</span>
+      <span class="pill mono">Blockchain</span>
+      <span class="pill mono">Quantum</span>
+      <span class="pill mono">Mountains</span>
+    </div>
+    <p class="hero-sign serif">
+      A writer from the last century. Writing since 1995: Dawn · Gulf News.<br>
+      <strong style="font-style:normal;color:var(--gold2)">See you on the other side.</strong>
+    </p>
+  </div>
+</section>
+
+<!-- ══ CONVERGENCE ═══════════════════════════ -->
+<section id="convergence">
+  <div class="container">
+    <span class="s-label mono reveal">§ 01 · Who I Am</span>
+    <div class="conv-grid">
+      <div class="reveal">
+        <h2 class="conv-big-q serif">The rarest thing is not intelligence.<br>It is <em>convergence.</em></h2>
+        <div class="pull-quote serif">"I don't just understand the future. I see how all its parts connect — and that is the only real competitive advantage left."</div>
+      </div>
+      <div class="reveal d2">
+        <p class="body-text">On any given morning, I might begin by analysing the <strong>dollar index against silver futures</strong> as geopolitical events in Iran ripple through the COMEX market. By afternoon, I am architecting an <strong>AI chatbot for Pakistan's largest logistics company</strong> in five languages. By evening, writing a white paper on <strong>space-based solar infrastructure.</strong></p>
+        <p class="body-text">This is not restlessness. This is what happens when thirty years of pattern recognition across business, technology, finance, sustainability and human development compound into a single, integrated mind.</p>
+        <p class="body-text">Most specialists understand one domain deeply. Most generalists understand many domains shallowly. <strong>The convergence thinker understands how domains transform each other.</strong> That is the value I bring. Not a list of domains. <em>A map of how the future actually works.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 8 DIMENSIONS ══════════════════════════ -->
+<section id="dimensions">
+  <div class="container">
+    <span class="s-label mono reveal">§ 02</span>
+    <h2 class="s-title serif reveal">The 8 Dimensions<br>of One Mind</h2>
+    <div class="dim-grid">
+      <div class="dim-card reveal d1">
+        <p class="dim-num mono">01 / 08</p>
+        <h3 class="dim-title serif">Precious Metals & Macro Markets</h3>
+        <p class="dim-body">Tracks <strong>DXY vs gold/silver correlations</strong> in real time. Reads COMEX inventory, JPMorgan delivery positions, China mineral export restrictions, and how geopolitical events transmit to precious metal prices. Correctly identified the January 2026 silver crash as paper manipulation — Shanghai's +$20 premium was the tell.</p>
+        <p class="dim-proof mono">→ RarestEarth.com · BtcTradingDesk.com · GetGoldSilver.com</p>
+      </div>
+      <div class="dim-card reveal d2">
+        <p class="dim-num mono">02 / 08</p>
+        <h3 class="dim-title serif">AI & Robotics Convergence</h3>
+        <p class="dim-body">Thinks in convergence — how AI agents, humanoid robots, battery storage, and reusable rockets are not separate trends but a single compounding shift toward universal abundance. Mapped the multiomics → autonomous vehicles → humanoid robotics chain before boardrooms discovered it.</p>
+        <p class="dim-proof mono">→ RoboticTakeover.com · CreateAgent.ai · Mr. TCS concept</p>
+      </div>
+      <div class="dim-card reveal d3">
+        <p class="dim-num mono">03 / 08</p>
+        <h3 class="dim-title serif">ESG & UAE Climate Law</h3>
+        <p class="dim-body">Advisory-grade knowledge of UAE Federal Decree-Law No. 11/2024, GHG Protocol Scope 1/2/3, EU CBAM 2026, UAE IEQT platform, GCC carbon markets. Helping MENA enterprises navigate mandatory reporting before the <strong>May 2026 compliance deadline.</strong></p>
+        <p class="dim-proof mono">→ Planet2050.com · NoCarbonEconomy.com · SkyH2O COO</p>
+      </div>
+      <div class="dim-card reveal d4">
+        <p class="dim-num mono">04 / 08</p>
+        <h3 class="dim-title serif">Space Economy & Abundance Thesis</h3>
+        <p class="dim-body">Written seriously on orbital solar (5× efficiency), passive cooling to 3°K, and reusable rocket economics reducing launch costs 100×. Understands space as infrastructure — the optimal location for civilisation's compute. Sees AI + Robots + Solar + Space as the mechanism for universal abundance.</p>
+        <p class="dim-proof mono">→ FutureDigitalEconomy.com · Value Proposition article</p>
+      </div>
+      <div class="dim-card reveal d1">
+        <p class="dim-num mono">05 / 08</p>
+        <h3 class="dim-title serif">New World Curriculum Architect</h3>
+        <p class="dim-body">Building a comprehensive educational platform on <strong>BuddyPress + Anesta + LearnDash</strong> with 7 learning tracks, membership tiers, gamification, and revenue model. A complete education in the new economy — from AI agents to UAE climate law, in one place.</p>
+        <p class="dim-proof mono">→ AI School · LearnESG.com · CryptoLearning.Academy</p>
+      </div>
+      <div class="dim-card reveal d2">
+        <p class="dim-num mono">06 / 08</p>
+        <h3 class="dim-title serif">Pakistan Nation-Builder</h3>
+        <p class="dim-body">Thinks about Pakistan's <strong>100 million citizens under 15</strong> as a civilisational opportunity. Authored TCS 2050 Vision. Advocated for Urdu LLM at The Future Summit 2024. Architecting Pakistan's first AI-integrated school curriculum. The Fourth Industrial Revolution is Pakistan's narrow window.</p>
+        <p class="dim-proof mono">→ TCS 2050 Vision · Mr. TCS AI · AI School Pakistan</p>
+      </div>
+      <div class="dim-card reveal d3">
+        <p class="dim-num mono">07 / 08</p>
+        <h3 class="dim-title serif">Fintech & Blockchain Pioneer</h3>
+        <p class="dim-body">CMO of a <strong>DAO/NFT/Blockchain enterprise</strong> at the Fairmont Hotel Dubai before Web3 was mainstream. Built DeFiAnything.com, FintechGlossary.com, StableCoinUseCase.com, FutureTokenization.com years before the sector exploded. Understands Bitcoin as protocol and network, DeFi liquidity, Layer 2 infrastructure.</p>
+        <p class="dim-proof mono">→ FarSky CMO · BtcTradingDesk.com · FutureTokenization.com</p>
+      </div>
+      <div class="dim-card reveal d4">
+        <p class="dim-num mono">08 / 08</p>
+        <h3 class="dim-title serif">Mountain & Environmental Philosopher</h3>
+        <p class="dim-body">Developed a mountain education platform connecting climbing skills to environmental stewardship, net zero, mental resilience, and personal transformation. The mountain is not a sport — it is a teacher of interconnectedness, mindful progress, and ecological wisdom.</p>
+        <p class="dim-proof mono">→ Mountain Education Initiative · NoCarbonEconomy.com</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MARKETS ════════════════════════════════ -->
+<section id="markets">
+  <div class="container">
+    <span class="s-label mono reveal">§ 03</span>
+    <h2 class="s-title serif reveal">The Markets Mind</h2>
+    <div class="markets-grid">
+      <div class="reveal">
+        <p class="body-text">While most read headlines about gold and silver, I read <em>the dollar index.</em> I understand that <strong>DXY is the only true driver</strong> of precious metal prices — everything else matters only insofar as it moves the dollar.</p>
+        <p class="body-text">I tracked silver from <strong>$120/oz to $75</strong> during a single Friday crash, identified it as CME margin call manipulation rather than a fundamental break, watched the $20 Shanghai physical premium as proof that real demand hadn't moved — and held the thesis.</p>
+        <p class="body-text">This is not investing as a hobby. This is <strong>pattern recognition applied to global capital flows</strong> — the same skill that let me see blockchain, ESG, fintech, and AI years before they arrived in the mainstream.</p>
+      </div>
+      <div class="reveal d2">
+        <div class="ticker-list">
+          <div class="ticker-item">
+            <div><div class="ticker-name serif">Gold / Silver</div><div class="ticker-sub mono">PRECIOUS METALS · MONETARY HEDGE</div></div>
+            <div class="ticker-insight">Dollar weakness drives. Physical demand sets the floor. Paper market manipulates intraday.</div>
+          </div>
+          <div class="ticker-item">
+            <div><div class="ticker-name serif">US Dollar Index</div><div class="ticker-sub mono">DXY · THE ONLY REAL VARIABLE</div></div>
+            <div class="ticker-insight">DXY is the meta-driver. Everything else is noise unless it moves the dollar.</div>
+          </div>
+          <div class="ticker-item">
+            <div><div class="ticker-name serif">Bitcoin</div><div class="ticker-sub mono">BTC · WEEKEND SENTIMENT SIGNAL</div></div>
+            <div class="ticker-insight">Correlation 0.14 with gold. Useful as weekend risk-off signal. Not a substitute for physical demand analysis.</div>
+          </div>
+          <div class="ticker-item">
+            <div><div class="ticker-name serif">Rare Earth Minerals</div><div class="ticker-sub mono">CRITICAL SUPPLY CHAIN ASSETS</div></div>
+            <div class="ticker-insight">China controls 60% of mining, 85% of refining. Geopolitical weapon. AI chip dependency.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABUNDANCE ══════════════════════════════ -->
+<section id="abundance">
+  <div class="container">
+    <span class="s-label mono reveal">§ 04</span>
+    <h2 class="s-title serif reveal">The Abundance Thesis</h2>
+    <p class="body-text reveal" style="max-width:680px;margin-bottom:40px;">Four forces are converging. When they fully combine, they will produce something humanity has never experienced: the realistic possibility of material abundance for everyone on the planet.</p>
+    <div class="pillars-grid">
+      <div class="pillar-card reveal d1">
+        <div class="pillar-icon">🤖</div>
+        <h3 class="pillar-name serif">Intelligent Automation</h3>
+        <p class="pillar-body">Humanoid robots adapting to any task. The demographic math is stark — not enough young people to care for the aging. Intelligent robotics solves this through capability, not policy.</p>
+        <div class="pillar-prop serif">"Care becomes abundant rather than rationed."</div>
+      </div>
+      <div class="pillar-card reveal d2">
+        <div class="pillar-icon">🧠</div>
+        <h3 class="pillar-name serif">Unlimited Intelligence</h3>
+        <p class="pillar-body">AI costs dropping monthly. Intelligence becoming a utility — ubiquitous, affordable, always available. Within this decade, AI will exceed collective human cognitive capacity across every domain.</p>
+        <div class="pillar-prop serif">"World-class expertise, available to everyone, essentially free."</div>
+      </div>
+      <div class="pillar-card reveal d3">
+        <div class="pillar-icon">☀️</div>
+        <h3 class="pillar-name serif">Sustainable Energy</h3>
+        <p class="pillar-body">The sun provides 99.8% of all energy in the solar system. The area needed to power a country with solar: 100×100 miles. Battery storage closes the intermittency problem. Orbital solar captures 5× more.</p>
+        <div class="pillar-prop serif">"Unlimited clean energy for 5 billion more years."</div>
+      </div>
+      <div class="pillar-card reveal d4">
+        <div class="pillar-icon">🚀</div>
+        <h3 class="pillar-name serif">Space Infrastructure</h3>
+        <p class="pillar-body">Reusable rockets reduce launch costs 100-fold. Space becomes infrastructure. Orbital platforms: continuous solar, passive cooling to 3°K, unlimited volume. The cheapest place to run AI may float above our heads.</p>
+        <div class="pillar-prop serif">"Space becomes the optimal location for civilisation's compute."</div>
+      </div>
+    </div>
+    <p class="abundance-closer serif reveal">The convergence of these four forces points toward something genuinely new: <em>abundance that is broad, not narrow. Not just for the wealthy. For everyone.</em> This is not utopian speculation. It is engineering trajectory.</p>
+  </div>
+</section>
+
+<!-- ══ ESG ════════════════════════════════════ -->
+<section id="esg">
+  <div class="container">
+    <span class="s-label mono reveal">§ 05</span>
+    <h2 class="s-title serif reveal">ESG & Net Zero:<br>The Regulatory Wave</h2>
+    <div class="esg-grid">
+      <div class="reveal">
+        <p class="body-text">I was COO of <strong>SkyH2O</strong> — a company that converted atmospheric humidity into potable water — before the word "sustainability" appeared in a single business proposal I read. I built Planet2050.com and NoCarbonEconomy.com before ESG became a boardroom requirement.</p>
+        <p class="body-text">Today I carry <strong>advisory-grade knowledge</strong> of the UAE Climate Law, GHG Protocol methodology, EU CBAM 2026, GCC voluntary carbon markets, and the IEQT reporting platform that every UAE entity must use by May 2026.</p>
+        <p class="body-text">When I say the 2026 CBAM implementation is a tipping point — I say it from having built a comprehensive analysis of 6 GCC countries' carbon frameworks, their Article 6 alignments, and the gap between their pledges and their trajectories.</p>
+      </div>
+      <div class="reveal d2">
+        <div class="esg-facts">
+          <div class="esg-fact">
+            <div class="esg-fact-date mono">May 30<br>2026</div>
+            <div class="esg-fact-text">UAE full GHG compliance deadline — ALL entities must report via IEQT platform</div>
+          </div>
+          <div class="esg-fact">
+            <div class="esg-fact-date mono">Jan 1<br>2026</div>
+            <div class="esg-fact-text">EU CBAM full implementation — carbon tariff on GCC exports begins</div>
+          </div>
+          <div class="esg-fact">
+            <div class="esg-fact-date mono">3 Scopes</div>
+            <div class="esg-fact-text">Scope 1 (direct) + Scope 2 (energy) mandatory. Scope 3 from 2027 for high-impact sectors</div>
+          </div>
+          <div class="esg-fact">
+            <div class="esg-fact-date mono">AED 2M</div>
+            <div class="esg-fact-text">First-offense penalty for non-compliance. Doubled on repeat (AED 4M)</div>
+          </div>
+          <div class="esg-fact">
+            <div class="esg-fact-date mono">2009–14</div>
+            <div class="esg-fact-text">COO SkyH2O — atmospheric water generation. UAE & Singapore. The sustainability foundation.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SCHOOL ══════════════════════════════════ -->
+<section id="school">
+  <div class="container">
+    <span class="s-label mono reveal">§ 06</span>
+    <h2 class="s-title serif reveal">The New World School</h2>
+    <p class="school-hero serif reveal">What if there was a single place where anyone — from a student in Karachi to a CEO in Dubai — could learn everything needed to navigate the <em>new economy?</em> I am building it.</p>
+    <div class="tracks-grid">
+      <div class="track-card reveal d1">
+        <p class="track-num mono">TRACK 01</p>
+        <h3 class="track-name serif">Artificial Intelligence</h3>
+        <p class="track-domains">RoboticTakeover.com · CreateAgent.ai — from intelligent automation to building your first AI agent</p>
+      </div>
+      <div class="track-card reveal d2">
+        <p class="track-num mono">TRACK 02</p>
+        <h3 class="track-name serif">Blockchain & Web3</h3>
+        <p class="track-domains">BtcTradingDesk.com · StableCoinUseCase.com · 1000XAltcoins.com · FutureTokenization.com</p>
+      </div>
+      <div class="track-card reveal d3">
+        <p class="track-num mono">TRACK 03</p>
+        <h3 class="track-name serif">Fintech & Digital Economy</h3>
+        <p class="track-domains">DeFiAnything.com · FintechGlossary.com · FutureDigitalEconomy.com · CashlessUniverse.com</p>
+      </div>
+      <div class="track-card reveal d1">
+        <p class="track-num mono">TRACK 04</p>
+        <h3 class="track-name serif">ESG & Sustainability</h3>
+        <p class="track-domains">Planet2050.com · NoCarbonEconomy.com · NoSustainability.com — net zero, carbon markets, CBAM</p>
+      </div>
+      <div class="track-card reveal d2">
+        <p class="track-num mono">TRACK 05</p>
+        <h3 class="track-name serif">Rare Minerals & Commodities</h3>
+        <p class="track-domains">RarestEarth.com · InvestInGoldSilver.com · GetGoldSilver.com — physical assets powering the digital revolution</p>
+      </div>
+      <div class="track-card reveal d3">
+        <p class="track-num mono">TRACK 06</p>
+        <h3 class="track-name serif">Geopolitics & Global Trade</h3>
+        <p class="track-domains">GeoPoliticalTrade.com · BusinessMarketReport.com · C-Suited.com — post-2025 world order</p>
+      </div>
+    </div>
+    <div class="school-platform reveal">
+      <div>
+        <p class="platform-label mono">Platform Architecture</p>
+        <p class="platform-text">BuddyPress + Anesta + LearnDash — a full social learning community with 7 tracks, membership tiers, gamification, certificates, and a domain portfolio funnel that sends learners from any of the 20+ topic sites directly into the school ecosystem.</p>
+      </div>
+      <div>
+        <p class="platform-label mono">The Vision</p>
+        <p class="platform-text">The only platform in the world where you can learn everything needed to navigate the new economy — from silver futures to orbital solar, from blockchain DAOs to UAE climate law — all in one place, taught by someone who built them all.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PAKISTAN ════════════════════════════════ -->
+<section id="pakistan">
+  <div class="container">
+    <span class="s-label mono reveal">§ 07</span>
+    <div class="pak-stat serif reveal">100M</div>
+    <p class="pak-stat-label mono reveal">Pakistani citizens under the age of 15</p>
+    <p class="pak-manifesto serif reveal">This is not a crisis. <strong>This is the single greatest demographic opportunity in the world.</strong> The future of Pakistan is not in oil, not in remittances, not in the IMF. It is in those 100 million minds — if we build the systems to unlock them before the window closes.</p>
+    <p class="body-text reveal" style="text-align:center;max-width:640px;margin:0 auto 20px;">The future lies in alignment with the new global challenges:</p>
+    <div class="future-pillars reveal">
+      <span class="fp mono">Trade & Geopolitics</span>
+      <span class="fp mono">Economy & Society</span>
+      <span class="fp mono">Nature & Climate</span>
+      <span class="fp mono">Rural-Urban Balance</span>
+      <span class="fp mono">Fourth Industrial Revolution</span>
+      <span class="fp mono">AI for 100M Youth</span>
+      <span class="fp mono">Urdu LLM</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LUMINARIES ═════════════════════════════ -->
+<section id="luminaries">
+  <div class="container">
+    <span class="s-label mono reveal">§ 08 · The Constellation</span>
+    <h2 class="s-title serif reveal">People I Have<br><span class="gold italic">Known.</span></h2>
+    <p class="section-intro reveal">Over thirty years — across Dubai, Karachi, London, and the stages between — certain encounters define not just a career, but a way of seeing the world.</p>
+
+    <!-- Filter — scrollable on mobile -->
+    <div class="filter-row" id="filterRow">
+      <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
+      <button class="filter-btn" onclick="filterCards('music', this)">Music</button>
+      <button class="filter-btn" onclick="filterCards('gov', this)">Government</button>
+      <button class="filter-btn" onclick="filterCards('business', this)">Business</button>
+      <button class="filter-btn" onclick="filterCards('media', this)">Media</button>
+      <button class="filter-btn" onclick="filterCards('sport', this)">Sport</button>
+      <button class="filter-btn" onclick="filterCards('humanity', this)">Humanitarian</button>
+      <button class="filter-btn" onclick="filterCards('film', this)">Film & Arts</button>
+    </div>
+
+    <div class="luminaries-grid" id="lumGrid">
+
+      <div class="lum-card reveal" data-cat="humanity">
+        <span class="card-tag tag-humanity">Humanitarian</span>
+        <h3 class="lum-name serif">Abdul Sattar Edhi</h3>
+        <p class="lum-role mono">Pakistan's Greatest Humanitarian · Edhi Foundation</p>
+        <p class="lum-story">To sit in the presence of Edhi Sahab was to sit in the presence of pure moral clarity. No fanfare. No entourage. Just a man who had given everything — and kept giving. <strong>A moment that quietly reorganised my understanding of what leadership actually means.</strong></p>
+        <p class="lum-year mono">Dubai · 2005</p>
+      </div>
+
+      <div class="lum-card reveal d1" data-cat="music">
+        <span class="card-tag tag-music">Music Legend</span>
+        <h3 class="lum-name serif">Jermaine Jackson</h3>
+        <p class="lum-role mono">The Jackson 5 · Global Music Icon</p>
+        <p class="lum-story">Brought to Dubai under Spotlight FZE. Working with Jermaine was a masterclass in what genuine stardom looks like up close — <strong>the discipline, the professionalism, the extraordinary grace.</strong> One of Spotlight's landmark international productions.</p>
+        <p class="lum-year mono">Dubai · 2009</p>
+      </div>
+
+      <div class="lum-card reveal d2" data-cat="music">
+        <span class="card-tag tag-music">Music · Debut</span>
+        <h3 class="lum-name serif">Atif Aslam</h3>
+        <p class="lum-role mono">Pakistan's Most Beloved Voice · International Superstar</p>
+        <p class="lum-story">I debuted Atif Aslam in Dubai in 2005 — <strong>before he became the phenomenon the world now knows.</strong> We returned together in 2006 and 2007. To have introduced that voice to the Gulf stage before the crowds arrived is something I carry with particular pride.</p>
+        <p class="lum-year mono">Dubai · 2005 · 2006 · 2007</p>
+      </div>
+
+      <div class="lum-card reveal d3" data-cat="business">
+        <span class="card-tag tag-business">Business · Thought Leadership</span>
+        <h3 class="lum-name serif">Brian Tracy</h3>
+        <p class="lum-role mono">World's Leading Business Author & Speaker</p>
+        <p class="lum-story">Hosted Brian Tracy in Dubai through Spotlight FZE — one of the world's most respected voices on achievement, sales, and personal development. <strong>A production that set the standard</strong> for the calibre of international thought leaders Spotlight would go on to bring to the Gulf.</p>
+        <p class="lum-year mono">Dubai · 2002</p>
+      </div>
+
+      <div class="lum-card reveal" data-cat="gov">
+        <span class="card-tag tag-gov">Government · UAE</span>
+        <h3 class="lum-name serif">Marwan bin Beyat Al Falasi</h3>
+        <p class="lum-role mono">Senior Official · DTCM — Dubai Tourism & Commerce Marketing</p>
+        <p class="lum-story">Working under contract with DTCM and Marwan Sahab placed Spotlight FZE <strong>at the heart of Dubai's official events and tourism infrastructure.</strong> Government-level engagement that cemented Spotlight as a top-5 event company in Dubai.</p>
+        <p class="lum-year mono">Dubai · DTCM Contract</p>
+      </div>
+
+      <div class="lum-card reveal d1" data-cat="film">
+        <span class="card-tag tag-film">Film & Arts · UAE</span>
+        <h3 class="lum-name serif">Nayla Al Khaja</h3>
+        <p class="lum-role mono">UAE's First Female Film Director · Trailblazer</p>
+        <p class="lum-story">One of the UAE's most significant creative voices — the first Emirati woman to direct a feature film. <strong>Our mutual work together placed Spotlight at the intersection of Dubai's official arts and culture establishment,</strong> a world very few outsiders were invited into.</p>
+        <p class="lum-year mono">Dubai · Creative Industry</p>
+      </div>
+
+      <div class="lum-card reveal d2" data-cat="business">
+        <span class="card-tag tag-business">Business · Finance</span>
+        <h3 class="lum-name serif">HD Habib</h3>
+        <p class="lum-role mono">Distinguished Business Leader · Dubai</p>
+        <p class="lum-story">A man who embodied the principle that the most enduring enterprises are built on trust, not transactions. <strong>His mentorship shaped my philosophy on business longevity</strong> — that character is the only competitive advantage that cannot be replicated.</p>
+        <p class="lum-year mono">Dubai · 2006</p>
+      </div>
+
+      <div class="lum-card reveal d3" data-cat="media">
+        <span class="card-tag tag-media">Media · Broadcasting</span>
+        <h3 class="lum-name serif">Salman Iqbal</h3>
+        <p class="lum-role mono">Founder & CEO · ARY Group of Companies</p>
+        <p class="lum-story">Salman Iqbal built ARY into one of Pakistan's most powerful media and commercial empires. <strong>Mutual business engagement with ARY</strong> placed Spotlight within the orbit of Pakistan's most influential media architecture — a relationship built on shared ambition and complementary reach.</p>
+        <p class="lum-year mono">Pakistan · UAE · ARY Network</p>
+      </div>
+
+      <div class="lum-card reveal" data-cat="media">
+        <span class="card-tag tag-media">Media · Broadcasting</span>
+        <h3 class="lum-name serif">Rashid Ashraf</h3>
+        <p class="lum-role mono">Senior Executive · ARY Network</p>
+        <p class="lum-story">Rashid Ashraf represented the operational heartbeat of ARY's reach across Pakistan and the diaspora. <strong>Working alongside him opened doors to Pakistan's most-watched media network,</strong> creating opportunities at the intersection of entertainment, broadcasting, and live events.</p>
+        <p class="lum-year mono">Pakistan · UAE · ARY Network</p>
+      </div>
+
+      <div class="lum-card reveal d1" data-cat="media">
+        <span class="card-tag tag-media">Media · Television</span>
+        <h3 class="lum-name serif">Nadia Khan</h3>
+        <p class="lum-role mono">Pakistan's Queen of Morning Television · Host</p>
+        <p class="lum-story">Pakistan's most recognised female television face. <strong>I worked with Nadia to facilitate celebrity connections</strong> — leveraging my international network to bridge Pakistan's entertainment world with Gulf media infrastructure. A collaboration built on mutual respect.</p>
+        <p class="lum-year mono">Pakistan · Celebrity Management</p>
+      </div>
+
+      <div class="lum-card reveal d2" data-cat="business">
+        <span class="card-tag tag-business">Finance · Policy</span>
+        <h3 class="lum-name serif">Dr. Ishrat Hussain</h3>
+        <p class="lum-role mono">Former Governor · State Bank of Pakistan</p>
+        <p class="lum-story">One of Pakistan's most consequential economic minds. <strong>His counsel and mentorship</strong> has directly informed how I think about Pakistan's AI transformation agenda and the country's next economic chapter.</p>
+        <p class="lum-year mono">2025 · Mentor</p>
+      </div>
+
+      <div class="lum-card reveal d3" data-cat="sport">
+        <span class="card-tag tag-sport">Sport · Cricket</span>
+        <h3 class="lum-name serif">Shoaib Akhtar</h3>
+        <p class="lum-role mono">The Rawalpindi Express · Pakistan's Fastest Bowler</p>
+        <p class="lum-story">The fastest bowler cricket has ever produced — and one of Pakistan's most electrifying personalities in any room he enters. <strong>Collaborating with Shoaib</strong> on event and brand work was a reminder of what genuine star power does: it doesn't just attract attention, it transforms the energy of an entire room.</p>
+        <p class="lum-year mono">Pakistan · UAE · Events</p>
+      </div>
+
+      <div class="lum-card reveal" data-cat="film">
+        <span class="card-tag tag-film">Bollywood · Film</span>
+        <h3 class="lum-name serif">Bollywood Productions</h3>
+        <p class="lum-role mono">India's Film Industry · International Productions · Dubai</p>
+        <p class="lum-story">Dubai in 2007 was a hub where Bollywood, Pakistani entertainment, and Gulf audiences converged. <strong>Spotlight FZE operated at the centre of this crossroads,</strong> producing international events that brought India's film world to Gulf stages.</p>
+        <p class="lum-year mono">Dubai · 2007</p>
+      </div>
+
+      <div class="lum-card reveal d1" data-cat="business">
+        <span class="card-tag tag-business">Business · Pakistan</span>
+        <h3 class="lum-name serif">Khalid Nawaz Awan</h3>
+        <p class="lum-role mono">Founder & Chairman · TCS Private Limited</p>
+        <p class="lum-story">The man who built Pakistan's logistics backbone from scratch. His vision for TCS — including the Mr. TCS concept and the company's 2050 transformation ambition — <strong>is what brought me back to TCS in 2024,</strong> 28 years after my first tenure there.</p>
+        <p class="lum-year mono">Pakistan · TCS · 1996 & 2024</p>
+      </div>
+
+      <!-- Placeholder -->
+      <div class="lum-card placeholder reveal d2" data-cat="all">
+        <div class="placeholder-plus">+</div>
+        <p class="placeholder-text mono">More names being added.<br>The list is long.</p>
+      </div>
+
+    </div><!-- end grid -->
+
+    <div class="quote-strip reveal">
+      <div class="qt serif">"The rooms you are invited into say everything about the <em>value you bring</em> to the world."</div>
+      <div class="qb">
+        <p>For three decades, across Dubai, Karachi, and the international stages between them, Khurram Badar moved in rooms that most people only read about. <strong>He debuted Atif Aslam before Pakistan knew his name.</strong> He produced events under official DTCM contracts. He sat with Edhi Sahab in Dubai.</p>
+        <p style="margin-top:12px;">These are not name-drops. They are <strong>proof of a life lived at the intersection of culture, commerce, and consequence.</strong></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ PORTFOLIO ═══════════════════════════════ -->
+<section id="portfolio">
+  <div class="container">
+    <span class="s-label mono reveal">§ 09</span>
+    <h2 class="s-title serif reveal">The Proof<br><span class="gold italic">is Online.</span></h2>
+    <div class="port-table reveal">
+      <div class="port-row"><div class="port-cat mono">AI</div><div class="port-domains"><span class="port-tag mono">RoboticTakeover.com</span><span class="port-tag mono">CreateAgent.ai</span></div></div>
+      <div class="port-row"><div class="port-cat mono">Blockchain</div><div class="port-domains"><span class="port-tag mono">BtcTradingDesk.com</span><span class="port-tag mono">StableCoinUseCase.com</span><span class="port-tag mono">1000XAltcoins.com</span><span class="port-tag mono">FutureTokenization.com</span></div></div>
+      <div class="port-row"><div class="port-cat mono">Fintech</div><div class="port-domains"><span class="port-tag mono">DeFiAnything.com</span><span class="port-tag mono">FintechGlossary.com</span><span class="port-tag mono">FutureDigitalEconomy.com</span><span class="port-tag mono">CashlessUniverse.com</span></div></div>
+      <div class="port-row"><div class="port-cat mono">Sustainability</div><div class="port-domains"><span class="port-tag mono">Planet2050.com</span><span class="port-tag mono">NoSustainability.com</span><span class="port-tag mono">NoCarbonEconomy.com</span></div></div>
+      <div class="port-row"><div class="port-cat mono">Digital Wallet</div><div class="port-domains"><span class="port-tag mono">TheDigitalWallet.com</span><span class="port-tag mono">CreateDigitalWallet.com</span><span class="port-tag mono">MakeDigitalPayments.com</span></div></div>
+      <div class="port-row"><div class="port-cat mono">Rare Minerals</div><div class="port-domains"><span class="port-tag mono">RarestEarth.com</span><span class="port-tag mono">InvestInGoldSilver.com</span><span class="port-tag mono">GetGoldSilver.com</span></div></div>
+      <div class="port-row"><div class="port-cat mono">US Equities</div><div class="port-domains"><span class="port-tag mono">2030Stocks.com</span><span class="port-tag mono">EconomyConsumer.com</span><span class="port-tag mono">AttractiveStock.com</span></div></div>
+      <div class="port-row"><div class="port-cat mono">Business</div><div class="port-domains"><span class="port-tag mono">BusinessMarketReport.com</span><span class="port-tag mono">C-Suited.com</span><span class="port-tag mono">GeoPoliticalTrade.com</span></div></div>
+    </div>
+    <div class="port-count serif reveal">20+</div>
+    <p class="port-count-sub mono reveal">Independently built digital innovation platforms</p>
+  </div>
+</section>
+
+<!-- ══ LEGACY ════════════════════════════════ -->
+<section id="legacy">
+  <div class="container">
+    <span class="s-label mono reveal">§ 10 · The Shoulders & The Page</span>
+    <h2 class="s-title serif reveal">Mentors &amp;<br><span class="gold italic">The Writing.</span></h2>
+    <div class="mentors-list reveal">
+      <div class="mentor">
+        <h3 class="mentor-name serif">Abdul Sattar Edhi</h3>
+        <p class="mentor-info mono">Dubai · 2005</p>
+        <p class="mentor-lesson">Service at scale. You do not need permission to help people. You need conviction and the discipline to show up. The greatest Pakistani who ever lived taught me that leadership is daily, unglamorous, and always for others.</p>
+      </div>
+      <div class="mentor">
+        <h3 class="mentor-name serif">HD Habib</h3>
+        <p class="mentor-info mono">Dubai · 2006</p>
+        <p class="mentor-lesson">Business and humanity are not opposites. Trust compounds. Transactions don't. The most enduring enterprises are built on meaning, not margins.</p>
+      </div>
+      <div class="mentor">
+        <h3 class="mentor-name serif">Dr. Ishrat Hussain</h3>
+        <p class="mentor-info mono">Former Governor, State Bank of Pakistan · 2025</p>
+        <p class="mentor-lesson">One of Pakistan's most consequential economic minds. His guidance on policy, technology, and national development has shaped how I think about Pakistan's next chapter — and who must write it.</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="writing-quote serif">A writer from the last century.<br><strong>Writing in this one.</strong></p>
+      <div class="pub-cards">
+        <div class="pub-card">
+          <div><div class="pub-name serif">Dawn News</div><div class="pub-sub mono">Pakistan's oldest English newspaper</div></div>
+          <div class="pub-years mono">1995–96</div>
+        </div>
+        <div class="pub-card">
+          <div><div class="pub-name serif">Gulf News</div><div class="pub-sub mono">UAE's leading English daily</div></div>
+          <div class="pub-years mono">2002–03</div>
+        </div>
+      </div>
+      <p class="body-text" style="margin-top:20px;">Writing taught me to identify what matters — to translate complex ideas into human language, to see a market the way a reader sees a story: what is the conflict, what is at stake, and where is it going? Every platform I've built is, at heart, an act of writing. A thesis before its time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ════════════════════════════════ -->
+<section id="contact">
+  <div class="container">
+    <h2 class="conn-title serif reveal">
+      If you are building<br>the future — let's<br><strong>talk.</strong>
+    </h2>
+    <p class="conn-subtitle reveal">AI transformation, ESG advisory, innovation strategy, clean energy dealmaking, and building what others are still only talking about.</p>
+    <div class="conn-links reveal">
+      <a class="conn-link primary mono" href="mailto:khurrambadar@gmail.com">khurrambadar@gmail.com</a>
+      <a class="conn-link mono" href="tel:+923262266682">+92 326 2266682</a>
+      <a class="conn-link mono" href="tel:+971556239111">+971 55 6239111</a>
+      <a class="conn-link mono" href="http://khurrambadar.com" target="_blank" rel="noopener">khurrambadar.com</a>
+    </div>
+    <div class="signature serif reveal">
+      "An AI Innovator who's seen every major wave —<br>
+      blockchain, fintech, ESG, AI —<br>
+      years before the mainstream did.<br><br>
+      A writer from the last century. Writing since 1995: Dawn · Gulf News.<br><br>
+      <strong>See you on the other side. The proof is online.</strong>"
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═════════════════════════════════ -->
+<footer>
+  <p>© 2025–2026 <span>Khurram Badar</span>. All rights reserved.</p>
+  <p class="mono">Karachi · Dubai · The New World</p>
+  <p class="mono">khurrambrother.com</p>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scrolltop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<script>
+/* ── NAV ── */
+function toggleMenu() {
+  const h = document.getElementById('ham');
+  const d = document.getElementById('drawer');
+  h.classList.toggle('open');
+  d.classList.toggle('open');
+  document.body.style.overflow = d.classList.contains('open') ? 'hidden' : '';
+}
+function closeMenu() {
+  document.getElementById('ham').classList.remove('open');
+  document.getElementById('drawer').classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Close drawer on outside tap
+document.getElementById('drawer').addEventListener('click', function(e){
+  if(e.target === this) closeMenu();
+});
+
+/* ── SCROLL REVEAL ── */
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ── SCROLL TO TOP ── */
+const scrollBtn = document.getElementById('scrolltop');
+window.addEventListener('scroll', () => {
+  scrollBtn.classList.toggle('visible', window.scrollY > 400);
+}, { passive: true });
+
+/* ── NAV SHRINK ── */
+const navEl = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  navEl.style.height = window.scrollY > 60 ? '48px' : '56px';
+}, { passive: true });
+
+/* ── FILTER LUMINARIES ── */
+function filterCards(cat, btn) {
+  // Update active button
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  // Filter cards
+  document.querySelectorAll('#lumGrid .lum-card').forEach(card => {
+    const c = card.getAttribute('data-cat');
+    const show = cat === 'all' || c === cat || c === 'all';
+    card.style.display = show ? '' : 'none';
+    if(show) card.style.animation = 'fadeUp 0.3s ease';
+  });
+}
+/* ── ANIMATIONS ── */
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
+`;
+document.head.appendChild(style);
+
+/* ── iOS SAFE AREAS ── */
+document.documentElement.style.setProperty(
+  '--safe-top', 'env(safe-area-inset-top)'
+);
+
+/* ── PREVENT DOUBLE TAP ZOOM on buttons ── */
+document.querySelectorAll('button, a').forEach(el => {
+  el.addEventListener('touchend', e => { e.preventDefault(); el.click(); }, { passive: false });
+});
+</script>
+</body>
+</html>
