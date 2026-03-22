@@ -1,3 +1,5 @@
+import { KNOWLEDGE_BASE } from './knowledge.js';
+
 export const config = { runtime: 'edge' };
 
 export default async function handler(req) {
@@ -41,6 +43,11 @@ export default async function handler(req) {
 
     // Cap max_tokens to prevent abuse
     body.max_tokens = Math.min(body.max_tokens || 1024, 2048);
+
+    // Inject knowledge base into system prompt if present
+    if (body.system && typeof body.system === 'string') {
+      body.system = body.system + '\n\nKNOWLEDGE BASE (use this data to answer financial/macro questions):\n' + KNOWLEDGE_BASE;
+    }
 
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
