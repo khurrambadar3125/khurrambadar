@@ -644,6 +644,71 @@ CONCLUSIONS:
 4. Structural bull INTACT but delayed — JP Morgan $6,300 year-end, Deutsche Bank $6,000. Timeline pushed 90 days right.
 5. Peace dividend trade: Buy gold on initial ceasefire dip, buy silver aggressively for ratio compression, short DXY as war premium exits.
 
+-------------------------------------------------------------
+15. DAILY MARKET INTELLIGENCE FRAMEWORK — SIGNAL MATRIX & THESIS TRACKER
+-------------------------------------------------------------
+
+KHURRAM BADAR'S 6 CORE THESES (Track daily — INTACT / STRESS-TESTED / BROKEN):
+
+THESIS A — DXY STRUCTURAL FLOOR (96-97):
+- INTACT if: DXY < 102, BOJ still hiking, Fed in easing bias.
+- STRESS-TESTED if: DXY exceeds 102 sustainably.
+- BROKEN only if: DXY exceeds 104 with no war and full BOJ normalization.
+- Current status (Mar 2026): INTACT — DXY 99-100 is war premium, not structural strength.
+
+THESIS B — 4D CHESS (Warsh blocked, Powell stays, QE continues):
+- INTACT if: Tillis blocking, DOJ investigation ongoing, Fed balance sheet expanding, rate at 3.5%.
+- BROKEN if: Warsh confirmed, OR Fed restarts QT aggressively, OR Fed hikes rates.
+- Current status: INTACT — Tillis firm, investigation ongoing, Powell doing $40B/mo QE.
+
+THESIS C — BOJ RATE HIKE PATH (1.25-1.5% by Jul-Aug 2026):
+- INTACT if: BOJ in hiking cycle. Each 25bp narrows spread, pressures DXY.
+- BROKEN if: BOJ explicitly pauses or reverses.
+- Current status: INTACT — BOJ at 0.75%, next hike expected by mid-2026.
+
+THESIS D — GOLD STRUCTURAL BULL ($5,500-$6,300 year-end):
+- INTACT: CB buying 1,000+ tonnes/yr, 5 consecutive supply deficits, China export controls, COMEX stress.
+- Currently in CYCLICAL CORRECTION due to war/hawkish Fed.
+- BROKEN only if: Real yields above 3%, OR Fed multi-year pause, OR CB buying reverses.
+
+THESIS E — PEACE DIVIDEND TRADE (post-ceasefire):
+- PENDING until ceasefire. On confirmation: Buy gold on 3-5% dip, buy silver aggressively (ratio compression 75→50), short DXY (war premium exits 3-4 pts), long equities (+3-5%).
+- Gold target within 30 days of ceasefire: $5,000-$5,400. Silver: $90-$110. DXY: 96-97.
+
+THESIS F — CYCLICAL vs STRUCTURAL:
+- Always active. If metals move >5% in one day on single news item = CYCLICAL.
+- If gold holds/rises despite dollar strength = STRUCTURAL.
+- The 2025 rally: 60-70% cyclical (DXY 110→96), 30-40% structural (CB buying, deficits).
+
+14-SIGNAL MATRIX (evaluate daily):
+Signal 1: DXY below 98 → BULLISH metals (war premium exiting or dollar weakness structural)
+Signal 2: DXY above 101 → BEARISH metals (war escalating or hawkish Fed)
+Signal 3: 10Y yield below 4.0% → STRONG BUY gold (rate cuts priced, real yields falling)
+Signal 4: 10Y yield above 4.5% → BEARISH metals (real yields too high for gold)
+Signal 5: Oil below $80 sustained → BULLISH gold within 2-4 weeks (rate cut path reopens)
+Signal 6: Oil above $110 → Stagflation (bearish gold near-term, ultra-bullish long-term when Fed forced to choose growth)
+Signal 7: CEASEFIRE announced → Execute Peace Dividend Trade (Thesis E activation)
+Signal 8: BOJ rate hike → BULLISH gold (each 25bp = DXY -0.8-1.2% direct, -2-4% with carry unwind)
+Signal 9: Fed signals rate cut → STRONGEST possible buy signal for gold/silver
+Signal 10: Warsh confirmed → SHORT gold (4D Chess broken). Watch first statements for hawk/dove.
+Signal 11: Gold-Silver ratio above 75 → Silver very cheap, historical mean reversion opportunity
+Signal 12: Shanghai premium above $10/oz → Structural demand confirmed, physical diverging from paper
+Signal 13: COMEX registered silver below 80M oz → Delivery stress rising. Below 50M oz = CRITICAL.
+Signal 14: DXY + Gold BOTH rising simultaneously → Rarest and most bullish signal. CB buying overwhelming dollar-gold inverse.
+
+MULTI-SIGNAL ALERTS:
+RED ALERT: Signals 2 + 4 + 6 + 10 triggered together = maximum danger for metals.
+GREEN LIGHT: Signals 1 + 3 + 5 + 7 + 8 + 9 triggered together = maximum bullish alignment.
+
+KEY LEVELS MASTER REFERENCE:
+Gold: $6,000-6,300 (JP Morgan/DB year-end) | $5,500-5,600 (Jan ATH) | $5,000 (key resistance) | $4,700 (recovery target) | $4,250-4,400 (CRITICAL support) | $4,200 (200-day EMA) | $3,500 (structural floor)
+Silver: $120 (ATH) | $90-97 (war peak) | $85 (recovery) | $65 (support) | $50-60 (structural floor)
+DXY: 103-106 (major resistance) | 101-102 (war escalation) | 99-101 (war premium zone) | 97-98 (de-escalation) | 96-97 (structural floor) | 94-95 (BOJ aggressive) | 91-93 (BOJ full normalization)
+10Y Yield: Above 4.6% (danger) | 4.3-4.5% (war-elevated) | 4.0-4.2% (neutral) | Below 4.0% (bullish gold) | Below 3.5% (strongly bullish)
+US-Japan Spread: Above 3.5% (carry strong) | 2.5-3.5% (moderating) | Below 2.0% (CRITICAL unwind) | Below 1.5% (carry dead)
+Oil: Above $110 (stagflation alert) | $90-110 (war premium) | $70-90 (normal) | Below $70 (post-war relief, bullish gold)
+Gold-Silver Ratio: 80+ (silver very cheap) | 60-70 (neutral) | 50 (balanced) | 40 (silver overvalued)
+
 =============================================================
 END OF KNOWLEDGE BASE
 =============================================================
