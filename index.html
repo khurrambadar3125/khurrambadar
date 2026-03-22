@@ -746,6 +746,65 @@ footer p {
   letter-spacing: 0.1em; color: var(--muted); margin-bottom: 4px;
 }
 footer span { color: var(--gold); }
+.legal-links {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px;
+  margin-top: 12px;
+}
+.legal-links a {
+  font-family: 'DM Mono', monospace; font-size: 8.5px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); opacity: 0.7;
+  transition: all 0.2s; border-bottom: 1px solid transparent;
+}
+.legal-links a:hover { color: var(--gold); opacity: 1; border-color: rgba(201,146,31,0.3); }
+
+/* ── LEGAL OVERLAY ── */
+.legal-overlay {
+  position: fixed; inset: 0; z-index: 11000;
+  background: rgba(0,0,0,0.85); backdrop-filter: blur(10px);
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.legal-overlay.open { display: flex; }
+.legal-content {
+  background: #0a0c18;
+  border: 1px solid rgba(201,146,31,0.2);
+  border-radius: 12px;
+  max-width: 680px; width: 100%;
+  max-height: 80vh; overflow-y: auto;
+  padding: 32px 28px;
+  scrollbar-width: thin; scrollbar-color: rgba(201,146,31,0.2) transparent;
+}
+.legal-content::-webkit-scrollbar { width: 4px; }
+.legal-content::-webkit-scrollbar-thumb { background: rgba(201,146,31,0.2); border-radius: 2px; }
+.legal-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 700; color: var(--cream);
+  margin-bottom: 8px;
+}
+.legal-content .legal-label {
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 20px; display: block;
+}
+.legal-content p, .legal-content li {
+  font-size: 12.5px; line-height: 1.8; color: rgba(237,232,220,0.65);
+  margin-bottom: 12px;
+}
+.legal-content strong { color: rgba(237,232,220,0.85); }
+.legal-content ul { padding-left: 18px; margin-bottom: 12px; }
+.legal-content h4 {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); margin: 20px 0 8px; opacity: 0.8;
+}
+.legal-close {
+  position: sticky; top: 0; float: right;
+  width: 32px; height: 32px; border: none; border-radius: 6px;
+  background: rgba(255,255,255,0.05); color: var(--muted);
+  font-size: 18px; cursor: pointer; z-index: 1;
+}
+.legal-close:hover { background: rgba(255,255,255,0.1); color: var(--cream); }
 @media (min-width: 768px) {
   footer {
     padding: 24px var(--pad-tablet);
@@ -1344,7 +1403,160 @@ footer span { color: var(--gold); }
   <p>© 2025–2026 <span>Khurram Badar</span>. All rights reserved.</p>
   <p class="mono">Karachi · Dubai · The New World</p>
   <p class="mono">khurrambrother.com</p>
+  <div class="legal-links">
+    <a href="#" onclick="openLegal('disclaimer');return false">Disclaimer</a>
+    <a href="#" onclick="openLegal('financial');return false">Not Financial Advice</a>
+    <a href="#" onclick="openLegal('privacy');return false">Privacy Policy</a>
+    <a href="#" onclick="openLegal('liability');return false">Limitation of Liability</a>
+    <a href="#" onclick="openLegal('ai');return false">AI Disclosure</a>
+  </div>
 </footer>
+
+<!-- ══ LEGAL OVERLAYS ═════════════════════════ -->
+<div class="legal-overlay" id="legal-overlay" onclick="if(event.target===this)closeLegal()">
+  <div class="legal-content">
+    <button class="legal-close" onclick="closeLegal()">&times;</button>
+
+    <!-- DISCLAIMER -->
+    <div id="legal-disclaimer" style="display:none">
+      <span class="legal-label">General Disclaimer</span>
+      <h3>Disclaimer</h3>
+      <p><strong>Effective Date: March 2026</strong></p>
+      <p>This website and all content, research, analysis, opinions, and materials published herein (collectively, the "Content") are provided by <strong>Khurram Badar</strong> ("the Author") solely for <strong>informational and educational purposes</strong>.</p>
+      <h4>No Professional Relationship</h4>
+      <p>Use of this website does not create any professional, advisory, fiduciary, consultancy, or client relationship between you and Khurram Badar. The Author is not acting as your financial adviser, investment adviser, broker, dealer, attorney, accountant, or in any other professional capacity.</p>
+      <h4>No Guarantees</h4>
+      <p>The Content is provided on an <strong>"as is" and "as available"</strong> basis without warranties of any kind, either express or implied. The Author makes no representations or warranties regarding the accuracy, completeness, reliability, suitability, or timeliness of any Content.</p>
+      <h4>Forward-Looking Statements</h4>
+      <p>This website may contain forward-looking statements, projections, forecasts, scenario analyses, and probability assessments. These are inherently uncertain, based on assumptions that may prove incorrect, and should not be relied upon as predictions of future events or performance.</p>
+      <h4>Third-Party Sources</h4>
+      <p>The Content may reference or cite third-party sources including but not limited to Reuters, Bloomberg, CNBC, Trading Economics, the Wall Street Journal, and others. The Author does not control, verify, or guarantee the accuracy of third-party information. All citations are for reference only.</p>
+      <h4>Jurisdiction</h4>
+      <p>This website is operated from Pakistan and the United Arab Emirates. The Content may not be appropriate or available for use in all jurisdictions. Users accessing this website from other locations do so at their own risk and are responsible for compliance with local laws.</p>
+    </div>
+
+    <!-- NOT FINANCIAL ADVICE -->
+    <div id="legal-financial" style="display:none">
+      <span class="legal-label">Financial Disclaimer</span>
+      <h3>Not Financial Advice</h3>
+      <p><strong>Effective Date: March 2026</strong></p>
+      <p>Nothing on this website constitutes <strong>financial advice, investment advice, trading advice, or any other form of professional advice</strong>. All Content — including but not limited to market analysis, research notes, presentations, price targets, probability assessments, scenario modelling, and commentary on gold, silver, DXY, bonds, equities, cryptocurrencies, central bank policy, and geopolitical events — is published strictly for <strong>informational and educational purposes only</strong>.</p>
+      <h4>Not a Recommendation</h4>
+      <p>No Content on this website should be interpreted as a recommendation to buy, sell, hold, or trade any financial instrument, security, commodity, currency, or derivative. Any references to specific assets, price levels, or trading strategies are illustrative only and do not constitute personalised advice.</p>
+      <h4>Do Your Own Research</h4>
+      <p>You are solely responsible for your own investment decisions. Before making any financial decision, you should:</p>
+      <ul>
+        <li>Conduct your own independent research and due diligence</li>
+        <li>Consult with a qualified, licensed financial adviser</li>
+        <li>Consider your personal financial circumstances, risk tolerance, and investment objectives</li>
+        <li>Understand that all investments carry risk, including the potential loss of principal</li>
+      </ul>
+      <h4>Past Performance</h4>
+      <p>Any historical data, past performance metrics, or backtested results presented on this website are <strong>not indicative of future results</strong>. Markets are inherently unpredictable and past patterns may not repeat.</p>
+      <h4>Risk Warning</h4>
+      <p>Trading and investing in financial markets, precious metals, commodities, forex, and cryptocurrencies involves <strong>substantial risk of loss</strong> and is not suitable for all investors. You could lose some or all of your invested capital. Leveraged products (futures, options, CFDs) carry additional risk and can result in losses exceeding your initial deposit.</p>
+      <h4>Proprietary Research</h4>
+      <p>Research labelled as "proprietary," "KRM Intelligence," or attributed to Khurram Badar represents the Author's personal analysis and opinions. It has not been independently verified, audited, or peer-reviewed. It may contain errors, omissions, or biases.</p>
+      <h4>No Regulatory Oversight</h4>
+      <p>Khurram Badar is <strong>not a registered financial adviser, broker-dealer, investment adviser, or regulated entity</strong> in any jurisdiction. This website is not registered with or supervised by the SEC, FCA, SBP, DFSA, SECP, or any other financial regulatory authority.</p>
+    </div>
+
+    <!-- PRIVACY POLICY -->
+    <div id="legal-privacy" style="display:none">
+      <span class="legal-label">Privacy &amp; Data Policy</span>
+      <h3>Privacy Policy</h3>
+      <p><strong>Effective Date: March 2026</strong></p>
+      <h4>Information We Collect</h4>
+      <p>This website may collect the following information:</p>
+      <ul>
+        <li><strong>Chat Interactions:</strong> Messages sent through the KRM AI chatbot are processed in real-time by third-party AI services (Anthropic Claude) and are <strong>not stored, logged, or retained</strong> by this website after the session ends.</li>
+        <li><strong>Meeting Requests:</strong> If you voluntarily submit your name, organisation, email, or phone number through the chatbot's appointment booking feature, this information is transmitted via email or WhatsApp and is used solely to facilitate a meeting with Khurram Badar.</li>
+        <li><strong>Analytics:</strong> This website may use standard web analytics (e.g., page views, referral sources) through hosting platform analytics. No personally identifiable information is collected through analytics.</li>
+      </ul>
+      <h4>How We Use Information</h4>
+      <ul>
+        <li>To respond to your enquiries and facilitate requested meetings</li>
+        <li>To improve the website and chatbot experience</li>
+        <li>We do <strong>not</strong> sell, rent, trade, or share your personal information with third parties for marketing purposes</li>
+      </ul>
+      <h4>Third-Party Services</h4>
+      <p>The KRM chatbot is powered by <strong>Anthropic's Claude AI</strong>. Chat messages are sent to Anthropic's API for processing. Anthropic's data handling is governed by their own privacy policy. We encourage you to review <strong>Anthropic's privacy policy</strong> for details on how they process data.</p>
+      <h4>Cookies</h4>
+      <p>This website does not use tracking cookies. Hosting platform (Vercel) may set essential functional cookies for performance and security.</p>
+      <h4>Data Retention</h4>
+      <p>Chat conversations are <strong>not stored</strong> after the browser session ends. Meeting request data is retained only as long as necessary to facilitate the requested appointment.</p>
+      <h4>Your Rights</h4>
+      <p>You have the right to:</p>
+      <ul>
+        <li>Request information about any personal data we hold</li>
+        <li>Request deletion of your personal data</li>
+        <li>Withdraw consent at any time</li>
+      </ul>
+      <p>Contact: <strong>khurrambadar@gmail.com</strong></p>
+      <h4>Children</h4>
+      <p>This website is not directed at individuals under the age of 18. We do not knowingly collect information from minors.</p>
+    </div>
+
+    <!-- LIMITATION OF LIABILITY -->
+    <div id="legal-liability" style="display:none">
+      <span class="legal-label">Legal</span>
+      <h3>Limitation of Liability</h3>
+      <p><strong>Effective Date: March 2026</strong></p>
+      <h4>Complete Limitation</h4>
+      <p>To the <strong>fullest extent permitted by applicable law</strong>, Khurram Badar, his affiliates, associates, employees, agents, successors, and assigns (collectively, the "Released Parties") shall <strong>not be liable</strong> for any direct, indirect, incidental, special, consequential, punitive, or exemplary damages arising from or related to:</p>
+      <ul>
+        <li>Your use of or reliance on any Content published on this website</li>
+        <li>Any investment, trading, or financial decisions made based on Content from this website</li>
+        <li>Any losses, damages, or expenses (including but not limited to loss of profits, loss of data, business interruption, or financial loss) resulting from your use of this website</li>
+        <li>Any errors, omissions, inaccuracies, or outdated information in the Content</li>
+        <li>Any interactions with the KRM AI chatbot, including any advice, recommendations, or information provided therein</li>
+        <li>Any unauthorised access to or alteration of your data or transmissions</li>
+        <li>Any third-party content, links, or services referenced on this website</li>
+      </ul>
+      <h4>AI-Generated Content</h4>
+      <p>The KRM AI chatbot uses artificial intelligence to generate responses. AI-generated content may be <strong>inaccurate, incomplete, misleading, or outdated</strong>. The Released Parties accept no liability whatsoever for any AI-generated content, including content that may appear authoritative or factual but is in error.</p>
+      <h4>Indemnification</h4>
+      <p>By using this website, you agree to <strong>indemnify and hold harmless</strong> the Released Parties from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the website, your violation of these terms, or your violation of any rights of a third party.</p>
+      <h4>Assumption of Risk</h4>
+      <p>You acknowledge and agree that:</p>
+      <ul>
+        <li>Financial markets are inherently risky and unpredictable</li>
+        <li>You use all Content at your own risk</li>
+        <li>You are solely responsible for your own financial and investment decisions</li>
+        <li>No Content on this website guarantees any outcome</li>
+        <li>The Author may hold positions in assets discussed on this website</li>
+      </ul>
+      <h4>Maximum Liability</h4>
+      <p>In jurisdictions that do not allow the complete exclusion of liability, the total aggregate liability of the Released Parties for any claim arising from use of this website shall not exceed <strong>USD $1.00 (one US dollar)</strong>.</p>
+      <h4>Governing Law</h4>
+      <p>These terms shall be governed by and construed in accordance with the laws of the United Arab Emirates. Any disputes shall be subject to the exclusive jurisdiction of the courts of Dubai, UAE.</p>
+    </div>
+
+    <!-- AI DISCLOSURE -->
+    <div id="legal-ai" style="display:none">
+      <span class="legal-label">AI Disclosure</span>
+      <h3>Artificial Intelligence Disclosure</h3>
+      <p><strong>Effective Date: March 2026</strong></p>
+      <h4>AI-Powered Chatbot</h4>
+      <p>This website features an AI-powered chatbot ("KRM") that uses <strong>Anthropic's Claude</strong> large language model. The chatbot is designed to provide information about Khurram Badar and his work, facilitate contact, and discuss macro-financial topics using a curated knowledge base.</p>
+      <h4>AI Limitations</h4>
+      <p>You should be aware that:</p>
+      <ul>
+        <li>The chatbot is an <strong>artificial intelligence</strong>, not a human being</li>
+        <li>AI responses may contain factual errors, hallucinations, or outdated information</li>
+        <li>The chatbot's knowledge base is curated but may not reflect the most current market data</li>
+        <li>AI cannot predict future market movements, economic events, or geopolitical outcomes</li>
+        <li>The chatbot does not have access to real-time market data</li>
+        <li>Responses are generated algorithmically and do not represent the live, personal opinions of Khurram Badar</li>
+      </ul>
+      <h4>AI-Generated Content</h4>
+      <p>Some content on this website, including research summaries and analytical frameworks, may have been created or assisted by artificial intelligence tools. Such content has been reviewed but may contain errors.</p>
+      <h4>No Reliance</h4>
+      <p>You should <strong>not rely on AI-generated content</strong> for financial, investment, legal, medical, or any other professional decisions. Always verify information independently and consult qualified professionals.</p>
+    </div>
+
+  </div>
+</div>
 
 <!-- Scroll to top -->
 <button id="scrolltop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
@@ -1414,6 +1626,23 @@ document.documentElement.style.setProperty(
 /* ── PREVENT DOUBLE TAP ZOOM on buttons ── */
 document.querySelectorAll('button, a').forEach(el => {
   el.addEventListener('touchend', e => { e.preventDefault(); el.click(); }, { passive: false });
+});
+
+/* ── LEGAL OVERLAYS ── */
+function openLegal(section) {
+  document.querySelectorAll('.legal-content > div[id^="legal-"]').forEach(d => d.style.display = 'none');
+  const target = document.getElementById('legal-' + section);
+  if (target) target.style.display = 'block';
+  document.getElementById('legal-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  document.querySelector('.legal-content').scrollTop = 0;
+}
+function closeLegal() {
+  document.getElementById('legal-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLegal();
 });
 </script>
 
