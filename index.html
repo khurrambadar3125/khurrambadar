@@ -1400,15 +1400,20 @@ footer span { color: var(--gold); }
 
 <!-- ══ FOOTER ═════════════════════════════════ -->
 <footer>
+  <div style="max-width:700px;margin:0 auto 16px;padding:16px 20px;border:1px solid rgba(201,146,31,0.15);background:rgba(201,146,31,0.03);border-radius:6px;text-align:left;">
+    <p style="font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">Important Notice</p>
+    <p style="font-size:11px;line-height:1.7;color:rgba(237,232,220,0.55);margin-bottom:6px;">khurrambadar.com is an educational platform providing AI-generated market commentary and analytical frameworks. Nothing on this platform constitutes financial advice, investment advice, or any form of professional advice. Khurram Badar is not a registered investment adviser or financial professional. All AI-generated analysis is for informational purposes only and may contain errors.</p>
+    <p style="font-size:11px;line-height:1.7;color:rgba(237,232,220,0.55);">Trading and investing involves substantial risk of loss. Past performance is not indicative of future results. You may lose all of your invested capital. Never invest money you cannot afford to lose. Always consult a qualified financial adviser before making investment decisions.</p>
+  </div>
   <p>© 2025–2026 <span>Khurram Badar</span>. All rights reserved.</p>
   <p class="mono">Karachi · Dubai · The New World</p>
   <p class="mono">khurrambrother.com</p>
   <div class="legal-links">
-    <a href="#" onclick="openLegal('disclaimer');return false">Disclaimer</a>
-    <a href="#" onclick="openLegal('financial');return false">Not Financial Advice</a>
+    <a href="#" onclick="openLegal('disclaimer');return false">Financial Disclaimer</a>
+    <a href="#" onclick="openLegal('noadvice');return false">Non-Advice Statement</a>
     <a href="#" onclick="openLegal('privacy');return false">Privacy Policy</a>
-    <a href="#" onclick="openLegal('liability');return false">Limitation of Liability</a>
-    <a href="#" onclick="openLegal('ai');return false">AI Disclosure</a>
+    <a href="#" onclick="openLegal('liability');return false">No-Liability Statement</a>
+    <a href="#" onclick="openLegal('terms');return false">General Terms</a>
   </div>
 </footer>
 
@@ -1417,142 +1422,109 @@ footer span { color: var(--gold); }
   <div class="legal-content">
     <button class="legal-close" onclick="closeLegal()">&times;</button>
 
-    <!-- DISCLAIMER -->
+    <!-- 1. FINANCIAL DISCLAIMER -->
     <div id="legal-disclaimer" style="display:none">
-      <span class="legal-label">General Disclaimer</span>
-      <h3>Disclaimer</h3>
-      <p><strong>Effective Date: March 2026</strong></p>
-      <p>This website and all content, research, analysis, opinions, and materials published herein (collectively, the "Content") are provided by <strong>Khurram Badar</strong> ("the Author") solely for <strong>informational and educational purposes</strong>.</p>
-      <h4>No Professional Relationship</h4>
-      <p>Use of this website does not create any professional, advisory, fiduciary, consultancy, or client relationship between you and Khurram Badar. The Author is not acting as your financial adviser, investment adviser, broker, dealer, attorney, accountant, or in any other professional capacity.</p>
-      <h4>No Guarantees</h4>
-      <p>The Content is provided on an <strong>"as is" and "as available"</strong> basis without warranties of any kind, either express or implied. The Author makes no representations or warranties regarding the accuracy, completeness, reliability, suitability, or timeliness of any Content.</p>
-      <h4>Forward-Looking Statements</h4>
-      <p>This website may contain forward-looking statements, projections, forecasts, scenario analyses, and probability assessments. These are inherently uncertain, based on assumptions that may prove incorrect, and should not be relied upon as predictions of future events or performance.</p>
-      <h4>Third-Party Sources</h4>
-      <p>The Content may reference or cite third-party sources including but not limited to Reuters, Bloomberg, CNBC, Trading Economics, the Wall Street Journal, and others. The Author does not control, verify, or guarantee the accuracy of third-party information. All citations are for reference only.</p>
-      <h4>Jurisdiction</h4>
-      <p>This website is operated from Pakistan and the United Arab Emirates. The Content may not be appropriate or available for use in all jurisdictions. Users accessing this website from other locations do so at their own risk and are responsible for compliance with local laws.</p>
+      <span class="legal-label">Section 1 — Financial Disclaimer</span>
+      <h3>Financial Disclaimer</h3>
+      <p><strong>Effective Date: March 22, 2026 | khurrambadar.com</strong></p>
+      <p>All content published on khurrambadar.com, including but not limited to market analysis, commentary, price predictions, scenario forecasts, signal matrices, thesis evaluations, AI-generated verdicts, charts, tables, and any other materials (collectively, the "Content"), is provided strictly for <strong>informational and educational purposes only</strong>.</p>
+      <h4>1.1 Not Financial Advice</h4>
+      <p>The Content does not constitute and must not be construed as: financial advice of any kind; investment advice, recommendations, or solicitations; trading advice or trade recommendations; portfolio management guidance; tax, legal, or accounting advice; an offer or solicitation to buy or sell any financial instrument, security, commodity, currency, or derivative; or a prospectus, offering memorandum, or disclosure document of any kind.</p>
+      <h4>1.2 No Professional Relationship</h4>
+      <p>Accessing or using khurrambadar.com does not create any professional relationship — including but not limited to a financial advisory, brokerage, fiduciary, attorney-client, or any other professional relationship — between you and Khurram Badar or any affiliated party. <strong>Khurram Badar is not a registered investment adviser, broker-dealer, financial planner, financial analyst, portfolio manager, commodity trading adviser, or any other regulated financial professional in any jurisdiction.</strong></p>
+      <h4>1.3 AI-Generated Content Disclaimer</h4>
+      <p>This platform uses artificial intelligence (AI) systems to generate market commentary, analysis, and daily verdicts. You explicitly acknowledge that: AI-generated content is produced by automated systems and reflects pattern recognition, not human professional judgement; AI systems can produce <strong>errors, hallucinations, outdated information, and factually incorrect statements</strong> without any indication that such errors have occurred; AI-generated market commentary does not incorporate your personal financial circumstances, goals, risk tolerance, tax situation, or investment horizon; past analytical accuracy provides no guarantee of future accuracy.</p>
+      <h4>1.4 Past Performance Warning</h4>
+      <p><strong>PAST PERFORMANCE IS NOT INDICATIVE OF FUTURE RESULTS.</strong> Any reference to historical price movements, returns, thesis accuracy, or market outcomes is purely for informational context. Markets can and do move in ways that contradict all analysis, however sophisticated.</p>
+      <h4>1.5 Risk Warning</h4>
+      <p>Trading and investing in financial markets — including equities, fixed income, currencies, commodities, precious metals, cryptocurrencies, and derivatives — involves <strong>substantial risk of loss</strong>. You may lose some or all of your invested capital. Leveraged products amplify both gains and losses. You should never invest money you cannot afford to lose.</p>
+      <h4>1.6 Jurisdiction Notice</h4>
+      <p>The Content is intended for a general, global audience and is not directed at any specific jurisdiction. Financial regulations vary significantly across jurisdictions. It is your sole responsibility to ensure compliance with the laws and regulations applicable in your jurisdiction.</p>
     </div>
 
-    <!-- NOT FINANCIAL ADVICE -->
-    <div id="legal-financial" style="display:none">
-      <span class="legal-label">Financial Disclaimer</span>
-      <h3>Not Financial Advice</h3>
-      <p><strong>Effective Date: March 2026</strong></p>
-      <p>Nothing on this website constitutes <strong>financial advice, investment advice, trading advice, or any other form of professional advice</strong>. All Content — including but not limited to market analysis, research notes, presentations, price targets, probability assessments, scenario modelling, and commentary on gold, silver, DXY, bonds, equities, cryptocurrencies, central bank policy, and geopolitical events — is published strictly for <strong>informational and educational purposes only</strong>.</p>
-      <h4>Not a Recommendation</h4>
-      <p>No Content on this website should be interpreted as a recommendation to buy, sell, hold, or trade any financial instrument, security, commodity, currency, or derivative. Any references to specific assets, price levels, or trading strategies are illustrative only and do not constitute personalised advice.</p>
-      <h4>Do Your Own Research</h4>
-      <p>You are solely responsible for your own investment decisions. Before making any financial decision, you should:</p>
-      <ul>
-        <li>Conduct your own independent research and due diligence</li>
-        <li>Consult with a qualified, licensed financial adviser</li>
-        <li>Consider your personal financial circumstances, risk tolerance, and investment objectives</li>
-        <li>Understand that all investments carry risk, including the potential loss of principal</li>
-      </ul>
-      <h4>Past Performance</h4>
-      <p>Any historical data, past performance metrics, or backtested results presented on this website are <strong>not indicative of future results</strong>. Markets are inherently unpredictable and past patterns may not repeat.</p>
-      <h4>Risk Warning</h4>
-      <p>Trading and investing in financial markets, precious metals, commodities, forex, and cryptocurrencies involves <strong>substantial risk of loss</strong> and is not suitable for all investors. You could lose some or all of your invested capital. Leveraged products (futures, options, CFDs) carry additional risk and can result in losses exceeding your initial deposit.</p>
-      <h4>Proprietary Research</h4>
-      <p>Research labelled as "proprietary," "KRM Intelligence," or attributed to Khurram Badar represents the Author's personal analysis and opinions. It has not been independently verified, audited, or peer-reviewed. It may contain errors, omissions, or biases.</p>
-      <h4>No Regulatory Oversight</h4>
-      <p>Khurram Badar is <strong>not a registered financial adviser, broker-dealer, investment adviser, or regulated entity</strong> in any jurisdiction. This website is not registered with or supervised by the SEC, FCA, SBP, DFSA, SECP, or any other financial regulatory authority.</p>
+    <!-- 2. NON-ADVICE STATEMENT -->
+    <div id="legal-noadvice" style="display:none">
+      <span class="legal-label">Section 2 — Non-Financial Advice Statement</span>
+      <h3>Non-Financial Advice Statement</h3>
+      <p><strong>Effective Date: March 22, 2026 | khurrambadar.com</strong></p>
+      <h4>2.1 The Platform Is An Educational Tool</h4>
+      <p>khurrambadar.com is an educational and analytical platform that presents market intelligence frameworks, macro-economic theses, and AI-generated commentary for the purpose of learning, discussion, and intellectual engagement with financial markets.</p>
+      <p>The platform is designed to: present analytical frameworks and methodologies; demonstrate how macroeconomic variables interact with asset prices; provide AI-generated interpretations of publicly available market data; track the status of analytical theses over time for educational purposes.</p>
+      <p><strong>The platform is NOT designed to:</strong> tell you what to buy or sell; manage your money or investments; provide personalised financial planning; replace the advice of a qualified financial professional.</p>
+      <h4>2.2 Always Seek Professional Advice</h4>
+      <p>Before making any financial decision based on information encountered on this platform, you should consult with a <strong>qualified, licensed financial adviser</strong> who is familiar with your personal circumstances.</p>
+      <h4>2.3 The 'User's Thesis' Framework</h4>
+      <p>khurrambadar.com presents analysis built around a specific individual's research framework. This framework, including theses labeled A through F, signal matrices, key price levels, and scenario probabilities, represents <strong>one person's analytical viewpoint</strong> developed through personal research. It is not endorsed by any financial institution, regulator, or professional body. You should treat it as one perspective among many, requiring your own critical evaluation.</p>
+      <h4>2.4 Scenario Probabilities Are Estimates, Not Predictions</h4>
+      <p>Any probability estimates presented on this platform (e.g., "45% probability of Scenario A") are <strong>illustrative estimates</strong> based on an analytical framework. They are not statistical forecasts derived from quantitative models, actuarial analysis, or any regulated forecasting methodology. They carry no mathematical guarantee and should not be relied upon as predictive.</p>
     </div>
 
-    <!-- PRIVACY POLICY -->
+    <!-- 3. PRIVACY POLICY -->
     <div id="legal-privacy" style="display:none">
-      <span class="legal-label">Privacy &amp; Data Policy</span>
+      <span class="legal-label">Section 3 — Privacy Policy</span>
       <h3>Privacy Policy</h3>
-      <p><strong>Effective Date: March 2026</strong></p>
-      <h4>Information We Collect</h4>
-      <p>This website may collect the following information:</p>
-      <ul>
-        <li><strong>Chat Interactions:</strong> Messages sent through the KRM AI chatbot are processed in real-time by third-party AI services (Anthropic Claude) and are <strong>not stored, logged, or retained</strong> by this website after the session ends.</li>
-        <li><strong>Meeting Requests:</strong> If you voluntarily submit your name, organisation, email, or phone number through the chatbot's appointment booking feature, this information is transmitted via email or WhatsApp and is used solely to facilitate a meeting with Khurram Badar.</li>
-        <li><strong>Analytics:</strong> This website may use standard web analytics (e.g., page views, referral sources) through hosting platform analytics. No personally identifiable information is collected through analytics.</li>
-      </ul>
-      <h4>How We Use Information</h4>
-      <ul>
-        <li>To respond to your enquiries and facilitate requested meetings</li>
-        <li>To improve the website and chatbot experience</li>
-        <li>We do <strong>not</strong> sell, rent, trade, or share your personal information with third parties for marketing purposes</li>
-      </ul>
-      <h4>Third-Party Services</h4>
-      <p>The KRM chatbot is powered by <strong>Anthropic's Claude AI</strong>. Chat messages are sent to Anthropic's API for processing. Anthropic's data handling is governed by their own privacy policy. We encourage you to review <strong>Anthropic's privacy policy</strong> for details on how they process data.</p>
-      <h4>Cookies</h4>
-      <p>This website does not use tracking cookies. Hosting platform (Vercel) may set essential functional cookies for performance and security.</p>
-      <h4>Data Retention</h4>
-      <p>Chat conversations are <strong>not stored</strong> after the browser session ends. Meeting request data is retained only as long as necessary to facilitate the requested appointment.</p>
-      <h4>Your Rights</h4>
-      <p>You have the right to:</p>
-      <ul>
-        <li>Request information about any personal data we hold</li>
-        <li>Request deletion of your personal data</li>
-        <li>Withdraw consent at any time</li>
-      </ul>
-      <p>Contact: <strong>khurrambadar@gmail.com</strong></p>
-      <h4>Children</h4>
-      <p>This website is not directed at individuals under the age of 18. We do not knowingly collect information from minors.</p>
+      <p><strong>Effective Date: March 22, 2026 | khurrambadar.com</strong></p>
+      <h4>3.1 Information We Collect</h4>
+      <p><strong>Information You Provide Voluntarily:</strong> We may collect information you voluntarily provide when you contact us via email, submit feedback, or use the chatbot appointment booking feature. This may include your name, email address, organisation, and phone number.</p>
+      <p><strong>Information Collected Automatically:</strong> When you visit this platform, we may automatically collect: IP address and approximate geographic location; browser type, version, and operating system; pages visited, time spent, and navigation patterns; device type; date and time of visits.</p>
+      <p><strong>AI Chat Interactions:</strong> Messages sent through the KRM AI chatbot are processed in real-time by third-party AI services (Anthropic Claude) and are <strong>not stored, logged, or retained</strong> by this website after the session ends.</p>
+      <h4>3.2 How We Use Your Information</h4>
+      <p>Information collected is used solely to: operate and improve the platform; respond to enquiries and communications; analyse usage patterns in aggregate, anonymised form; comply with applicable legal obligations. <strong>We do not sell, rent, trade, or otherwise transfer your personal information to third parties for marketing purposes.</strong> khurrambadar.com is an ad-free platform.</p>
+      <h4>3.3 Cookies and Tracking</h4>
+      <p>This platform may use cookies for analytics and session state. We do not use cookies for advertising profiling or behavioural targeting. You may disable cookies through your browser settings.</p>
+      <h4>3.4 Third-Party Services</h4>
+      <p>This platform uses third-party services including: cloud hosting (Vercel); AI API (Anthropic Claude — prompts may be processed subject to their terms); market data API providers. These third parties have their own privacy policies.</p>
+      <h4>3.5 Data Retention</h4>
+      <p>Chat conversations are <strong>not stored</strong> after the browser session ends. Personal data is retained only as long as necessary to fulfil its purpose or as required by law. You may request deletion at any time.</p>
+      <h4>3.6 Children's Privacy</h4>
+      <p>This platform is not directed at children under 18. We do not knowingly collect personal information from minors.</p>
+      <h4>3.7 Your Rights</h4>
+      <p>Depending on your jurisdiction, you may have rights to: access, rectify, erase, restrict processing, port, or object to processing of your personal data. Contact: <strong>khurrambadar@gmail.com</strong>. We will respond within 30 days.</p>
+      <h4>3.8 Changes</h4>
+      <p>We may update this Privacy Policy periodically. Changes will be posted with a revised effective date. Continued use constitutes acceptance.</p>
     </div>
 
-    <!-- LIMITATION OF LIABILITY -->
+    <!-- 4. NO-LIABILITY STATEMENT -->
     <div id="legal-liability" style="display:none">
-      <span class="legal-label">Legal</span>
-      <h3>Limitation of Liability</h3>
-      <p><strong>Effective Date: March 2026</strong></p>
-      <h4>Complete Limitation</h4>
-      <p>To the <strong>fullest extent permitted by applicable law</strong>, Khurram Badar, his affiliates, associates, employees, agents, successors, and assigns (collectively, the "Released Parties") shall <strong>not be liable</strong> for any direct, indirect, incidental, special, consequential, punitive, or exemplary damages arising from or related to:</p>
-      <ul>
-        <li>Your use of or reliance on any Content published on this website</li>
-        <li>Any investment, trading, or financial decisions made based on Content from this website</li>
-        <li>Any losses, damages, or expenses (including but not limited to loss of profits, loss of data, business interruption, or financial loss) resulting from your use of this website</li>
-        <li>Any errors, omissions, inaccuracies, or outdated information in the Content</li>
-        <li>Any interactions with the KRM AI chatbot, including any advice, recommendations, or information provided therein</li>
-        <li>Any unauthorised access to or alteration of your data or transmissions</li>
-        <li>Any third-party content, links, or services referenced on this website</li>
-      </ul>
-      <h4>AI-Generated Content</h4>
-      <p>The KRM AI chatbot uses artificial intelligence to generate responses. AI-generated content may be <strong>inaccurate, incomplete, misleading, or outdated</strong>. The Released Parties accept no liability whatsoever for any AI-generated content, including content that may appear authoritative or factual but is in error.</p>
-      <h4>Indemnification</h4>
-      <p>By using this website, you agree to <strong>indemnify and hold harmless</strong> the Released Parties from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from your use of the website, your violation of these terms, or your violation of any rights of a third party.</p>
-      <h4>Assumption of Risk</h4>
-      <p>You acknowledge and agree that:</p>
-      <ul>
-        <li>Financial markets are inherently risky and unpredictable</li>
-        <li>You use all Content at your own risk</li>
-        <li>You are solely responsible for your own financial and investment decisions</li>
-        <li>No Content on this website guarantees any outcome</li>
-        <li>The Author may hold positions in assets discussed on this website</li>
-      </ul>
-      <h4>Maximum Liability</h4>
-      <p>In jurisdictions that do not allow the complete exclusion of liability, the total aggregate liability of the Released Parties for any claim arising from use of this website shall not exceed <strong>USD $1.00 (one US dollar)</strong>.</p>
-      <h4>Governing Law</h4>
-      <p>These terms shall be governed by and construed in accordance with the laws of the United Arab Emirates. Any disputes shall be subject to the exclusive jurisdiction of the courts of Dubai, UAE.</p>
+      <span class="legal-label">Section 4 — No-Liability Statement</span>
+      <h3>No-Liability Statement</h3>
+      <p><strong>Effective Date: March 22, 2026 | khurrambadar.com</strong></p>
+      <p><strong>READ THIS SECTION CAREFULLY. IT CONTAINS IMPORTANT LIMITATIONS ON LIABILITY.</strong></p>
+      <h4>4.1 Comprehensive Limitation of Liability</h4>
+      <p>To the fullest extent permitted by applicable law, Khurram Badar, the operator of khurrambadar.com, and any affiliated persons, employees, contractors, agents, successors, or assigns (collectively, the "Platform Parties") shall <strong>not be liable</strong> for any of the following, whether arising in contract, tort (including negligence), breach of statutory duty, or otherwise:</p>
+      <p><strong>Financial Losses:</strong> Any loss of money, capital, investment, profit, revenue, or anticipated savings; any trading losses from acting on or failing to act on any Content; any losses from reliance on AI-generated analysis, verdicts, signals, or commentary; any losses from margin calls, liquidations, or forced closures; any losses from cryptocurrency, options, futures, or other derivatives.</p>
+      <p><strong>Indirect and Consequential Losses:</strong> Loss of profits, business, contracts, opportunity, goodwill, or reputation; loss of data; indirect, incidental, special, consequential, punitive, or exemplary damages; any third-party claim against you arising from use of this platform.</p>
+      <p><strong>Platform and Technical Failures:</strong> Interruptions, downtime, errors, inaccuracies, omissions, delays, failure of third-party data feeds or APIs, AI system errors or hallucinations, cybersecurity incidents or data breaches.</p>
+      <p><strong>External Factors:</strong> Changes in laws, regulations, tax treatment, or government policy; market disruptions or force majeure events; actions of third parties including brokers, exchanges, or regulators.</p>
+      <h4>4.2 No Warranty</h4>
+      <p>THE PLATFORM AND ALL CONTENT ARE PROVIDED ON AN <strong>"AS IS" AND "AS AVAILABLE" BASIS WITHOUT ANY WARRANTY OF ANY KIND</strong>, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, ACCURACY, COMPLETENESS, RELIABILITY, OR NON-INFRINGEMENT.</p>
+      <h4>4.3 Assumption of Risk</h4>
+      <p>By using this platform, you expressly acknowledge that you understand the risks associated with financial markets and AI-generated analysis. You assume <strong>full responsibility</strong> for any financial decisions made in connection with your use of this platform.</p>
+      <h4>4.4 Indemnification</h4>
+      <p>You agree to <strong>indemnify, defend, and hold harmless</strong> the Platform Parties from and against any and all claims, damages, losses, costs, and expenses (including reasonable legal fees) arising from: your use of or reliance on any Content; your violation of these terms; your violation of any applicable law; or any financial decision made in connection with your use of this platform.</p>
+      <h4>4.5 Maximum Liability Cap</h4>
+      <p>In jurisdictions that do not allow the complete exclusion of liability, the total aggregate liability of the Platform Parties shall not exceed the greater of: (a) the amount you paid to access this platform in the twelve months preceding the claim, or (b) <strong>one United States Dollar (USD $1.00)</strong>.</p>
+      <h4>4.6 Governing Law</h4>
+      <p>These terms shall be governed by and construed in accordance with the laws of <strong>Pakistan</strong>. You submit to the exclusive jurisdiction of the courts of Karachi, Pakistan for resolution of any dispute.</p>
     </div>
 
-    <!-- AI DISCLOSURE -->
-    <div id="legal-ai" style="display:none">
-      <span class="legal-label">AI Disclosure</span>
-      <h3>Artificial Intelligence Disclosure</h3>
-      <p><strong>Effective Date: March 2026</strong></p>
-      <h4>AI-Powered Chatbot</h4>
-      <p>This website features an AI-powered chatbot ("KRM") that uses <strong>Anthropic's Claude</strong> large language model. The chatbot is designed to provide information about Khurram Badar and his work, facilitate contact, and discuss macro-financial topics using a curated knowledge base.</p>
-      <h4>AI Limitations</h4>
-      <p>You should be aware that:</p>
-      <ul>
-        <li>The chatbot is an <strong>artificial intelligence</strong>, not a human being</li>
-        <li>AI responses may contain factual errors, hallucinations, or outdated information</li>
-        <li>The chatbot's knowledge base is curated but may not reflect the most current market data</li>
-        <li>AI cannot predict future market movements, economic events, or geopolitical outcomes</li>
-        <li>The chatbot does not have access to real-time market data</li>
-        <li>Responses are generated algorithmically and do not represent the live, personal opinions of Khurram Badar</li>
-      </ul>
-      <h4>AI-Generated Content</h4>
-      <p>Some content on this website, including research summaries and analytical frameworks, may have been created or assisted by artificial intelligence tools. Such content has been reviewed but may contain errors.</p>
-      <h4>No Reliance</h4>
-      <p>You should <strong>not rely on AI-generated content</strong> for financial, investment, legal, medical, or any other professional decisions. Always verify information independently and consult qualified professionals.</p>
+    <!-- 5. GENERAL TERMS -->
+    <div id="legal-terms" style="display:none">
+      <span class="legal-label">Section 5 — General Terms</span>
+      <h3>General Terms</h3>
+      <p><strong>Effective Date: March 22, 2026 | khurrambadar.com</strong></p>
+      <h4>5.1 Intellectual Property</h4>
+      <p>All Content on khurrambadar.com, including analytical frameworks, signal matrices, thesis structures, written commentary, AI prompt architecture, and visual presentations, is the <strong>intellectual property of Khurram Badar</strong> unless otherwise indicated. You may not reproduce, distribute, modify, or create derivative works without express written permission. Fair use for personal educational purposes, with proper attribution, is permitted.</p>
+      <h4>5.2 Third-Party Links and Content</h4>
+      <p>This platform may reference or link to third-party websites, data sources, news outlets, or publications. The Platform Parties are not responsible for the content, accuracy, or practices of third-party sites. Any reliance on third-party content is at your own risk.</p>
+      <h4>5.3 Severability</h4>
+      <p>If any provision of these terms is found to be invalid, unlawful, or unenforceable, that provision shall be severed and the remaining provisions shall continue in full force and effect.</p>
+      <h4>5.4 Entire Agreement</h4>
+      <p>These legal terms — comprising the Financial Disclaimer, Non-Financial Advice Statement, Privacy Policy, No-Liability Statement, and General Terms — constitute the <strong>entire agreement</strong> between you and Khurram Badar regarding the use of khurrambadar.com and supersede all prior representations, understandings, or agreements.</p>
+      <h4>5.5 Amendments</h4>
+      <p>Khurram Badar reserves the right to amend any part of these legal terms at any time. Amendments take effect upon posting on this platform. Your continued use following any amendment constitutes acceptance. It is your responsibility to review these terms periodically.</p>
+      <h4>5.6 Contact</h4>
+      <p>For any questions regarding these terms: <strong>khurrambadar@gmail.com</strong></p>
     </div>
 
   </div>
