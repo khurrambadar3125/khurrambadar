@@ -1718,6 +1718,23 @@ document.addEventListener('keydown', function(e) {
   border-radius: 10px;
   animation: krm-msg-in 0.3s ease;
 }
+/* ── QUICK ACTION LINKS ── */
+.krm-quick {
+  color: var(--cream) !important;
+  text-decoration: none !important;
+  border-bottom: 1px dashed rgba(201,146,31,0.3);
+  padding-bottom: 1px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.krm-quick:hover {
+  color: var(--gold) !important;
+  border-bottom-color: var(--gold);
+  text-shadow: 0 0 8px rgba(201,146,31,0.3);
+}
+.krm-quick.krm-pulse {
+  animation: krm-pulse-text 2s ease-in-out infinite;
+}
 @keyframes krm-pulse-text {
   0%, 100% { color: var(--gold); text-shadow: 0 0 0 transparent; }
   50% { color: #F0B840; text-shadow: 0 0 12px rgba(240,184,64,0.4); }
@@ -1935,10 +1952,10 @@ Wishing you and your loved ones a blessed Eid al-Fitr. May this season bring joy
 
 How may I assist you today? I can:
 
-&#8226; Share Khurram's <strong>contact details</strong> (Pakistan / Dubai / WhatsApp)
-&#8226; Tell you about his <strong>work and expertise</strong>
-&#8226; <span style="animation:krm-pulse-text 2s ease-in-out infinite;display:inline-block;">Learn from Khurram's <strong>proprietary market research</strong> (DXY, metals, bonds, Fed policy, geopolitics)</span>
-&#8226; Book a <strong>coffee meeting</strong> with Khurram`;
+&#8226; <a href="#" class="krm-quick" onclick="krmQuickSend('Share Khurram\\'s contact details — Pakistan number, Dubai number, and WhatsApp');return false;">Share Khurram's <strong>contact details</strong> (Pakistan / Dubai / WhatsApp)</a>
+&#8226; <a href="#" class="krm-quick" onclick="krmQuickSend('Tell me about Khurram Badar\\'s work and expertise');return false;">Tell you about his <strong>work and expertise</strong></a>
+&#8226; <a href="#" class="krm-quick krm-pulse" onclick="krmQuickSend('Show me Khurram\\'s proprietary market research — give me today\\'s market verdict with thesis scorecard and signal alerts');return false;">Learn from Khurram's <strong>proprietary market research</strong> (DXY, metals, bonds, Fed policy, geopolitics)</a>
+&#8226; <a href="#" class="krm-quick" onclick="krmQuickSend('I want to book a coffee meeting with Khurram');return false;">Book a <strong>coffee meeting</strong> with Khurram</a>`;
 
   let krmHistory = [];
   let krmBusy = false;
@@ -2057,6 +2074,12 @@ How may I assist you today? I can:
     const el = document.getElementById('krm-typing');
     if (el) el.remove();
   }
+
+  // Quick-send from clickable greeting options
+  window.krmQuickSend = function(text) {
+    document.getElementById('krm-input').value = text;
+    window.krmSend();
+  };
 
   window.krmSend = async function() {
     if (krmBusy) return;
