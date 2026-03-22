@@ -1718,6 +1718,10 @@ document.addEventListener('keydown', function(e) {
   border-radius: 10px;
   animation: krm-msg-in 0.3s ease;
 }
+@keyframes krm-pulse-text {
+  0%, 100% { color: var(--gold); text-shadow: 0 0 0 transparent; }
+  50% { color: #F0B840; text-shadow: 0 0 12px rgba(240,184,64,0.4); }
+}
 @keyframes krm-msg-in {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: none; }
@@ -1933,7 +1937,7 @@ How may I assist you today? I can:
 
 &#8226; Share Khurram's <strong>contact details</strong> (Pakistan / Dubai / WhatsApp)
 &#8226; Tell you about his <strong>work and expertise</strong>
-&#8226; Learn from Khurram's <strong>proprietary market research</strong> (DXY, metals, bonds, Fed policy, geopolitics)
+&#8226; <span style="animation:krm-pulse-text 2s ease-in-out infinite;display:inline-block;">Learn from Khurram's <strong>proprietary market research</strong> (DXY, metals, bonds, Fed policy, geopolitics)</span>
 &#8226; Book a <strong>coffee meeting</strong> with Khurram`;
 
   let krmHistory = [];
