@@ -567,6 +567,83 @@ Probability-Weighted Year-End Targets:
 - Gold: (0.45 × 5800) + (0.25 × 6200) + (0.15 × 4000) + (0.15 × 5100) = $5,525.
 - Silver: (0.45 × 70) + (0.25 × 82.5) + (0.15 × 40) + (0.15 × 57.5) = $66.9.
 
+-------------------------------------------------------------
+14. OPERATION EPIC FURY — IRAN WAR MARKET CHRONICLE (Feb 27 – Mar 22, 2026)
+-------------------------------------------------------------
+
+MASTER TIMELINE — 25 Days That Shook Markets:
+- Feb 27: Oman FM declared 'breakthrough reached' in Iran nuclear talks. Gold $5,296, DXY 97.5, Oil ~$70.
+- Feb 28 (Sat): Operation Epic Fury launched. US/Israel strike Iran. Khamenei killed. Hormuz threatened.
+- Mar 2 (Mon): First full trading day. Gold spiked to $5,423 (+5%), then confusion. 10Y yields ROSE (unusual).
+- Mar 3 (Tue): Gold crashed -6% to $5,085. El-Erian: 'Bond market MORE worried about inflation than safety.'
+- Mar 5-7: Trump says '4 weeks max'. Gold stabilizes $5,172. Oil $85.41.
+- Mar 8-10: Iran FM: 'No ceasefire'. Oil infrastructure hit. DXY climbs to 99.4.
+- Mar 11: 10Y Treasury hit 4.21% — HIGHEST in 11 months DURING ACTIVE WAR. Bonds NOT a safe haven.
+- Mar 13: DXY breaks 100 (100.32) — highest since May 2025.
+- Mar 17: PPI +0.7% — hottest since mid-2025.
+- Mar 18: FOMC 'hawkish hold'. Dot plot: ONLY 1 CUT for all of 2026 (markets had priced 3). Gold crashed to $4,885.
+- Mar 19: FLASH CRASH — Gold session low $4,557.80 (-6.9%), Silver $67.84 (-12.5%), VIX 26.78 (+11%), 10Y 4.39%.
+- Mar 22: Gold $4,495 (-15% from war start), Silver ~$69 (-23%), DXY 99.3, 10Y 4.35%, Oil ~$100.
+
+ASSET SCOREBOARD (Feb 27 → Mar 22):
+- Gold: $5,296 → $4,495 = -15.1%
+- Silver: $90+ → ~$69 = -25%+
+- DXY: 97.5 → 99.3 = +1.8%
+- 10Y Yield: 4.05% → 4.35% = +30bp
+- Oil (Brent): $70 → ~$100 = +43%
+- S&P 500: ~6,700 → ~6,500 = -3%
+- Bitcoin: ~$92k → ~$70k = -24%
+
+THE GRAND PARADOX — Why Gold Crashed DURING War:
+1. OIL SHOCK = INFLATION = HAWKISH FED: War is supply-side inflation event. Oil $70→$119. Forces CBs to hold/raise rates. Higher real rates = lower gold.
+2. DOLLAR TOOK SAFE-HAVEN CROWN: USD — not gold — is primary 2026 crisis asset. Oil priced in dollars = supply shock INCREASES dollar demand.
+3. GOLD WAS OVERVALUED/OVERLEVERAGED: 64% rally in 2025, $5,594 ATH Jan. Parabolic move + thin positioning = vulnerable.
+4. MARGIN CALLS ACROSS RISK ASSETS: S&P -3%, Bitcoin -24%. Funds sell gold to cover losses elsewhere. 'Sell what you can.'
+5. BOND MARKET FAILURE: Bonds FELL (yields rose 4.05%→4.39%). Inflation fear overwhelmed safety bid. Gold's war rally mechanism broken.
+6. SYNCHRONIZED GLOBAL HAWKISHNESS: Not just Fed — BOJ held, ECB reconsidering cuts, RBA hiked, SNB flagged intervention.
+
+DXY WAR PREMIUM ANALYSIS:
+- War premium in DXY = ~2-3 points.
+- DXY was heading to 96-97 before war. War pushed to 100+.
+- When war ends: DXY falls 3-4 points immediately.
+- Combined with BOJ hikes: DXY 91-93 by August target INTACT but delayed 60-90 days.
+- 96-97 structural floor CONFIRMED — war is temporary override.
+
+FORWARD SCENARIOS (Mar 22 – Apr 16):
+Scenario A — War Drags On (45%): Gold $4,200-$4,700, DXY 99-101, Oil $90-105. Limbo. $4,250-4,400 critical support.
+Scenario B — Escalation / Hormuz Fully Closed (20%): Gold $4,800-$5,200, DXY 101-104, Oil $120-140. Full stagflation. BOTH gold AND dollar rally.
+Scenario C — De-Escalation / Ceasefire (35%): Gold initial dip then $4,500-$5,000, DXY 96-98, Oil $72-82. Peace dividend. Gold recovers as DXY falls.
+
+WHEN WAR ENDS — Post-Ceasefire Playbook (Historical Precedent):
+Gold: Day 1-7 initial dip -3% to -5% (safe-haven unwind), Day 8-30 recovery +8% to +15% (DXY falls, rate cut hopes), Day 31-90 structural bull $5,000-$5,500.
+Silver: Day 1-7 sharp dip -5% to -8%, Day 8-30 outperforms gold +12% to +20% (ratio compression), Day 31-90 target $90-$100.
+DXY: Day 1-7 immediate drop -1.5% to -3%, Day 8-30 accelerated weakening 97-98, Day 31-90 trending lower 93-96 (BOJ thesis resumes).
+Oil: Day 1-7 flash crash -15% to -25% (Hormuz reopens), Day 8-30 settles $72-82, Day 31-90 pre-war $70 baseline.
+S&P: Day 1-7 surge +2% to +4% (relief), Day 8-30 consolidation, Day 31-90 trend to 7,000-7,500 if Fed signals cuts.
+
+Historical precedent: Gulf War '91 gold -8% then +15%, Iraq '03 gold -5% then +12%, Ukraine ceasefire gold -4% then +8%.
+
+CRITICAL DATES AHEAD:
+- Mar 28: Core PCE (HIGH)
+- Apr 4: NFP Jobs Report (HIGH)
+- Apr 10: CPI Release (CRITICAL)
+- Apr 29: FOMC — Powell's last? (CRITICAL)
+- Mid-May: Powell term ends (CRITICAL)
+- Jun 17: 1st Warsh FOMC (HIGHEST)
+
+KEY LEVELS:
+- Gold support: $4,250-$4,400 (must hold), $4,200 (200-day EMA bull/bear line), $3,500 (structural floor)
+- Gold resistance: $4,700, $5,000 (break = bull confirmed)
+- DXY: 99-101 (war zone), 97-98 (de-escalation), 96-97 (structural floor)
+- Silver: $65 support, $75 resistance, $85 recovery target
+
+CONCLUSIONS:
+1. Gold crashes DURING war because war created oil-driven inflation forcing hawkish CBs — gold's two worst enemies.
+2. Cyclical thesis CONFIRMED AGAIN — DXY 99-100 is war premium, returns to 96-97 path post-war.
+3. 4D Chess still running — Powell in place doing QE, Warsh blocked, debt refinancing continues.
+4. Structural bull INTACT but delayed — JP Morgan $6,300 year-end, Deutsche Bank $6,000. Timeline pushed 90 days right.
+5. Peace dividend trade: Buy gold on initial ceasefire dip, buy silver aggressively for ratio compression, short DXY as war premium exits.
+
 =============================================================
 END OF KNOWLEDGE BASE
 =============================================================
