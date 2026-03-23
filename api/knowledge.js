@@ -753,6 +753,95 @@ OIL IS THE MASTER VARIABLE:
 
 THESIS E STATUS: APPROACHING ACTIVATION. Ceasefire probability doubled from 20% → 40% in one day.
 
+-------------------------------------------------------------
+17. FOMC COMPLETE FRAMEWORK — FED RATE PATH & MARKET PRICING
+-------------------------------------------------------------
+
+Current rate: 3.50-3.75% (held March 18 2026, hawkish hold).
+Next meeting: April 28-29. After that: June 17-18.
+Dot plot (March 18): Only 1 cut expected in 2026 (was 2 in Dec 2025).
+7 of 19 officials expect ZERO cuts in 2026.
+GDP raised to 2.4%, inflation raised to 2.7% PCE.
+Powell: "Not as much progress on inflation as we hoped." "We just don't know."
+Powell confirmed he will serve temporarily if Warsh not confirmed by May.
+
+Pre-peace-post pricing: April FOMC 87-89% hold, 11-13% HIKE, ZERO cut probability.
+Post-peace-post (Mar 23): Rapidly repricing. Hike probability collapsing. Cut coming back.
+First realistic cut: September 2026 (needs June/July CPI showing improvement).
+April FOMC = HOLD (99% certain regardless of peace talks).
+
+THE FOMC DILEMMA: Oil falls → good for inflation → good for cuts → good for gold.
+BUT: Supply chain damage is already embedded. LNG plants don't restart overnight.
+CPI still prints 3.5-4% in April and May regardless of oil.
+Fed needs 2-3 CPI prints to see improvement = September earliest.
+
+-------------------------------------------------------------
+18. SUPPLY CHAIN DAMAGE MAP — WHAT'S BROKEN AND WHY IT STAYS BROKEN
+-------------------------------------------------------------
+
+ENERGY INFRASTRUCTURE:
+- Qatar Ras Laffan LNG hub: STRUCK March 18-19. Full production halt. 30% of global LNG. Restart: weeks/months.
+- European gas storage: 30% capacity (worst since 2022). Dutch TTF: doubled to €60/MWh.
+- UK inflation forecast: breach 5% in 2026 regardless of war end.
+- Fujairah bunkering hub (world's 3rd largest): OFFLINE after drone strikes.
+- Saudi Aramco, ADNOC refineries: precautionary shutdown.
+- Iraq Rumaila oil field: shut down March 3. Gulf port calls collapsed 47%.
+
+FERTILISER — THE HIDDEN TIME BOMB:
+- Qatar Fertiliser Company: world's largest single-site urea export. SHUT DOWN.
+- Qatar = 14-15% of global urea exports (5.6M tonnes/year).
+- SABIC + Industries Qatar: declared force majeure.
+- ~1M metric tons fertiliser STRANDED in Gulf. Urea prices up 30-35%.
+- US prices up 32% in ONE WEEK. Sulfur shortage cascading into phosphate.
+- Farmers already planting with expensive fertiliser. Food inflation arrives Q3-Q4 2026.
+- EVEN IF WAR ENDS TOMORROW: food price inflation is already baked in.
+
+HIGH-TECH / SEMICONDUCTORS:
+- Helium: Qatar = 33% of global supply. Halted at Ras Laffan. Essential for chip manufacturing.
+- Amazon data centres in UAE/Bahrain: struck by Iranian drones.
+- Singapore jet fuel: up 175%. Asian LNG: up 130%.
+
+SHIPPING / INSURANCE:
+- Marine insurance: 4-6x normal. 21 confirmed attacks on commercial vessels since March 1.
+- Bunker fuel at historic highs (Fujairah offline). Rerouting via Cape of Good Hope (+2-3 weeks/voyage).
+- Port backlog: Jebel Ali, Sohar, Salalah. Weeks to clear.
+
+TRANSMISSION LAG — Why inflation stays after oil falls:
+Oil falls → pump prices: 2-3 weeks. Shipping: 6-10 weeks. LNG restart: 4-8 weeks.
+Fertiliser to fields: 8-12 weeks. Food on shelves: 12-20 weeks.
+CPI improvement: 2-3 monthly readings (8-12 weeks). Fed cut signal: 10-14 weeks.
+OIL CRASH TODAY = FED CUT SIGNAL IN SEPTEMBER AT EARLIEST.
+
+-------------------------------------------------------------
+19. DOLLAR DEEP DIVE — 4 COMPETING FORCES & TIME HORIZONS
+-------------------------------------------------------------
+
+FORCE 1 — WAR PREMIUM (3-4 DXY points): Petrodollar demand + safe-haven + rate differential.
+Exits FAST — hours to days after credible ceasefire. DXY 99 → 96-97.
+
+FORCE 2 — EMBEDDED INFLATION (keeps dollar at 96-98 for 6-8 weeks post-ceasefire):
+April CPI (May 12) shows March oil spike. May CPI (June 10) shows supply chain effects.
+June CPI (July 15) = first potential improvement. Fed can't cut until data improves.
+
+FORCE 3 — STAGFLATION RISK (perversely strengthens dollar):
+High inflation + slow growth = Fed MUST stay hawkish even as economy weakens.
+If April/May CPI >4% and growth <1% = stagflation. DXY holds 97-100 through summer.
+Probability: LOWER after Trump peace post (oil falling reduces stagflation risk).
+
+FORCE 4 — BOJ/ECB HIKING (medium-term dollar killer, Q3 2026):
+US-Japan spread ~2.75%. Below 2.0% = carry trade unwinds. BOJ path to 1.5% = 2-3 more hikes.
+Combined with US cuts = 3-4 percentage points of spread compression by Aug.
+This drives DXY to 91-93. Takes until July-August to manifest.
+
+DXY PATH BY TIME HORIZON:
+- Today-Tomorrow: 98.0-99.5 range. Oscillates with Trump posts.
+- This week (5-day window): 97.0-101.0 depending on talks.
+- Ceasefire Day 1: DXY drops 1.5-2.5 pts to 96-97 in hours. Then STALLS.
+- Weeks 4-10 post-ceasefire: DXY 95-98. Fed on hold. CPI still elevated. Gold builds $4,700-5,000.
+- Months 3-5 post-ceasefire: June/July CPI disinflates. Fed signals September cut. BOJ hikes. DXY breaks 95. Falls to 91-93. Gold surges $5,500-6,000+.
+
+TWO-STAGE DOLLAR DECLINE: Stage 1 fast (war premium out, 96-97). Stalls 6-8 weeks while inflation data catches up. Stage 2 in Q3 when Fed has cover to cut.
+
 =============================================================
 END OF KNOWLEDGE BASE
 =============================================================
