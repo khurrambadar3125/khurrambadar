@@ -39,12 +39,16 @@ Uses Claude Code to build and maintain everything.
 12: Shanghai premium>$10 structural | 13: COMEX silver<80Moz stress | 14: Gold+Dollar up = decoupling
 
 ## Current Context (as of March 23, 2026)
-- Gold: ~$4,248 (9-session losing streak, 4-month low)
-- Silver: ~$65.61 (1-year low)
-- DXY: ~99.59 (war premium, structural floor = 96-97)
-- 10Y Yield: 4.39% (8-month high)
-- Brent Oil: ~$108/bbl
-- War: Active-Escalating — Day 23 — Operation Epic Fury
+- BREAKING Mar 23: Trump announces "very good talks" with Iran, postpones strikes 5 days
+- Gold: ~$4,350-4,450 (BOUNCING after $4,248 low, peace signal)
+- Silver: ~$67-69 (bouncing +2-5%)
+- DXY: ~98.5-99.0 (FALLING — war premium exiting)
+- Brent Oil: CRASHED from $114 → $99-103 (-13% in minutes)
+- WTI: ~$89-92 (approaching sub-$90)
+- 10Y Yield: ~4.20-4.25% (falling from 4.39%)
+- S&P Futures: swung -1% → +3% on Trump post
+- War: Day 23 — PEACE TALKS SIGNAL DETECTED — 5-day diplomatic window to Mar 28
+- Thesis E (Peace Dividend): APPROACHING ACTIVATION — probability 40% (up from 20%)
 - Warsh: BLOCKED — Tillis 12-12 deadlock
 
 ## File Structure
@@ -52,7 +56,7 @@ Uses Claude Code to build and maintain everything.
 index.html              — main site (single page)
 khurrambrother_mobile.html — mobile variant
 api/chat.js             — chatbot proxy (Edge Function)
-api/knowledge.js        — 15-section knowledge base
+api/knowledge.js        — 16-section knowledge base
 api/update.js           — autonomous daily update agent
 vercel.json             — routes + cron schedule
 CLAUDE.md               — this file

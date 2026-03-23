@@ -709,6 +709,50 @@ US-Japan Spread: Above 3.5% (carry strong) | 2.5-3.5% (moderating) | Below 2.0% 
 Oil: Above $110 (stagflation alert) | $90-110 (war premium) | $70-90 (normal) | Below $70 (post-war relief, bullish gold)
 Gold-Silver Ratio: 80+ (silver very cheap) | 60-70 (neutral) | 50 (balanced) | 40 (silver overvalued)
 
+-------------------------------------------------------------
+16. BREAKING — MARCH 23, 2026: TRUMP PEACE TALKS SIGNAL & 5-DAY WINDOW
+-------------------------------------------------------------
+
+TIMELINE OF EVENTS:
+- Sat 7:44 PM ET: Trump posts 48-hour ultimatum — reopen Hormuz or power plants "obliterated." Oil spikes to $114.
+- Sunday night: Iran IRGC vows to COMPLETELY close Hormuz + mine Persian Gulf. Iran strikes Dimona (180 injured).
+- Monday 6-10 AM: Asia markets crash — Nikkei -3.5 to -5%, KOSPI -4.5 to -6.5% (circuit breakers), Hang Seng -3.5%, DAX -2%. S&P futures -1%.
+- Monday ~10 AM ET: TRUMP POSTS on Truth Social — "very good and productive conversations regarding COMPLETE AND TOTAL RESOLUTION." Strikes postponed FIVE DAYS.
+- Brent crashes $114 → sub-$99 (-13%). S&P futures swing -1% → +3%. BIGGEST SINGLE-HOUR REVERSAL OF THE WAR.
+- Iran state media says Trump "backed down" — NOT confirming talks. Strikes continue in Tehran and Lebanon.
+
+MARKET SNAPSHOT AFTER TRUMP POST:
+- Brent Oil: $114 → $99-103 (-10 to 13%)
+- WTI Oil: ~$100 → $89-92 (-8 to 10%) — approaching sub-$90
+- S&P Futures: -1% → +2.5 to +3% (4-point swing)
+- Gold: $4,248 → $4,350-4,450 (bouncing +1-3%)
+- Silver: $65.61 → $67-69 (bouncing +2-5%)
+- DXY: 99.59 → 98.5-99.0 (falling — war premium exiting)
+- 10Y Yield: 4.39% → 4.20-4.25% (falling — rate cut path cracking open)
+
+THE 5-DAY DIPLOMATIC WINDOW (March 23-28):
+This is the most important market period since the war began.
+
+OUTCOME A — Talks Succeed / Ceasefire (40% probability, UP from 20%):
+- Thesis E FULLY ACTIVATES — Peace Dividend Trade executes
+- Day 1: Gold dips 3-5% (safe-haven unwind) → BUY. Silver dips 5-8% → BUY AGGRESSIVELY.
+- DXY falls 2-3 points → 96-97 floor in sight. Oil falls $15-20 → rate cuts reopen.
+- S&P rallies 5-8%. Gold 30-day target: $5,000-5,400. Silver: $90-110.
+
+OUTCOME B — Talks Collapse / Back to War (45%):
+- Trump strikes power plants — worst escalation. Oil $120-140+. DXY 101-103.
+- Gold paradox continues. $4,200 EMA retested.
+
+OUTCOME C — Limbo (15%): Talks drag, another extension. Gold $4,200-4,600, Oil $95-108.
+
+OIL IS THE MASTER VARIABLE:
+- Oil $100-110: Fed holds, gold suppressed $4,200-4,600
+- Oil $85-100: Fed signals 1-2 cuts, gold rallies $4,700-5,200
+- Oil $70-85: Full rate cut cycle, gold surges $5,200-5,800
+- Oil below $70: Pre-war conditions, gold ATH territory $6,000+
+
+THESIS E STATUS: APPROACHING ACTIVATION. Ceasefire probability doubled from 20% → 40% in one day.
+
 =============================================================
 END OF KNOWLEDGE BASE
 =============================================================
