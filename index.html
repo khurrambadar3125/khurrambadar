@@ -1623,6 +1623,112 @@ footer span { color: var(--gold); }
   </div>
 </section>
 
+<!-- ══ LIVE TICKER ═════════════════════════════ -->
+<div id="live-ticker" style="
+  background: rgba(201,146,31,0.04);
+  border-top: 1px solid rgba(201,146,31,0.15);
+  border-bottom: 1px solid rgba(201,146,31,0.15);
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+">
+  <div id="ticker-track" style="
+    display: inline-flex; gap: 32px; animation: ticker-scroll 30s linear infinite;
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em;
+    color: var(--muted); padding: 0 20px;
+  ">
+    <span id="tk-gold">GOLD <span style="color:var(--gold)">--</span></span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
+    <span id="tk-silver">SILVER <span style="color:var(--gold)">--</span></span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
+    <span id="tk-btc">BTC <span style="color:var(--gold)">--</span></span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
+    <span id="tk-sp500">S&P 500 <span style="color:var(--gold)">--</span></span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
+    <span id="tk-gold2">GOLD <span style="color:var(--gold)">--</span></span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
+    <span id="tk-silver2">SILVER <span style="color:var(--gold)">--</span></span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
+    <span id="tk-btc2">BTC <span style="color:var(--gold)">--</span></span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
+    <span id="tk-sp5002">S&P 500 <span style="color:var(--gold)">--</span></span>
+  </div>
+</div>
+<style>
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+#live-ticker:hover #ticker-track { animation-play-state: paused; }
+</style>
+<script>
+// Live price ticker — fetches from free APIs every 60 seconds
+(function(){
+  function fmt(n, decimals) {
+    if (!n && n !== 0) return '--';
+    return Number(n).toLocaleString('en-US', {minimumFractionDigits: decimals, maximumFractionDigits: decimals});
+  }
+  function color(change) {
+    if (!change && change !== 0) return 'var(--gold)';
+    return change >= 0 ? '#4CAF50' : '#E74C3C';
+  }
+  function sign(change) {
+    if (!change && change !== 0) return '';
+    return change >= 0 ? '+' : '';
+  }
+  function setTicker(id, label, price, change, prefix, decimals) {
+    const c = color(change);
+    const s = sign(change);
+    const html = label + ' <span style="color:' + c + '">' + prefix + fmt(price, decimals) +
+      (change !== null ? ' <span style="font-size:9px;">(' + s + change.toFixed(2) + '%)</span>' : '') + '</span>';
+    const el1 = document.getElementById(id);
+    const el2 = document.getElementById(id + '2');
+    if (el1) el1.innerHTML = html;
+    if (el2) el2.innerHTML = html;
+  }
+
+  async function fetchPrices() {
+    try {
+      // Gold & Silver from metals API (free proxy)
+      const metalsRes = await fetch('https://api.metals.live/v1/spot');
+      if (metalsRes.ok) {
+        const metals = await metalsRes.json();
+        const gold = metals.find(m => m.gold);
+        const silver = metals.find(m => m.silver);
+        if (gold) setTicker('tk-gold', 'GOLD', gold.gold, null, '$', 2);
+        if (silver) setTicker('tk-silver', 'SILVER', silver.silver, null, '$', 2);
+      }
+    } catch(e) {}
+
+    try {
+      // Bitcoin from CoinGecko
+      const btcRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true');
+      if (btcRes.ok) {
+        const btc = await btcRes.json();
+        setTicker('tk-btc', 'BTC', btc.bitcoin.usd, btc.bitcoin.usd_24h_change, '$', 0);
+      }
+    } catch(e) {}
+
+    try {
+      // S&P 500 from Yahoo Finance proxy
+      const spRes = await fetch('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?interval=1d&range=1d');
+      if (spRes.ok) {
+        const sp = await spRes.json();
+        const meta = sp.chart.result[0].meta;
+        const prev = meta.chartPreviousClose;
+        const cur = meta.regularMarketPrice;
+        const chg = prev ? ((cur - prev) / prev * 100) : null;
+        setTicker('tk-sp500', 'S&P 500', cur, chg, '', 2);
+      }
+    } catch(e) {}
+  }
+
+  // Initial fetch + refresh every 60 seconds
+  fetchPrices();
+  setInterval(fetchPrices, 60000);
+})();
+</script>
+
 <!-- ══ FOOTER ═════════════════════════════════ -->
 <footer>
   <p>© 2025–2026 <span>Khurram Badar</span>. All rights reserved.</p>
