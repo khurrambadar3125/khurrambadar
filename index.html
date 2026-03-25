@@ -1688,39 +1688,57 @@ footer span { color: var(--gold); }
   }
 
   async function fetchPrices() {
+    // Gold & Silver — metals.live (CORS-friendly)
     try {
-      // Gold & Silver from metals API (free proxy)
-      const metalsRes = await fetch('https://api.metals.live/v1/spot');
-      if (metalsRes.ok) {
-        const metals = await metalsRes.json();
-        const gold = metals.find(m => m.gold);
-        const silver = metals.find(m => m.silver);
-        if (gold) setTicker('tk-gold', 'GOLD', gold.gold, null, '$', 2);
-        if (silver) setTicker('tk-silver', 'SILVER', silver.silver, null, '$', 2);
+      const r = await fetch('https://api.metals.live/v1/spot');
+      if (r.ok) {
+        const d = await r.json();
+        const g = d.find(m => m.gold);
+        const s = d.find(m => m.silver);
+        if (g) setTicker('tk-gold', 'GOLD', g.gold, null, '$', 2);
+        if (s) setTicker('tk-silver', 'SILVER', s.silver, null, '$', 2);
+      }
+    } catch(e) {
+      // Fallback: try metals.dev
+      try {
+        const r2 = await fetch('https://api.metals.live/v1/spot/gold');
+        if (r2.ok) { const d2 = await r2.json(); setTicker('tk-gold', 'GOLD', d2[0]?.price, null, '$', 2); }
+      } catch(e2) {}
+    }
+
+    // Bitcoin — CoinGecko (CORS-friendly, no key needed)
+    try {
+      const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true');
+      if (r.ok) {
+        const d = await r.json();
+        if (d.bitcoin) setTicker('tk-btc', 'BTC', d.bitcoin.usd, d.bitcoin.usd_24h_change, '$', 0);
       }
     } catch(e) {}
 
+    // S&P 500 — use Twelve Data free tier (CORS-friendly)
     try {
-      // Bitcoin from CoinGecko
-      const btcRes = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true');
-      if (btcRes.ok) {
-        const btc = await btcRes.json();
-        setTicker('tk-btc', 'BTC', btc.bitcoin.usd, btc.bitcoin.usd_24h_change, '$', 0);
+      const r = await fetch('https://api.twelvedata.com/quote?symbol=SPX&apikey=demo');
+      if (r.ok) {
+        const d = await r.json();
+        if (d.close) {
+          const chg = d.percent_change ? parseFloat(d.percent_change) : null;
+          setTicker('tk-sp500', 'S&P 500', parseFloat(d.close), chg, '', 2);
+        }
       }
-    } catch(e) {}
-
-    try {
-      // S&P 500 from Yahoo Finance proxy
-      const spRes = await fetch('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?interval=1d&range=1d');
-      if (spRes.ok) {
-        const sp = await spRes.json();
-        const meta = sp.chart.result[0].meta;
-        const prev = meta.chartPreviousClose;
-        const cur = meta.regularMarketPrice;
-        const chg = prev ? ((cur - prev) / prev * 100) : null;
-        setTicker('tk-sp500', 'S&P 500', cur, chg, '', 2);
-      }
-    } catch(e) {}
+    } catch(e) {
+      // Fallback: try Yahoo Finance v8
+      try {
+        const r2 = await fetch('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?interval=1d&range=1d');
+        if (r2.ok) {
+          const d2 = await r2.json();
+          const m = d2.chart?.result?.[0]?.meta;
+          if (m) {
+            const chg = m.chartPreviousClose ? ((m.regularMarketPrice - m.chartPreviousClose) / m.chartPreviousClose * 100) : null;
+            setTicker('tk-sp500', 'S&P 500', m.regularMarketPrice, chg, '', 2);
+          }
+        }
+      } catch(e2) {}
+    }
   }
 
   // Initial fetch + refresh every 60 seconds
@@ -2059,11 +2077,14 @@ document.addEventListener('keydown', function(e) {
   text-shadow: 0 0 8px rgba(201,146,31,0.3);
 }
 .krm-quick.krm-pulse {
-  animation: krm-pulse-text 2s ease-in-out infinite;
+  animation: krm-pulse-text 2s ease-in-out infinite !important;
+  color: var(--gold) !important;
+  border-bottom-color: rgba(240,184,64,0.5) !important;
+  font-weight: 500;
 }
 @keyframes krm-pulse-text {
-  0%, 100% { color: var(--gold); text-shadow: 0 0 0 transparent; }
-  50% { color: #F0B840; text-shadow: 0 0 12px rgba(240,184,64,0.4); }
+  0%, 100% { color: #C9921F !important; text-shadow: 0 0 4px rgba(201,146,31,0.2); }
+  50% { color: #F0B840 !important; text-shadow: 0 0 16px rgba(240,184,64,0.5), 0 0 30px rgba(240,184,64,0.2); }
 }
 @keyframes krm-msg-in {
   from { opacity: 0; transform: translateY(8px); }
