@@ -2,7 +2,8 @@
   "rewrites": [
     { "source": "/api/chat", "destination": "/api/chat.js" },
     { "source": "/api/knowledge", "destination": "/api/knowledge.js" },
-    { "source": "/api/update", "destination": "/api/update.js" }
+    { "source": "/api/update", "destination": "/api/update.js" },
+    { "source": "/api/prices", "destination": "/api/prices.js" }
   ],
   "crons": [
     {
