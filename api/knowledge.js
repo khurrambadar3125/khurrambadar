@@ -1226,6 +1226,82 @@ and Kelly Criterion. ALWAYS end with: "This is NOT financial advice. TitanTrader
 educational and research framework. All trading involves substantial risk of loss.
 Always consult a qualified financial adviser."
 
+-------------------------------------------------------------
+22. TITANTRADER OMEGA — INSTITUTIONAL INTELLIGENCE BRIEF (March 2026)
+NOT FINANCIAL ADVICE. Educational and research framework only.
+All trading involves substantial risk of loss.
+-------------------------------------------------------------
+
+PRECIOUS METALS — THE GENERATIONAL BULL MARKET:
+Gold (GC): $4,500+ in 2025, 50+ new ATH records. Goldman Sachs target $4,900 by Dec 2026 (#1 single favourite long). JPMorgan $5,000-5,055 by Q4 2026, $5,400 by end 2027. BofA $5,000. Deutsche Bank $3,950-4,950. Central bank purchases: 1,044t in 2024 (3rd year >1,000t). Poland +90t 2024, China 6 consecutive months. ETF inflows $38B H1 2025. London vaults: 8,841t valued $1.087 TRILLION. LBMA Fix: AM 10:30, PM 15:00 London, 15 direct participants (Barclays, HSBC, Goldman, JPM, UBS). COMEX GC: 100 oz, $0.10 tick. Gold/USD: DXY -1% = Gold +0.8-1.2%. Every 25bp Fed cut adds ~1.5% to gold.
+
+Silver (SI): $37+ in 2025 (highest since 2011). Goldman $85-100 average 2026, "primary strategic metal of green transition." Citi $110 H2 2026 (acute shortage). 5 consecutive years STRUCTURAL DEFICIT. Mine production DECLINING (1.07B oz 2010 → 1.03B oz 2025). 70%+ is BY-PRODUCT mining — supply INELASTIC. Solar PV ~120M oz/year rising. EVs 25-50g per vehicle. 58% of demand now industrial. G/S ratio historical mean ~60, compression toward 40-60. COMEX SI: 5,000 oz, $0.005 tick.
+
+Platinum (PL): +49.8% H1 2025. South African supply constrained + palladium→platinum substitution. Still ~40% below 2008 ATH $2,250. Tharisa $547M new PGM mine investment.
+
+ENERGY — STRUCTURAL OVERSUPPLY:
+WTI Crude (CL): Goldman 2026 $52/bbl, Brent $56. 2.0mb/d oversupply from long-cycle projects. OPEC+ discipline fraying. EV adoption 20M+ sold 2025. Structural trend: DOWN.
+Natural Gas (NG): Goldman "largest ever LNG supply wave" 2025-2030. Henry Hub $4.60 2026, $3.80 2027. BUT: US power demand +3%/year (AI data centres).
+
+BASE METALS — AI-POWERED DEMAND:
+Copper (HG): Record highs 2025 +35%. JPMorgan $12,500/mt Q2 2026. 2026 deficit ~330,000mt. Supply disruptions: Grasberg mudslide (70% affected), Kamoa-Kakula flooding. AI data centres: each MW needs ~27mt copper. Glencore targeting 1,600kt by 2035.
+
+CRYPTO — INSTITUTIONAL ERA:
+Bitcoin: 2025 peak $126,080. JPMorgan $170K 2026, Standard Chartered $150K, Bitwise $200K. ETF assets $100-120B, projected $180-220B by end 2026. 172 public companies hold ~1M BTC. CZ: "The 4-year cycle is DEAD. This is a supercycle." GENIUS Act passed (stablecoin framework). JPMorgan accepting BTC/ETH as collateral. Strategic reserves: US, Brazil, Kyrgyzstan, Bhutan.
+Ethereum: Fusaka Hard Fork targeting 10x L1 throughput. DeFi TVL $150-176B. 68% of total DeFi TVL. RWA tokenisation accelerating.
+Solana: Record 2025, +186% on-chain revenue, ETF launched.
+
+MARKET MICROSTRUCTURE — HOW PROFESSIONALS TRADE:
+LBMA: 15 direct participants, OTC market OPAQUE. London vaults $1.087T. Fractional reserve bullion banking under stress.
+Three-layer gold pricing: Layer 1 LBMA (physical), Layer 2 COMEX (futures), Layer 3 OTC (bilateral). COMEX-London basis arbitrage = key opportunity.
+COT report: every Friday 3:30 PM ET. Managed money positioning as contrarian gauge.
+
+WORLD-CLASS ALGO FIRMS: Citadel Securities (world's largest MM), Jump Trading (HFT+ML), Virtu (99.9% profitable days), Jane Street (ETF arb), Two Sigma (ML macro), Renaissance (Medallion ~66% gross since 1988, 300+ PhD scientists), DRW (commodities+crypto), Optiver (derivatives), XTX Markets (FX+equities).
+
+BENCHMARKS: HFT market-making 8-12% annual. Top quant funds 15-25%. Best 2023: 47%. Professional MM Sharpe >2.0.
+
+TITANTRADER OMEGA ARCHITECTURE:
+6 layers: Data Ingestion → AI Brain → Market Making → Risk Firewall → Execution → Dashboard.
+12 instruments across precious metals, energy, base metals, agricultural, crypto.
+
+ENHANCED SIGNALS (beyond base RSI/MACD/BB):
+1. COT positioning (CFTC weekly, contrarian at extremes)
+2. Cross-asset (real rates, DXY momentum, VIX for gold)
+3. Physical premium (COMEX-London basis z-score)
+4. LBMA fix momentum (3-fix directional streaks)
+5. Options skew (Binance put/call for crypto)
+6. Supply disruption score (Claude AI headline scanning)
+7. Central bank flow (WGC monthly, >100t = strong buy)
+8. ETF flow (GLD/SLV/PHYS daily change, 5-day rolling)
+
+ENHANCED MARKET MAKING (beyond Avellaneda-Stoikov):
+- Adverse selection detection (Cartea-Jaimungal): if price moves against on >60% fills → widen spread 1.5-2x.
+- Stochastic volatility sigma: blend fast (20-bar) + slow (120-bar) with regime-adaptive alpha.
+- Inventory management (Glencore lesson): target $0 net, soft limit $20K, hard limit $50K, session-end unwind.
+- LBMA fix exploitation: position 5 min before fix, unwind after.
+- Smart quote sizing: volume-adaptive, macro event pause.
+
+ENHANCED RISK (Wall Street grade):
+- Correlation-adjusted VaR (DCC-GARCH). Portfolio VaR using full correlation matrix.
+- 7 historical stress scenarios run daily (COVID crash, Russia invasion, gold reversal, silver squeeze, flash crash, China hard landing, Fed pivot).
+- Dynamic position sizing: 50% Kelly + 50% risk-parity (inverse volatility).
+- Macro event calendar: auto-pause 15 min before FOMC/NFP/CPI/COT.
+- Circuit breakers: 2% hourly → halve, 4% hourly → close, 3% daily → close all, 8% peak → kill switch.
+
+CZ/BINANCE PHILOSOPHY (encoded):
+1. "Not investing is also risky" → never 100% cash
+2. "If it goes to zero, can you survive?" → 8% kill switch
+3. "How many times can you afford to try?" → walk-forward before live
+4. Speed + Liquidity + Scale → 500ms quote refresh
+5. "Nations are printing unlimited money" → macro signals as primary
+6. "4-year cycle is dead" → regime detection, not calendar signals
+
+TARGET METRICS: Annual return 25-40%. Sharpe >2.0. Sortino >3.0. Max DD <12%. Win rate >58%. Profit factor >1.8. Daily VaR <2%. 500ms quote refresh. 12 assets, 8 data sources.
+
+GRADUATION: 30+ days paper with Sharpe >1.5. Max DD <10%. All 52 tests passing. All stress scenarios within limits. Kill switch tested. Macro calendar pausing correctly.
+
+NOT FINANCIAL ADVICE. TitanTrader Omega is an educational and research framework for studying autonomous trading systems, market microstructure, and quantitative finance. Nothing in this section constitutes a recommendation to trade, invest, or deploy capital. All trading involves substantial risk of loss including the potential loss of all invested capital. Always consult a qualified financial adviser before making any investment decision.
+
 =============================================================
 END OF KNOWLEDGE BASE
 =============================================================
