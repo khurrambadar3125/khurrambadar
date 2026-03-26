@@ -2349,8 +2349,8 @@ How may I assist you today? I can:
 
 &#8226; <a href="#" class="krm-quick" onclick="krmQuickSend('Share Khurram\\'s contact details — Pakistan number, Dubai number, and WhatsApp');return false;">Share Khurram's <strong>contact details</strong> (Pakistan / Dubai / WhatsApp)</a>
 &#8226; <a href="#" class="krm-quick" onclick="krmQuickSend('Tell me about Khurram Badar\\'s work and expertise');return false;">Tell you about his <strong>work and expertise</strong></a>
-&#8226; <a href="#" class="krm-quick krm-pulse" onclick="krmQuickSend('Show me Khurram\\'s proprietary market research — give me today\\'s market verdict with thesis scorecard and signal alerts');return false;">Learn from Khurram's <strong>proprietary market research</strong> (DXY, metals, bonds, Fed policy, geopolitics)</a>
-&#8226; <a href="#" class="krm-quick krm-pulse" onclick="krmQuickSend('Tell me about the luminaries and icons Khurram has worked with — Edhi, Jermaine Jackson, Atif Aslam, Nayla Al Khaja, Shoaib Akhtar, and others');return false;">Discover the <strong>icons Khurram has worked with</strong> (Edhi, Jackson, Atif Aslam, Nayla Al Khaja...)</a>
+&#8226; <a href="#" class="krm-quick krm-pulse" onclick="krmQuickSend('Show me the latest breaking market news and Khurram\\'s proprietary market verdict for today ' + new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'}) + '. Include thesis scorecard and signal alerts.');return false;"><strong>Breaking News</strong> from Khurram — <span class="krm-date"></span></a>
+&#8226; <a href="#" class="krm-quick krm-pulse" onclick="krmQuickSend('Tell me about the luminaries and icons Khurram has worked with — Edhi, Jermaine Jackson, Atif Aslam, HD Habib, Shoaib Akhtar, and others');return false;">Discover the <strong>icons Khurram has worked with</strong> (Edhi, Jackson, Atif Aslam, HD Habib...)</a>
 &#8226; <a href="#" class="krm-quick krm-pulse" onclick="krmQuickSend('Tell me about TitanTrader — the autonomous super trader and market maker framework. How does it work? What is the Avellaneda-Stoikov model? What commodities does it cover?');return false;">Explore <strong>TitanTrader</strong> — autonomous super trader</a>
 &#8226; <a href="#" class="krm-quick" onclick="krmQuickSend('I want to book a coffee meeting with Khurram');return false;">Book a <strong>coffee meeting</strong> with Khurram</a>`;
 
@@ -2366,7 +2366,13 @@ How may I assist you today? I can:
       btn.classList.add('open');
       document.body.style.overflow = 'hidden'; // Prevent scroll-behind on mobile
       addMessage('assistant', KRM_GREETING);
-      krmHistory.push({ role: 'assistant', content: 'Happy ' + dayName + '. Welcome — I am KRM, the market intelligence of Khurram Badar. How may I assist you today? I can: share Khurram\'s contact details, tell you about his work, show you his proprietary market research, introduce the icons he has worked with, or book a coffee meeting.' });
+      // Populate date in Breaking News link
+      document.querySelectorAll('.krm-date').forEach(function(el) {
+        el.textContent = new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
+        el.style.fontSize = '10px';
+        el.style.opacity = '0.7';
+      });
+      krmHistory.push({ role: 'assistant', content: 'Happy ' + dayName + '. Welcome — I am KRM, the market intelligence of Khurram Badar. How may I assist you today?' });
       // Only auto-focus on desktop to avoid keyboard popup on mobile
       if (window.innerWidth > 768) {
         setTimeout(() => document.getElementById('krm-input').focus(), 400);
