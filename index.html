@@ -2403,7 +2403,13 @@ How may I assist you today? I can:
     div.className = 'krm-msg ' + role;
     div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
     container.appendChild(div);
-    container.scrollTop = container.scrollHeight;
+    if (role === 'user') {
+      // User message: scroll to bottom so they see what they sent
+      container.scrollTop = container.scrollHeight;
+    } else {
+      // Assistant message: scroll to the TOP of the new message so reader starts from beginning
+      setTimeout(function() { div.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
+    }
     return div;
   }
 
