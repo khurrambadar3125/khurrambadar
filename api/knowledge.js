@@ -878,12 +878,163 @@ fully pricing peace. Correct assessment: 35% ceasefire, 40% escalation, 25% limb
 RULE: Watch what DXY does, not what headlines say. If DXY stays above 99 despite
 "peace talks," the market is skeptical. DXY is the truth-teller.
 
+=== COMPLETE ASSESSMENT HISTORY (Feb 5 – Present) ===
+Read ALL of this before making any new assessment. This is the institutional memory.
+
+PHASE 0: THE MACRO SETUP (Nov 2024 – Jan 2026)
+
+NOV 2024 — TRUMP WINS ELECTION:
+- Trump elected November 5, 2024. Bitcoin surged to ATH $108,000 on crypto-friendly promises.
+- Executive orders: US as "crypto capital," Strategic Bitcoin Reserve, prohibited Fed CBDC.
+- Gold initially dipped post-election (dollar strength), then resumed rally on fiscal deficit fears.
+- DXY at ~105-108. Fed funds at 4.75-5.00% (had started cutting Sept 2024 with 50bp).
+
+JAN 2024 — BITCOIN ETF APPROVED:
+- BlackRock Bitcoin ETF (IBIT) approved January 2024. $20B+ inflows in months — fastest ETF launch in history.
+- Fidelity, Invesco, Franklin Templeton ETFs followed. Institutional adoption inflection point.
+- MicroStrategy accumulated to 500,000+ BTC.
+
+FED RATE CUTS 2024-2025:
+- Sept 18, 2024: First cut -50bp (to 4.75-5.00%). Aggressive start.
+- Oct 2024: -25bp (to 4.50-4.75%).
+- Dec 2024: -25bp (to 4.25-4.50%).
+- Sept 2025: -25bp (to 4.00-4.25%). Gold accelerating.
+- Oct 2025: -25bp (to 3.75-4.00%). DXY falling fast.
+- Dec 10, 2025: -25bp (to 3.50-3.75%). QT ended Dec 1. QE restarted Dec 10 ($40B/mo).
+- Total: 175bp of cuts in 15 months. Fed funds: 5.50% → 3.50-3.75%.
+
+GOLD'S HISTORIC RALLY (2024-2025):
+- Oct 2024: Gold breaks $2,700 for first time.
+- Q1 2025: Gold $2,624 → $3,500. DXY falling 110→103. Central banks buying 1,000+ tonnes.
+- Q2 2025: Gold $3,500 → $4,000. DXY continues to 100.
+- Q3 2025: Gold $4,000 → $4,381 (Aug ATH). 53 new ATH records set in 2025 alone (LBMA).
+- Q4 2025: Gold $4,381 → $5,593. DXY collapses to 96-97. QE restarts.
+- Jan 29, 2026: Gold hits $5,594.82 — ALL-TIME HIGH. Silver hits $121.62.
+- Total 2024-2025 gold rally: $2,000 → $5,594 = +180%.
+- DXY journey: 110 (Jan 2025) → 96.37 (Jul 2025) → 95.5 (Jan 27, 2026 low).
+
+THE DOLLAR COLLAPSE (Jan 2025 – Jan 2026):
+- DXY fell from 110 to 95.5 = -13.2% in 12 months. Enormous move for a reserve currency.
+- Drivers: Fed cutting 175bp + QE restart + Trump wanting weak dollar + BOJ hiking.
+- Jan 27, 2026: Trump publicly welcomed dollar decline — "great for American business."
+- This DXY collapse was the PRIMARY driver of the gold/silver rally (cyclical thesis).
+
+CENTRAL BANK GOLD BUYING:
+- 2022: 1,082 tonnes (record). 2023: 1,037 tonnes. 2024: ~1,000+ tonnes. 2025: 863 tonnes.
+- China (PBoC) added 735 tonnes 2022-2024. Russia, Turkey, India, Poland all accumulating.
+- CB buying = structural floor under gold. Does not reverse on single events.
+
+SILVER'S PARABOLIC RUN:
+- Jan 2025: Silver at $28.92/oz with 4 consecutive years of deficit already.
+- Silver rallied 300%+ to $121.62 ATH (Jan 2026). Outperformed gold 2:1.
+- Leverage: 356:1 paper-to-physical ratio on COMEX. CME margins 9% gold, 18% silver.
+- China silver export controls effective Jan 1, 2026. COMEX registered below 100M oz.
+- Structural deficit: 820M oz cumulative (2021-2025). 5 consecutive years.
+
+THE WARSH SHOCK (Jan 30, 2026):
+- Trump nominated Kevin Warsh as Fed Chair. Known hawk — resigned from Fed 2011 over QE.
+- Gold crashed -15% ($5,594 → $4,745). Silver crashed -31% ($121 → $78). $7 TRILLION destroyed in 2 days.
+- CME raised margins: gold 5%→8%→9%. Silver 9%→15%→18%. Forced liquidation cascade.
+- This crash PROVED the rally was 60-70% cyclical (dollar-driven leverage), not structural.
+- 4D Chess thesis: Trump announced Warsh to crash gold, but keeps Powell investigation open (Tillis blockade) to prevent actual confirmation. Powell stays doing QE.
+
+TAKAICHI & JGB ROUT (Jan 2026):
+- PM Takaichi called snap Japan election (Feb 8). JGB 40-year yield spiked to 4.24%.
+- $170M in bonds caused $41B destruction. "Pure chaos." Worst since 2003 VaR shock.
+- Japan holds $1.2T US Treasuries. "Great Repatriation" risk: $5T overseas capital.
+- BOJ at 0.75%, hiking path to 1.25-1.5%. Carry trade: $500B outstanding (Morgan Stanley).
+
+PHASE 1: PRE-WAR ANALYSIS (Feb 5-27, 2026)
+FEB 5: Gold $4,850 | DXY 97.8 | Fed just restarted QE (Dec 2025, $40B/mo). QT ended Dec 1.
+- Original assessment: Gold rally was 60-70% CYCLICAL (DXY fell 110→96 in 2025), 30-40% structural.
+- Warsh nominated Jan 30 → Gold crashed 15%, Silver 31%. CME raised margins (gold 5%→9%, silver 9%→18%).
+- 4D Chess thesis formed: Trump announced Warsh to crash gold, keeps Powell investigation open to block confirmation (Tillis 12-12 deadlock), Powell stays doing QE.
+- Key insight: The crash PROVED the rally was cyclical — 30%+ cannot vanish in one day if structural.
+- DXY structural floor identified: 96-97. Below 96 requires zero rates + unlimited QE (2020 conditions).
+- Bank of America "fundamentally justified" silver: $60. JP Morgan gold year-end: $6,300.
+
+FEB 17: Gold ~$4,928 | DXY 97.2 | Fed doing QE.
+- Confirmed: Fed QE active since Dec 10 ($40B/mo T-bills). Dollar fell 108→97 in 12 months.
+- Tillis doubled down on blockade. Trump refused to drop Powell investigation.
+- 4D Chess probability raised to 55-65%.
+- BOJ at 0.75%, hiking path to 1.25-1.5% by Jul-Aug. US-Japan spread 2.75%.
+- Carry trade unwind threshold: spread below 2.0%.
+- Record bearish dollar positioning (BofA survey) = short squeeze risk.
+- Silver structural floor recalibrated: $35-50 (was priced at $28.92 in Jan 2025 WITH deficit).
+- Demand destruction proven at $50 (solar thrifting -7%).
+
+PHASE 2: IRAN WAR (Feb 28 onwards)
+FEB 27: Gold $5,296 | DXY 97.5 | Oil $70 | Oman FM declared "breakthrough" in Iran talks.
+FEB 28: WAR STARTS — Operation Epic Fury. US/Israel strike Iran. Khamenei killed. Hormuz threatened.
+MAR 2: Gold spiked to $5,423 (+5%). DXY 98.5. Oil $82. But 10Y yields ROSE (unusual — bonds NOT safe haven).
+MAR 3: Gold crashed -6% to $5,085. El-Erian: "Bond market more worried about inflation than safety."
+
+THE WAR PARADOX IDENTIFIED (March 3-11):
+- Gold crashes DURING war because: (1) Oil shock = inflation = hawkish Fed = higher real yields. (2) Dollar won safe-haven battle. (3) Gold technically exhausted at $5,594 ATH. (4) Margin calls forced liquidation. (5) Bond market SOLD (yields rose). (6) ALL CBs turned hawkish simultaneously. (7) Some pricing Fed rate HIKE.
+- Treasuries LOST safe-haven status — yields rose during war. Gold became "last haven standing."
+- Key learning: War HURT gold by creating the conditions that suppress it (inflation → hawkish Fed).
+
+MAR 11: 10Y hit 4.21% (11-month high). DXY broke 100 (100.32 on Mar 13).
+MAR 18: FOMC "hawkish hold." Dot plot: only 1 cut for 2026. 7 of 19 expect ZERO cuts. PPI +0.7%.
+MAR 19: FLASH CRASH — Gold $4,558 low (-6.9%), Silver $67.84 (-12.5%), VIX 26.78.
+
+SUPPLY CHAIN DAMAGE MAP (identified March 18-22):
+- Qatar Ras Laffan LNG hub struck Mar 18 — full halt. 30% of global LNG. Weeks/months to restart.
+- Fertiliser +30-35%. ~1M tons stranded. Food inflation arrives Q3-Q4 regardless of ceasefire.
+- Shipping insurance 4-6x normal. 21 attacks on commercial vessels. Gulf port calls -47%.
+- Helium (Qatar 33% global) halted — semiconductor impact.
+- KEY INSIGHT: Oil can fall today. CPI cannot fall for 2-3 months. Fed needs 2-3 CPI prints.
+- Transmission lag: Oil falls → pump prices 2-3 weeks → shipping 6-10 weeks → LNG 4-8 weeks → food 12-20 weeks → CPI improvement 8-12 weeks → Fed cut signal 10-14 weeks.
+
+4 FORCES ON THE DOLLAR (identified March 22):
+Force 1 — War Premium (3-4 DXY pts): exits fast on ceasefire.
+Force 2 — Embedded Inflation: stays 6-8 weeks post-ceasefire. CPI hot through June.
+Force 3 — Stagflation Risk: if CPI >4% and growth <1%, dollar stays 97-100.
+Force 4 — BOJ Path: medium-term dollar killer. Manifests Jul-Aug. DXY to 91-93.
+TWO-STAGE DOLLAR DECLINE: Fast to 96-97, stalls 6-8 weeks, then 91-93 in Q3.
+
+PHASE 3: PEACE TALKS SIGNAL (Mar 23-26)
+MAR 23: Trump posted "very good productive conversations, complete and total resolution." Strikes postponed 5 days. Oil CRASHED $114→$99. S&P swung -1%→+3%. Biggest reversal of war.
+- Ceasefire probability: 40%. Thesis E approaching activation.
+- ERROR: Oil falling did NOT immediately reopen rate cut path — embedded supply chain damage.
+MAR 24: Iran DENIED talks. Called Trump "buying time." DXY bounced to 99.40.
+- Ceasefire probability revised DOWN to 30%. Correct assessment: market skeptical.
+MAR 25: 15-point ceasefire plan submitted via Pakistan. 82nd Airborne deploying. Iran mocked plan.
+- Ceasefire 35%. Simultaneous escalation AND diplomacy.
+MAR 26: Gold $4,521 (+2.7%) | DXY 99.63 (+0.19%) | Oil $99.75 | 10Y 4.35-4.39%.
+- SIGNAL 14 FIRED: Gold and dollar BOTH rising. Rarest structural signal.
+- ERROR CAUGHT: Initially assessed gold rally as "weaker dollar" — WRONG. DXY rose.
+- Corrected: Gold rising DESPITE stronger dollar + high yields = structural demand overwhelming cyclical headwinds.
+- Iran counter-offered with 5 conditions (reparations, Hormuz sovereignty, future attack guarantees).
+- Assessment: This is a counter-offer, not a rejection. Most constructive diplomatic signal of war.
+- BUT DXY staying above 99 = market NOT fully pricing peace. DXY is the truth-teller.
+
 === DAILY SNAPSHOTS (append new data each day) ===
 
-MAR 23: Gold $4,248-4,450 | Silver $65-69 | DXY 98.5-99.59 | Brent $99-114 | 10Y 4.20-4.39% | War Day 23 | Trump peace post, oil crashed $114→$99 | Theses: A-INTACT B-INTACT C-REACTIVATING D-INTACT E-APPROACHING F-TURNING
-MAR 24: Gold $4,418 | Silver $67-69 | DXY 99.40 | Brent $101 | 10Y 4.39% | War Day 24 | Iran denied talks, DXY bounced back | Theses: A-INTACT B-INTACT C-ON-HOLD D-INTACT E-UNCERTAIN F-MIXED
-MAR 25: Gold $4,474 | Silver $67-69 | DXY 99.3 | Brent $103.56 | 10Y 4.39% | War Day 25 | 15-point plan submitted, 82nd Airborne deploying, Iran mocking | Theses: A-INTACT B-INTACT C-ON-HOLD D-INTACT E-APPROACHING F-MIXED
-MAR 26: Gold $4,521 (+2.7%) | Silver $70-72 | DXY 99.63 (+0.19%) | Brent $99.75 | 10Y 4.35-4.39% | War Day 26 | SIGNAL 14 FIRED: gold+dollar both up. Iran counter-offered 5 conditions. | Theses: A-INTACT B-INTACT C-ON-HOLD D-INTACT+SIGNAL14 E-APPROACHING F-STRUCTURAL
+FEB 5:  Gold $4,850 | DXY 97.8 | QE active | Warsh just announced | 4D Chess thesis born
+FEB 17: Gold $4,928 | DXY 97.2 | Record bearish USD positioning | BOJ 0.75% hiking
+FEB 27: Gold $5,296 | DXY 97.5 | Oil $70 | Pre-war: peace "within reach"
+FEB 28: WAR STARTS | Gold $5,423 spike | DXY 98.5 | Oil $82
+MAR 3:  Gold $5,085 (-6%) | DXY 98.8 | War paradox begins
+MAR 11: Gold $5,178 | DXY 99.0 | 10Y 4.21% (11-mo high) | Bonds NOT safe haven
+MAR 13: DXY breaks 100 (100.32) | Gold struggling
+MAR 18: FOMC hawkish hold | PPI +0.7% | Gold $4,885
+MAR 19: FLASH CRASH | Gold $4,558 | Silver $67.84 | VIX 26.78
+MAR 22: Gold $4,495 | DXY 99.3 | War Day 22 | 9-session losing streak
+MAR 23: Gold $4,248-4,450 | DXY 98.5-99.59 | Brent $99-114 | Trump peace post | Oil crashed
+MAR 24: Gold $4,418 | DXY 99.40 | Iran denied talks | DXY bounced back
+MAR 25: Gold $4,474 | DXY 99.3 | Brent $103.56 | 15-point plan + 82nd Airborne
+MAR 26: Gold $4,521 | DXY 99.63 | Brent $99.75 | SIGNAL 14: gold+dollar both up | Iran 5 conditions
+
+=== THESIS EVOLUTION TRACKER ===
+
+THESIS A (DXY Floor 96-97): INTACT since Feb 5. Never broken. DXY touched 95.5 in Jan (briefly). War pushed to 100.32 (Mar 13). Currently 99.63 = war premium. Floor thesis unbroken.
+THESIS B (4D Chess): INTACT since Feb 5. Probability rose from 35%→55-65% as evidence accumulated. Warsh STILL blocked. No paperwork even filed. Powell safe past May.
+THESIS C (Cyclical vs Structural): CONFIRMED by Jan 30 crash. Reconfirmed by war paradox. Signal 14 (Mar 26) suggests structural component reasserting.
+THESIS D (BOJ Path): ON TRACK but DELAYED 60-90 days by war. BOJ still at 0.75%. Spread still above 2%.
+THESIS E (Peace Dividend): PENDING→APPROACHING since Mar 23. Iran counter-offered Mar 26. Not activated yet. 35% probability.
+THESIS F (Gold Bull $5,500-6,300): INTACT structurally. In deepest correction ($5,594→$4,248 = -24%). Signal 14 suggests structural floor holding. JP Morgan $6,300 target live.
+THESIS G (Supply Chain): Added Mar 22. LOCKED IN regardless of war outcome. Food inflation baked in.
 
 === PATTERNS DETECTED ===
 
