@@ -2473,6 +2473,43 @@ How may I assist you today? I can:
     if (el) el.remove();
   }
 
+  // ═══ PRE-CACHED RESPONSES — instant answers without API call ═══
+  const CACHED = {
+    // Contact
+    'contact': 'Khurram Badar is available on:\n\n**Pakistan:** +92 326 2266682 (WhatsApp active)\n**Dubai:** +971 55 6239111 (WhatsApp active)\n**Email:** khurrambadar@gmail.com\n**Website:** khurrambadar.com\n\nWhatsApp is open on both numbers. What would you like to discuss with Khurram?',
+    'phone': null, 'number': null, 'whatsapp': null, 'email': null, 'reach': null,
+    // About
+    'who is khurram': "Khurram Badar is Pakistan's foremost Convergence Thinker. 30+ years of C-Suite leadership across 8 countries — Philippines in the 1980s, Karachi 1987-1997, London, Saudi Arabia, Bahrain, and Dubai since 2000. He founded Spotlight FZE — a top-5 event company in Dubai for 18 years. He's an AI innovator, ESG advisor, fintech and blockchain expert, clean energy dealmaker, and a published journalist (Dawn News 1995, Gulf News 2002). A journalist from the last century still writing in the present century.\n\n20+ digital platforms built. Mentored by Abdul Sattar Edhi, HD Habib, and Dr. Ishrat Hussain. He brought Jermaine Jackson, Atif Aslam, Kailash Kher, and Jatin-Lalit to Gulf stages.\n\nWhat aspect of his work interests you most?",
+    'about': null, 'tell me about': null, 'background': null,
+    // Expertise
+    'expertise': "Khurram operates across 8 dimensions of convergence:\n\n**AI & Enterprise Innovation** — Mr. TCS AI platform (5 languages, replacing Salesforce), CreateAgent.ai, RoboticTakeover.com\n**ESG & Climate** — UAE Federal Decree-Law No 11 compliance, GHG Protocol, EU CBAM 2026\n**Fintech & Web3** — DAO, NFT, DeFi, stablecoins, Layer 2. 20+ domain portfolio.\n**Precious Metals & Macro** — Proprietary DXY-gold-silver research. 6 theses, 14 signals.\n**Clean Energy** — STRATEMA AM GmbH $110M solar hydroponic campus for Masdar/Silal/Alpha Dhabi\n**Pakistan AI Education** — 100 million youth under 15. New World Curriculum.\n**Space Economy** — AI + robots + solar + reusable rockets abundance thesis\n**Journalism** — Dawn News 1995, Gulf News 2002. Still writing.\n\nWhich area would you like to explore deeper?",
+    'what does khurram do': null, 'work': null,
+    // Luminaries
+    'luminaries': "Khurram Badar has worked with an extraordinary constellation of people:\n\n**Abdul Sattar Edhi** — Pakistan's greatest humanitarian. Had Khurram on his personal call list. Opened his famous briefcase for him in Dubai.\n**Jermaine Jackson** — UAE PR principal 2005-2008. Accompanied him to the House of Sarkal in Abu Dhabi.\n**H.E. Khalifa Al Kindi** — Founding MD of Abu Dhabi Investment Council, Deputy MD ADIA.\n**Atif Aslam** — Debuted in Dubai 2005 before the world knew his name.\n**Dubai Rock 2006** — Kailash Kher, Rabbi Shergill, Ali Zafar, Fawad Khan/EP Band, Ali Azmat.\n**Bollywood Nite 2007** — Co-produced with Jatin-Lalit at Dubai Media City Amphitheatre. Shaan, Gulshan Grover.\n**Nayla Al Khaja** — UAE's first female film director. Netflix. AR Rahman.\n**Mir Shakil ur Rahman** — Founder Geo TV. Jermaine Jackson on live breakfast show.\n\nWho would you like to hear more about?",
+    'icons': null, 'worked with': null, 'edhi': null, 'jermaine': null,
+    // TitanTrader
+    'titantrader': "TitanTrader is an autonomous commodity market maker and directional trading framework — an educational and research system that operates across 12 instruments: gold, silver, platinum, crude oil, natural gas, copper, zinc, wheat, corn, soybeans, and crypto commodity proxies.\n\nIt uses the **Avellaneda-Stoikov (2008)** stochastic optimal control model for market making — the same mathematical framework used by Citadel Securities and Virtu Financial. It includes:\n\n- 7 technical signals + Claude AI sentiment + 5-regime detection\n- Risk firewall: 8% drawdown kill switch, 2% daily loss limit\n- Kelly Criterion fractional position sizing\n- Walk-forward backtesting + Monte Carlo simulation\n\nThe goal: outperform Glencore, Trafigura, and Vitol in market-making efficiency.\n\nNOT FINANCIAL ADVICE. TitanTrader is educational and research only. All trading involves substantial risk of loss. Always consult a qualified financial adviser.\n\nWhat aspect interests you — the math, the risk management, or the market coverage?",
+    // Meeting
+    'meeting': "I'd be happy to help arrange a meeting with Khurram Badar. I'll need a few details:\n\n1. **Your name**\n2. **Your organisation**\n3. **Topic you'd like to discuss**\n4. **Preferred contact method** (email, WhatsApp, phone)\n\nKhurram will reach out personally within 24 hours.\n\nPlease share your details and I'll set it up.",
+    'coffee': null, 'book': null, 'appointment': null, 'meet': null,
+  };
+  // Map null entries to the parent key's response
+  (function(){
+    let lastVal = null;
+    for (const [k,v] of Object.entries(CACHED)) {
+      if (v !== null) lastVal = v;
+      else CACHED[k] = lastVal;
+    }
+  })();
+
+  function getCachedResponse(text) {
+    const lower = text.toLowerCase().replace(/[^a-z0-9\s]/g, '');
+    for (const [keyword, response] of Object.entries(CACHED)) {
+      if (lower.includes(keyword)) return response;
+    }
+    return null;
+  }
+
   // Quick-send from clickable greeting options
   window.krmQuickSend = function(text) {
     document.getElementById('krm-input').value = text;
@@ -2489,6 +2526,18 @@ How may I assist you today? I can:
     input.style.height = 'auto';
     addMessage('user', text);
     krmHistory.push({ role: 'user', content: text });
+
+    // Check pre-cached responses first — instant, no API call
+    const cached = getCachedResponse(text);
+    if (cached && krmHistory.length <= 3) {
+      // Only use cache for early conversation (first 1-2 messages)
+      // After that, use full AI for contextual responses
+      setTimeout(function() {
+        krmHistory.push({ role: 'assistant', content: cached });
+        addMessage('assistant', cached);
+      }, 300); // Small delay to feel natural, not robotic
+      return;
+    }
 
     krmBusy = true;
     document.getElementById('krm-send').disabled = true;
