@@ -5,3 +5,4 @@ Disallow: /api/update
 Disallow: /api/memory
 
 Sitemap: https://khurrambadar.com/sitemap.xml
+Sitemap: https://khurrambadar.com/news-sitemap.xml
