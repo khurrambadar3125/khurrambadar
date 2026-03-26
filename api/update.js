@@ -141,10 +141,22 @@ export default async function handler(req) {
     const mode = body.mode || 'full'; // 'full' or 'monitor'
     const today = new Date().toISOString().split('T')[0];
 
+    // Fetch memory context for the AI to compare against previous days
+    let memoryContext = '';
+    try {
+      const memUrl = new URL('/api/memory?action=context', req.url);
+      const memRes = await fetch(memUrl.toString());
+      if (memRes.ok) {
+        const memData = await memRes.json();
+        memoryContext = memData.context || '';
+      }
+    } catch (e) { /* memory unavailable, continue without it */ }
+
     const systemPrompt = mode === 'monitor' ? EVENT_MONITOR_PROMPT : UPDATE_AGENT_PROMPT;
+    const memoryBlock = memoryContext ? `\n\nHISTORICAL MEMORY (compare today against this data):\n${memoryContext}` : '';
     const userMessage = mode === 'monitor'
       ? `Today is ${today}. Scan for trigger events now.`
-      : `Today is ${today}. Run the full daily update. Search for all data points. Output ONLY the structured block.`;
+      : `Today is ${today}. Run the full daily update. Search for all data points.${memoryBlock}\n\nCompare today's data against the memory above. Note any multi-day trends, thesis changes, or patterns. Output ONLY the structured block.`;
 
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -171,12 +183,39 @@ export default async function handler(req) {
       validation = { valid: errors.length === 0, errors };
     }
 
+    // Store snapshot in memory after successful full update
+    if (mode === 'full' && validation.valid) {
+      try {
+        const memUrl = new URL('/api/memory?action=snapshot', req.url);
+        await fetch(memUrl.toString(), {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${process.env.UPDATE_SECRET || 'kbai-update-2026'}`,
+          },
+          body: JSON.stringify({
+            date: today,
+            gold: output.match(/GOLD[:\s]*\$([0-9,.]+)/i)?.[1],
+            silver: output.match(/SILVER[:\s]*\$([0-9,.]+)/i)?.[1],
+            dxy: output.match(/DXY[:\s]*([0-9.]+)/i)?.[1],
+            oil_brent: output.match(/BRENT[:\s]*\$([0-9,.]+)/i)?.[1],
+            yield_10y: output.match(/10Y[:\s]*([0-9.]+)%/i)?.[1],
+            sp500: output.match(/SP500[:\s]*([0-9,.]+)/i)?.[1],
+            war_status: output.match(/WAR[:\s]*([A-Z-]+)/i)?.[1],
+            warsh_status: output.match(/WARSH[:\s]*([A-Z]+)/i)?.[1],
+            verdict: output.match(/VERDICT[:\s]*(.*?)(?:\n|---)/is)?.[1]?.substring(0, 500),
+          }),
+        });
+      } catch (e) { /* memory store failed, continue */ }
+    }
+
     return new Response(JSON.stringify({
       mode,
       date: today,
       timestamp: new Date().toISOString(),
       validation,
       output,
+      memory_integrated: !!memoryContext,
     }), {
       status: 200,
       headers: {

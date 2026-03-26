@@ -47,6 +47,18 @@ export default async function handler(req) {
     // Inject knowledge base into system prompt if present
     if (body.system && typeof body.system === 'string') {
       body.system = body.system + '\n\nKNOWLEDGE BASE (use this data to answer financial/macro questions):\n' + KNOWLEDGE_BASE;
+
+      // Inject learning loop memory context (last 30 days of snapshots + patterns)
+      try {
+        const memUrl = new URL('/api/memory?action=context', req.url);
+        const memRes = await fetch(memUrl.toString());
+        if (memRes.ok) {
+          const memData = await memRes.json();
+          if (memData.context && memData.context.length > 50) {
+            body.system = body.system + '\n\nLEARNING LOOP MEMORY (historical snapshots, thesis changes, detected patterns — use this to identify multi-day trends and compare today vs previous days):\n' + memData.context;
+          }
+        }
+      } catch (e) { /* memory unavailable, continue without it */ }
     }
 
     const res = await fetch('https://api.anthropic.com/v1/messages', {
