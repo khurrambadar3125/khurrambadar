@@ -1665,7 +1665,7 @@ footer span { color: var(--gold); }
       <a class="conn-link primary mono" href="mailto:khurrambadar@gmail.com">khurrambadar@gmail.com</a>
       <a class="conn-link mono" href="tel:+923262266682">+92 326 2266682</a>
       <a class="conn-link mono" href="tel:+971556239111">+971 55 6239111</a>
-      <a class="conn-link mono" href="http://khurrambadar.com" target="_blank" rel="noopener">khurrambadar.com</a>
+      <a class="conn-link mono" href="https://khurrambadar.com" target="_blank" rel="noopener">khurrambadar.com</a>
     </div>
     <div class="signature serif reveal">
       "An AI Innovator who's seen every major wave —<br>
@@ -2083,10 +2083,11 @@ document.addEventListener('keydown', function(e) {
 .krm-messages::-webkit-scrollbar-thumb { background: rgba(201,146,31,0.2); border-radius: 2px; }
 
 .krm-msg {
-  max-width: 88%; padding: 12px 16px;
-  font-size: 13.5px; line-height: 1.65;
+  max-width: 88%; padding: 14px 18px;
+  font-size: 14.5px; line-height: 1.7;
   border-radius: 10px;
   animation: krm-msg-in 0.3s ease;
+  letter-spacing: 0.01em;
 }
 /* ── QUICK ACTION LINKS ── */
 .krm-quick {
@@ -2118,9 +2119,13 @@ document.addEventListener('keydown', function(e) {
 }
 .krm-msg.assistant {
   align-self: flex-start;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-  color: var(--cream);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #F5F1E8;
+}
+.krm-msg.assistant strong { color: #fff; }
+.krm-msg.assistant h1, .krm-msg.assistant h2, .krm-msg.assistant h3 {
+  color: #fff; margin: 12px 0 6px; font-size: 15px;
 }
 .krm-msg.user {
   align-self: flex-end;
