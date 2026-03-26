@@ -1,4 +1,30 @@
 {
+  "headers": [
+    {
+      "source": "/(.*).html",
+      "headers": [
+        { "key": "Cache-Control", "value": "s-maxage=60, stale-while-revalidate=300" }
+      ]
+    },
+    {
+      "source": "/api/prices",
+      "headers": [
+        { "key": "Cache-Control", "value": "s-maxage=30, stale-while-revalidate=60" }
+      ]
+    },
+    {
+      "source": "/api/chat",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Cache-Control", "value": "s-maxage=3600" }
+      ]
+    }
+  ],
   "rewrites": [
     { "source": "/api/chat", "destination": "/api/chat.js" },
     { "source": "/api/knowledge", "destination": "/api/knowledge.js" },
