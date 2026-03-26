@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/chat
+Disallow: /api/update
+Disallow: /api/memory
+
+Sitemap: https://khurrambadar.com/sitemap.xml

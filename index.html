@@ -6,9 +6,58 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#070810">
-<title>Khurram Badar — The Convergence Thinker</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;0,900;1,400;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Khurram Badar — The Convergence Thinker | AI, ESG, Fintech, Markets</title>
+<meta name="description" content="Khurram Badar — Pakistan's foremost Convergence Thinker. 30+ years C-Suite across UAE, Pakistan, Saudi Arabia. AI Innovator, ESG Advisor, Fintech Expert, Clean Energy Dealmaker. Proprietary market intelligence on gold, silver, DXY, bonds, geopolitics. TitanTrader autonomous trading framework.">
+<meta name="keywords" content="Khurram Badar, convergence thinker, AI Pakistan, ESG UAE, fintech blockchain, gold silver DXY, market intelligence, TitanTrader, Spotlight FZE Dubai, TCS Pakistan, clean energy, precious metals">
+<meta name="author" content="Khurram Badar">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://khurrambadar.com/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Khurram Badar — The Convergence Thinker">
+<meta property="og:description" content="Pakistan's foremost Convergence Thinker. AI, ESG, Fintech, Precious Metals Market Intelligence. 30+ years C-Suite. Proprietary research on gold, silver, DXY, bonds, geopolitics.">
+<meta property="og:url" content="https://khurrambadar.com/">
+<meta property="og:site_name" content="Khurram Badar">
+<meta property="og:locale" content="en_US">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Khurram Badar — The Convergence Thinker">
+<meta name="twitter:description" content="AI, ESG, Fintech, Precious Metals Market Intelligence. Pakistan's foremost Convergence Thinker.">
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Khurram Badar",
+  "url": "https://khurrambadar.com",
+  "jobTitle": "Convergence Thinker & AI Innovator",
+  "description": "Pakistan's foremost Convergence Thinker. 30+ years C-Suite across UAE, Pakistan, Saudi Arabia. AI Innovator, ESG Advisor, Fintech Expert, Clean Energy Dealmaker.",
+  "email": "khurrambadar@gmail.com",
+  "telephone": ["+923262266682", "+971556239111"],
+  "knowsAbout": ["Artificial Intelligence", "ESG", "Fintech", "Blockchain", "Gold Markets", "Silver Markets", "Clean Energy", "Pakistan Economy"],
+  "alumniOf": "Dawn News, Gulf News",
+  "worksFor": {"@type": "Organization", "name": "khurrambadar.com"},
+  "sameAs": ["https://khurrambadar.com"]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Khurram Badar",
+  "url": "https://khurrambadar.com",
+  "description": "AI-powered market intelligence platform with proprietary research on gold, silver, DXY, bonds, and geopolitics.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://khurrambadar.com/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;0,900;1,400;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;0,900;1,400;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 
 <style>
 /* ══════════════════════════════════════════════
@@ -1687,95 +1736,35 @@ footer span { color: var(--gold); }
     if (el2) el2.innerHTML = html;
   }
 
-  // Track which assets still need data
-  let need = { gold: true, silver: true, btc: true, sp500: true };
-
   async function fetchPrices() {
-    need = { gold: true, silver: true, btc: true, sp500: true };
-
-    // ── LAYER 1: Direct CORS APIs (fastest, no proxy) ──
-
-    // Gold via PAXG on Binance (tokenized physical gold, tracks spot within ~$5)
-    try {
-      const r = await fetch('https://api.binance.com/api/v3/ticker/24hr?symbol=PAXGUSDT');
-      if (r.ok) {
-        const d = await r.json();
-        setTicker('tk-gold', 'GOLD', parseFloat(d.lastPrice), parseFloat(d.priceChangePercent), '$', 2);
-        need.gold = false;
-      }
-    } catch(e) {}
-
-    // Bitcoin via Binance (most liquid, CORS-friendly)
-    try {
-      const r = await fetch('https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT');
-      if (r.ok) {
-        const d = await r.json();
-        setTicker('tk-btc', 'BTC', parseFloat(d.lastPrice), parseFloat(d.priceChangePercent), '$', 0);
-        need.btc = false;
-      }
-    } catch(e) {}
-
-    // Gold fallback via CoinGecko PAXG
-    if (need.gold) {
-      try {
-        const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=pax-gold&vs_currencies=usd&include_24hr_change=true');
-        if (r.ok) {
-          const d = await r.json();
-          if (d['pax-gold']) {
-            setTicker('tk-gold', 'GOLD', d['pax-gold'].usd, d['pax-gold'].usd_24h_change, '$', 2);
-            need.gold = false;
-          }
-        }
-      } catch(e) {}
-    }
-
-    // BTC fallback via CoinGecko
-    if (need.btc) {
-      try {
-        const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true');
-        if (r.ok) {
-          const d = await r.json();
-          if (d.bitcoin) {
-            setTicker('tk-btc', 'BTC', d.bitcoin.usd, d.bitcoin.usd_24h_change, '$', 0);
-            need.btc = false;
-          }
-        }
-      } catch(e) {}
-    }
-
-    // ── LAYER 2: Our own Vercel proxy for Silver + S&P (guaranteed CORS) ──
+    // PRIMARY: Our own server proxy — guaranteed to work, no CORS issues
     try {
       const r = await fetch('/api/prices');
       if (r.ok) {
         const d = await r.json();
-        if (d.silver && need.silver) {
-          setTicker('tk-silver', 'SILVER', d.silver.price, d.silver.change, '$', 2);
-          need.silver = false;
-        }
-        if (d.sp500 && need.sp500) {
-          setTicker('tk-sp500', 'S&P 500', d.sp500.price, d.sp500.change, '', 2);
-          need.sp500 = false;
-        }
-        // Use proxy gold/btc as fallback if direct APIs failed
-        if (d.gold && need.gold) {
-          setTicker('tk-gold', 'GOLD', d.gold.price, d.gold.change, '$', 2);
-          need.gold = false;
-        }
-        if (d.btc && need.btc) {
-          setTicker('tk-btc', 'BTC', d.btc.price, d.btc.change, '$', 0);
-          need.btc = false;
-        }
+        if (d.gold) setTicker('tk-gold', 'GOLD', d.gold.price, d.gold.change, '$', 2);
+        if (d.silver) setTicker('tk-silver', 'SILVER', d.silver.price, d.silver.change, '$', 2);
+        if (d.btc) setTicker('tk-btc', 'BTC', d.btc.price, d.btc.change, '$', 0);
+        if (d.sp500) setTicker('tk-sp500', 'S&P 500', d.sp500.price, d.sp500.change, '', 2);
+        return; // All done from proxy
+      }
+    } catch(e) {}
+    // FALLBACK: Direct APIs if proxy fails
+    try {
+      const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,pax-gold&vs_currencies=usd&include_24hr_change=true');
+      if (r.ok) {
+        const d = await r.json();
+        if (d['pax-gold']) setTicker('tk-gold', 'GOLD', d['pax-gold'].usd, d['pax-gold'].usd_24h_change, '$', 2);
+        if (d.bitcoin) setTicker('tk-btc', 'BTC', d.bitcoin.usd, d.bitcoin.usd_24h_change, '$', 0);
       }
     } catch(e) {}
   }
 
-  // Wait for DOM, then fetch + refresh every 60 seconds
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function() { fetchPrices(); setInterval(fetchPrices, 60000); });
-  } else {
+  // Defer ticker fetch — don't block page load. Start after 3 seconds.
+  setTimeout(function() {
     fetchPrices();
     setInterval(fetchPrices, 60000);
-  }
+  }, 3000);
 })();
 </script>
 
@@ -2361,7 +2350,7 @@ How may I assist you today? I can:
   let krmHistory = [];
   let krmBusy = false;
 
-  // Open chat automatically on page load — all devices
+  // Open chat immediately on page load — all devices
   window.addEventListener('load', function() {
     setTimeout(function() {
       const panel = document.getElementById('krm-chat-panel');
@@ -2375,7 +2364,7 @@ How may I assist you today? I can:
       if (window.innerWidth > 768) {
         setTimeout(() => document.getElementById('krm-input').focus(), 400);
       }
-    }, 800);
+    }, 100);
   });
 
   // Expose toggle
