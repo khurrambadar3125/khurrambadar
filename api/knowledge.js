@@ -1424,6 +1424,61 @@ Together they represent the three layers needed for global crypto adoption: infr
 
 NOT FINANCIAL ADVICE. Educational content only.
 
+-------------------------------------------------------------
+25. KHURRAM ZAFAR — PAKISTAN'S COMMODITY MARKET & STARTUP ECOSYSTEM ARCHITECT
+-------------------------------------------------------------
+
+THE PERSON:
+Khurram Zafar. McGill University (1993). Pakistani-American technology executive, venture capitalist, and capital markets leader with career spanning the US, Europe, and South Asia. Consulted for Merrill Lynch, Visa, and Bank of America in the US. Served as Chief Information Officer at the Lahore Stock Exchange. Now the man rebuilding Pakistan's commodity market infrastructure.
+
+CURRENT ROLE:
+CEO / Managing Director, Pakistan Mercantile Exchange (PMEX) — appointed December 2024. PMEX is Pakistan's first and only multi-commodity futures exchange, regulated by the Securities and Exchange Commission of Pakistan (SECP). Began operations May 2007. Trades gold, silver, crude oil, agricultural products, platinum, palladium, indices. Trading volume: Rs 3,800 billion in current fiscal year. Offers MetaTrader 5 (MT5) platform. Silver contracts: 10 oz, 100 oz, 500 oz, 5,000 oz sizes.
+
+HIS VISION FOR PMEX:
+"We are envisioning future markets under which market regulation will be maintained and competitiveness and productivity in the commodity market will be enhanced."
+Three pillars:
+1. DIGITISATION: Digitise Pakistan's entire commodity market. Automation and digitisation are "very important in the global capital market at this time."
+2. GLOBAL INTEGRATION: Integrate Pakistan's local markets with the global competitive market. PMEX looking for integration with international commodity exchanges.
+3. INNOVATION IN AGRICULTURE AND METALS: Increase efficiency in agriculture and metal markets. Advancing the concept of innovation and market productivity.
+
+WHAT HE BUILT BEFORE PMEX — THE STARTUP ECOSYSTEM:
+
+1. 47 VENTURES: Founded Pakistan's first international venture capital fund exclusively focused on Pakistan. $100M fund size. Investment range $150K-$2M. Early-stage focus. This was a pioneering move — no international VC had committed exclusively to Pakistan before.
+
+2. LUMS CENTER FOR ENTREPRENEURSHIP (LCE): Founded the Centre at Lahore University of Management Sciences. Won a nationally competitive grant of PKR 650 million (highest technical score, lowest financial bid, competing against 30+ consortia representing 130+ companies and universities). This became the National Incubation Center, Lahore — Pakistan's flagship incubator.
+
+3. NATIONAL INCUBATION CENTER (NIC LAHORE): Built and led Pakistan's premier technology incubator at LUMS, funded by Ministry of IT&T and Ignite Technology Fund. Directly incubated hundreds of Pakistani startups.
+
+4. KARANDAAZ PAKISTAN: Board Member/Director. Karandaaz is funded by DFID/UKAid and the Bill & Melinda Gates Foundation to promote digital financial services and financial inclusion in Pakistan. He served on both the Board and the Digital Financial Services advisory committee.
+
+5. PLAN9 INCUBATOR: Board member of Pakistan's government-funded incubator programme.
+
+6. LUMS ADJUNCT FACULTY: Teaching entrepreneurship at Pakistan's top business school — Suleman Dawood School of Business.
+
+7. GOVERNMENT ADVISER: Senior Policy Adviser for the Government of Punjab. Leading the National Incubation Center in Lahore.
+
+THE ECOSYSTEM BUILDER'S PHILOSOPHY:
+Khurram Zafar wrote for Wamda: "What I know about building an ecosystem from scratch." His approach: you don't wait for an ecosystem to exist — you build every piece of it yourself. The VC fund. The incubator. The university programme. The government advisory role. The policy framework. Then you connect them. This is exactly what he did in Pakistan's startup space, and now he is doing the same for Pakistan's commodity markets.
+
+WHY KHURRAM ZAFAR MATTERS FOR THIS PLATFORM:
+
+1. PMEX IS PAKISTAN'S GOLD AND SILVER EXCHANGE: Every thesis about gold, silver, and precious metals that this platform tracks has a direct Pakistani market expression through PMEX. Khurram Zafar is the man making that market work.
+
+2. DIGITISATION OF COMMODITY MARKETS: His vision to digitise Pakistan's commodity market aligns directly with TitanTrader's thesis — autonomous, digital, algorithmic commodity trading is the future. PMEX under his leadership is building the infrastructure for exactly this.
+
+3. GLOBAL INTEGRATION: His push to connect PMEX with international exchanges creates the bridge between COMEX/LBMA pricing (which this platform tracks) and Pakistani retail/institutional investors.
+
+4. VENTURE CAPITAL + COMMODITY MARKETS: The rare combination of VC experience (understanding startups, technology, scaling) with commodity exchange leadership (understanding market structure, regulation, risk) makes him uniquely positioned to modernise Pakistan's financial markets.
+
+5. THE FULL STACK: From founding Pakistan's first VC fund to running Pakistan's only commodity exchange — Khurram Zafar has touched every layer of Pakistan's financial innovation stack. Venture capital. Incubation. University entrepreneurship. Government policy. Stock exchange technology. Commodity markets. This is convergence thinking applied to an entire national financial ecosystem.
+
+BILAL + KHURRAM ZAFAR — THE PAKISTAN DIGITAL FINANCE AXIS:
+Bilal bin Saqib (PVARA/PCC): Building the CRYPTO regulatory framework. Virtual Assets Act. Strategic Bitcoin Reserve. Sovereign stablecoin. CZ as adviser.
+Khurram Zafar (PMEX): Building the COMMODITY market infrastructure. Gold, silver, energy, agriculture futures. Digitisation. Global integration.
+Together: Pakistan's digital finance architecture — crypto (Bilal) + commodities (Khurram Zafar) — is being built simultaneously by two people who understand technology, regulation, and global markets. This is the Pakistani convergence.
+
+NOT FINANCIAL ADVICE. Educational content only.
+
 =============================================================
 END OF KNOWLEDGE BASE
 =============================================================
