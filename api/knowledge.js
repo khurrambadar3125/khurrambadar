@@ -1134,6 +1134,98 @@ PATTERN 004: Signal 14 fired March 26 — gold up with dollar up. Watch for pers
 6. After 3+ day trend, note it as a pattern. After 5+ days, flag it as significant.
 7. Every correction/error must be logged as a LESSON with a RULE to prevent recurrence.
 
+-------------------------------------------------------------
+21. TITANTRADER — AUTONOMOUS SUPER TRADER & MARKET MAKER FRAMEWORK
+-------------------------------------------------------------
+
+DISCLAIMER: THIS IS NOT FINANCIAL ADVICE. TitanTrader is an educational and research
+framework for studying autonomous market making and algorithmic trading concepts.
+Nothing in this section constitutes a recommendation to trade, invest, or deploy
+capital. All trading involves substantial risk of loss. Always consult a qualified
+financial adviser before making any investment decision.
+
+WHAT IS TITANTRADER:
+TitanTrader is a production-grade autonomous commodity market maker and directional
+trader framework designed to operate across precious metals (Gold/GC, Silver/SI,
+Platinum/PL), energy (WTI Crude/CL, Natural Gas/NG), base metals (Copper/HG, Zinc/ZN),
+agricultural commodities (Wheat/ZW, Corn/ZC, Soybeans/ZS), and crypto commodity proxies
+(XAUUSDT, XAGUUSDT). NOT FINANCIAL ADVICE.
+
+THREE OPERATING ENVIRONMENTS:
+1. Paper Trading (always on, zero risk) — simulation mode for testing
+2. Live Crypto via CCXT (Binance/Kraken/OKX) — requires real capital, REAL RISK
+3. Live Futures via Interactive Brokers (COMEX, NYMEX, CBOT, LME) — institutional grade
+
+CORE TECHNOLOGY STACK:
+- Python 3.12, asyncio single event loop
+- TimescaleDB (PostgreSQL 15) for time-series data storage
+- Redis 7 for real-time state, cache, and pub/sub messaging
+- Avellaneda-Stoikov (2008) stochastic optimal control model for market making
+- Claude Sonnet API for AI-powered news sentiment analysis
+- CCXT unified interface for crypto execution
+- ib-insync for Interactive Brokers futures execution
+- FastAPI + WebSocket for real-time dashboard streaming
+
+6-LAYER ARCHITECTURE:
+Layer 1 — DATA INGESTION: Binance WebSocket (bookTicker + depth20), AlphaVantage REST (30s polls), Nasdaq Data Link (hourly futures settle). Unified Tick and OrderBook dataclasses. Dual-layer TimescaleDB + Redis storage with 100-tick batch inserts.
+
+Layer 2 — AI BRAIN: 7 technical signals (RSI, MACD, Bollinger, ATR, VWAP, Momentum, ADX) all returning [-1.0, +1.0]. Sentiment engine using Claude API with structured JSON scoring. 5-regime detector (TRENDING_UP, TRENDING_DOWN, RANGING, HIGH_VOLATILITY, CRISIS). Ensemble engine: technical 40%, sentiment 25%, regime 20%, order flow 15%. Kelly Criterion position sizing (fractional Kelly 0.25). NOT FINANCIAL ADVICE.
+
+Layer 3 — MARKET MAKING (Avellaneda-Stoikov 2008):
+- Reservation price: r = s - q * gamma * sigma² * tau
+- Optimal half-spread: delta/2 = (gamma * sigma² * tau)/2 + (1/gamma) * ln(1 + gamma/kappa)
+- Inventory skew: excess inventory lowers bid / raises ask (max 20bps)
+- Min spread 2bps, max spread 50bps. Regime-adjusted multipliers.
+- This is the same mathematical framework used by top market makers globally.
+
+Layer 4 — RISK FIREWALL (every order must pass):
+Check 0: Kill switch active → HALTED
+Check 1: Drawdown >= 8% from peak → kill switch activated → HALTED
+Check 2: Daily loss >= 2% → REJECTED
+Check 3: Position > 10% of portfolio → REJECTED
+Check 4: Sector concentration > 30% → REJECTED
+Check 5: VaR breach > 3% → WARNING (logged, still approved)
+Kill switch requires EXPLICIT manual deactivation — never auto-resets.
+
+Layer 5 — EXECUTION: PaperBroker (simulation), CryptoBroker (CCXT), FuturesBroker (IB).
+Order lifecycle: NEW → PENDING → FILLED / PARTIAL / REJECTED / ERROR.
+All fills written to TimescaleDB with full audit trail.
+
+Layer 6 — DASHBOARD & BACKTEST: FastAPI + WebSocket streaming. Real-time equity curves,
+risk metrics, signal scores, MM quotes. Backtesting engine with walk-forward validation
+(5-fold) and Monte Carlo simulation (1,000 runs). Single-file React dark theme dashboard.
+
+ASSET UNIVERSE (12 instruments):
+GC (Gold/COMEX), SI (Silver/COMEX), PL (Platinum/NYMEX), CL (WTI/NYMEX),
+NG (NatGas/NYMEX), HG (Copper/COMEX), ZN (Zinc/LME), ZW (Wheat/CBOT),
+ZC (Corn/CBOT), ZS (Soybeans/CBOT), XAUUSDT (Gold-crypto/Binance),
+XAGUUSDT (Silver-crypto/Binance).
+
+COMPETITIVE EDGE vs GLENCORE / TRAFIGURA / VITOL / CARGILL:
+Traditional commodity houses rely on physical inventory, human traders (slow), high
+operational costs, and single-market expertise per desk. TitanTrader offers:
+- Sub-second quote refresh (500ms) vs human reaction (seconds)
+- Simultaneous 12-market coverage 24/7
+- Zero inventory cost (financial positions only)
+- AI sentiment scored in <2 seconds per event
+- Mathematically optimal spread (Avellaneda-Stoikov proven model)
+- Autonomous crisis detection halts trading before losses compound
+- Fractional Kelly prevents ruin even in adverse regimes
+- Walk-forward backtested before ANY live deployment
+
+LAUNCH SEQUENCE:
+1. Paper mode ONLY for first 30+ days. Validate positive P&L.
+2. Graduate to crypto only after paper validation.
+3. Graduate to futures only after 30+ days live crypto validation.
+EXECUTION_MODE=paper is the DEFAULT. This is NOT financial advice.
+
+WHEN USERS ASK ABOUT TITANTRADER:
+Explain it as an educational framework for understanding how autonomous trading systems
+work. Cover the Avellaneda-Stoikov model, risk management principles, regime detection,
+and Kelly Criterion. ALWAYS end with: "This is NOT financial advice. TitanTrader is an
+educational and research framework. All trading involves substantial risk of loss.
+Always consult a qualified financial adviser."
+
 =============================================================
 END OF KNOWLEDGE BASE
 =============================================================
