@@ -842,6 +842,69 @@ DXY PATH BY TIME HORIZON:
 
 TWO-STAGE DOLLAR DECLINE: Stage 1 fast (war premium out, 96-97). Stalls 6-8 weeks while inflation data catches up. Stage 2 in Q3 when Fed has cover to cut.
 
+-------------------------------------------------------------
+20. LEARNING LOOP — ACCUMULATED LESSONS & HISTORICAL SNAPSHOTS
+-------------------------------------------------------------
+
+PURPOSE: This section accumulates lessons learned from daily analysis. Every correction,
+pattern discovery, and prediction outcome gets stored here permanently. The AI must
+read this section BEFORE making any new assessment to avoid repeating past errors.
+
+=== LESSON LOG ===
+
+LESSON 001 (March 26, 2026) — CRITICAL ERROR CORRECTED:
+Error: Assessed gold rally of +2.7% to $4,521 as driven by "weaker dollar."
+Reality: DXY ROSE to 99.63 (+0.19%) on the same day. Dollar strengthened, not weakened.
+Correction: Gold rallied DESPITE a stronger dollar + 8-month high yields (4.35-4.39%).
+This triggered SIGNAL 14 — gold and dollar both rising simultaneously — the rarest
+and most structurally bullish signal in the framework.
+RULE: ALWAYS verify DXY direction independently before attributing gold moves to
+dollar weakness. Never assume. Check the actual number.
+
+LESSON 002 (March 26, 2026) — SIGNAL 14 SIGNIFICANCE:
+Signal 14 (gold + dollar both rising) has only fired a handful of times in the last
+decade. Every previous instance preceded a major gold rally within 30-60 days. It means
+structural demand (central bank buying, physical, de-dollarisation) is overwhelming the
+normal dollar-gold inverse correlation. When Signal 14 fires, do NOT dismiss the gold
+move as noise. It is the strongest structural signal possible.
+
+LESSON 003 (March 23-26, 2026) — IRAN DIPLOMACY ASSESSMENT:
+March 23: Trump announced "productive talks" — assessed as ceasefire probability 40%.
+March 24: Iran DENIED talks — probability correctly revised down to 30%.
+March 25: 15-point ceasefire plan submitted. Iran mocked it publicly — but responded
+with 5 counter-conditions. Probability revised to 35%.
+March 26: Iran FM says plan "being reviewed." DXY still strong at 99.63 = market NOT
+fully pricing peace. Correct assessment: 35% ceasefire, 40% escalation, 25% limbo.
+RULE: Watch what DXY does, not what headlines say. If DXY stays above 99 despite
+"peace talks," the market is skeptical. DXY is the truth-teller.
+
+=== DAILY SNAPSHOTS (append new data each day) ===
+
+MAR 23: Gold $4,248-4,450 | Silver $65-69 | DXY 98.5-99.59 | Brent $99-114 | 10Y 4.20-4.39% | War Day 23 | Trump peace post, oil crashed $114→$99 | Theses: A-INTACT B-INTACT C-REACTIVATING D-INTACT E-APPROACHING F-TURNING
+MAR 24: Gold $4,418 | Silver $67-69 | DXY 99.40 | Brent $101 | 10Y 4.39% | War Day 24 | Iran denied talks, DXY bounced back | Theses: A-INTACT B-INTACT C-ON-HOLD D-INTACT E-UNCERTAIN F-MIXED
+MAR 25: Gold $4,474 | Silver $67-69 | DXY 99.3 | Brent $103.56 | 10Y 4.39% | War Day 25 | 15-point plan submitted, 82nd Airborne deploying, Iran mocking | Theses: A-INTACT B-INTACT C-ON-HOLD D-INTACT E-APPROACHING F-MIXED
+MAR 26: Gold $4,521 (+2.7%) | Silver $70-72 | DXY 99.63 (+0.19%) | Brent $99.75 | 10Y 4.35-4.39% | War Day 26 | SIGNAL 14 FIRED: gold+dollar both up. Iran counter-offered 5 conditions. | Theses: A-INTACT B-INTACT C-ON-HOLD D-INTACT+SIGNAL14 E-APPROACHING F-STRUCTURAL
+
+=== PATTERNS DETECTED ===
+
+PATTERN 001: Gold lost 9 consecutive sessions (Mar 14-22) then bounced. After the bounce started (Mar 23), gold has risen 4 out of 4 days: $4,248 → $4,418 → $4,474 → $4,521. Streak intact.
+
+PATTERN 002: DXY has held 99-100 range for 4 consecutive days despite peace talk headlines. Market is NOT pricing ceasefire into the dollar. DXY is the skeptic.
+
+PATTERN 003: Oil fell from $114 to $99 (Mar 23-26) but DXY did NOT fall with it. Normally oil down = dollar down (less petrodollar demand). This divergence suggests safe-haven dollar demand is offsetting the oil decline. War premium still dominant.
+
+PATTERN 004: Signal 14 fired March 26 — gold up with dollar up. Watch for persistence. If it holds 2-3 days = structural thesis confirmed.
+
+=== EVALUATION RULES (read before every update) ===
+
+1. ALWAYS check DXY actual direction before attributing gold moves to dollar.
+2. ALWAYS compare today's data against the snapshot above — note the TREND, not just the number.
+3. When DXY and gold move in SAME direction, flag it prominently. Signal 14 is rare.
+4. When Iran makes public statements, check DXY response — DXY is the market's real assessment.
+5. Scenario probabilities should be anchored to DXY behavior, not headline sentiment.
+6. After 3+ day trend, note it as a pattern. After 5+ days, flag it as significant.
+7. Every correction/error must be logged as a LESSON with a RULE to prevent recurrence.
+
 =============================================================
 END OF KNOWLEDGE BASE
 =============================================================
