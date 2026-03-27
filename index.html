@@ -8,7 +8,9 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="theme-color" content="#070810">
+<meta name="theme-color" content="#C9921F">
+<link rel="manifest" href="/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
 <title>Khurram Badar — The Convergence Thinker | AI, ESG, Fintech, Markets</title>
 <meta name="description" content="Khurram Badar — Pakistan's foremost Convergence Thinker. 30+ years C-Suite across UAE, Pakistan, Saudi Arabia. AI Innovator, ESG Advisor, Fintech Expert, Clean Energy Dealmaker. Proprietary market intelligence on gold, silver, DXY, bonds, geopolitics. TitanTrader autonomous trading framework.">
 <meta name="keywords" content="Khurram Badar, convergence thinker, AI Pakistan, ESG UAE, fintech blockchain, gold silver DXY, market intelligence, TitanTrader, Spotlight FZE Dubai, TCS Pakistan, clean energy, precious metals">
@@ -2604,5 +2606,11 @@ How may I assist you today? I can:
 })();
 </script>
 
+<script>
+// Register Service Worker for PWA "Install App" functionality
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').catch(function(){});
+}
+</script>
 </body>
 </html>
