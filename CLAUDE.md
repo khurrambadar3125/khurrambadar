@@ -6,7 +6,7 @@ It fetches live market data, evaluates 6 analytical theses, scores 14 signals,
 writes a daily verdict, and updates the site chatbot — all automatically.
 
 ## Owner
-Khurram Badar — Pakistan's foremost Convergence Thinker.
+Khurram Badar — One of the world's foremost Convergence Thinkers.
 30+ years C-Suite across UAE, Pakistan, Saudi Arabia, Bahrain, Singapore.
 Uses Claude Code to build and maintain everything.
 
