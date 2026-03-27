@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>The 14 Signals — Khurram Badar's Market Intelligence Framework</title>
+<meta name="description" content="The 14 market signals framework by Khurram Badar. DXY, gold, silver, oil, Fed policy, ceasefire, BOJ, and the rarest Signal 14 — gold and dollar rising together.">
+<link rel="canonical" href="https://khurrambadar.com/signals.html">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,700;0,900;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#070810;--cream:#EDE8DC;--gold:#C9921F;--gold2:#F0B840;--muted:#5B6370}
+body{background:var(--black);color:var(--cream);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;padding:0}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:rgba(7,8,16,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,146,31,0.18)}
+.top-bar a{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted)}
+.top-bar a:hover{color:var(--gold)}
+.top-bar .logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:700;color:var(--cream);letter-spacing:-0.02em}
+.container{max-width:800px;margin:0 auto;padding:80px 24px 60px}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,48px);font-weight:900;line-height:1;margin-bottom:8px}
+h1 em{color:var(--gold);font-style:italic}
+.subtitle{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:32px}
+.intro{font-size:16px;line-height:1.8;color:rgba(237,232,220,0.7);margin-bottom:48px;max-width:640px}
+.signal-card{padding:24px;margin-bottom:16px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;transition:all 0.2s}
+.signal-card:hover{background:rgba(201,146,31,0.04);border-color:rgba(201,146,31,0.2)}
+.signal-card.highlight{border-left:3px solid var(--gold);background:rgba(201,146,31,0.06)}
+.signal-num{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;display:inline-block}
+.signal-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;margin-bottom:8px}
+.signal-trigger{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:10px}
+.signal-meaning{font-size:14.5px;line-height:1.75;color:rgba(237,232,220,0.75)}
+.signal-meaning strong{color:var(--cream)}
+.tag{display:inline-block;padding:2px 8px;border-radius:3px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;margin-right:6px}
+.tag-bull{color:#4CAF50;background:rgba(76,175,80,0.1)}
+.tag-bear{color:#E74C3C;background:rgba(231,76,60,0.1)}
+.tag-rare{color:var(--gold2);background:rgba(240,184,64,0.1)}
+.disclaimer{margin-top:48px;padding:20px;border:1px solid rgba(201,146,31,0.15);background:rgba(201,146,31,0.03);border-radius:6px;font-size:11px;line-height:1.7;color:var(--muted)}
+footer{text-align:center;padding:24px;font-family:'DM Mono',monospace;font-size:9.5px;color:var(--muted);border-top:1px solid rgba(201,146,31,0.18)}
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <a href="/" class="logo">Khurram Badar</a>
+  <div>
+    <a href="/">Home</a> &nbsp;·&nbsp;
+    <a href="news.html">News</a> &nbsp;·&nbsp;
+    <a href="#signal-14">Signal 14</a>
+  </div>
+</div>
+
+<div class="container">
+  <span class="subtitle">Proprietary Framework</span>
+  <h1>The 14 <em>Signals.</em></h1>
+  <p class="intro">These are the 14 market signals Khurram Badar tracks daily. Each signal has a specific trigger condition, a market meaning, and an action implication. When multiple signals fire simultaneously, it creates either a RED ALERT (bearish convergence) or a GREEN LIGHT (bullish convergence). NOT FINANCIAL ADVICE.</p>
+
+  <div class="signal-card" id="signal-1">
+    <span class="signal-num">Signal 01</span> <span class="tag tag-bull">Bullish Gold</span>
+    <h3 class="signal-name">DXY Below 98</h3>
+    <p class="signal-trigger">Trigger: Dollar Index falls below 98.0</p>
+    <p class="signal-meaning">War premium is exiting the dollar OR structural dollar weakness is accelerating. When DXY falls below 98, gold becomes cheaper for international buyers and the dollar-gold inverse correlation drives metals higher. <strong>Every 1% DXY decline historically produces 0.8-1.2% gold gain.</strong></p>
+  </div>
+
+  <div class="signal-card" id="signal-2">
+    <span class="signal-num">Signal 02</span> <span class="tag tag-bear">Bearish Gold</span>
+    <h3 class="signal-name">DXY Above 101</h3>
+    <p class="signal-trigger">Trigger: Dollar Index rises above 101.0</p>
+    <p class="signal-meaning">Dollar dominance is strengthening — either from war escalation (safe-haven flows), hawkish Fed (rate differential), or stagflation fear. <strong>Gold faces a double headwind: higher opportunity cost AND more expensive for global buyers.</strong></p>
+  </div>
+
+  <div class="signal-card" id="signal-3">
+    <span class="signal-num">Signal 03</span> <span class="tag tag-bull">Strong Buy Gold</span>
+    <h3 class="signal-name">10Y Yield Below 4.0%</h3>
+    <p class="signal-trigger">Trigger: US 10-Year Treasury yield falls below 4.0%</p>
+    <p class="signal-meaning">Rate cut expectations are building. Real yields are falling. The opportunity cost of holding zero-yield gold is declining. <strong>This is the single strongest fundamental catalyst for gold. Every previous break below 4.0% since 2023 preceded a gold rally of 5-15% within 30 days.</strong></p>
+  </div>
+
+  <div class="signal-card" id="signal-4">
+    <span class="signal-num">Signal 04</span> <span class="tag tag-bear">Bearish Gold</span>
+    <h3 class="signal-name">10Y Yield Above 4.5%</h3>
+    <p class="signal-trigger">Trigger: US 10-Year Treasury yield rises above 4.5%</p>
+    <p class="signal-meaning">Real yields are crushing gold. Treasuries paying 4.5%+ make gold's zero yield uncompetitive. Some desks begin pricing a Fed rate HIKE. <strong>Currently at 4.42% and approaching this danger zone — the "Great Hawkish Pivot."</strong></p>
+  </div>
+
+  <div class="signal-card" id="signal-5">
+    <span class="signal-num">Signal 05</span> <span class="tag tag-bull">Bullish Gold</span>
+    <h3 class="signal-name">Oil Below $80</h3>
+    <p class="signal-trigger">Trigger: Brent crude sustained below $80/barrel</p>
+    <p class="signal-meaning">Inflation pressure easing. Rate cut path reopens. The oil-to-gold transmission chain: oil falls → inflation expectations fall → Fed can cut → real yields fall → gold rallies. <strong>Sub-$80 oil sustained for 48+ hours is the pivot that changes everything for gold.</strong></p>
+  </div>
+
+  <div class="signal-card" id="signal-6">
+    <span class="signal-num">Signal 06</span> <span class="tag tag-bear">Bearish Near-Term</span>
+    <h3 class="signal-name">Oil Above $110</h3>
+    <p class="signal-trigger">Trigger: Brent crude rises above $110/barrel</p>
+    <p class="signal-meaning">Stagflation territory. All central banks forced hawkish. Gold's worst near-term enemy — because oil inflation forces the Fed to hold or hike, raising real yields. <strong>Paradoxically, sustained $110+ oil eventually forces a recession → Fed pivot → ultra-bullish gold long-term.</strong></p>
+  </div>
+
+  <div class="signal-card" id="signal-7">
+    <span class="signal-num">Signal 07</span> <span class="tag tag-bull">Peace Dividend</span>
+    <h3 class="signal-name">Ceasefire Announced</h3>
+    <p class="signal-trigger">Trigger: Formal ceasefire or credible peace deal signal</p>
+    <p class="signal-meaning">Execute the Peace Dividend Trade. Day 1: gold DIPS 3-5% (safe-haven unwind) — <strong>that dip is the entry, not the announcement.</strong> Silver dips 5-8% — buy aggressively. DXY falls 2-3 points. Oil crashes $15-20. S&P rallies 3-5%. Gold target within 30 days: $5,000-5,400.</p>
+  </div>
+
+  <div class="signal-card" id="signal-8">
+    <span class="signal-num">Signal 08</span> <span class="tag tag-bull">Bullish Gold</span>
+    <h3 class="signal-name">BOJ Rate Hike</h3>
+    <p class="signal-trigger">Trigger: Bank of Japan announces a rate increase</p>
+    <p class="signal-meaning">US-Japan rate spread narrows. Yen carry trade unwinds. DXY falls. Each 25bp BOJ hike = DXY -0.8-1.2% directly, -2-4% including carry unwind. <strong>BOJ hiking to 1.25-1.50% by July-August 2026 is the medium-term dollar killer that takes DXY to 91-93.</strong></p>
+  </div>
+
+  <div class="signal-card" id="signal-9">
+    <span class="signal-num">Signal 09</span> <span class="tag tag-bull">Strongest Buy</span>
+    <h3 class="signal-name">Fed Signals Rate Cut</h3>
+    <p class="signal-trigger">Trigger: Fed statement, Powell speech, or dot plot signals rate cut</p>
+    <p class="signal-meaning"><strong>The single biggest gold catalyst of 2026.</strong> Real yields falling. Dollar weakening. Carry into gold accelerates. If accompanied by QE expansion = strongest possible bull signal. First cut expected September 2026 at earliest.</p>
+  </div>
+
+  <div class="signal-card" id="signal-10">
+    <span class="signal-num">Signal 10</span> <span class="tag tag-bear">Bearish Gold</span>
+    <h3 class="signal-name">Warsh Confirmed</h3>
+    <p class="signal-trigger">Trigger: Kevin Warsh confirmed as Fed Chair by Senate</p>
+    <p class="signal-meaning">4D Chess thesis BROKEN. Hawkish Fed incoming. Warsh historically anti-QE — resigned from Fed in 2011 over easy money. <strong>Gold crashed 15% on his mere nomination (Jan 30). Confirmation would signal end of $40B/month QE and potential rate hikes.</strong> Currently blocked by Tillis 12-12 deadlock.</p>
+  </div>
+
+  <div class="signal-card" id="signal-11">
+    <span class="signal-num">Signal 11</span> <span class="tag tag-bull">Silver Cheap</span>
+    <h3 class="signal-name">Gold/Silver Ratio Above 75</h3>
+    <p class="signal-trigger">Trigger: Gold-to-silver price ratio exceeds 75:1</p>
+    <p class="signal-meaning">Silver is historically undervalued relative to gold. Historical mean ~60:1. <strong>Ratio compression from 75:1 toward 50:1 implies 50%+ silver outperformance even if gold is flat.</strong> Current ratio ~64:1 — approaching but not yet triggered.</p>
+  </div>
+
+  <div class="signal-card" id="signal-12">
+    <span class="signal-num">Signal 12</span> <span class="tag tag-bull">Structural</span>
+    <h3 class="signal-name">Shanghai Premium Above $10/oz</h3>
+    <p class="signal-trigger">Trigger: Shanghai Gold Exchange price exceeds COMEX by $10+/oz</p>
+    <p class="signal-meaning">Physical demand in Asia is diverging from Western paper markets. <strong>This is the structural demand signal — central banks and Asian buyers willing to pay a premium for physical metal over COMEX paper price.</strong> Confirms that real demand exceeds what the paper market reflects.</p>
+  </div>
+
+  <div class="signal-card" id="signal-13">
+    <span class="signal-num">Signal 13</span> <span class="tag tag-bull">Supply Stress</span>
+    <h3 class="signal-name">COMEX Silver Below 80M oz</h3>
+    <p class="signal-trigger">Trigger: COMEX registered silver inventory falls below 80 million ounces</p>
+    <p class="signal-meaning">Delivery stress rising. The 356:1 paper-to-physical ratio becomes unsustainable. <strong>Below 50M oz = CRITICAL — delivery failure risk. Currently below 100M oz and draining ~785,000 oz daily.</strong> 5 consecutive years of structural deficit (820M oz cumulative).</p>
+  </div>
+
+  <div class="signal-card highlight" id="signal-14">
+    <span class="signal-num">Signal 14 — The Rarest Signal</span> <span class="tag tag-rare">Structural Confirmation</span>
+    <h3 class="signal-name">Gold and Dollar BOTH Rising</h3>
+    <p class="signal-trigger">Trigger: Gold price rises on the same day the Dollar Index (DXY) also rises</p>
+    <p class="signal-meaning">This is the <strong>rarest and most structurally bullish signal</strong> in the entire 14-signal framework. Normally, gold and the dollar move in opposite directions (correlation coefficient ~-0.7). When both rise simultaneously, it means structural demand — central bank buying, physical accumulation, de-dollarisation hedging — is powerful enough to <strong>override the normal dollar-gold inverse correlation.</strong><br><br>
+
+    <strong>Historical significance:</strong> Signal 14 has fired only a handful of times in the last decade. Every previous instance preceded a major gold rally within 30-60 days.<br><br>
+
+    <strong>March 25-27, 2026:</strong> Signal 14 fired for 3 consecutive days. Gold rose from $4,452 to $4,486 while DXY held at 99.65. Per the learning loop evaluation rules: "if Signal 14 holds 2-3 days, structural thesis confirmed." <strong>The structural floor for gold was revised UP from $3,000-3,500 to $4,000-4,200</strong> based on this confirmation. Central bank buying in 2026 is overriding the dollar-gold inverse even during an active war, oil above $100, and yields at 8-month highs.<br><br>
+
+    The signal broke on March 27 late session (gold fell while dollar held) — but the 3-day confirmation stands. <strong>Signal 14 confirms the FLOOR, not the direction.</strong> The structural floor at $4,000-4,200 is real. The cyclical headwinds (yields, oil) are also real. Both can be true simultaneously.</p>
+  </div>
+
+  <div class="disclaimer">
+    <strong>NOT FINANCIAL ADVICE.</strong> These signals are part of an educational analytical framework developed by Khurram Badar through months of original research. Nothing on this page constitutes a recommendation to buy, sell, or trade any financial instrument. All trading involves substantial risk of loss. Always consult a qualified financial adviser before making any investment decision.
+  </div>
+</div>
+
+<footer>
+  <p>© 2025–2026 Khurram Badar. All rights reserved.</p>
+  <p>The New World</p>
+  <p><a href="/">Home</a> · <a href="news.html">News</a> · <a href="https://khurrambadar.com">khurrambadar.com</a></p>
+</footer>
+</body>
+</html>
