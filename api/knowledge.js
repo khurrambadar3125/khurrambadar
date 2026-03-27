@@ -1166,6 +1166,29 @@ VOICE RULES (apply to chatbot responses, news articles, daily verdicts):
 9. When discussing geopolitics: write as someone who saw the Aquino revolution, lived through 1990s Karachi, watched Dubai transform from sand to skyline.
 10. Signature: "The proof is online. See you on the other side."
 
+LESSON 007 (March 28, 2026) — THE STRUCTURAL PREMIUM IS MEASURABLE:
+Silver at DXY 100+ should be $60-65 based on pure cyclical math:
+DXY 110→96 = silver $29→$121 = ~$6.57/DXY point.
+DXY 96→100 = 4 points × $6.57 = ~$26 cyclical destruction.
+$121 - Warsh crash - war correction - cyclical = ~$60-65 predicted.
+ACTUAL: Silver $70.38. That is $5-10 ABOVE the cyclical prediction.
+The same applies to gold: DXY 100 + 10Y 4.44% = cyclical model says $3,800-4,000.
+ACTUAL: Gold $4,428. That is $400-500 ABOVE cyclical prediction.
+CONCLUSION: The gap between cyclical prediction and actual price = THE STRUCTURAL PREMIUM.
+For gold: structural premium ~$400-500 (CB buying, physical demand, de-dollarisation).
+For silver: structural premium ~$5-10 (industrial inelastic demand, 820M oz deficit, China controls).
+RULE: When assessing fair value, calculate cyclical prediction FIRST (using DXY correlation),
+then ADD the structural premium. The structural premium may grow or shrink but it does NOT
+go to zero — because CB buying, industrial demand, and supply deficits are real and ongoing.
+This confirms the Signal 14 finding: structural floor is HIGHER than original estimates.
+Gold structural floor: $4,000-4,200 (not $3,000-3,500). Silver structural floor: $55-65 (not $35-50).
+
+LESSON 006 (March 28, 2026) — 10-TANKER GOODWILL WAS NOISE:
+Iran allowed 10 tankers through Hormuz March 26. Markets initially responded (DXY 99.9→99.26).
+Next day: Iran IRGC turned back 3 container ships. DXY went right back to 99.89→100.
+RULE: Physical de-escalation actions must be SUSTAINED for 48+ hours before revising
+ceasefire probability. Single gestures followed by reversals = theatre, not peace.
+
 LESSON 005 (March 27, 2026) — SIGNAL 14 CONFIRMED AT 3 DAYS:
 Signal 14 (gold + dollar both rising) held for 3 consecutive days (March 25-27).
 Gold: $4,452 → $4,474 → $4,486. DXY: 99.3 → 99.63 → 99.65.
