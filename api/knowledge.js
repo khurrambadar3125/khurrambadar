@@ -1105,6 +1105,7 @@ MAR 25: Gold $4,474 | DXY 99.3 | Brent $103.56 | 15-point plan + 82nd Airborne
 MAR 26: Gold $4,521 | DXY 99.63 | Brent $99.75 | SIGNAL 14: gold+dollar both up | Iran 5 conditions
 MAR 27 (AM): Gold $4,486 (+1.9%) | DXY 99.65 | SIGNAL 14 DAY 3 CONFIRMED | Structural thesis confirmed
 MAR 27 (LATE): TRUMP EXTENDED DEADLINE TO APRIL 6. Gold fell to $4,434. Silver broke $70 ($68.96). 10Y SPIKED to 4.42% (new 8-mo high). VIX surged to 27.44 (+8.33%). S&P -1.2%. BTC -2.76%. Signal 14 BROKE (gold down, dollar up). Extension = war continues = oil above $100 = hawkish pivot. "The Great Hawkish Pivot" — rate cuts evaporating. Israel killed IRGC Navy chief. Ceasefire prob: 30% (down).
+MAR 28: MARKETS PLUNGING. Gold $4,428. Silver $67-68. DXY 100 (at threshold). Brent $101.89 (+4.8%). 10Y 4.44% (new high). S&P 6,378 (-1.53%, 5th straight losing week). Dow -746. Nasdaq -1.99% (IN CORRECTION). BTC $65,717 (-4%). Iran turned back 3 ships after 10-tanker gesture. Pentagon +10K troops. Israel "intensify and expand." Ceasefire prob: 28% (down). Escalation prob: 47% (up). Learning: 10-tanker goodwill was NOISE — physical actions must sustain 48+ hours.
 
 === THESIS EVOLUTION TRACKER ===
 
