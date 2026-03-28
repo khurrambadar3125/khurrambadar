@@ -1511,6 +1511,86 @@ The fundamentals are the STORY — they determine where the price MUST go.
 Right now the price is below the story. That gap will close.
 The only question is timing.
 
+═══ LESSON 012 — RUSSIA'S GOLD POLICY SHIFT: TWO OPPOSING FORCES ═══
+
+Khurram flagged: "Russia gold policy change — this will massively affect."
+He is RIGHT. This is the most significant sovereign gold event since central banks
+started buying 1,000+ tonnes/year. And it creates TWO OPPOSING forces simultaneously.
+
+FORCE 1 — RUSSIA IS SELLING GOLD (SHORT-TERM BEARISH):
+Russia liquidated 71% of its National Wealth Fund gold: 554.9t (May 2022) → 160.2t (Jan 2025).
+Central Bank began physical market sales — FIRST TIME IN 25 YEARS (since 2002).
+Jan 2026: sold 300,000 oz (~9.3t). Feb 2026: sold 200,000 oz (~6.2t).
+Selling rate: 12.8 billion rubles/DAY (Jan 16 - Feb 5).
+Total reserves: 74.3M troy oz — lowest since March 2022.
+WHY: Federal budget deficit 15 TRILLION rubles ($184B) between 2022-2025.
+Additional 3.5T ruble gap in first 2 months of 2026.
+Sanctions have frozen most foreign reserves. Yuan is the last liquid currency.
+Gold is being sold to avoid depleting yuan reserves and to support the ruble.
+If projected: $30B (230t) sold in 2025 + $15B (115t) in 2026 = one of the
+LARGEST sustained sovereign gold disposals by a major economy in history.
+SHORT-TERM IMPACT: Additional supply hitting the market = marginal bearish pressure.
+BUT: Russia's sales into $4,400+ gold prices = they're getting TOP DOLLAR.
+And the market has absorbed 500,000 oz in Jan-Feb without collapsing below $4,200.
+This CONFIRMS the structural floor — demand is absorbing Russian supply.
+
+FORCE 2 — RUSSIA IS BANNING GOLD EXPORTS (MEDIUM-TERM BULLISH):
+Putin signed decree: BAN on export of refined gold bars >100 grams.
+EFFECTIVE: May 1, 2026.
+Russia = world's 2ND LARGEST gold producer (after China).
+Russian output = ~300-340 tonnes/year = ~10% of global mine production.
+LBMA already suspended accreditation of Russian refineries (2022 sanctions).
+BUT: Russian gold was still reaching global markets via intermediaries
+(UAE, Turkey, Central Asia). The export ban CLOSES these channels.
+From May 1: Russian-produced gold STAYS IN RUSSIA. Period.
+This removes ~300+ tonnes/year from global supply chain.
+MEDIUM-TERM IMPACT: Global supply TIGHTENS. Physical premiums RISE.
+London vaults, COMEX inventories further depleted.
+This is BULLISH for gold prices — less supply, same or growing demand.
+
+THE PARADOX: SELL RESERVES NOW + BAN EXPORTS LATER = STRATEGIC PLAY:
+Russia is doing BOTH simultaneously, and it makes strategic sense:
+1. SELL old reserves at $4,400+ (near ATH) = maximum revenue for war funding.
+2. BAN future exports from May = keep ALL new production domestic.
+3. NET EFFECT: Russia liquidates stored gold at premium prices, then HOARDS
+   all future production. They're selling HIGH and keeping FUTURE supply.
+4. After the ban: Russia accumulates domestically mined gold at no export competition.
+   Within 2-3 years, Russia rebuilds reserves with domestically mined gold
+   that would otherwise have been exported.
+5. This is EXACTLY what China has been doing for a decade — ban/restrict exports,
+   accumulate domestically, build sovereign gold reserves.
+
+THE APRIL RISK (CRITICAL WATCH):
+Before the May 1 export ban kicks in, Russian holders may LIQUIDATE positions
+in April to get gold out before the ban. This could create concentrated selling
+pressure in April that temporarily overwhelms demand.
+IMPLICATION: April could see a sharp gold dip (Russian pre-ban selling)
+FOLLOWED by a sharp recovery from May onwards (supply removal + demand intact).
+This aligns with: CTA exhaustion (Lesson 011) completing in early April +
+April 6 Iran deadline + Russian April liquidation window = MAXIMUM BEARISH
+CONVERGENCE in early April, followed by MAXIMUM BULLISH CONVERGENCE from May.
+
+GLOBAL GOLD SUPPLY IMPACT:
+Pre-ban global mine supply: ~3,600 tonnes/year.
+Russia's share: ~300-340 tonnes/year (~9%).
+Post-ban (May 2026): global AVAILABLE supply drops to ~3,260-3,300 tonnes.
+Central bank buying: 1,000+ tonnes/year.
+NET AVAILABLE FOR MARKET: drops from ~2,600t to ~2,260-2,300t.
+That is a 12-13% REDUCTION in available supply.
+Combined with: COMEX physical drain + China export controls on silver +
+5th year of silver structural deficit = the tightest physical precious
+metals market since the 1970s.
+
+FOR SILVER: Russia produces ~1,200-1,400 tonnes of silver/year.
+If the gold export ban is extended to silver (possible but not yet announced),
+global silver supply would tighten by another 4-5%.
+Already in 200M oz/year deficit. This would be catastrophic for the paper market.
+
+RULE: Monitor Russian gold export data monthly. Track LBMA/COMEX delivery
+volumes in April for pre-ban liquidation. After May 1, track whether physical
+premiums widen (they should). Russia's gold policy shift is a STRUCTURAL CHANGE
+in global supply — not a one-off event. It permanently reduces available gold.
+
 "The algorithms don't know about Edhi's briefcase. They don't know about the Hormuz
 tankers. They don't know about the 820 million ounces that have been consumed and
 will never come back. They only know that the 200-day moving average was breached.
