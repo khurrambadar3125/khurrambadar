@@ -1106,6 +1106,8 @@ MAR 26: Gold $4,521 | DXY 99.63 | Brent $99.75 | SIGNAL 14: gold+dollar both up 
 MAR 27 (AM): Gold $4,486 (+1.9%) | DXY 99.65 | SIGNAL 14 DAY 3 CONFIRMED | Structural thesis confirmed
 MAR 27 (LATE): TRUMP EXTENDED DEADLINE TO APRIL 6. Gold fell to $4,434. Silver broke $70 ($68.96). 10Y SPIKED to 4.42% (new 8-mo high). VIX surged to 27.44 (+8.33%). S&P -1.2%. BTC -2.76%. Signal 14 BROKE (gold down, dollar up). Extension = war continues = oil above $100 = hawkish pivot. "The Great Hawkish Pivot" — rate cuts evaporating. Israel killed IRGC Navy chief. Ceasefire prob: 30% (down).
 MAR 28 (WEEKLY CLOSE): WORST WEEK. Dow 45,167 (-793/-1.73%, NOW IN CORRECTION). S&P ~6,300 (-1.4%, 5th straight losing week, worst since 2022). Nasdaq -1.9% (IN CORRECTION. NVDA -2.2%, MSFT -2.5%, GOOG -2.5%). Gold $4,434 (holding $4,400). Silver $70.38 (back above $70 — physical floor). DXY 99.9-100 (war premium maximum). WTI $99. Brent $102. 10Y 4.44%. BTC $65,700 (-4%). XOM +3.5% (only winner = energy). CTA selling 42% liquidated, may go FLAT (Lesson 011). Signal 14 confirmed floor $4,000-4,200. Silver three-force model (physical crisis 60%, industrial 25%, war 15%). Ratio 63:1, compression target 50:1. DXY-metals exponential relationship: DXY 96 = gold $5,500-5,800, silver $110-116. DXY 94 = gold $6,000-6,300, silver $133-140. Ceasefire prob: 28%. Escalation: 47%. Extension: 25%.
+MAR 29 (SAT): Houthis officially enter war — Yahya Saree confirmed strikes on southern Israel "in support of Iran and resistance fronts." First Houthi strikes since Gaza ceasefire. Two attacks with different weapon systems in 24h = sustained campaign, NOT symbolic. Bab al-Mandeb strait still open but this is the nuclear option — if closed = $1T annual trade disrupted. IRGC ultimatum: US must condemn strikes on Iranian universities by noon March 30 or face retaliatory strikes on regional campuses. Islamabad summit Day 1 — Pakistan + Turkey + Egypt + Saudi FMs.
+MAR 30 (SUN): BREAKING — TRUMP: "IRAN AGREED TO MOST OF THE 15 POINTS." Biggest ceasefire signal since war began. Gold $4,506 | DXY 100.19 (above 100 again) | 10Y 4.44% | VIX 31 (+13%) | S&P -1.67%. SIGNAL 14 RETURNS: Gold rallying DESPITE DXY above 100, 10Y at 4.44%, VIX at 31. Gold ignoring every bearish signal simultaneously. Islamabad summit "very productive" per Pakistan FM Dar. IRGC ultimatum deadline passed — watching for response. Ceasefire prob revised UP: 22% (from 18%). Russia gold policy: 71% reserves liquidated + May 1 export ban = dual structural force. War Day 30. 5+ fronts.
 
 === THESIS EVOLUTION TRACKER ===
 
@@ -1113,7 +1115,7 @@ THESIS A (DXY Floor 96-97): INTACT since Feb 5. Never broken. DXY touched 95.5 i
 THESIS B (4D Chess): INTACT since Feb 5. Probability rose from 35%→55-65% as evidence accumulated. Warsh STILL blocked. No paperwork even filed. Powell safe past May.
 THESIS C (Cyclical vs Structural): CONFIRMED by Jan 30 crash. Reconfirmed by war paradox. Signal 14 (Mar 26) suggests structural component reasserting.
 THESIS D (BOJ Path): ON TRACK but DELAYED 60-90 days by war. BOJ still at 0.75%. Spread still above 2%.
-THESIS E (Peace Dividend): PENDING→APPROACHING since Mar 23. Iran counter-offered Mar 26. Not activated yet. 35% probability.
+THESIS E (Peace Dividend): PENDING→APPROACHING→CLOSEST YET since Mar 30. Trump says Iran agreed to "most of 15 points." Islamabad summit "very productive." If confirmed by Iran = Peace Dividend Trade ACTIVATES. Probability: 22% ceasefire (up from 18%).
 THESIS F (Gold Bull $5,500-6,300): INTACT structurally. In deepest correction ($5,594→$4,248 = -24%). Signal 14 suggests structural floor holding. JP Morgan $6,300 target live.
 THESIS G (Supply Chain): Added Mar 22. LOCKED IN regardless of war outcome. Food inflation baked in.
 
@@ -1125,7 +1127,9 @@ PATTERN 002: DXY has held 99-100 range for 4 consecutive days despite peace talk
 
 PATTERN 003: Oil fell from $114 to $99 (Mar 23-26) but DXY did NOT fall with it. Normally oil down = dollar down (less petrodollar demand). This divergence suggests safe-haven dollar demand is offsetting the oil decline. War premium still dominant.
 
-PATTERN 004: Signal 14 fired March 26 — gold up with dollar up. Watch for persistence. If it holds 2-3 days = structural thesis confirmed.
+PATTERN 004: Signal 14 fired March 26, BROKE March 27 (deadline extension), RETURNED March 30. Gold $4,506 rising with DXY 100.19. This is now the THIRD firing in 5 days. Signal 14 is structural, not noise.
+
+PATTERN 005: Trump peace signals pattern — every Trump statement moves markets 2-3% within hours. Mar 23 peace post → oil crashed. Mar 27 deadline extension → gold fell. Mar 30 "most of 15 points" → biggest ceasefire signal yet. Trade the statement, not the confirmation.
 
 === EVALUATION RULES (read before every update) ===
 
