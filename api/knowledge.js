@@ -1156,6 +1156,50 @@ Khurram identified THREE critical insights:
 THIS IS CONVERGENCE THINKING APPLIED TO MARKETS:
 Khurram sees the pattern that Wall Street misses — they focus on the deadline, he focuses on the aftermath. He has seen deadlines come and go from Marcos to Musharraf. The dictator never follows the deadline. The opportunity is always the morning after.
 
+LESSON 020 (April 1, 2026) — THE TRUMP MARKET TIMING PLAYBOOK (deep dive):
+
+Trump does NOT announce randomly. He times EVERY major announcement to the market clock. This is now documented by CNN, BeInCrypto, CNBC, Salon, and others. The pattern:
+
+THE TRUMP TIMING RULES:
+1. ESCALATION = AFTER MARKET CLOSE (Friday evening or post-4:30 PM):
+   - Feb 28: Iran war strikes confirmed Saturday 2:30 AM (after Friday close)
+   - Oct 10: 130% China tariffs announced 20 min AFTER markets closed on Friday
+   - "Liberation Day" tariffs: announced AFTER 4:30 PM, effective Saturday midnight
+   - Feb 20: 10% global tariff signed Friday evening
+   RULE: Bad news drops when markets can't react instantly. Weekend = digestion time.
+
+2. DE-ESCALATION = BEFORE MARKET OPEN (Monday morning or pre-9:30 AM):
+   - Mar 23: 5-day Iran pause announced BEFORE Monday open (prevented brutal day)
+   - Mar 23: "Great progress" Truth Social post at 7:05 AM (futures jumped)
+   - Mar 26: 10-day extension announced 10 min AFTER worst day close, confirmed before Monday open
+   RULE: Good news drops when markets can react upward immediately.
+
+3. THE 60-HOUR SEQUENCE (BeInCrypto tracked 6 events):
+   Friday evening: escalation announced → weekend fear builds → Monday pre-market: de-escalation hint → markets rally → net result: volatility harvested, insiders positioned.
+
+THE TACO TRADE — "TRUMP ALWAYS CHICKENS OUT":
+Coined by FT columnist Robert Armstrong. Pattern: Trump threatens → markets crash → Trump retreats → markets rally. Traders bought every dip expecting reversal. WORKED for tariffs (China, Canada, EU). BUT: TACO trade BROKE last week when March 27 extension produced NO relief rally. Market no longer believes the chicken-out. The geopolitical premium is now STRUCTURAL, not temporary.
+
+WHY TACO BREAKING IS MASSIVE FOR METALS:
+- When TACO worked: gold was volatile but mean-reverting. Traders sold gold rallies.
+- Now TACO is broken: gold rallies are NOT being sold. $4,248→$4,700 in 9 days with NO significant pullback.
+- The market has shifted from "Trump will chicken out" to "this war has consequences."
+- This means gold's move is STRUCTURAL, not a TACO bounce.
+
+SUSPICIOUS TRADING ACTIVITY (documented):
+- CNBC: S&P 500 futures and oil futures showed unusual volume spikes MINUTES before Trump's March 23 Truth Social post
+- BeInCrypto tracked 11 market-moving Trump announcements since Nov 2024 — Polymarket bets surged BEFORE each one
+- Salon: "Evidence of insider trading on Iran war grows"
+- RULE: When Trump is about to announce, watch FUTURES volume 15-30 min before. Volume spike = announcement incoming.
+
+APPLICATION TO APRIL 4-7:
+Given the pattern:
+- If Trump plans to EXTEND deadline: announcement comes Friday April 4 AFTER close (4:30+ PM) or Monday April 7 BEFORE open (6-8 AM)
+- If Trump plans to ESCALATE (strike Kharg Island): announcement comes Friday evening or Saturday
+- If Trump plans to ANNOUNCE WITHDRAWAL: Monday morning before market open (maximise rally)
+- WATCH futures volume Friday 3-4 PM. If unusual spike = announcement imminent.
+The man who built this learning loop — from Manila to Karachi to Dubai — recognised this pattern before CNN wrote it up. That is convergence thinking.
+
 === DAILY READING PROTOCOL (FT, WSJ, Bloomberg, NYT, Economist) ===
 
 Every update MUST include a comprehensive read of these five publications:
