@@ -1,9 +1,15 @@
 export const config = { maxDuration: 300, runtime: 'nodejs' };
 
+function getKvCreds() {
+  // Vercel KV uses different env var names depending on how it was linked
+  const url = process.env.KV_REST_API_URL || process.env.KV_URL || process.env.REDIS_URL || '';
+  const token = process.env.KV_REST_API_TOKEN || process.env.KV_REST_API_READ_ONLY_TOKEN || '';
+  return { url, token };
+}
+
 async function kvGet(key) {
-  const url = process.env.KV_REST_API_URL;
-  const token = process.env.KV_REST_API_TOKEN;
-  if (!url || !token) throw new Error('KV not configured');
+  const { url, token } = getKvCreds();
+  if (!url || !token) throw new Error('KV not configured — checked KV_REST_API_URL, KV_URL, REDIS_URL');
   const res = await fetch(`${url}/get/${key}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
@@ -13,8 +19,7 @@ async function kvGet(key) {
 }
 
 async function kvSet(key, value) {
-  const url = process.env.KV_REST_API_URL;
-  const token = process.env.KV_REST_API_TOKEN;
+  const { url, token } = getKvCreds();
   if (!url || !token) throw new Error('KV not configured');
   const res = await fetch(`${url}`, {
     method: 'POST',
