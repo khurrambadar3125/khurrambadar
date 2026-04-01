@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#C9921F">
+<title>KBAI Daily Reading Order — Khurram Badar Market Intelligence</title>
+<meta name="description" content="Daily reading order and market brief from KBAI — Khurram Badar's autonomous market intelligence system. Gold, silver, DXY, oil, geopolitics.">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;600;700&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: #070810;
+  color: #EDE8DC;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+:root {
+  --black: #070810;
+  --ink: #0C0E1A;
+  --cream: #EDE8DC;
+  --gold: #C9921F;
+  --gold2: #F0B840;
+  --muted: #5B6370;
+  --rule: rgba(201,146,31,0.18);
+  --glass: rgba(7,8,16,0.94);
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--gold2); letter-spacing: 0.02em;
+}
+.nav-links { display: flex; gap: 24px; }
+.nav-links a {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold); }
+
+/* MAIN */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px 60px;
+}
+
+/* HEADER */
+.page-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+.page-header h1 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+.page-header p {
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* PUBLICATION CARDS */
+.pub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.pub-card {
+  background: rgba(12,14,26,0.8);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 20px 22px;
+  transition: border-color 0.25s, transform 0.2s;
+  cursor: pointer;
+  display: block;
+}
+.pub-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.pub-card .pub-number {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+.pub-card h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+.pub-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.pub-card .pub-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* BRIEF SECTION */
+.brief-section {
+  margin-bottom: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+.brief-loading {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  font-size: 13px;
+}
+.brief-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.brief-metric {
+  background: rgba(12,14,26,0.6);
+  border: 1px solid rgba(201,146,31,0.1);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.brief-metric .label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.brief-metric .value {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--gold2);
+}
+.brief-metric .value.silver { color: #C0C0C0; }
+.brief-metric .value.neutral { color: var(--cream); font-size: 18px; }
+
+.verdict-box {
+  background: rgba(201,146,31,0.06);
+  border: 1px solid rgba(201,146,31,0.2);
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+}
+.verdict-box h3 {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.verdict-box p {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--cream);
+}
+
+.thesis-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+.thesis-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(201,146,31,0.08);
+  font-size: 13px;
+}
+.thesis-table .thesis-name { color: var(--cream); }
+.thesis-table .thesis-reason { color: var(--muted); font-size: 12px; }
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+.status-INTACT { background: #22c55e; }
+.status-STRESS-TESTED, .status-STRESS_TESTED { background: #f59e0b; }
+.status-BROKEN { background: #ef4444; }
+.status-APPROACHING, .status-ACTIVATED, .status-PENDING { background: #3b82f6; }
+.status-PAUSED { background: #6b7280; }
+
+.signals-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin-bottom: 24px;
+}
+.signals-list li {
+  padding: 3px 0;
+  font-size: 13px;
+  color: var(--cream);
+}
+
+.alert-box {
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.alert-red {
+  background: rgba(239,68,68,0.1);
+  border: 1px solid rgba(239,68,68,0.3);
+}
+.alert-red .alert-label { color: #ef4444; }
+.alert-green {
+  background: rgba(34,197,94,0.1);
+  border: 1px solid rgba(34,197,94,0.3);
+}
+.alert-green .alert-label { color: #22c55e; }
+.alert-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.alert-text { font-size: 13px; color: var(--cream); margin-top: 4px; }
+
+/* SUBSCRIBE FORM */
+.subscribe-section {
+  margin-bottom: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+  max-width: 560px;
+}
+.subscribe-form .field {
+  flex: 1;
+  min-width: 160px;
+}
+.subscribe-form label {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(12,14,26,0.8);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.subscribe-form input:focus {
+  border-color: var(--gold);
+}
+.subscribe-form input::placeholder {
+  color: var(--muted);
+}
+.subscribe-btn {
+  padding: 10px 24px;
+  background: var(--gold);
+  color: var(--black);
+  border: none;
+  border-radius: 6px;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.subscribe-btn:hover { background: var(--gold2); }
+.subscribe-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.subscribe-msg {
+  width: 100%;
+  font-size: 13px;
+  margin-top: 4px;
+  min-height: 20px;
+}
+.subscribe-msg.success { color: #22c55e; }
+.subscribe-msg.error { color: #ef4444; }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 32px 20px;
+  border-top: 1px solid var(--rule);
+}
+footer p {
+  font-size: 12px;
+  color: var(--muted);
+}
+footer a {
+  color: var(--gold);
+  transition: color 0.2s;
+}
+footer a:hover { color: var(--gold2); }
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .pub-grid { grid-template-columns: 1fr; }
+  .brief-grid { grid-template-columns: repeat(2, 1fr); }
+  .subscribe-form { flex-direction: column; }
+  .subscribe-form .field { min-width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">KB</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/daily" style="color:var(--gold);">Daily</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="page-header">
+    <h1>KBAI Daily Reading Order</h1>
+    <p>Curated sources. Structured intelligence. Every morning.</p>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div class="section-title">Morning Reading Order</div>
+  <div class="pub-grid">
+
+    <a href="https://www.ft.com/markets" target="_blank" rel="noopener" class="pub-card">
+      <div class="pub-number">01</div>
+      <h3>Financial Times</h3>
+      <p>Global macro, central bank policy, and geopolitical risk. The anchor source.</p>
+      <span class="pub-link">ft.com/markets &rarr;</span>
+    </a>
+
+    <a href="https://www.wsj.com/news/markets" target="_blank" rel="noopener" class="pub-card">
+      <div class="pub-number">02</div>
+      <h3>Wall Street Journal</h3>
+      <p>US policy, Fed signals, treasury moves. Cross-reference with FT for bias check.</p>
+      <span class="pub-link">wsj.com/markets &rarr;</span>
+    </a>
+
+    <a href="https://www.bloomberg.com/markets" target="_blank" rel="noopener" class="pub-card">
+      <div class="pub-number">03</div>
+      <h3>Bloomberg</h3>
+      <p>Real-time data, commodities, currencies. Terminal-grade intelligence for non-terminal users.</p>
+      <span class="pub-link">bloomberg.com/markets &rarr;</span>
+    </a>
+
+    <a href="https://www.nytimes.com/section/business" target="_blank" rel="noopener" class="pub-card">
+      <div class="pub-number">04</div>
+      <h3>New York Times</h3>
+      <p>Narrative shaping, political context. Understand how the story is being told.</p>
+      <span class="pub-link">nytimes.com/business &rarr;</span>
+    </a>
+
+    <a href="https://www.economist.com/finance-and-economics" target="_blank" rel="noopener" class="pub-card">
+      <div class="pub-number">05</div>
+      <h3>The Economist</h3>
+      <p>Structural analysis, long-term thesis validation. Weekly depth over daily noise.</p>
+      <span class="pub-link">economist.com &rarr;</span>
+    </a>
+
+    <a href="https://finance.yahoo.com/" target="_blank" rel="noopener" class="pub-card">
+      <div class="pub-number">06</div>
+      <h3>Yahoo Finance</h3>
+      <p>Retail sentiment gauge, quick price checks, sector heat maps.</p>
+      <span class="pub-link">finance.yahoo.com &rarr;</span>
+    </a>
+
+    <a href="https://www.cnbc.com/markets/" target="_blank" rel="noopener" class="pub-card">
+      <div class="pub-number">07</div>
+      <h3>CNBC</h3>
+      <p>Wall Street consensus view. Useful as a contrarian indicator when everyone agrees.</p>
+      <span class="pub-link">cnbc.com/markets &rarr;</span>
+    </a>
+
+    <a href="https://www.reuters.com/markets/" target="_blank" rel="noopener" class="pub-card">
+      <div class="pub-number">08</div>
+      <h3>Reuters</h3>
+      <p>Wire service speed, breaking headlines. First signal on geopolitical events.</p>
+      <span class="pub-link">reuters.com/markets &rarr;</span>
+    </a>
+
+  </div>
+
+  <!-- TODAY'S BRIEF -->
+  <div class="brief-section">
+    <div class="section-title">Today's Brief</div>
+    <div id="brief-container">
+      <div class="brief-loading" id="brief-loading">Loading today's brief...</div>
+    </div>
+  </div>
+
+  <!-- SUBSCRIBE -->
+  <div class="subscribe-section">
+    <div class="section-title">Subscribe to the Daily Brief</div>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">Get the KBAI Daily Brief delivered to your inbox every morning at 06:15 UTC.</p>
+    <form class="subscribe-form" id="subscribe-form">
+      <div class="field">
+        <label for="sub-name">Name</label>
+        <input type="text" id="sub-name" name="name" placeholder="Your name" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="sub-email">Email</label>
+        <input type="email" id="sub-email" name="email" placeholder="you@example.com" required autocomplete="email">
+      </div>
+      <button type="submit" class="subscribe-btn" id="subscribe-btn">Subscribe</button>
+      <div class="subscribe-msg" id="subscribe-msg"></div>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <p style="margin-bottom:8px;font-style:italic;">Educational only — not financial advice.</p>
+  <p><a href="https://khurrambadar.com">khurrambadar.com</a></p>
+</footer>
+
+<script>
+// Fetch and render today's brief
+(async function() {
+  const container = document.getElementById('brief-container');
+  const loading = document.getElementById('brief-loading');
+
+  try {
+    const res = await fetch('/api/daily-brief');
+    const brief = await res.json();
+
+    if (brief.placeholder && !brief.gold_price) {
+      loading.textContent = brief.message || 'No brief available yet.';
+      return;
+    }
+
+    let html = '';
+
+    // Market snapshot
+    html += '<div class="brief-grid">';
+    html += metric('Gold', '$' + (brief.gold_price || '—'), '');
+    html += metric('Silver', '$' + (brief.silver_price || '—'), 'silver');
+    html += metric('DXY', brief.dxy || '—', 'neutral');
+    html += metric('Brent Oil', '$' + (brief.oil_brent || '—'), 'neutral');
+    html += metric('10Y Yield', (brief.ten_year_yield || '—') + '%', 'neutral');
+    html += metric('S&P 500', brief.sp500 || '—', 'neutral');
+    html += metric('War Status', brief.war_status || '—', 'neutral');
+    html += metric('Warsh', brief.warsh_status || '—', 'neutral');
+    html += '</div>';
+
+    // Alerts
+    if (brief.red_alert) {
+      html += '<div class="alert-box alert-red"><div class="alert-label">RED ALERT</div><div class="alert-text">' + esc(brief.red_alert_reason || '') + '</div></div>';
+    }
+    if (brief.green_light) {
+      html += '<div class="alert-box alert-green"><div class="alert-label">GREEN LIGHT</div><div class="alert-text">' + esc(brief.green_light_reason || '') + '</div></div>';
+    }
+
+    // Verdict
+    if (brief.verdict) {
+      html += '<div class="verdict-box"><h3>Today\'s Verdict</h3><p>' + esc(brief.verdict) + '</p></div>';
+    }
+
+    // Thesis scorecard
+    const theses = [
+      ['thesis_a', 'A: DXY Floor 96-97'],
+      ['thesis_b', 'B: 4D Chess (Fed/Warsh)'],
+      ['thesis_c', 'C: BOJ Hike Path'],
+      ['thesis_d', 'D: Gold Bull $5,500-6,300'],
+      ['thesis_e', 'E: Peace Dividend'],
+      ['thesis_f', 'F: Cyclical vs Structural'],
+    ];
+    html += '<table class="thesis-table">';
+    for (const [key, label] of theses) {
+      const t = brief[key] || { status: 'PENDING', reason: '' };
+      const sc = (t.status || 'PENDING').toUpperCase().replace(/ /g, '_');
+      html += '<tr><td class="thesis-name">' + esc(label) + '</td>';
+      html += '<td style="text-align:center;"><span class="status-badge status-' + esc(sc) + '">' + esc(t.status || 'PENDING') + '</span></td>';
+      html += '<td class="thesis-reason">' + esc(t.reason || '') + '</td></tr>';
+    }
+    html += '</table>';
+
+    // Active signals
+    const sigs = brief.active_signals || [];
+    if (sigs.length > 0) {
+      html += '<ul class="signals-list">';
+      for (const s of sigs) html += '<li>' + esc(s) + '</li>';
+      html += '</ul>';
+    }
+
+    container.innerHTML = html;
+  } catch (e) {
+    loading.textContent = 'Failed to load brief. Try refreshing.';
+  }
+
+  function metric(label, value, cls) {
+    return '<div class="brief-metric"><div class="label">' + label + '</div><div class="value ' + (cls||'') + '">' + value + '</div></div>';
+  }
+
+  function esc(s) {
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+})();
+
+// Subscribe form
+document.getElementById('subscribe-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('subscribe-btn');
+  const msg = document.getElementById('subscribe-msg');
+  const name = document.getElementById('sub-name').value.trim();
+  const email = document.getElementById('sub-email').value.trim();
+
+  if (!email) { msg.textContent = 'Please enter your email.'; msg.className = 'subscribe-msg error'; return; }
+
+  btn.disabled = true;
+  btn.textContent = 'Subscribing...';
+  msg.textContent = '';
+  msg.className = 'subscribe-msg';
+
+  try {
+    const res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, name }),
+    });
+    const data = await res.json();
+
+    if (data.success) {
+      msg.textContent = data.message || 'Subscribed successfully.';
+      msg.className = 'subscribe-msg success';
+      document.getElementById('sub-name').value = '';
+      document.getElementById('sub-email').value = '';
+    } else {
+      msg.textContent = data.message || 'Subscription failed.';
+      msg.className = 'subscribe-msg error';
+    }
+  } catch (err) {
+    msg.textContent = 'Network error. Please try again.';
+    msg.className = 'subscribe-msg error';
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+});
+</script>
+
+</body>
+</html>

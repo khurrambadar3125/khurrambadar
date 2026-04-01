@@ -31,7 +31,14 @@
     { "source": "/api/update", "destination": "/api/update.js" },
     { "source": "/api/prices", "destination": "/api/prices.js" },
     { "source": "/api/memory", "destination": "/api/memory.js" },
-    { "source": "/api/news", "destination": "/api/news.js" }
+    { "source": "/api/news", "destination": "/api/news.js" },
+    { "source": "/api/subscribe", "destination": "/api/subscribe.js" },
+    { "source": "/api/unsubscribe", "destination": "/api/unsubscribe.js" },
+    { "source": "/api/daily-brief", "destination": "/api/daily-brief.js" },
+    { "source": "/api/update-brief", "destination": "/api/update-brief.js" },
+    { "source": "/api/send-newsletter", "destination": "/api/send-newsletter.js" },
+    { "source": "/api/run-daily", "destination": "/api/run-daily.js" },
+    { "source": "/daily", "destination": "/daily.html" }
   ],
   "crons": [
     {
@@ -45,6 +52,10 @@
     {
       "path": "/api/news",
       "schedule": "0 6,18 * * *"
+    },
+    {
+      "path": "/api/run-daily",
+      "schedule": "15 6 * * *"
     }
   ]
 }
