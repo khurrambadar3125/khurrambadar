@@ -203,7 +203,9 @@ export default async function handler(req, res) {
           // Since we can't import in Edge easily, inline a simpler send
           const goldLabel = briefJson.gold_price ? `$${briefJson.gold_price}` : 'N/A';
           const warLabel = briefJson.war_status || 'Active';
-          const subject = `KRM Daily Brief — ${today} | Gold ${goldLabel} | ${warLabel}`;
+          const silverLabel = briefJson.silver_price ? `$${briefJson.silver_price}` : '';
+          const dxyLabel = briefJson.dxy || '';
+          const subject = `KRM Daily Brief — ${today} | Gold ${goldLabel} | Silver ${silverLabel} | DXY ${dxyLabel}`;
 
           let sentCount = 0;
           for (const sub of subscribers) {

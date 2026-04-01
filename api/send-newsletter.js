@@ -309,7 +309,9 @@ export default async function handler(req) {
     const date = brief.date || new Date().toISOString().split('T')[0];
     const goldLabel = brief.gold_price ? `$${brief.gold_price}` : 'N/A';
     const warLabel = brief.war_status || 'Active';
-    const subject = `KRM Daily Brief — ${date} | Gold ${goldLabel} | ${warLabel}`;
+    const silverLabel = brief.silver_price ? `$${brief.silver_price}` : '';
+    const dxyLabel = brief.dxy || '';
+    const subject = `KRM Daily Brief — ${date} | Gold ${goldLabel} | Silver ${silverLabel} | DXY ${dxyLabel}`;
 
     let sentCount = 0;
     const errors = [];
