@@ -1,4 +1,4 @@
-export const config = { runtime: 'edge', maxDuration: 120 };
+export const config = { maxDuration: 300 };
 
 async function kvGet(key) {
   const url = process.env.KV_REST_API_URL;
