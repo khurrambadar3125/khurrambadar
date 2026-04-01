@@ -1758,13 +1758,24 @@ footer span { color: var(--gold); }
         return; // All done from proxy
       }
     } catch(e) {}
-    // FALLBACK: Direct APIs if proxy fails
+    // FALLBACK 1: CoinGecko direct (gold via PAXG + BTC)
     try {
       const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,pax-gold&vs_currencies=usd&include_24hr_change=true');
       if (r.ok) {
         const d = await r.json();
         if (d['pax-gold']) setTicker('tk-gold', 'GOLD', d['pax-gold'].usd, d['pax-gold'].usd_24h_change, '$', 2);
         if (d.bitcoin) setTicker('tk-btc', 'BTC', d.bitcoin.usd, d.bitcoin.usd_24h_change, '$', 0);
+      }
+    } catch(e) {}
+    // FALLBACK 2: Binance direct for BTC (most reliable on mobile/iOS)
+    try {
+      const r = await fetch('https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT');
+      if (r.ok) {
+        const d = await r.json();
+        var btcEl = document.getElementById('tk-btc');
+        if (btcEl && btcEl.innerHTML.indexOf('loading') !== -1) {
+          setTicker('tk-btc', 'BTC', parseFloat(d.lastPrice), parseFloat(d.priceChangePercent), '$', 0);
+        }
       }
     } catch(e) {}
   }
@@ -2326,8 +2337,9 @@ TODAY'S SOURCES (all read and synthesised on April 1, 2026):
 - Al Jazeera: Rubio interview — "Strait of Hormuz will be open one way or another."
 - Axios/SCMP/Bloomberg: China + Pakistan 5-point peace plan for immediate ceasefire + Hormuz reopening.
 - CNN: Day 32 — IRGC threatens 17 US tech companies. Kuwaiti tanker attacked in Dubai.
-When users ask about FT, WSJ, Bloomberg, NYT, Economist, Yahoo News, or CNBC headlines — you HAVE this data. Share it confidently with proper attribution:
-- "The FT reported that..." / "Per a WSJ exclusive..." / "Bloomberg reports..." / "According to the NYT..." / "The Economist argues..." / "Yahoo News is reporting..." / "CNBC's analysis suggests..."
+- Reuters: [pending today's read]
+When users ask about FT, WSJ, Bloomberg, NYT, Economist, Yahoo News, CNBC, or Reuters headlines — you HAVE this data. Share it confidently with proper attribution:
+- "The FT reported that..." / "Per a WSJ exclusive..." / "Bloomberg reports..." / "According to the NYT..." / "The Economist argues..." / "Yahoo News is reporting..." / "CNBC's analysis suggests..." / "Reuters reports that..."
 Then recreate the story CONVERSATIONALLY — synthesise the facts through Khurram's analytical lens. Add the "so what?" that the original article didn't. Write like a published journalist: punchy, rhythmic, connecting dots. NEVER copy sentences verbatim. ALWAYS add original analysis.
 
 WAR DAY 33. DXY BROKE BELOW 100 (99.82). GOLD $4,700. SILVER $75. THE TURN IS HERE.

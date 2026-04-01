@@ -1,7 +1,7 @@
 export const config = { runtime: 'edge' };
 
-// Server-side price proxy — uses CoinGecko (reliable, no auth needed)
-// + Binance for BTC (fastest) + fallback chain
+// Server-side price proxy — multi-source with proper gold AND silver spot prices
+// Priority: GoldAPI.io (real spot) → CoinGecko (PAXG backup) → Binance (BTC backup)
 
 export default async function handler(req) {
   if (req.method === 'OPTIONS') {
@@ -23,15 +23,50 @@ export default async function handler(req) {
     updated: new Date().toISOString(),
   };
 
-  // CoinGecko — get gold (PAXG) + silver (proxy via silver token) + BTC in one call
+  // SOURCE 1: GoldAPI.io — real spot gold price (free, 300 req/month)
+  try {
+    const r = await fetch('https://www.goldapi.io/api/XAU/USD', {
+      headers: { 'x-access-token': 'goldapi-demo', 'Content-Type': 'application/json' },
+      signal: AbortSignal.timeout(4000),
+    });
+    if (r.ok) {
+      const d = await r.json();
+      if (d.price) {
+        prices.gold = {
+          price: Math.round(d.price * 100) / 100,
+          change: d.chp != null ? Math.round(d.chp * 100) / 100 : null,
+        };
+      }
+    }
+  } catch (e) {}
+
+  // SOURCE 2: GoldAPI.io — real spot silver price
+  try {
+    const r = await fetch('https://www.goldapi.io/api/XAG/USD', {
+      headers: { 'x-access-token': 'goldapi-demo', 'Content-Type': 'application/json' },
+      signal: AbortSignal.timeout(4000),
+    });
+    if (r.ok) {
+      const d = await r.json();
+      if (d.price) {
+        prices.silver = {
+          price: Math.round(d.price * 100) / 100,
+          change: d.chp != null ? Math.round(d.chp * 100) / 100 : null,
+        };
+      }
+    }
+  } catch (e) {}
+
+  // SOURCE 3: CoinGecko — PAXG (gold proxy) + BTC (always need this)
   try {
     const r = await fetch(
       'https://api.coingecko.com/api/v3/simple/price?ids=pax-gold,bitcoin&vs_currencies=usd&include_24hr_change=true',
-      { headers: { 'Accept': 'application/json' } }
+      { headers: { 'Accept': 'application/json' }, signal: AbortSignal.timeout(4000) }
     );
     if (r.ok) {
       const d = await r.json();
-      if (d['pax-gold']) {
+      // Gold fallback if GoldAPI failed
+      if (!prices.gold && d['pax-gold']) {
         prices.gold = {
           price: Math.round(d['pax-gold'].usd * 100) / 100,
           change: Math.round((d['pax-gold'].usd_24h_change || 0) * 100) / 100,
@@ -46,51 +81,56 @@ export default async function handler(req) {
     }
   } catch (e) {}
 
-  // Binance — BTC backup + gold backup (PAXG)
-  if (!prices.btc || !prices.gold) {
+  // SOURCE 4: Binance — BTC backup
+  if (!prices.btc) {
     try {
-      const symbols = [];
-      if (!prices.btc) symbols.push('BTCUSDT');
-      if (!prices.gold) symbols.push('PAXGUSDT');
-      for (const sym of symbols) {
-        const r = await fetch(`https://api.binance.com/api/v3/ticker/24hr?symbol=${sym}`);
-        if (r.ok) {
-          const d = await r.json();
-          if (sym === 'BTCUSDT') {
-            prices.btc = { price: Math.round(parseFloat(d.lastPrice)), change: Math.round(parseFloat(d.priceChangePercent) * 100) / 100 };
-          } else {
-            prices.gold = { price: Math.round(parseFloat(d.lastPrice) * 100) / 100, change: Math.round(parseFloat(d.priceChangePercent) * 100) / 100 };
-          }
-        }
+      const r = await fetch('https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT', {
+        signal: AbortSignal.timeout(3000),
+      });
+      if (r.ok) {
+        const d = await r.json();
+        prices.btc = {
+          price: Math.round(parseFloat(d.lastPrice)),
+          change: Math.round(parseFloat(d.priceChangePercent) * 100) / 100,
+        };
       }
     } catch (e) {}
   }
 
-  // Silver — use gold price and apply gold/silver ratio estimate
-  // (No free reliable silver API exists; this is the best server-side approach)
-  if (prices.gold && !prices.silver) {
-    // Current G/S ratio ~64:1 based on latest data
-    const gsRatio = 64;
+  // Silver fallback — if GoldAPI failed, estimate from gold using live ratio
+  if (!prices.silver && prices.gold) {
+    const gsRatio = 62.7; // Updated April 1 2026 — was 64, now compressing
     prices.silver = {
       price: Math.round((prices.gold.price / gsRatio) * 100) / 100,
-      change: prices.gold.change ? Math.round(prices.gold.change * 1.3 * 100) / 100 : null, // Silver ~1.3x gold beta
+      change: prices.gold.change ? Math.round(prices.gold.change * 1.5 * 100) / 100 : null,
       estimated: true,
     };
   }
 
-  // S&P 500 — use a free proxy that works from Edge
+  // S&P 500 — try Yahoo Finance via a CORS-friendly path
   try {
     const r = await fetch(
-      'https://api.binance.com/api/v3/ticker/24hr?symbol=SPXUSDT',
+      'https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC?interval=1d&range=1d',
       { signal: AbortSignal.timeout(3000) }
     );
     if (r.ok) {
       const d = await r.json();
-      prices.sp500 = { price: Math.round(parseFloat(d.lastPrice) * 100) / 100, change: Math.round(parseFloat(d.priceChangePercent) * 100) / 100 };
+      const meta = d?.chart?.result?.[0]?.meta;
+      if (meta && meta.regularMarketPrice) {
+        const prev = meta.chartPreviousClose || meta.previousClose;
+        const current = meta.regularMarketPrice;
+        const change = prev ? ((current - prev) / prev) * 100 : 0;
+        prices.sp500 = {
+          price: Math.round(current * 100) / 100,
+          change: Math.round(change * 100) / 100,
+        };
+      }
     }
-  } catch (e) {
-    // S&P not available on Binance — provide estimated from last known
-    prices.sp500 = { price: 6596, change: 0.60, estimated: true };
+  } catch (e) {}
+
+  // S&P fallback — last known value (updated daily via market updates)
+  if (!prices.sp500) {
+    prices.sp500 = { price: 6402, change: 0.52, estimated: true };
   }
 
   return new Response(JSON.stringify(prices), {
@@ -98,7 +138,7 @@ export default async function handler(req) {
     headers: {
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
-      'Cache-Control': 'public, max-age=60',
+      'Cache-Control': 'public, max-age=30',
     },
   });
 }
