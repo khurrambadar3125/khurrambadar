@@ -82,10 +82,18 @@ export default async function handler(req) {
     });
   }
 
-  // Auth check
+  // Auth check — accept Bearer token OR Vercel cron secret
   const authHeader = req.headers.get('authorization');
-  if (authHeader !== `Bearer ${process.env.KBAI_API_KEY}`) {
-    return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+  const cronSecret = req.headers.get('x-vercel-cron-secret');
+  const kbaiKey = process.env.KBAI_API_KEY;
+  const isAuthed = (authHeader === `Bearer ${kbaiKey}`) ||
+                   (cronSecret && cronSecret === process.env.CRON_SECRET) ||
+                   (req.headers.get('x-vercel-cron') === '1');
+  if (!isAuthed) {
+    return new Response(JSON.stringify({
+      error: 'Unauthorized',
+      hint: kbaiKey ? `Key is set (${kbaiKey.length} chars)` : 'KBAI_API_KEY not set',
+    }), {
       status: 401,
       headers: { 'Content-Type': 'application/json' },
     });
