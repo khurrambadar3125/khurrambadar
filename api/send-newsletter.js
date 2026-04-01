@@ -30,6 +30,8 @@ function thesisLabel(key) {
     thesis_d: 'D: Gold Bull $5,500-6,300',
     thesis_e: 'E: Peace Dividend',
     thesis_f: 'F: Cyclical vs Structural',
+    thesis_g: 'G: Supply Chain',
+    thesis_h: 'H: Iran Incentive Flip',
   };
   return labels[key] || key;
 }
@@ -48,7 +50,7 @@ function buildEmailHtml(brief, recipientEmail) {
   const signals = brief.active_signals || [];
   const headlines = brief.headlines || [];
 
-  const theses = ['thesis_a','thesis_b','thesis_c','thesis_d','thesis_e','thesis_f'];
+  const theses = ['thesis_a','thesis_b','thesis_c','thesis_d','thesis_e','thesis_f','thesis_g','thesis_h'];
 
   const thesisRows = theses.map(key => {
     const t = brief[key] || { status: 'PENDING', reason: 'N/A' };

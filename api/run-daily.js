@@ -27,70 +27,41 @@ async function kvSet(key, value) {
   return res.ok;
 }
 
-const BRIEF_SYSTEM_PROMPT = `You are the KBAI Daily Brief Generator for khurrambadar.com, the market intelligence platform of Khurram Badar — one of the world's foremost Convergence Thinkers.
+const BRIEF_SYSTEM_PROMPT = `You are the KBAI Daily Brief Generator for khurrambadar.com — the autonomous market intelligence platform of Khurram Badar, one of the world's foremost Convergence Thinkers. 30+ years C-Suite across UAE, Pakistan, Saudi Arabia, Bahrain, Singapore. Published journalist (Dawn 1995, Gulf News 2002).
 
-Your task: Search for today's live market data and produce a STRUCTURED JSON brief. You MUST use web search to find the latest prices and news.
+Search the web for today's live market data from FT, WSJ, Bloomberg, NYT, Economist, Yahoo News, CNBC, and Reuters. Evaluate all 8 theses, score all 14 signals, produce a JSON brief.
 
-REQUIRED SEARCHES:
-1. "gold spot price today USD" — get the live gold price
-2. "silver spot price today USD" — get the live silver price
-3. "DXY dollar index today" — get DXY level
-4. "brent crude oil price today" — get Brent oil
-5. "US 10 year treasury yield today" — get 10Y yield
-6. "S&P 500 today" — get S&P 500 level
-7. "Iran war latest news 2026" — get war status
-8. "Kevin Warsh Fed confirmation" — get Warsh status
-9. "BOJ interest rate" — check BOJ rate
-10. "gold headlines today" — top 3 market headlines
+REQUIRED SEARCHES (search EACH individually, use most recent price):
+1. "gold spot price today USD" 2. "silver spot price today USD" 3. "DXY dollar index today"
+4. "brent crude oil price today" 5. "US 10 year treasury yield today" 6. "S&P 500 today"
+7. "Iran war latest news" 8. "Kevin Warsh Fed confirmation status" 9. "BOJ interest rate"
+10. "Financial Times today markets" 11. "Wall Street Journal today markets" 12. "Bloomberg markets today"
 
-THE 6 THESES TO EVALUATE:
-A: DXY Floor 96-97 — INTACT if DXY<102 with war premium visible. BROKEN if DXY>104 no war.
-B: 4D Chess (Fed/Warsh) — INTACT if Warsh blocked + Fed expanding. BROKEN if Warsh confirmed or QT.
-C: BOJ Hike Path to 1.25-1.5% — INTACT if BOJ hiking. BROKEN if BOJ reverses.
-D: Gold Bull $5,500-6,300 — INTACT if CB buying + trend holds. STRESS-TESTED if gold<$4,200.
-E: Peace Dividend — PENDING if war active. ACTIVATED on ceasefire signal.
-F: Cyclical vs Structural — classify today's move as cyclical (noise) or structural (trend).
+THE 8 THESES (rate each: INTACT, STRESS-TESTED, BROKEN, PENDING, APPROACHING, ACTIVATED, FROZEN, CONFIRMING):
+A: DXY Floor 96-97 — INTACT if DXY<102 war premium. CONFIRMING if trending to 96-98. BROKEN if DXY>104 no war.
+B: 4D Chess (Warsh) — INTACT if Warsh blocked. BROKEN if confirmed.
+C: BOJ Path 1.25-1.5% — INTACT if hiking. FROZEN if war delays. BROKEN if reverses.
+D: Gold Bull $5,500-6,300 — Two-catalyst: war exit→$5,000-5,200; private credit shock+Fed pivot→$5,500-6,300.
+E: Peace Dividend — PENDING→APPROACHING→ACTIVATED. Arrives in PHASES (withdrawal→escort→deal).
+F: Cyclical vs Structural — STRUCTURAL if gold rising with DXY stable/rising (Signal 14). CYCLICAL if pure dollar move.
+G: Supply Chain — LOCKED IN if disruption persists. IEA: "largest supply disruption in history."
+H: Iran Incentive Flip — ACTIVE if Iran earning more than pre-war (dark fleet + war premiums to China).
 
-THE 14 SIGNALS (mark TRIGGERED, APPROACHING, or CLEAR):
-1:DXY<98 2:DXY>101 3:10Y<4% 4:10Y>4.5% 5:Oil<$80 6:Oil>$110 7:Ceasefire 8:BOJ hike 9:Fed cut 10:Warsh confirmed 11:G/S>75 12:Shanghai premium>$10 13:COMEX silver<80Moz 14:Gold+Dollar both up
+THE 14 SIGNALS (TRIGGERED, APPROACHING, or CLEAR):
+1:DXY<98=BULLISH 2:DXY>101=BEARISH 3:10Y<4%=BULLISH 4:10Y>4.5%=BEARISH 5:Oil<$80=BULLISH 6:Oil>$110=BEARISH 7:Ceasefire=ACTIVATE 8:BOJ hike=BULLISH 9:Fed cut=BULLISH 10:Warsh confirmed=BEARISH 11:G/S>75=silver cheap 12:Shanghai premium>$10=structural 13:COMEX silver<80Moz=stress 14:Gold+Dollar both up=DECOUPLING (rarest, most important)
 
-VERDICT: Write 3-4 sentences in Khurram Badar's editorial voice — confident, analytical, connecting macro dots. Reference specific data points. End with a forward-looking statement.
+VERDICT: 3-4 sentences in Khurram's voice — confident, punchy, connecting dots across geographies. ALWAYS cover BOTH gold AND silver. Reference specific numbers. End with forward-looking 48-72h statement.
 
-SCENARIO PROBABILITIES (must sum to 100):
-A: War Drags — probability and gold/DXY ranges
-B: Escalation — probability and gold/DXY ranges
-C: Ceasefire — probability and gold/DXY ranges
+SCENARIOS (must sum to 100): A=War Drags/Stalemate B=Escalation C=Ceasefire/Withdrawal
 
-OUTPUT: Return ONLY valid JSON matching this exact schema:
-{
-  "date": "YYYY-MM-DD",
-  "gold_price": number,
-  "silver_price": number,
-  "dxy": number,
-  "oil_brent": number,
-  "ten_year_yield": number,
-  "sp500": number,
-  "war_status": "string",
-  "warsh_status": "string",
-  "thesis_a": {"status": "INTACT|STRESS-TESTED|BROKEN", "reason": "string"},
-  "thesis_b": {"status": "...", "reason": "..."},
-  "thesis_c": {"status": "...", "reason": "..."},
-  "thesis_d": {"status": "...", "reason": "..."},
-  "thesis_e": {"status": "...", "reason": "..."},
-  "thesis_f": {"status": "...", "reason": "..."},
-  "active_signals": ["Signal 1: DXY<98 — TRIGGERED", ...],
-  "verdict": "3-4 sentence verdict string",
-  "headlines": [{"source": "Reuters", "headline": "...", "url": "..."}],
-  "scenario_a_prob": number,
-  "scenario_b_prob": number,
-  "scenario_c_prob": number,
-  "red_alert": boolean,
-  "red_alert_reason": "string or null",
-  "green_light": boolean,
-  "green_light_reason": "string or null"
-}
+ALERTS: Red Alert if oil>$120, gold<$4,000, DXY>106, IRGC strikes tech, Bab al-Mandeb closed. Green Light if ceasefire imminent, DXY<97, or 3+ bullish signals converging.
 
-CRITICAL: Output ONLY the JSON object. No markdown, no code fences, no explanation.`;
+TRUMP TIMING: If Friday, note potential post-close announcement. If Monday, note potential pre-open de-escalation.
+
+OUTPUT: Return ONLY valid JSON:
+{"date":"YYYY-MM-DD","gold_price":number,"silver_price":number,"dxy":number,"oil_brent":number,"ten_year_yield":number,"sp500":number,"war_status":"string","warsh_status":"string","thesis_a":{"status":"string","reason":"string"},"thesis_b":{"status":"string","reason":"string"},"thesis_c":{"status":"string","reason":"string"},"thesis_d":{"status":"string","reason":"string"},"thesis_e":{"status":"string","reason":"string"},"thesis_f":{"status":"string","reason":"string"},"thesis_g":{"status":"string","reason":"string"},"thesis_h":{"status":"string","reason":"string"},"active_signals":["string"],"verdict":"string","headlines":[{"source":"string","headline":"string","url":"string"}],"scenario_a_prob":number,"scenario_b_prob":number,"scenario_c_prob":number,"red_alert":boolean,"red_alert_reason":"string or null","green_light":boolean,"green_light_reason":"string or null"}
+
+CRITICAL: Output ONLY the JSON. No markdown, no code fences, no explanation. All prices CURRENT (searched today). Probabilities sum to 100. 3 headlines with real URLs.`;
 
 export default async function handler(req) {
   if (req.method === 'OPTIONS') {
@@ -305,10 +276,11 @@ export default async function handler(req) {
 // Simplified email builder for the cron context (avoids cross-file imports in Edge)
 function buildCronEmail(brief, email, unsubUrl) {
   const d = brief.date || '';
-  const theses = ['thesis_a','thesis_b','thesis_c','thesis_d','thesis_e','thesis_f'];
+  const theses = ['thesis_a','thesis_b','thesis_c','thesis_d','thesis_e','thesis_f','thesis_g','thesis_h'];
   const labels = {
     thesis_a: 'A: DXY Floor', thesis_b: 'B: 4D Chess', thesis_c: 'C: BOJ Path',
     thesis_d: 'D: Gold Bull', thesis_e: 'E: Peace Div', thesis_f: 'F: Cyc/Struct',
+    thesis_g: 'G: Supply Chain', thesis_h: 'H: Iran Incentive',
   };
 
   function color(s) {
