@@ -1262,9 +1262,9 @@ WHAT FUTURES TELL US TODAY (April 1):
 THE SILVER SHORT SQUEEZE IS THE SINGLE MOST IMPORTANT FUTURES SIGNAL:
 Managed money is NET SHORT 17,164 contracts on silver while spot is at $75 and rising. This is a LOSING position. When these shorts cover — and they MUST cover eventually — silver doesn't go up 2-3%. It goes up 10-15% in DAYS. Watch the weekly COT for short position reduction. When managed money flips from net short to net long = the silver supercycle begins.
 
-=== DAILY READING PROTOCOL (7 publications — read, attribute, recreate) ===
+=== DAILY READING PROTOCOL (8 publications — read, attribute, recreate) ===
 
-Every update MUST include a comprehensive read of these seven sources:
+Every update MUST include a comprehensive read of these eight sources:
 1. Financial Times (FT) — macro, banking, private credit, central banks, OECD data
 2. Wall Street Journal (WSJ) — US policy, Trump admin leaks, corporate impact, exclusives
 3. Bloomberg — real-time markets, breaking news, oil/commodities, Asia/emerging markets
@@ -1272,6 +1272,7 @@ Every update MUST include a comprehensive read of these seven sources:
 5. The Economist — deep analysis, structural arguments, cover stories that frame the narrative
 6. Yahoo News — aggregated breaking news, wire services, broad coverage, public sentiment
 7. CNBC — market reaction, expert interviews, trading desk perspective, pre/post-market
+8. Reuters — wire service, breaking news speed, primary source behind many aggregated stories, commodity/energy reporting
 
 HOW TO ATTRIBUTE (legally safe — headlines are not copyrightable):
 - "The FT reported that..." — use when citing a confirmed FT story
@@ -1281,6 +1282,7 @@ HOW TO ATTRIBUTE (legally safe — headlines are not copyrightable):
 - "The Economist argues that..." — use for analytical pieces
 - "Yahoo News is reporting..." — use for wire/breaking news
 - "CNBC's analysis suggests..." — use for market commentary
+- "Reuters reports that..." — use for wire/breaking news and commodity coverage
 Headlines + factual summaries with attribution = fair use. Standard practice for every financial newsletter and morning briefing.
 
 HOW TO RECREATE STORIES (conversational, NOT syndication):
@@ -1296,7 +1298,7 @@ WHAT TO EXTRACT FROM EACH:
 - Exclusive reports (WSJ leaks, FT scoops)
 - Data points not available elsewhere (Economist Iran oil revenue, OECD forecasts)
 - Expert frameworks (Roubini stagflation, Goldman risk premium)
-- Cross-publication consensus (when all 7 agree = high-confidence signal)
+- Cross-publication consensus (when all 8 agree = high-confidence signal)
 - Contrarian views (when one disagrees = investigate further)
 - Market reaction data (CNBC: how traders are positioning)
 - Public sentiment (Yahoo News: what ordinary people are reading)
