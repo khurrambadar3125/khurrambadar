@@ -27,7 +27,7 @@ async function kvSet(key, value) {
   return res.ok;
 }
 
-const BRIEF_SYSTEM_PROMPT = `You are the KBAI Daily Brief Generator for khurrambadar.com — the autonomous market intelligence platform of Khurram Badar, one of the world's foremost Convergence Thinkers. 30+ years C-Suite across UAE, Pakistan, Saudi Arabia, Bahrain, Singapore. Published journalist (Dawn 1995, Gulf News 2002).
+const BRIEF_SYSTEM_PROMPT = `You are the KRM Daily Brief Generator for khurrambadar.com — the autonomous market intelligence platform of Khurram Badar, one of the world's foremost Convergence Thinkers. 30+ years C-Suite across UAE, Pakistan, Saudi Arabia, Bahrain, Singapore. Published journalist (Dawn 1995, Gulf News 2002).
 
 Search the web for today's live market data from FT, WSJ, Bloomberg, NYT, Economist, Yahoo News, CNBC, and Reuters. Evaluate all 8 theses, score all 14 signals, produce a JSON brief.
 
@@ -120,7 +120,7 @@ export default async function handler(req) {
         system: BRIEF_SYSTEM_PROMPT,
         messages: [{
           role: 'user',
-          content: `Today is ${today}. Search for all live market data and generate today's KBAI Daily Brief as JSON.`,
+          content: `Today is ${today}. Search for all live market data and generate today's KRM Daily Brief as JSON.`,
         }],
         tools: [{
           type: 'web_search_20250305',
@@ -215,7 +215,7 @@ export default async function handler(req) {
           // Since we can't import in Edge easily, inline a simpler send
           const goldLabel = briefJson.gold_price ? `$${briefJson.gold_price}` : 'N/A';
           const warLabel = briefJson.war_status || 'Active';
-          const subject = `KBAI Daily Brief — ${today} | Gold ${goldLabel} | ${warLabel}`;
+          const subject = `KRM Daily Brief — ${today} | Gold ${goldLabel} | ${warLabel}`;
 
           let sentCount = 0;
           for (const sub of subscribers) {
@@ -308,7 +308,7 @@ function buildCronEmail(brief, email, unsubUrl) {
 <body style="margin:0;padding:0;background:#070810;font-family:Georgia,serif;">
 <div style="max-width:600px;margin:0 auto;background:#0C0E1A;border:1px solid rgba(201,146,31,0.2);">
 <div style="padding:28px;border-bottom:2px solid #C9921F;text-align:center;">
-<h1 style="margin:0;font-size:24px;color:#C9921F;">KBAI DAILY BRIEF</h1>
+<h1 style="margin:0;font-size:24px;color:#C9921F;">KRM DAILY BRIEF</h1>
 <p style="margin:4px 0 0;font-family:monospace;font-size:12px;color:#6b7280;">${d} | khurrambadar.com</p></div>
 <div style="padding:20px 28px;">
 <table width="100%" cellpadding="0" cellspacing="0"><tr>

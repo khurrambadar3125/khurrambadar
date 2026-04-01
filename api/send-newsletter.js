@@ -117,7 +117,7 @@ function buildEmailHtml(brief, recipientEmail) {
 
   <!-- HEADER -->
   <div style="background:linear-gradient(135deg,#0C0E1A 0%,#1a1520 100%);padding:32px 28px 24px;border-bottom:2px solid #C9921F;text-align:center;">
-    <h1 style="margin:0;font-family:Georgia,serif;font-size:26px;color:#C9921F;font-weight:bold;letter-spacing:0.04em;">KBAI DAILY BRIEF</h1>
+    <h1 style="margin:0;font-family:Georgia,serif;font-size:26px;color:#C9921F;font-weight:bold;letter-spacing:0.04em;">KRM DAILY BRIEF</h1>
     <p style="margin:6px 0 0;font-family:'Courier New',monospace;font-size:13px;color:#6b7280;letter-spacing:0.1em;">${date}</p>
     <p style="margin:4px 0 0;font-size:12px;color:#5B6370;">khurrambadar.com</p>
   </div>
@@ -309,7 +309,7 @@ export default async function handler(req) {
     const date = brief.date || new Date().toISOString().split('T')[0];
     const goldLabel = brief.gold_price ? `$${brief.gold_price}` : 'N/A';
     const warLabel = brief.war_status || 'Active';
-    const subject = `KBAI Daily Brief — ${date} | Gold ${goldLabel} | ${warLabel}`;
+    const subject = `KRM Daily Brief — ${date} | Gold ${goldLabel} | ${warLabel}`;
 
     let sentCount = 0;
     const errors = [];

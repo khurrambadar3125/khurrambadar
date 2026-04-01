@@ -90,7 +90,7 @@ export default async function handler(req) {
 
     await kvSet('kbai:subscribers', subscribers);
 
-    return new Response(JSON.stringify({ success: true, message: 'Welcome to the KBAI Daily Brief.' }), {
+    return new Response(JSON.stringify({ success: true, message: 'Welcome to the KRM Daily Brief.' }), {
       status: 200,
       headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
     });

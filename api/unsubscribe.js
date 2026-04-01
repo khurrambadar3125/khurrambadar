@@ -63,7 +63,7 @@ export default async function handler(req) {
     }
 
     return new Response(
-      htmlPage("You've been unsubscribed from KBAI Daily Brief.", true),
+      htmlPage("You've been unsubscribed from KRM Daily Brief.", true),
       {
         status: 200,
         headers: { 'Content-Type': 'text/html; charset=utf-8' },
@@ -125,7 +125,7 @@ function htmlPage(message, success) {
 </head>
 <body>
 <div class="card">
-  <h1>KBAI Daily Brief</h1>
+  <h1>KRM Daily Brief</h1>
   <p>${message}</p>
   <a href="https://khurrambadar.com">Return to khurrambadar.com</a>
 </div>
