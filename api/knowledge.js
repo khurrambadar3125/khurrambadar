@@ -1109,20 +1109,75 @@ MAR 28 (WEEKLY CLOSE): WORST WEEK. Dow 45,167 (-793/-1.73%, NOW IN CORRECTION). 
 MAR 29 (SAT): Houthis officially enter war — Yahya Saree confirmed strikes on southern Israel "in support of Iran and resistance fronts." First Houthi strikes since Gaza ceasefire. Two attacks with different weapon systems in 24h = sustained campaign, NOT symbolic. Bab al-Mandeb strait still open but this is the nuclear option — if closed = $1T annual trade disrupted. IRGC ultimatum: US must condemn strikes on Iranian universities by noon March 30 or face retaliatory strikes on regional campuses. Islamabad summit Day 1 — Pakistan + Turkey + Egypt + Saudi FMs.
 MAR 30 (SUN): BREAKING — TRUMP: "IRAN AGREED TO MOST OF THE 15 POINTS." Biggest ceasefire signal since war began. Gold $4,506 | DXY 100.19 (above 100 again) | 10Y 4.44% | VIX 31 (+13%) | S&P -1.67%. SIGNAL 14 RETURNS: Gold rallying DESPITE DXY above 100, 10Y at 4.44%, VIX at 31. Gold ignoring every bearish signal simultaneously. Islamabad summit "very productive" per Pakistan FM Dar. IRGC ultimatum deadline passed — watching for response. Ceasefire prob revised UP: 22% (from 18%). Russia gold policy: 71% reserves liquidated + May 1 export ban = dual structural force. War Day 30. 5+ fronts.
 MAR 31 (TUE — CORRECTED): SIGNAL 14 RETURNS. Gold $4,555 (+1.9%) | Silver $71.98 (+2.8% — OUTPERFORMING gold) | DXY 100.46 | 10Y 4.35-4.42% | VIX 30.61 | S&P 6,344 (-0.39%, -7% YTD) | Nasdaq 20,795 (-0.73%, -10% Q1, IN CORRECTION) | BTC $67,864 (+1.38%). Brent $113-115 (+55% for March = RECORD since 1988). WTI $102-103 (first above $100 since July 2022). BREAKING: Rubio on Al Jazeera — "Strait of Hormuz will be open one way or another." Bahrain leads UNSC Chapter VII resolution — 22+ nation coalition (UK, France, Germany, Japan, etc.). Russia/China ABSTAINED (did not veto). Ghalibaf rejected talks but Khamenei decides. Houthis threatening Bab al-Mandeb but haven't closed. G/S ratio tightening 63.3:1 — silver outperforming = bullish. Signal 14: BOTH metals rising with DXY 100+ = structural override. Ceasefire prob: 22%. The Rubio Doctrine puts a TIME LIMIT on Hormuz closure.
-APR 1 (WED): THE TURN. DXY BROKE BELOW 100 (99.82). Gold $4,700 (surging +3.2%). Silver $75.00 (+4.2% — NEW POST-CORRECTION HIGH). Ratio compressing to 62.7:1. 10Y 4.30% (falling). VIX 29.60 (below 30). S&P 6,402 (+0.52%). Nasdaq 21,009 (+0.29%). Brent $118.35 (+5%). WTI $101.38. BTC $67,700. THREE SEISMIC DEVELOPMENTS: (1) China + Pakistan 5-POINT PEACE PLAN — immediate ceasefire + reopen Hormuz (Bloomberg, Axios, SCMP confirmed). Pakistan FM in Beijing. Trump told Axios "diplomacy going well." (2) IRGC threatens 17 US tech companies (Apple, Microsoft, Google, Nvidia, Tesla, Boeing, JPM, etc.) starting 8 PM Tehran time tonight — evacuation orders issued. (3) Kuwaiti oil tanker attacked by Iranian drone in Dubai waters. Trump threatened to "obliterate" Iran's energy + water + Kharg Island if no deal by April 6. US gas prices hit $4/gallon (highest since 2022, largest monthly jump on record). DXY below 100 = WAR PREMIUM DEFLATING. China entering peace push = game-changer. Exponential model activating: DXY 100→gold $4,600 (confirmed), DXY 98→$4,800-5,000, DXY 96→$5,500-5,800. Ceasefire prob: 30% (UP).
+APR 1 (WED — COMPREHENSIVE): THE TURN. DXY BROKE BELOW 100 (99.82). Gold $4,700 (+3.2%). Silver $75.00 (+4.2% — NEW POST-CORRECTION HIGH). Ratio 62.7:1 (compressing). 10Y 4.30% (falling). VIX 29.60 (below 30). S&P 6,402 (+0.52%). Nasdaq 21,009 (+0.29%). Brent $118→ fell 3.2% after peace signals. WTI ~$102. BTC $67,700.
+
+BREAKING DEVELOPMENTS FROM DAILY READING (FT, WSJ, Bloomberg, NYT, Economist):
+(1) WSJ EXCLUSIVE: Trump told aides willing to END WAR WITHOUT REOPENING HORMUZ. Pentagon timeline: Operation Epic Fury wraps mid-April. Plan: hobble Iran navy + missiles, then leave Hormuz to allies/diplomacy. THIS CHANGES THE EXIT SCENARIO.
+(2) BLOOMBERG: Iran President Pezeshkian told EU Council President Costa Iran has "necessary will" to end war — needs guarantees against repeat attacks. FIRST direct presidential statement of willingness. S&P posted BEST DAY SINCE MAY (+2.91%). Dow +1,125 (+2.49%). Nasdaq +3.83%. Asian stocks +3.7% (best in 17 years).
+(3) ECONOMIST COVER: "IRAN IS WINNING THE ENERGY WAR." Iran earning NEARLY TWICE as much from oil as pre-war. Exporting 2.4-2.8M bbl/day via IRGC dark fleet (transponders off, falsified docs, ship-to-ship transfers off SE Asia). China absorbs 90%+. IRAN HAS NO ECONOMIC INCENTIVE TO END WAR QUICKLY.
+(4) FT: Private credit = biggest opportunity since 2008. Defaults could surge to 8% (vs 2.5% historical). AI disruption hitting software loans. Morgan Stanley warning. SECOND FINANCIAL SHOCK building parallel to war.
+(5) FT: OECD downgrades UK growth most in G20 (-0.5pp to 0.7%). Energy shock hitting hardest.
+(6) CNBC: Roubini ("Dr. Doom") says 50%+ probability Trump ESCALATES (seize Kharg Island). Two outcomes: regime collapse (better long-term) OR 1970s stagflation.
+(7) NYT/ALL: US gas $4/gallon. Up from $2.98 pre-war. Largest monthly jump on record. Projected peak $4.25+ May. Average household +$857/year. IEA: "largest supply disruption in history" — 4.5-5M bbl/day lost (5% global supply).
+(8) China + Pakistan 5-point peace plan. IRGC threatens 17 US tech companies from 8 PM tonight. Kuwaiti tanker attacked in Dubai.
+
+REVISED ASSESSMENT (post-reading):
+- BOTH sides signaling exit (WSJ: Trump, Bloomberg: Pezeshkian)
+- BUT Iran has no economic incentive to rush (Economist: revenue doubled)
+- Gas prices forcing Trump's hand ($4/gallon = political ceiling)
+- Second financial shock building (FT: private credit)
+- Roubini warns alternative is 1970s stagflation
+- NET: War ends mid-April. NOT grand ceasefire — US withdrawal + coalition Hormuz escort. Oil drifts to $90-100 (not crash to $70). DXY drifts to 98-99. Gold grinds to $5,000-5,200. Silver $80-85. EXPLOSIVE move ($5,500+ gold, $110+ silver) comes later when private credit shock hits + Fed forced to cut.
 
 LESSON 014 (April 1, 2026) — CHINA ENTERS THE GAME:
 When China joins a diplomatic initiative with Pakistan (the established mediator), it signals tacit US approval. Pakistan would NOT launch this with Beijing without Washington's knowledge. China's entry adds: (a) UNSC leverage (Russia won't veto if China sponsors), (b) economic leverage over Iran (China = Iran's biggest oil buyer), (c) credibility with Iran (China = trusted partner). RULE: When China publicly aligns with a peace initiative, INCREASE ceasefire probability by 8-10 percentage points immediately.
 
+LESSON 015 (April 1, 2026) — THE ECONOMIST REVEALED IRAN'S INCENTIVE FLIP:
+Before the war: Iran wanted Hormuz open (to export at market price). Now: Iran profits MORE with Hormuz partially closed (higher prices + dark fleet). Revenue DOUBLED. This means: (a) Iran will drag out negotiations, (b) ceasefire timeline extends, (c) oil stays elevated longer. RULE: When evaluating Iran's behavior, ask "does this serve their economic interest?" NOT "does this serve peace?" Iran's economic incentive = PROLONG, not resolve.
+
+LESSON 016 (April 1, 2026) — WSJ: THE US EXIT WITHOUT HORMUZ:
+Trump willing to end war without reopening Hormuz = Scenario C (managed stalemate) is now MOST LIKELY. Pentagon wraps mid-April. Hormuz reopening left to 22-nation coalition. This means: (a) oil drops GRADUALLY not suddenly ($118→$90-100 over weeks), (b) DXY drifts down not snaps (100→98-99 over weeks), (c) gold GRINDS up ($4,700→$5,000-5,200), (d) the EXPLOSIVE metals move is delayed until private credit shock + Fed pivot. RULE: Revise scenarios when exit mechanism changes from "ceasefire" to "withdrawal."
+
+LESSON 017 (April 1, 2026) — FT: PRIVATE CREDIT = THE SECOND SHOCK:
+Private credit defaults surging to 8% (vs 2.5% historical). AI disruption hitting software loans. This is a SEPARATE crisis from the war. When it hits: (a) banking stress → flight to gold, (b) Fed forced to provide liquidity → dollar weakens, (c) combined with war-exit DXY decline = DOUBLE tailwind for metals. RULE: Track private credit stress as a LEADING indicator for the next leg of the gold bull market.
+
+LESSON 018 (April 1, 2026) — $4 GAS = THE POLITICAL CEILING:
+US gas at $4/gallon is the single strongest force pushing toward peace. Trump cannot win with $4 gas. Every day at $4+ accelerates exit timeline. Gas prices > military strategy > diplomacy in determining when this war ends. RULE: Track US gas prices daily. Above $4 = maximum political pressure on Trump. Above $4.25 = existential political threat.
+
+=== DAILY READING PROTOCOL (FT, WSJ, Bloomberg, NYT, Economist) ===
+
+Every update MUST include a comprehensive read of these five publications:
+1. Financial Times — macro, banking, private credit, central banks, OECD data
+2. Wall Street Journal — US policy, Trump admin leaks, corporate impact, exclusive reports
+3. Bloomberg — real-time markets, breaking news, oil/commodities, Asia/emerging markets
+4. New York Times — political impact, consumer economy, gas prices, voter sentiment
+5. The Economist — deep analysis, structural arguments, cover stories that frame the narrative
+
+WHAT TO EXTRACT FROM EACH:
+- Exclusive reports (WSJ leaks, FT scoops)
+- Data points not available elsewhere (Economist Iran oil revenue, OECD forecasts)
+- Expert frameworks (Roubini stagflation, Goldman risk premium)
+- Cross-publication consensus (when all 5 agree = high-confidence signal)
+- Contrarian views (when one disagrees = investigate further)
+
+=== REVISED SCENARIO PROBABILITIES (post-reading Apr 1) ===
+
+A — Quick ceasefire before April 6 (15%, DOWN from 30%): Economist shows Iran has no incentive to rush. Pezeshkian wants guarantees that take time to negotiate.
+B — US withdrawal + coalition Hormuz escort, mid-April (40%, NEW SCENARIO): WSJ reporting. Most likely outcome. Oil $90-100. DXY 98-99. Gold $5,000-5,200. Silver $80-85.
+C — Trump escalates / seizes Kharg Island (20%): Roubini's thesis. If gas hits $4.25+ and no deal = Trump goes nuclear on Iran's oil. Short-term chaos, oil $150, then collapse of Iran revenue → faster resolution.
+D — War continues through April (20%): Iran drags out talks to maximize revenue. Houthis keep threatening Bab al-Mandeb. Stalemate. Gold range $4,500-4,800. Silver $72-78.
+E — Black Swan: IRGC strikes tech companies tonight (5%): If any facility hit → Nasdaq circuit breakers, VIX 40+, gold $5,000+ overnight.
+
 === THESIS EVOLUTION TRACKER ===
 
-THESIS A (DXY Floor 96-97): INTACT since Feb 5. Never broken. DXY touched 95.5 in Jan (briefly). War pushed to 100.32 (Mar 13). Currently 99.63 = war premium. Floor thesis unbroken.
-THESIS B (4D Chess): INTACT since Feb 5. Probability rose from 35%→55-65% as evidence accumulated. Warsh STILL blocked. No paperwork even filed. Powell safe past May.
-THESIS C (Cyclical vs Structural): CONFIRMED by Jan 30 crash. Reconfirmed by war paradox. Signal 14 (Mar 26) suggests structural component reasserting.
-THESIS D (BOJ Path): ON TRACK but DELAYED 60-90 days by war. BOJ still at 0.75%. Spread still above 2%.
-THESIS E (Peace Dividend): PENDING→APPROACHING→HIGHEST PROBABILITY since Apr 1. China + Pakistan 5-point peace plan. 22-nation Hormuz coalition. Rubio "one way or another." Trump told Axios "going well." US gas at $4/gallon forcing Trump's hand. Probability: 30% ceasefire (UP from 22%). If Rubio-Iran meet → 45%.
-THESIS F (Gold Bull $5,500-6,300): INTACT structurally. In deepest correction ($5,594→$4,248 = -24%). Signal 14 suggests structural floor holding. JP Morgan $6,300 target live.
-THESIS G (Supply Chain): Added Mar 22. LOCKED IN regardless of war outcome. Food inflation baked in.
+THESIS A (DXY Floor 96-97): CONFIRMING — DXY broke below 100 (99.82) on Apr 1. War premium deflating. WSJ: Trump willing to exit without Hormuz. Path to 98-99 via managed withdrawal. Path to 96-97 when private credit shock hits + Fed cuts. Two-phase decline: Phase 1 (April) 100→98, Phase 2 (Q2-Q3) 98→96.
+THESIS B (4D Chess): INTACT — Warsh irrelevant. War makes Powell essential (can't change Fed chair during crisis). Powell safe well into 2027.
+THESIS C (Cyclical vs Structural): STRUCTURAL WINNING — Gold $4,700, silver $75 with DXY still near 100. Signal 14 fired 5 times in 7 days. Structural demand (CB buying + physical) overpowering maximum cyclical headwinds.
+THESIS D (BOJ Path): FROZEN → THAWING — 10Y falling to 4.30%. If DXY drops to 98, BOJ window reopens. Delayed 3-6 months by war but thesis INTACT.
+THESIS E (Peace Dividend): EVOLVING — No longer a simple ceasefire trade. WSJ reveals it's a US WITHDRAWAL trade. Pezeshkian expressed willingness (Bloomberg). But Economist shows Iran profiting from delay. NEW FRAMEWORK: Peace dividend arrives in PHASES, not a single event. Phase 1 = US withdrawal (mid-April, 40% prob). Phase 2 = Hormuz reopening (coalition escort, May-June). Phase 3 = formal settlement (Q3). Each phase releases a portion of the trade.
+THESIS F (Gold Bull $5,500-6,300): ALIVE + NEW CATALYST — Private credit stress (FT) = second shock that could force Fed to provide liquidity. Gold path: $4,700 now → $5,000-5,200 on war exit → $5,500-6,300 on private credit shock + Fed pivot. JP Morgan target REINFORCED by two-catalyst model.
+THESIS G (Supply Chain): LOCKED IN + WORSENING — IEA confirmed "largest supply disruption in history." 4.5-5M bbl/day lost. Jet fuel +75%. Food prices rising. Even after war ends, supply chain rebuild takes 6-12 months.
+THESIS H (Iran Incentive Flip — NEW, Apr 1): Iran PROFITS from prolonged war (Economist: revenue doubled). Dark fleet exporting 2.4-2.8M bbl/day to China at war premiums. Iran will PROLONG negotiations to maximize revenue. Ceasefire requires either: (a) security guarantees Iran accepts, (b) Kharg Island seizure killing revenue, or (c) China pressuring Iran to settle.
 
 === PATTERNS DETECTED ===
 
@@ -1200,6 +1255,10 @@ PRED_002 (Apr 1): If IRGC strikes ANY tech facility tonight → Nasdaq -5%+, VIX
 PRED_003 (Apr 1): China-Pakistan peace plan increases probability of Rubio-Iran direct meeting before April 6 deadline. If meeting announced → ceasefire probability jumps to 45%, gold initial dip then $5,000+, DXY to 97-98.
 PRED_004 (Apr 1): Silver will continue outperforming gold this week. Ratio will compress from 62.7:1 toward 60:1. Based on Pattern 006 + Three-Force Model + physical demand floor.
 PRED_005 (Apr 1): Brent will stay above $110 until either (a) ceasefire, (b) Hormuz escort begins, or (c) SPR release. Gas prices at $4/gallon = political ceiling approaching.
+PRED_006 (Apr 1 — post-reading): War ends mid-April via US WITHDRAWAL, not formal ceasefire (per WSJ). Oil drops to $90-100 gradually, not a crash. DXY to 98-99. Gold grinds to $5,000-5,200.
+PRED_007 (Apr 1 — post-reading): Iran will NOT accept ceasefire before April 6 deadline (Economist: revenue doubled = no incentive). Trump will either extend deadline again OR escalate (Roubini: 50% escalation probability).
+PRED_008 (Apr 1 — post-reading): Private credit stress (FT) will become a major market theme in April-May. Watch for: fund gates, forced sales, bank earnings warnings. When this hits → second flight to gold.
+PRED_009 (Apr 1 — post-reading): S&P rally (+2.91% today) is a BEAR MARKET RALLY, not a reversal. Gas at $4+ and stagflation fears will drag equities lower. Gold will decouple further from equities.
 
 === EDITORIAL VOICE & IDENTITY (apply to ALL content) ===
 
