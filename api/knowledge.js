@@ -1200,6 +1200,68 @@ Given the pattern:
 - WATCH futures volume Friday 3-4 PM. If unusual spike = announcement imminent.
 The man who built this learning loop — from Manila to Karachi to Dubai — recognised this pattern before CNN wrote it up. That is convergence thinking.
 
+=== FUTURES MARKETS DASHBOARD (read FIRST, before all other research) ===
+
+Futures tell you what SMART MONEY is doing BEFORE the headlines. Read futures FIRST, then publications, then form assessment.
+
+KEY FUTURES TO MONITOR DAILY:
+
+1. GOLD FUTURES (GC — COMEX/CME):
+   Current: ~$4,700+ | Open interest: 403,925 contracts (Mar 24 COT)
+   Managed Money: 101,299 LONG vs 24,593 SHORT = NET LONG 76,706 contracts
+   MEANING: Institutions are HEAVILY long gold. 4:1 long/short ratio. This is conviction positioning, not speculation.
+   WATCH FOR: Open interest RISING + price rising = new money entering (bullish). OI falling + price rising = short covering (less bullish but still positive).
+
+2. SILVER FUTURES (SI — COMEX/CME):
+   Current: ~$75 | Open interest: 71,997 contracts (Mar 24 COT)
+   Managed Money: 19,951 LONG vs 37,115 SHORT = NET SHORT 17,164 contracts
+   MEANING: Institutions are STILL SHORT silver despite $75 price. This is the SQUEEZE setup. When shorts cover, silver EXPLODES. This is why silver's beta is 2x gold — the short squeeze amplifies every move.
+   WATCH FOR: Short covering = price surge + OI declining. New longs entering = OI rising + price rising = even more bullish.
+
+3. CRUDE OIL FUTURES (CL=WTI, BZ=Brent — NYMEX/ICE):
+   Current: WTI ~$101, Brent ~$115
+   STRUCTURE: EXTREME BACKWARDATION. Front month trading at DOUBLE-DIGIT premium to next month.
+   - Prompt month: ~$101 (WTI)
+   - 4 months out: ~$85-90
+   - 10 months out: ~$70-75 (back to "normal")
+   MEANING: Market says oil crisis is TEMPORARY. Longer-dated futures ALREADY pricing war end and supply normalisation. Goldman's $14-18 risk premium is IN the front month. When war ends, front month collapses to meet the curve = oil drops $20-30 fast.
+   WATCH FOR: Backwardation STEEPENING = crisis worsening. FLATTENING = market pricing resolution.
+
+4. S&P 500 FUTURES (ES — CME E-mini):
+   Current: +0.7% pre-market | Rallied 2.91% Tuesday
+   VIX FUTURES: 26.38 (front), opened at 28.25. VIX term structure in contango (front < back) = market expects volatility to persist but not spike.
+   WATCH FOR: ES volume spikes 15-30 min before Trump announcements (documented pattern). VIX futures above 30 = panic. Below 25 = complacency.
+
+5. TREASURY FUTURES (ZN=10Y, ZB=30Y — CBOT):
+   10Y yield: 4.30% (falling from 4.48% high)
+   Fed rate hike probability: DROPPED to 20% (from 35% last week)
+   Powell: tariff inflation is "one-time" — Fed has "little control over supply shocks"
+   MEANING: Bond market is starting to price in EASING, not tightening. Yields falling = bullish for gold/silver.
+   WATCH FOR: 10Y breaking below 4.0% = Signal 3 TRIGGERS = maximum bullish for metals.
+
+6. DXY FUTURES (DX — ICE):
+   Current: 99.82 | Open interest: 39,480 contracts
+   Consensus range: 99-103 through Q2
+   MEANING: Moderate positioning. Market expects dollar to hold but not surge. War premium keeps floor at 99. Peace premium caps at 103.
+   WATCH FOR: DXY futures breaking below 99 = Signal 1 approaching. Breaking 98 = FULL BULLISH trigger.
+
+COT REPORT SCHEDULE:
+- Data collected: Every Tuesday
+- Released: Every Friday at 3:30 PM Eastern
+- CRITICAL: April 4 (Friday) COT release will show positioning INTO the April 6 deadline weekend. This is the most important COT report in weeks.
+
+WHAT FUTURES TELL US TODAY (April 1):
+- Gold: Institutions 4:1 long = CONVICTION, not speculation
+- Silver: Institutions STILL SHORT at $75 = SQUEEZE SETUP (this is explosive)
+- Oil: Extreme backwardation = market says crisis is TEMPORARY (pricing war end within 10 months)
+- Bonds: Yields falling, rate hike probability dropping = bullish pivot forming
+- DXY: Below 100, moderate positioning = war premium deflating
+- VIX: Below 30, contango = fear easing but not gone
+- S&P futures: +0.7% = cautious optimism, not euphoria
+
+THE SILVER SHORT SQUEEZE IS THE SINGLE MOST IMPORTANT FUTURES SIGNAL:
+Managed money is NET SHORT 17,164 contracts on silver while spot is at $75 and rising. This is a LOSING position. When these shorts cover — and they MUST cover eventually — silver doesn't go up 2-3%. It goes up 10-15% in DAYS. Watch the weekly COT for short position reduction. When managed money flips from net short to net long = the silver supercycle begins.
+
 === DAILY READING PROTOCOL (FT, WSJ, Bloomberg, NYT, Economist) ===
 
 Every update MUST include a comprehensive read of these five publications:
@@ -1266,12 +1328,14 @@ PATTERN 006: DXY-metals inverse acceleration. DXY 100.46→99.82 (-0.64%) in one
 
 The knowledge base is NOT a log. It is a BRAIN. Every update must make it smarter.
 
-BEFORE EVERY UPDATE — READ AND APPLY:
-1. Read ALL snapshots from the last 7 days. Note the TRAJECTORY, not just today.
-2. Read ALL active patterns. Confirm or break each one with today's data.
-3. Read ALL lessons. Apply every rule. If you violate a rule, log a new lesson.
-4. Read thesis tracker. Update each thesis with today's evidence.
-5. Deep dive: search FT, Bloomberg, WSJ, NYT, Reuters, Al Jazeera — minimum 8-10 searches across geopolitics, macro, commodities, central banks, diplomacy.
+BEFORE EVERY UPDATE — READ AND APPLY (IN THIS ORDER):
+1. FUTURES FIRST: Check all 6 futures markets (gold, silver, oil, S&P, bonds, DXY). Futures tell you what smart money did overnight BEFORE headlines explain why.
+2. Read ALL snapshots from the last 7 days. Note the TRAJECTORY, not just today.
+3. Read ALL active patterns. Confirm or break each one with today's data.
+4. Read ALL lessons. Apply every rule. If you violate a rule, log a new lesson.
+5. Read thesis tracker. Update each thesis with today's evidence.
+6. DAILY READING: FT, WSJ, Bloomberg, NYT, Economist — minimum 10-15 searches across geopolitics, macro, commodities, central banks, diplomacy.
+7. COT report every Friday: check managed money positioning in gold, silver, oil.
 
 AFTER EVERY UPDATE — EXTRACT AND BANK:
 1. WHAT DID TODAY'S DATA TEACH US? — Extract at least ONE new insight or confirmation. Add to lessons or patterns.
@@ -1307,6 +1371,8 @@ KHURRAM'S ANALYTICAL INSIGHTS (banked from his prompts):
 - "April 4th is most critical" → The last TRADING DAY before a weekend deadline is the event, not the deadline itself.
 - "The real icing on the cake is the day after the day" → Led to "Day After the Day" principle (Lesson 019). Don't trade the fear, trade the clarity. Monday April 7 is THE day.
 - "Deal or not, 2-3 weeks" → Trump is LEAVING regardless. This is a withdrawal, not a negotiation. Changes the entire exit framework.
+- "Study all the futures markets before all research and readings" → Futures FIRST, then publications. Smart money positions in futures tell you the direction BEFORE headlines explain why. Led to Futures Markets Dashboard with 6 key contracts monitored daily.
+- Trump Friday/Monday timing pattern → Led to Trump Market Timing Playbook (Lesson 020). Escalation after close, de-escalation before open. TACO trade analysis.
 
 PREDICTION LOG (check each day — verify and score):
 
