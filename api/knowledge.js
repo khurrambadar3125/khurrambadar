@@ -1262,21 +1262,44 @@ WHAT FUTURES TELL US TODAY (April 1):
 THE SILVER SHORT SQUEEZE IS THE SINGLE MOST IMPORTANT FUTURES SIGNAL:
 Managed money is NET SHORT 17,164 contracts on silver while spot is at $75 and rising. This is a LOSING position. When these shorts cover — and they MUST cover eventually — silver doesn't go up 2-3%. It goes up 10-15% in DAYS. Watch the weekly COT for short position reduction. When managed money flips from net short to net long = the silver supercycle begins.
 
-=== DAILY READING PROTOCOL (FT, WSJ, Bloomberg, NYT, Economist) ===
+=== DAILY READING PROTOCOL (7 publications — read, attribute, recreate) ===
 
-Every update MUST include a comprehensive read of these five publications:
-1. Financial Times — macro, banking, private credit, central banks, OECD data
-2. Wall Street Journal — US policy, Trump admin leaks, corporate impact, exclusive reports
+Every update MUST include a comprehensive read of these seven sources:
+1. Financial Times (FT) — macro, banking, private credit, central banks, OECD data
+2. Wall Street Journal (WSJ) — US policy, Trump admin leaks, corporate impact, exclusives
 3. Bloomberg — real-time markets, breaking news, oil/commodities, Asia/emerging markets
-4. New York Times — political impact, consumer economy, gas prices, voter sentiment
+4. New York Times (NYT) — political impact, consumer economy, gas prices, voter sentiment
 5. The Economist — deep analysis, structural arguments, cover stories that frame the narrative
+6. Yahoo News — aggregated breaking news, wire services, broad coverage, public sentiment
+7. CNBC — market reaction, expert interviews, trading desk perspective, pre/post-market
+
+HOW TO ATTRIBUTE (legally safe — headlines are not copyrightable):
+- "The FT reported that..." — use when citing a confirmed FT story
+- "Per a WSJ exclusive..." — use for scoops and exclusives
+- "Bloomberg reports that..." — use for breaking market news
+- "According to the NYT..." — use for political/economic coverage
+- "The Economist argues that..." — use for analytical pieces
+- "Yahoo News is reporting..." — use for wire/breaking news
+- "CNBC's analysis suggests..." — use for market commentary
+Headlines + factual summaries with attribution = fair use. Standard practice for every financial newsletter and morning briefing.
+
+HOW TO RECREATE STORIES (conversational, NOT syndication):
+- Read the headline and key facts
+- Synthesise through Khurram's thesis framework — what does this MEAN for the 6 theses, 14 signals?
+- Write in Khurram's editorial voice — punchy, rhythmic, connecting dots across geographies
+- Add the "so what?" that the original article doesn't provide
+- NEVER copy sentences or paragraphs verbatim from any source
+- ALWAYS add original analysis that the publication didn't include
+- This is what a published journalist does — reads widely, thinks deeply, writes originally
 
 WHAT TO EXTRACT FROM EACH:
 - Exclusive reports (WSJ leaks, FT scoops)
 - Data points not available elsewhere (Economist Iran oil revenue, OECD forecasts)
 - Expert frameworks (Roubini stagflation, Goldman risk premium)
-- Cross-publication consensus (when all 5 agree = high-confidence signal)
+- Cross-publication consensus (when all 7 agree = high-confidence signal)
 - Contrarian views (when one disagrees = investigate further)
+- Market reaction data (CNBC: how traders are positioning)
+- Public sentiment (Yahoo News: what ordinary people are reading)
 
 === REVISED SCENARIO PROBABILITIES (post-reading Apr 1) ===
 
