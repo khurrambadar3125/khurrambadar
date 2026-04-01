@@ -1,4 +1,4 @@
-export const config = { maxDuration: 300 };
+export const config = { maxDuration: 300, runtime: 'nodejs' };
 
 async function kvGet(key) {
   const url = process.env.KV_REST_API_URL;
@@ -63,48 +63,29 @@ OUTPUT: Return ONLY valid JSON:
 
 CRITICAL: Output ONLY the JSON. No markdown, no code fences, no explanation. All prices CURRENT (searched today). Probabilities sum to 100. 3 headlines with real URLs.`;
 
-export default async function handler(req) {
-  if (req.method === 'OPTIONS') {
-    return new Response(null, {
-      status: 204,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-      },
-    });
-  }
+export default async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-  if (req.method !== 'POST') {
-    return new Response(JSON.stringify({ error: 'Method not allowed' }), {
-      status: 405,
-      headers: { 'Content-Type': 'application/json' },
-    });
-  }
+  if (req.method === 'OPTIONS') return res.status(204).end();
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  // Auth check — accept Bearer token OR Vercel cron secret
-  const authHeader = req.headers.get('authorization');
-  const cronSecret = req.headers.get('x-vercel-cron-secret');
+  // Auth check — accept Bearer token OR Vercel cron header
+  const authHeader = req.headers['authorization'] || '';
   const kbaiKey = process.env.KBAI_API_KEY;
   const isAuthed = (authHeader === `Bearer ${kbaiKey}`) ||
-                   (cronSecret && cronSecret === process.env.CRON_SECRET) ||
-                   (req.headers.get('x-vercel-cron') === '1');
+                   (req.headers['x-vercel-cron'] === '1');
   if (!isAuthed) {
-    return new Response(JSON.stringify({
+    return res.status(401).json({
       error: 'Unauthorized',
       hint: kbaiKey ? `Key is set (${kbaiKey.length} chars)` : 'KBAI_API_KEY not set',
-    }), {
-      status: 401,
-      headers: { 'Content-Type': 'application/json' },
     });
   }
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return new Response(JSON.stringify({ error: 'ANTHROPIC_API_KEY not configured' }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return res.status(500).json({ error: 'ANTHROPIC_API_KEY not configured' });
   }
 
   const log = [];
@@ -141,10 +122,7 @@ export default async function handler(req) {
     if (!claudeRes.ok) {
       const errText = await claudeRes.text();
       log.push(`Claude API error: ${claudeRes.status} — ${errText}`);
-      return new Response(JSON.stringify({ error: 'Claude API failed', log }), {
-        status: 502,
-        headers: { 'Content-Type': 'application/json' },
-      });
+      return res.status(502).json({ error: 'Claude API failed', log });
     }
 
     const claudeData = await claudeRes.json();
@@ -177,13 +155,10 @@ export default async function handler(req) {
 
     if (!briefJson) {
       log.push('ERROR: Could not parse JSON from Claude response');
-      return new Response(JSON.stringify({
+      return res.status(500).json({
         error: 'Failed to parse brief from Claude',
         raw: claudeData.content?.map(b => b.type === 'text' ? b.text : b.type).join('\n'),
         log,
-      }), {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' },
       });
     }
 
@@ -262,22 +237,17 @@ export default async function handler(req) {
 
     log.push(`[${new Date().toISOString()}] Daily run complete`);
 
-    return new Response(JSON.stringify({
+    return res.status(200).json({
       success: true,
       date: today,
+      brief: briefJson,
       brief_saved: true,
       newsletter: newsletterResult,
       log,
-    }), {
-      status: 200,
-      headers: { 'Content-Type': 'application/json' },
     });
   } catch (e) {
     log.push(`FATAL: ${e.message}`);
-    return new Response(JSON.stringify({ error: e.message, log }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' },
-    });
+    return res.status(500).json({ error: e.message, log });
   }
 }
 
