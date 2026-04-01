@@ -295,26 +295,35 @@ function buildCronEmail(brief, email, unsubUrl) {
 <div style="padding:28px;border-bottom:2px solid #C9921F;text-align:center;">
 <h1 style="margin:0;font-size:24px;color:#C9921F;">KRM DAILY BRIEF</h1>
 <p style="margin:4px 0 0;font-family:monospace;font-size:12px;color:#6b7280;">${d} | khurrambadar.com</p></div>
-<div style="padding:20px 28px;">
-<table width="100%" cellpadding="0" cellspacing="0"><tr>
-<td width="50%" style="padding:6px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">GOLD</span><br><span style="font-size:18px;color:#F0B840;font-weight:bold;">$${brief.gold_price||'—'}</span></td>
-<td width="50%" style="padding:6px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">SILVER</span><br><span style="font-size:18px;color:#C0C0C0;font-weight:bold;">$${brief.silver_price||'—'}</span></td></tr><tr>
-<td style="padding:6px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">DXY</span><br><span style="font-size:16px;color:#EDE8DC;">${brief.dxy||'—'}</span></td>
-<td style="padding:6px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">BRENT</span><br><span style="font-size:16px;color:#EDE8DC;">$${brief.oil_brent||'—'}</span></td></tr><tr>
-<td style="padding:6px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">10Y YIELD</span><br><span style="font-size:16px;color:#EDE8DC;">${brief.ten_year_yield||'—'}%</span></td>
-<td style="padding:6px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">S&P 500</span><br><span style="font-size:16px;color:#EDE8DC;">${brief.sp500||'—'}</span></td></tr><tr>
-<td style="padding:6px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">WAR</span><br><span style="font-size:14px;color:#f59e0b;">${brief.war_status||'—'}</span></td>
-<td style="padding:6px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">WARSH</span><br><span style="font-size:14px;color:#EDE8DC;">${brief.warsh_status||'—'}</span></td></tr></table>
-<div style="text-align:center;padding:12px 0;"><span style="color:#f59e0b;font-family:monospace;font-size:18px;font-weight:bold;">${brief.scenario_a_prob||0}%</span><span style="color:#6b7280;font-size:11px;"> War </span><span style="color:#ef4444;font-family:monospace;font-size:18px;font-weight:bold;margin:0 12px;">${brief.scenario_b_prob||0}%</span><span style="color:#6b7280;font-size:11px;"> Esc </span><span style="color:#22c55e;font-family:monospace;font-size:18px;font-weight:bold;margin:0 12px;">${brief.scenario_c_prob||0}%</span><span style="color:#6b7280;font-size:11px;"> Peace</span></div>
+<div style="padding:24px 28px;">
+<div style="font-family:monospace;font-size:11px;color:#C9921F;margin-bottom:16px;letter-spacing:0.1em;">MARKET SNAPSHOT</div>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr><td width="50%" style="padding:14px 0;border-bottom:1px solid rgba(201,146,31,0.08);"><span style="font-family:monospace;font-size:10px;color:#6b7280;">GOLD</span><br><span style="font-size:20px;color:#F0B840;font-weight:bold;">$${brief.gold_price||'—'}</span></td>
+<td width="50%" style="padding:14px 0;border-bottom:1px solid rgba(201,146,31,0.08);"><span style="font-family:monospace;font-size:10px;color:#6b7280;">SILVER</span><br><span style="font-size:20px;color:#C0C0C0;font-weight:bold;">$${brief.silver_price||'—'}</span></td></tr>
+<tr><td style="padding:14px 0;border-bottom:1px solid rgba(201,146,31,0.08);"><span style="font-family:monospace;font-size:10px;color:#6b7280;">DXY</span><br><span style="font-size:18px;color:#EDE8DC;">${brief.dxy||'—'}</span></td>
+<td style="padding:14px 0;border-bottom:1px solid rgba(201,146,31,0.08);"><span style="font-family:monospace;font-size:10px;color:#6b7280;">BRENT OIL</span><br><span style="font-size:18px;color:#EDE8DC;">$${brief.oil_brent||'—'}</span></td></tr>
+<tr><td style="padding:14px 0;border-bottom:1px solid rgba(201,146,31,0.08);"><span style="font-family:monospace;font-size:10px;color:#6b7280;">10Y YIELD</span><br><span style="font-size:18px;color:#EDE8DC;">${brief.ten_year_yield||'—'}%</span></td>
+<td style="padding:14px 0;border-bottom:1px solid rgba(201,146,31,0.08);"><span style="font-family:monospace;font-size:10px;color:#6b7280;">S&P 500</span><br><span style="font-size:18px;color:#EDE8DC;">${brief.sp500||'—'}</span></td></tr>
+<tr><td style="padding:14px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">WAR STATUS</span><br><span style="font-size:13px;color:#f59e0b;line-height:1.4;">${brief.war_status||'—'}</span></td>
+<td style="padding:14px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">WARSH STATUS</span><br><span style="font-size:13px;color:#EDE8DC;line-height:1.4;">${brief.warsh_status||'—'}</span></td></tr></table>
+
+<div style="text-align:center;padding:20px 0;margin-top:8px;border-top:1px solid rgba(201,146,31,0.1);border-bottom:1px solid rgba(201,146,31,0.1);">
+<div style="font-family:monospace;font-size:10px;color:#6b7280;margin-bottom:8px;">SCENARIO PROBABILITIES</div>
+<span style="color:#f59e0b;font-family:monospace;font-size:20px;font-weight:bold;">${brief.scenario_a_prob||0}%</span><span style="color:#6b7280;font-size:11px;"> War </span><span style="color:#ef4444;font-family:monospace;font-size:20px;font-weight:bold;margin:0 16px;">${brief.scenario_b_prob||0}%</span><span style="color:#6b7280;font-size:11px;"> Escalation </span><span style="color:#22c55e;font-family:monospace;font-size:20px;font-weight:bold;margin:0 16px;">${brief.scenario_c_prob||0}%</span><span style="color:#6b7280;font-size:11px;"> Peace</span></div>
+
 ${alertHtml}
-<div style="background:rgba(201,146,31,0.08);border:1px solid rgba(201,146,31,0.2);border-radius:6px;padding:16px 20px;margin:16px 0;">
-<div style="font-family:monospace;font-size:11px;color:#C9921F;margin-bottom:8px;">TODAY'S VERDICT</div>
-<p style="margin:0;font-size:14px;color:#EDE8DC;line-height:1.6;">${brief.verdict||'No verdict.'}</p></div>
-<div style="font-family:monospace;font-size:11px;color:#C9921F;margin:16px 0 8px;">THESIS SCORECARD</div>
+
+<div style="background:rgba(201,146,31,0.08);border:1px solid rgba(201,146,31,0.2);border-radius:6px;padding:20px 24px;margin:24px 0;">
+<div style="font-family:monospace;font-size:11px;color:#C9921F;margin-bottom:12px;letter-spacing:0.1em;">TODAY'S VERDICT</div>
+<p style="margin:0;font-size:14px;color:#EDE8DC;line-height:1.7;">${brief.verdict||'No verdict.'}</p></div>
+
+<div style="font-family:monospace;font-size:11px;color:#C9921F;margin:28px 0 12px;letter-spacing:0.1em;">THESIS SCORECARD</div>
 <table width="100%" cellpadding="0" cellspacing="0">${thesisRows}</table>
-<div style="font-family:monospace;font-size:11px;color:#C9921F;margin:16px 0 8px;">ACTIVE SIGNALS</div>
+
+<div style="font-family:monospace;font-size:11px;color:#C9921F;margin:28px 0 12px;letter-spacing:0.1em;">ACTIVE SIGNALS</div>
 <ul style="margin:0;padding:0 0 0 16px;">${signals}</ul>
-<div style="font-family:monospace;font-size:11px;color:#C9921F;margin:16px 0 8px;">HEADLINES</div>
+
+<div style="font-family:monospace;font-size:11px;color:#C9921F;margin:28px 0 12px;letter-spacing:0.1em;">HEADLINES</div>
 ${headlines}
 </div>
 <div style="padding:20px 28px;border-top:1px solid rgba(201,146,31,0.12);text-align:center;">
