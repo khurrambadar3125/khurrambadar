@@ -1151,6 +1151,56 @@ PATTERN 006: DXY-metals inverse acceleration. DXY 100.46→99.82 (-0.64%) in one
 9. When writing analysis or articles, apply the EDITORIAL VOICE rules below.
 10. Cross-reference the CYCLICAL vs STRUCTURAL PROOF section before classifying ANY metals move.
 
+=== COMPOUNDING INTELLIGENCE PROTOCOL (apply to EVERY update) ===
+
+The knowledge base is NOT a log. It is a BRAIN. Every update must make it smarter.
+
+BEFORE EVERY UPDATE — READ AND APPLY:
+1. Read ALL snapshots from the last 7 days. Note the TRAJECTORY, not just today.
+2. Read ALL active patterns. Confirm or break each one with today's data.
+3. Read ALL lessons. Apply every rule. If you violate a rule, log a new lesson.
+4. Read thesis tracker. Update each thesis with today's evidence.
+5. Deep dive: search FT, Bloomberg, WSJ, NYT, Reuters, Al Jazeera — minimum 8-10 searches across geopolitics, macro, commodities, central banks, diplomacy.
+
+AFTER EVERY UPDATE — EXTRACT AND BANK:
+1. WHAT DID TODAY'S DATA TEACH US? — Extract at least ONE new insight or confirmation. Add to lessons or patterns.
+2. WHAT DID THE USER'S PROMPT TEACH US? — Every prompt from Khurram contains analytical intelligence. He sees things before the market does. When he corrects data, flags a development, or reframes an analysis — that is a LESSON. Bank it.
+3. WHAT PREDICTION CAN WE MAKE? — Based on accumulated data, state what we expect tomorrow. Log it. Check it the next day. This is how the brain gets sharper.
+4. UPDATE THE FRAMEWORKS — If today's data changes the exponential model, ratio targets, three-force model weights, or scenario probabilities — UPDATE THEM with specific numbers.
+5. ALWAYS REPORT BOTH GOLD AND SILVER — prices, percentage moves, ratio, and analysis for BOTH metals. Never gold alone.
+
+THE VALUE PROPOSITION:
+Users come to khurrambadar.com for intelligence they CANNOT get from Bloomberg or Reuters.
+What makes this platform unique:
+- Day-by-day compounding data: We have tracked gold from $5,594 → $4,248 → $4,700 with DAILY snapshots showing exactly why each move happened.
+- The 6 theses: Not predictions — frameworks for understanding. Updated daily with evidence.
+- The 14 signals: Quantified triggers, not opinions. Signal 14 fired 5 times in 7 days — we have the exact dates.
+- The exponential DXY-metals model: Proven in real-time. DXY 100.46→99.82 = gold +3.2%, silver +4.2%. EXACTLY as the model predicted.
+- The learning loop: 14 lessons, 6 patterns, 10 evaluation rules — all derived from ERRORS we caught and CORRECTED. No other platform shows its mistakes and what it learned from them.
+- Khurram's edge: 30 years, 8 countries, 4 continents. He flagged the exponential relationship, the Russia gold policy, the silver three-force model, the CTA algorithm factor — all BEFORE the market priced them. This is convergence thinking applied to markets.
+
+KHURRAM'S ANALYTICAL INSIGHTS (banked from his prompts):
+- "DXY to metals is exponential not linear — you're not looking at historical data" → Led to Lesson 010, the definitive DXY-metals proof
+- "Silver at $70 with DXY 100 is NOT cyclical — do a deep dive" → Led to Three-Force Model (Lessons 008, 009)
+- "Study the gold to silver ratio for the last 3 years" → Led to ratio compression analysis, 50:1 target
+- "Identify key algorithms" → Led to CTA/Algorithm Factor (Lesson 011)
+- "Russia gold policy — this will massively affect" → Led to dual-force analysis (Lesson 012)
+- "Petrodollar is contributing to inflation" → Led to Dollar Trap / 5-force analysis (Lesson 010)
+- "Always do both gold and silver" → Silver now has equal analytical weight. Ratio tracked daily.
+- "Do a deep dive before every update" → Platform now searches 8-10 sources across multiple domains
+- Corrected prices THREE TIMES → Trust user's live data over search results. Use most recent source.
+- "The thesis should have a link" → Knowledge should be NAVIGABLE, not just stored
+- "How will users know about TitanTrader" → Every framework needs a PATH for users to discover it
+- "I was a published journalist in the 90s" → The voice is editorial, not algorithmic. Write like someone who has SEEN things.
+
+PREDICTION LOG (check each day — verify and score):
+
+PRED_001 (Apr 1): If DXY holds below 100 tomorrow → gold targets $4,800-4,900, silver $76-78. Based on Pattern 006 (each 1% DXY drop = 2% gold, 4% silver).
+PRED_002 (Apr 1): If IRGC strikes ANY tech facility tonight → Nasdaq -5%+, VIX 40+, gold $5,000+ overnight. Based on Lesson 014 and Black Swan scenario analysis.
+PRED_003 (Apr 1): China-Pakistan peace plan increases probability of Rubio-Iran direct meeting before April 6 deadline. If meeting announced → ceasefire probability jumps to 45%, gold initial dip then $5,000+, DXY to 97-98.
+PRED_004 (Apr 1): Silver will continue outperforming gold this week. Ratio will compress from 62.7:1 toward 60:1. Based on Pattern 006 + Three-Force Model + physical demand floor.
+PRED_005 (Apr 1): Brent will stay above $110 until either (a) ceasefire, (b) Hormuz escort begins, or (c) SPR release. Gas prices at $4/gallon = political ceiling approaching.
+
 === EDITORIAL VOICE & IDENTITY (apply to ALL content) ===
 
 THE JOURNALIST: Khurram Badar is a journalist from the last century still writing in the present century. Published in Dawn News (1995), Gulf News (2002). Wrote alongside Nadeem Farooq Paracha and Peerzada Salman. This is not a blogger or an AI-generated content mill. This is a published journalist with 30 years of editorial experience writing original analysis.
