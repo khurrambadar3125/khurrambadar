@@ -189,10 +189,10 @@ nav {
   }
   .nav-links a {
     font-family: 'DM Mono', monospace;
-    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--muted); transition: color 0.2s;
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--cream); opacity: 0.75; transition: color 0.2s, opacity 0.2s;
   }
-  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover { color: var(--gold); opacity: 1; }
 }
 @media (min-width: 1024px) {
   nav { padding: 0 var(--pad-desk); }
@@ -2626,7 +2626,8 @@ How may I assist you today? I can:
       const btn = document.getElementById('krm-chat-btn');
       panel.classList.add('open');
       btn.classList.add('open');
-      document.body.style.overflow = 'hidden'; // Prevent scroll-behind on mobile
+      // Only block scroll on mobile where chat is fullscreen
+      if (window.innerWidth <= 768) document.body.style.overflow = 'hidden';
       addMessage('assistant', KRM_GREETING);
       // Populate date in Breaking News link
       document.querySelectorAll('.krm-date').forEach(function(el) {
@@ -2648,7 +2649,8 @@ How may I assist you today? I can:
     const btn = document.getElementById('krm-chat-btn');
     const isOpen = panel.classList.toggle('open');
     btn.classList.toggle('open', isOpen);
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    // Only block scroll on mobile where chat is fullscreen
+    document.body.style.overflow = (isOpen && window.innerWidth <= 768) ? 'hidden' : '';
     if (isOpen && window.innerWidth > 768) {
       setTimeout(() => document.getElementById('krm-input').focus(), 300);
     }
