@@ -654,17 +654,17 @@ THESIS A — DXY STRUCTURAL FLOOR (96-97):
 - INTACT if: DXY < 102, BOJ still hiking, Fed in easing bias.
 - STRESS-TESTED if: DXY exceeds 102 sustainably.
 - BROKEN only if: DXY exceeds 104 with no war and full BOJ normalization.
-- Current status (Mar 2026): INTACT — DXY 99-100 is war premium, not structural strength.
+- Current status (Apr 2 2026): INTACT — DXY 100.07 is war premium re-inflating after Trump hawkish speech. Structural floor 96-97 confirmed.
 
 THESIS B — 4D CHESS (Warsh blocked, Powell stays, QE continues):
 - INTACT if: Tillis blocking, DOJ investigation ongoing, Fed balance sheet expanding, rate at 3.5%.
 - BROKEN if: Warsh confirmed, OR Fed restarts QT aggressively, OR Fed hikes rates.
-- Current status: INTACT — Tillis firm, investigation ongoing, Powell doing $40B/mo QE.
+- Current status (Apr 2): INTACT — Tillis holding ALL Fed confirmations. Warsh blocked. Powell serving temporarily past May term.
 
 THESIS C — BOJ RATE HIKE PATH (1.25-1.5% by Jul-Aug 2026):
 - INTACT if: BOJ in hiking cycle. Each 25bp narrows spread, pressures DXY.
 - BROKEN if: BOJ explicitly pauses or reverses.
-- Current status: INTACT — BOJ at 0.75%, next hike expected by mid-2026.
+- Current status (Apr 2): INTACT — BOJ at 0.75%. Over one-third of economists expect April hike to 1.0%. Takata dissented wanting 1.0% in March. On track for 1.25-1.5% by Jul-Aug.
 
 THESIS D — GOLD STRUCTURAL BULL ($5,500-$6,300 year-end):
 - INTACT: CB buying 1,000+ tonnes/yr, 5 consecutive supply deficits, China export controls, COMEX stress.
@@ -1110,8 +1110,28 @@ MAR 29 (SAT): Houthis officially enter war — Yahya Saree confirmed strikes on 
 MAR 30 (SUN): BREAKING — TRUMP: "IRAN AGREED TO MOST OF THE 15 POINTS." Biggest ceasefire signal since war began. Gold $4,506 | DXY 100.19 (above 100 again) | 10Y 4.44% | VIX 31 (+13%) | S&P -1.67%. SIGNAL 14 RETURNS: Gold rallying DESPITE DXY above 100, 10Y at 4.44%, VIX at 31. Gold ignoring every bearish signal simultaneously. Islamabad summit "very productive" per Pakistan FM Dar. IRGC ultimatum deadline passed — watching for response. Ceasefire prob revised UP: 22% (from 18%). Russia gold policy: 71% reserves liquidated + May 1 export ban = dual structural force. War Day 30. 5+ fronts.
 MAR 31 (TUE — CORRECTED): SIGNAL 14 RETURNS. Gold $4,555 (+1.9%) | Silver $71.98 (+2.8% — OUTPERFORMING gold) | DXY 100.46 | 10Y 4.35-4.42% | VIX 30.61 | S&P 6,344 (-0.39%, -7% YTD) | Nasdaq 20,795 (-0.73%, -10% Q1, IN CORRECTION) | BTC $67,864 (+1.38%). Brent $113-115 (+55% for March = RECORD since 1988). WTI $102-103 (first above $100 since July 2022). BREAKING: Rubio on Al Jazeera — "Strait of Hormuz will be open one way or another." Bahrain leads UNSC Chapter VII resolution — 22+ nation coalition (UK, France, Germany, Japan, etc.). Russia/China ABSTAINED (did not veto). Ghalibaf rejected talks but Khamenei decides. Houthis threatening Bab al-Mandeb but haven't closed. G/S ratio tightening 63.3:1 — silver outperforming = bullish. Signal 14: BOTH metals rising with DXY 100+ = structural override. Ceasefire prob: 22%. The Rubio Doctrine puts a TIME LIMIT on Hormuz closure.
 APR 1 (WED — COMPREHENSIVE): THE TURN. DXY BROKE BELOW 100 (99.82). Gold $4,700 (+3.2%). Silver $75.00 (+4.2% — NEW POST-CORRECTION HIGH). Ratio 62.7:1 (compressing). 10Y 4.30% (falling). VIX 29.60 (below 30). S&P 6,402 (+0.52%). Nasdaq 21,009 (+0.29%). Brent $118→ fell 3.2% after peace signals. WTI ~$102. BTC $67,700.
+APR 2 (THU — COMPREHENSIVE): THE REVERSAL. Trump's prime-time HAWKISH national address killed the peace rally. Gold $4,619 (-2.9%). Silver $70.94 (-5.4% — silver punished harder as expected). Ratio 65.1:1 (EXPANDING — silver underperforming = risk-off). DXY 100.07 (+0.5% — BACK ABOVE 100). 10Y 4.381% (+6bp — yields rising on war fears). WTI $106.49 (+6.4%). Brent $107.87 (+6.6%). S&P 6,535 (-1.25%). Nasdaq futures -1.6%. BTC $66,676 (-2.9%). VIX spiked. COMEX silver registered: 76.4M oz (BELOW 80M oz — Signal 13 ACTIVE). EUR/USD 1.1535. USD/JPY 159.64.
 
-BREAKING DEVELOPMENTS FROM DAILY READING (FT, WSJ, Bloomberg, NYT, Economist):
+PRED_001 RESULT: FAILED — DXY broke ABOVE 100 (100.07), not below. Gold fell to $4,619, not $4,800-4,900. Trump's hawkish speech reversed the trend.
+PRED_002 RESULT: NOT TRIGGERED — No IRGC tech strikes.
+PRED_004 RESULT: FAILED — Silver UNDERPERFORMED gold (-5.4% vs -2.9%). Ratio expanded from 62.7 to 65.1. Risk-off = silver beta works BOTH ways.
+PRED_005 RESULT: CONFIRMED — Brent at $108, WTI $106. Above $110 threshold on Brent.
+PRED_007 RESULT: CONFIRMED — Trump speech was HAWKISH, not peaceful. Deadline extended but with escalation rhetoric.
+PRED_009 RESULT: CONFIRMED — S&P rally was indeed a bear market rally. Gave it all back and more (-1.25% today).
+PRED_010 RESULT: IN PROGRESS — Trump speech suggests he will NOT follow April 6 deadline as written. He extended with escalation rhetoric ("hit Iran extremely hard in 2-3 weeks"). The pattern continues.
+
+BREAKING DEVELOPMENTS FROM DAILY READING (FT, WSJ, Bloomberg, NYT, Economist) — APR 2:
+(1) TRUMP NATIONAL ADDRESS (April 1 prime-time): Vowed to "hit Iran extremely hard" in next 2-3 weeks. Threatened to bomb ALL electric generating plants, push Iran "back to the Stone Ages." Called war "nearly over" but offered NO exit plan. NO ceasefire timeline. THIS IS THE SINGLE BIGGEST MARKET-MOVER TODAY.
+(2) 5-DAY DIPLOMATIC WINDOW HAS EXPIRED. Trump extended Hormuz deadline to APRIL 6 — just 4 days away. Iran REJECTED the US 15-point plan, countered with 5 conditions including war reparations.
+(3) UK organizing 30+ country summit (April 3) to find diplomatic solutions for Hormuz reopening. This is the coalition escort thesis materializing.
+(4) IRGC opened limited "tolled passage" for some merchant ships, but strait remains effectively closed.
+(5) TRUMP IN CHINA (March 31-April 2): Meeting Xi Jinping. First presidential visit since 2017. Supreme Court struck down IEEPA tariffs — Trump shifted to Section 122 (15% global tariff for 150 days, expires July 24). Trade war adds complexity.
+(6) BOJ: Held at 0.75% in March (8-1 vote, Takata dissented wanting 1.0%). Over one-third of economists expect APRIL HIKE to 1.0%. This is Thesis C materializing.
+(7) ISM MANUFACTURING (April 1): 52.7 (expansion). BUT Prices Paid surged to 78.3 — HIGHEST SINCE JUNE 2022. STAGFLATION WARNING. Employment still contracting at 48.7.
+(8) Warsh: STILL BLOCKED. Tillis holding ALL Fed confirmations. Powell's term ends May — leadership vacuum forming.
+(9) Friday April 3: NONFARM PAYROLLS — major data release before Good Friday closure. Markets close Thursday for Good Friday.
+
+BREAKING DEVELOPMENTS FROM DAILY READING (FT, WSJ, Bloomberg, NYT, Economist) — APR 1:
 (1) WSJ EXCLUSIVE: Trump told aides willing to END WAR WITHOUT REOPENING HORMUZ. Pentagon timeline: Operation Epic Fury wraps mid-April. Plan: hobble Iran navy + missiles, then leave Hormuz to allies/diplomacy. THIS CHANGES THE EXIT SCENARIO.
 (2) BLOOMBERG: Iran President Pezeshkian told EU Council President Costa Iran has "necessary will" to end war — needs guarantees against repeat attacks. FIRST direct presidential statement of willingness. S&P posted BEST DAY SINCE MAY (+2.91%). Dow +1,125 (+2.49%). Nasdaq +3.83%. Asian stocks +3.7% (best in 17 years).
 (3) ECONOMIST COVER: "IRAN IS WINNING THE ENERGY WAR." Iran earning NEARLY TWICE as much from oil as pre-war. Exporting 2.4-2.8M bbl/day via IRGC dark fleet (transponders off, falsified docs, ship-to-ship transfers off SE Asia). China absorbs 90%+. IRAN HAS NO ECONOMIC INCENTIVE TO END WAR QUICKLY.
@@ -1155,6 +1175,18 @@ Khurram identified THREE critical insights:
 
 THIS IS CONVERGENCE THINKING APPLIED TO MARKETS:
 Khurram sees the pattern that Wall Street misses — they focus on the deadline, he focuses on the aftermath. He has seen deadlines come and go from Marcos to Musharraf. The dictator never follows the deadline. The opportunity is always the morning after.
+
+LESSON 021 (April 2, 2026) — TRUMP HAWKISH SPEECHES REVERSE PEACE RALLIES INSTANTLY:
+April 1: Gold $4,700 (+3.2%), silver $75 (+4.2%) on peace signals. April 2: Gold $4,619 (-2.9%), silver $70.94 (-5.4%) after Trump's hawkish national address. The ENTIRE peace rally was ERASED in one session. RULE: Never trust a Trump peace signal without a SECOND confirmation. One speech can reverse days of momentum. The "hope trade" is the most dangerous trade. Wait for ACTIONS (troop withdrawal, ceasefire order), not WORDS.
+
+LESSON 022 (April 2, 2026) — SIGNAL 13 TRIGGERED: COMEX SILVER STRESS:
+COMEX registered silver inventory: 76.4M oz — BELOW the 80M oz stress threshold for the first time. Down 13.1% in 30 days. Total COMEX: 327.6M oz, down 29.9M oz outflow in one month. This is the physical silver squeeze Signal 13 ACTIVATING. Combined with net short managed money positioning (17,164 contracts short), this is explosive. When shorts must cover AND physical is scarce = silver does not go up 5%. It goes up 20-30% in weeks. RULE: Track COMEX registered weekly. Below 50M oz = CRITICAL delivery failure risk.
+
+LESSON 023 (April 2, 2026) — ISM PRICES 78.3 = STAGFLATION IS HERE:
+ISM Manufacturing Prices Paid surged to 78.3 — highest since June 2022. Manufacturing expanding (52.7) but employment contracting (48.7). This is the TEXTBOOK definition of stagflation: rising prices + weakening labor market. For metals: stagflation is BEARISH near-term (Fed can't cut → real yields stay high) but ULTRA-BULLISH long-term (Fed eventually FORCED to choose growth over inflation → rate cuts → gold surges). 1970s playbook: gold went from $35 to $850 during stagflation. RULE: When ISM Prices > 75 AND Employment < 50 simultaneously, flag STAGFLATION ACTIVE.
+
+LESSON 024 (April 2, 2026) — SILVER'S NEGATIVE BETA IN RISK-OFF:
+Silver fell -5.4% vs gold -2.9% = 1.86x negative beta. This CONFIRMS the leverage model works SYMMETRICALLY. Silver outperforms gold 2x on the upside (Apr 1: silver +4.2% vs gold +3.2%) AND underperforms 2x on the downside (Apr 2: silver -5.4% vs gold -2.9%). The ratio expanded from 62.7 to 65.1 in ONE session. RULE: In risk-off sessions (DXY up, oil up, equities down), silver's negative beta is 1.5-2x gold. Position sizing must account for this. Silver is NOT a safe haven — it's a leveraged precious metals play.
 
 LESSON 020 (April 1, 2026) — THE TRUMP MARKET TIMING PLAYBOOK (deep dive):
 
@@ -1250,7 +1282,17 @@ COT REPORT SCHEDULE:
 - Released: Every Friday at 3:30 PM Eastern
 - CRITICAL: April 4 (Friday) COT release will show positioning INTO the April 6 deadline weekend. This is the most important COT report in weeks.
 
-WHAT FUTURES TELL US TODAY (April 1):
+WHAT FUTURES TELL US TODAY (April 2):
+- Gold: $4,619 (-2.9%) — institutions still 4:1 long but cyclical selling from war escalation
+- Silver: $70.94 (-5.4%) — managed money STILL net short. COMEX registered BELOW 80M oz = Signal 13 ACTIVE. Squeeze setup INTENSIFIES with lower prices.
+- Oil: WTI $106.49 (+6.4%), Brent $107.87 (+6.6%) — Trump speech drove oil SURGE. Approaching Signal 6 ($110). Backwardation likely steepened.
+- Bonds: 10Y 4.381% (+6bp) — yields rising = BEARISH for gold near-term. Approaching Signal 4 threshold (4.5%).
+- DXY: 100.07 (+0.5%) — BACK ABOVE 100. War premium re-inflating. Signal 1 (DXY<98) further away. Signal 2 (DXY>101) now CLOSER.
+- VIX: Spiked — fear returning.
+- S&P futures: -1.25% — risk-off across the board.
+- BTC: $66,676 (-2.9%) — correlating with equities, NOT gold. Not a safe haven.
+
+PREVIOUS (April 1):
 - Gold: Institutions 4:1 long = CONVICTION, not speculation
 - Silver: Institutions STILL SHORT at $75 = SQUEEZE SETUP (this is explosive)
 - Oil: Extreme backwardation = market says crisis is TEMPORARY (pricing war end within 10 months)
@@ -1303,7 +1345,15 @@ WHAT TO EXTRACT FROM EACH:
 - Market reaction data (CNBC: how traders are positioning)
 - Public sentiment (Yahoo News: what ordinary people are reading)
 
-=== REVISED SCENARIO PROBABILITIES (post-reading Apr 1) ===
+=== REVISED SCENARIO PROBABILITIES (post-reading Apr 2) ===
+
+A — Quick ceasefire before April 6 (10%, DOWN from 15%): Trump's hawkish speech makes ceasefire nearly impossible in 4 days. Iran rejected 15-point plan.
+B — US withdrawal + coalition Hormuz escort, mid-April (35%, down from 40%): WSJ reporting still base case, but Trump's escalation rhetoric complicates the timeline. UK 30-nation summit April 3 is key.
+C — Trump escalates / strikes power plants (30%, UP from 20%): Trump explicitly threatened this in his national address. "Hit Iran extremely hard in 2-3 weeks." If April 6 deadline passes without Hormuz reopening, strikes become most likely outcome. Oil $120-150. Gold paradox intensifies.
+D — War continues through April with another extension (20%): Trump extends deadline AGAIN (per Lesson 019 pattern). Gold $4,400-4,800. Silver $68-75. DXY 99-101.
+E — Black Swan / Iran retaliatory strikes (5%): IRGC strikes on regional infrastructure or tech targets.
+
+=== PREVIOUS SCENARIO PROBABILITIES (post-reading Apr 1) ===
 
 A — Quick ceasefire before April 6 (15%, DOWN from 30%): Economist shows Iran has no incentive to rush. Pezeshkian wants guarantees that take time to negotiate.
 B — US withdrawal + coalition Hormuz escort, mid-April (40%, NEW SCENARIO): WSJ reporting. Most likely outcome. Oil $90-100. DXY 98-99. Gold $5,000-5,200. Silver $80-85.
@@ -1311,7 +1361,18 @@ C — Trump escalates / seizes Kharg Island (20%): Roubini's thesis. If gas hits
 D — War continues through April (20%): Iran drags out talks to maximize revenue. Houthis keep threatening Bab al-Mandeb. Stalemate. Gold range $4,500-4,800. Silver $72-78.
 E — Black Swan: IRGC strikes tech companies tonight (5%): If any facility hit → Nasdaq circuit breakers, VIX 40+, gold $5,000+ overnight.
 
-=== THESIS EVOLUTION TRACKER ===
+=== THESIS EVOLUTION TRACKER (updated Apr 2) ===
+
+THESIS A (DXY Floor 96-97): STRESS-TESTED — DXY back ABOVE 100 (100.07) after Trump's hawkish speech. War premium RE-INFLATING. The Apr 1 break below 100 was premature. DXY now in 99-101 war premium zone. Path to 96-97 DELAYED until war actually de-escalates. Near-term: DXY 99-102.
+THESIS B (4D Chess): INTACT — Warsh still blocked by Tillis. Powell's term ends May but he confirmed he'll serve temporarily. War makes change impossible. ISM Prices at 78.3 = stagflation complicates everything.
+THESIS C (BOJ Path): APPROACHING — Over one-third of economists expect April hike to 1.0%. Takata dissented wanting 1.0% at March meeting. Thesis C (1.25-1.5% by Jul-Aug) is ON TRACK. Each hike = DXY -0.8-1.2%. This is the medium-term dollar killer.
+THESIS D (Cyclical vs Structural): TESTING — Gold fell -2.9% while DXY rose +0.5%. This is CYCLICAL behavior (dollar up = gold down). Signal 14 BROKE again. The structural floor held ($4,619 well above $4,200 support). Silver -5.4% = 1.85x gold's beta, confirming the leverage model works in BOTH directions.
+THESIS E (Peace Dividend): FADING — Trump's hawkish speech pushed this further away. No ceasefire in sight. Iran rejected the 15-point plan. April 6 deadline approaching but Trump explicitly said "2-3 more weeks" of strikes. Peace dividend trade is DELAYED — likely Q2 at earliest.
+THESIS F (Gold Bull $5,500-6,300): INTACT BUT DELAYED — Today's pullback is cyclical (war escalation → dollar up → gold down). Structural floor holding at $4,200-4,400. Gold needs DXY to break below 98 sustainably for the next leg. Private credit stress + Fed pivot remain the catalysts for $5,500+.
+THESIS G (Supply Chain): WORSENING — Oil back above $106-108. ISM Prices at 78.3 = input costs surging. Stagflation risk RISING. Even if war ends, supply chain rebuild takes 6-12 months. Food inflation arrives Q3-Q4 regardless.
+THESIS H (Iran Incentive Flip): CONFIRMED — Iran rejected the 15-point plan. Trump's hawkish response shows the incentive mismatch: Iran profits from prolonging, Trump's political pressure ($4 gas) pushes for resolution. The irreconcilable incentives extend the war.
+
+=== PREVIOUS THESIS EVOLUTION (Apr 1) ===
 
 THESIS A (DXY Floor 96-97): CONFIRMING — DXY broke below 100 (99.82) on Apr 1. War premium deflating. WSJ: Trump willing to exit without Hormuz. Path to 98-99 via managed withdrawal. Path to 96-97 when private credit shock hits + Fed cuts. Two-phase decline: Phase 1 (April) 100→98, Phase 2 (Q2-Q3) 98→96.
 THESIS B (4D Chess): INTACT — Warsh irrelevant. War makes Powell essential (can't change Fed chair during crisis). Powell safe well into 2027.
@@ -1335,6 +1396,12 @@ PATTERN 004: Signal 14 fired March 26, BROKE March 27 (deadline extension), RETU
 PATTERN 005: Trump peace signals pattern — every Trump statement moves markets 2-3% within hours. Mar 23 peace post → oil crashed. Mar 27 deadline extension → gold fell. Mar 30 "most of 15 points" → biggest ceasefire signal yet. Trade the statement, not the confirmation.
 
 PATTERN 006: DXY-metals inverse acceleration. DXY 100.46→99.82 (-0.64%) in one session = Gold +2-3%, Silver +4.2%. The exponential relationship (Lesson 010) is CONFIRMED in real-time. Silver's beta is 2x gold's on DXY moves. Each 1% DXY drop = ~2% gold, ~4% silver.
+
+PATTERN 007 (Apr 2): TRUMP SPEECH REVERSAL PATTERN. Every Trump peace signal is followed by a hawkish speech that reverses the rally. Mar 23: peace post → rally. Mar 27: extension → selloff. Mar 30: "agreed to 15 points" → rally. Apr 1-2: hawkish address → selloff. The pattern is: HOPE → FEAR → HOPE → FEAR. Markets are whipsawing on Trump's bipolar messaging. NET EFFECT: gold stays range-bound $4,400-4,700 as hope and fear cancel out.
+
+PATTERN 008 (Apr 2): SIGNAL 14 ON-OFF CYCLE. Signal 14 (gold+dollar both up) has now fired, broken, returned, and broken AGAIN in 7 days. Mar 26: FIRED. Mar 27: BROKE. Mar 30: RETURNED. Apr 1: FIRED (gold up, DXY fell). Apr 2: BROKE (gold down, DXY up — classic inverse). This on-off cycling means the market is at the EXACT inflection point between structural and cyclical forces. Neither has won decisively. Resolution comes when DXY makes a SUSTAINED move (3+ days in one direction).
+
+PATTERN 009 (Apr 2): OIL APPROACHING SIGNAL 6 THRESHOLD. Brent $107.87, WTI $106.49. Signal 6 triggers at $110 Brent. Combined with ISM Prices 78.3, the stagflation scenario (Signal 6 triggered) is 1-2 days of oil rally away. If April 6 deadline triggers strikes → oil $120+ → Signal 6 ACTIVE → bearish gold near-term, ultra-bullish long-term.
 
 === EVALUATION RULES (read before every update) ===
 
@@ -1413,6 +1480,14 @@ PRED_009 (Apr 1 — post-reading): S&P rally (+2.91% today) is a BEAR MARKET RAL
 PRED_010 (Apr 1 — Khurram): Trump will NOT follow his April 6 deadline. He will either extend or ignore it. He has NEVER followed his own deadlines in this war (Mar 23→Mar 27→Apr 6). The deadline is theatre, not policy.
 PRED_011 (Apr 1 — Khurram): April 4 (FRIDAY) is the critical day, not April 6 (Sunday). Markets can't trade Sunday. Institutions must position Friday for weekend risk. Expect: VIX spike, gold volatility, options expiry pressure. FRIDAY IS THE TRADE.
 PRED_012 (Apr 1 — Khurram): "The day after the day" = Monday April 7 is where the REAL directional move happens. The deadline creates volatility. The resolution creates direction. Smart money doesn't trade the fear — it trades the clarity AFTER the event. Gold either rockets to $5,000+ or confirms $4,500 floor on April 7.
+
+=== APR 2 NEW PREDICTIONS ===
+PRED_013 (Apr 2): Trump will NOT strike Iran power plants before April 6. His "2-3 weeks" language in the national address signals the April 6 deadline will be extended AGAIN (per Lesson 019 pattern). Watch for extension announcement Friday evening/Saturday per Trump timing playbook.
+PRED_014 (Apr 2): Gold holds $4,400-4,600 through April 4. The $4,200 EMA provides structural floor. War escalation rhetoric keeps DXY above 100, capping gold upside. Range-bound until April 6-7 resolution.
+PRED_015 (Apr 2): Silver continues to underperform gold in risk-off sessions. Ratio expands toward 66-68:1 if war escalation continues. But any peace signal reverses this FAST — silver's beta works both ways.
+PRED_016 (Apr 2): Oil approaches Signal 6 threshold ($110 Brent). If Brent crosses $110 sustained → stagflation Signal 6 TRIGGERS. ISM Prices at 78.3 already confirms inflationary pressure. WTI at $106 = $4.25+ gas by next week.
+PRED_017 (Apr 2): BOJ hikes in April. Over one-third of economists expect it. Takata's dissent (wanting 1.0%) shows internal pressure. This will compress US-Japan spread further and pressure DXY in May.
+PRED_018 (Apr 2): NFP (Friday April 3) will show employment cooling. ISM Employment at 48.7 (contracting) is the leading indicator. If NFP disappoints → rate cut expectations rise → gold rallies.
 
 === EDITORIAL VOICE & IDENTITY (apply to ALL content) ===
 

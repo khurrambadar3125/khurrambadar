@@ -38,18 +38,23 @@ Uses Claude Code to build and maintain everything.
 9: Fed cut BULLISH | 10: Warsh confirmed BEARISH | 11: G/S>75 silver cheap
 12: Shanghai premium>$10 structural | 13: COMEX silver<80Moz stress | 14: Gold+Dollar up = decoupling
 
-## Current Context (as of March 23, 2026)
-- BREAKING Mar 23: Trump announces "very good talks" with Iran, postpones strikes 5 days
-- Gold: ~$4,350-4,450 (BOUNCING after $4,248 low, peace signal)
-- Silver: ~$67-69 (bouncing +2-5%)
-- DXY: ~98.5-99.0 (FALLING — war premium exiting)
-- Brent Oil: CRASHED from $114 → $99-103 (-13% in minutes)
-- WTI: ~$89-92 (approaching sub-$90)
-- 10Y Yield: ~4.20-4.25% (falling from 4.39%)
-- S&P Futures: swung -1% → +3% on Trump post
-- War: Day 23 — PEACE TALKS SIGNAL DETECTED — 5-day diplomatic window to Mar 28
-- Thesis E (Peace Dividend): APPROACHING ACTIVATION — probability 40% (up from 20%)
-- Warsh: BLOCKED — Tillis 12-12 deadlock
+## Current Context (as of April 2, 2026)
+- BREAKING Apr 2: Trump's prime-time hawkish national address — vows to "hit Iran extremely hard" in 2-3 weeks, threatens power plants
+- Gold: ~$4,619 (-2.9% — peace rally REVERSED by hawkish speech)
+- Silver: ~$70.94 (-5.4% — punished harder, ratio expanding to 65.1:1)
+- DXY: ~100.07 (+0.5% — BACK ABOVE 100, war premium re-inflating)
+- Brent Oil: ~$107.87 (+6.6% — approaching Signal 6 threshold $110)
+- WTI: ~$106.49 (+6.4% — Trump speech drove oil surge)
+- 10Y Yield: ~4.381% (+6bp — yields rising on war/inflation fears)
+- S&P Futures: -1.25% (peace rally erased)
+- War: Day 33 — ESCALATION PHASE — April 6 Hormuz deadline 4 days away
+- Iran rejected 15-point plan, countered with 5 conditions
+- UK organizing 30+ nation summit April 3 for Hormuz diplomacy
+- BOJ: April hike to 1.0% expected by one-third of economists
+- ISM Prices: 78.3 (highest since June 2022 — STAGFLATION WARNING)
+- Signal 13 ACTIVE: COMEX registered silver 76.4M oz (below 80M threshold)
+- Thesis E (Peace Dividend): FADING — probability 10% before April 6
+- Warsh: STILL BLOCKED — Tillis holding all Fed confirmations
 
 ## File Structure
 ```

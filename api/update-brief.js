@@ -41,9 +41,10 @@ export default async function handler(req) {
     });
   }
 
-  // Auth check
+  // Auth check — accept Bearer token OR Vercel cron header
   const authHeader = req.headers.get('authorization');
-  if (authHeader !== `Bearer ${process.env.KBAI_API_KEY}`) {
+  const isCron = req.headers.get('x-vercel-cron') === '1';
+  if (!isCron && authHeader !== `Bearer ${process.env.KBAI_API_KEY}`) {
     return new Response(JSON.stringify({ error: 'Unauthorized' }), {
       status: 401,
       headers: { 'Content-Type': 'application/json' },

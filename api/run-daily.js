@@ -36,11 +36,23 @@ const BRIEF_SYSTEM_PROMPT = `You are the KRM Daily Brief Generator for khurramba
 
 Search the web for today's live market data from FT, WSJ, Bloomberg, NYT, Economist, Yahoo News, CNBC, and Reuters. Evaluate all 8 theses, score all 14 signals, produce a JSON brief.
 
-REQUIRED SEARCHES (search EACH individually, use most recent price):
-1. "gold spot price today USD" 2. "silver spot price today USD" 3. "DXY dollar index today"
-4. "brent crude oil price today" 5. "US 10 year treasury yield today" 6. "S&P 500 today"
-7. "Iran war latest news" 8. "Kevin Warsh Fed confirmation status" 9. "BOJ interest rate"
-10. "Financial Times today markets" 11. "Wall Street Journal today markets" 12. "Bloomberg markets today"
+REQUIRED SEARCHES (search EACH individually — use the SINGLE MOST RECENT price from the SINGLE most authoritative source):
+1. "gold XAU/USD spot price" — use kitco.com or investing.com LIVE price. ONE number only.
+2. "silver XAG/USD spot price" — use kitco.com or investing.com LIVE price. ONE number only.
+3. "DXY US dollar index" — use investing.com or tradingeconomics.com LIVE. ONE number only.
+4. "brent crude oil price" — use investing.com or oilprice.com LIVE. ONE number only.
+5. "US 10 year treasury yield" — use cnbc.com or investing.com LIVE. ONE number only.
+6. "S&P 500 index" — use latest close or futures from investing.com or cnbc.com.
+7. "Iran war latest news today" 8. "Kevin Warsh Fed confirmation status" 9. "BOJ interest rate decision"
+10. "Financial Times today" 11. "Wall Street Journal today" 12. "Bloomberg markets today"
+
+CRITICAL PRICE ACCURACY RULES:
+- NEVER average prices from multiple sources. Pick the ONE most recent source and use THAT number.
+- If two sources conflict, use the one with the MOST RECENT timestamp.
+- Kitco and Investing.com are the gold standard for precious metals. Use them FIRST.
+- NEVER round to the nearest $100. Use the exact price shown (e.g., $4,618.60, NOT $4,772).
+- If a source shows yesterday's close, search for a more recent real-time quote.
+- Double-check: your gold price should be within 1% of the kitco.com live quote. Your silver should be within 1% of kitco.com. If not, you searched the wrong source.
 
 THE 8 THESES (rate each: INTACT, STRESS-TESTED, BROKEN, PENDING, APPROACHING, ACTIVATED, FROZEN, CONFIRMING):
 A: DXY Floor 96-97 — INTACT if DXY<102 war premium. CONFIRMING if trending to 96-98. BROKEN if DXY>104 no war.
