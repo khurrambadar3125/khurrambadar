@@ -290,7 +290,7 @@ function buildCronEmail(brief, email, unsubUrl) {
 
   const thesisRows = theses.map(k => {
     const t = brief[k] || {status:'PENDING',reason:''};
-    return `<tr><td style="padding:6px 8px;color:#EDE8DC;font-size:13px;border-bottom:1px solid rgba(201,146,31,0.1);">${labels[k]}</td><td style="padding:6px 8px;text-align:center;border-bottom:1px solid rgba(201,146,31,0.1);"><span style="background:${color(t.status)};color:#fff;padding:2px 8px;border-radius:3px;font-size:11px;font-family:monospace;">${t.status}</span></td><td style="padding:6px 8px;color:#9ca3af;font-size:12px;border-bottom:1px solid rgba(201,146,31,0.1);">${t.reason||''}</td></tr>`;
+    return `<div style="padding:10px 0;border-bottom:1px solid rgba(201,146,31,0.1);"><div style="margin-bottom:4px;"><span style="color:#EDE8DC;font-size:13px;">${labels[k]}</span> <span style="background:${color(t.status)};color:#fff;padding:2px 8px;border-radius:3px;font-size:10px;font-family:monospace;margin-left:6px;">${t.status}</span></div><div style="color:#9ca3af;font-size:11px;line-height:1.5;">${t.reason||''}</div></div>`;
   }).join('');
 
   const signals = (brief.active_signals||[]).map(s=>`<li style="color:#EDE8DC;font-size:13px;padding:2px 0;">${s}</li>`).join('') || '<li style="color:#6b7280;">None triggered</li>';
@@ -316,8 +316,9 @@ function buildCronEmail(brief, email, unsubUrl) {
 <td style="padding:14px 0;border-bottom:1px solid rgba(201,146,31,0.08);"><span style="font-family:monospace;font-size:10px;color:#6b7280;">BRENT OIL</span><br><span style="font-size:18px;color:#EDE8DC;">$${brief.oil_brent||'—'}</span></td></tr>
 <tr><td style="padding:14px 0;border-bottom:1px solid rgba(201,146,31,0.08);"><span style="font-family:monospace;font-size:10px;color:#6b7280;">10Y YIELD</span><br><span style="font-size:18px;color:#EDE8DC;">${brief.ten_year_yield||'—'}%</span></td>
 <td style="padding:14px 0;border-bottom:1px solid rgba(201,146,31,0.08);"><span style="font-family:monospace;font-size:10px;color:#6b7280;">S&P 500</span><br><span style="font-size:18px;color:#EDE8DC;">${brief.sp500||'—'}</span></td></tr>
-<tr><td style="padding:14px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">WAR STATUS</span><br><span style="font-size:13px;color:#f59e0b;line-height:1.4;">${brief.war_status||'—'}</span></td>
-<td style="padding:14px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">WARSH STATUS</span><br><span style="font-size:13px;color:#EDE8DC;line-height:1.4;">${brief.warsh_status||'—'}</span></td></tr></table>
+</table>
+<div style="padding:10px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">WAR STATUS</span><br><span style="font-size:12px;color:#f59e0b;line-height:1.5;word-break:break-word;">${brief.war_status||'—'}</span></div>
+<div style="padding:10px 0;"><span style="font-family:monospace;font-size:10px;color:#6b7280;">WARSH STATUS</span><br><span style="font-size:12px;color:#EDE8DC;line-height:1.5;word-break:break-word;">${brief.warsh_status||'—'}</span></div>
 
 <div style="text-align:center;padding:20px 0;margin-top:8px;border-top:1px solid rgba(201,146,31,0.1);border-bottom:1px solid rgba(201,146,31,0.1);">
 <div style="font-family:monospace;font-size:10px;color:#6b7280;margin-bottom:8px;">SCENARIO PROBABILITIES</div>
@@ -330,7 +331,7 @@ ${alertHtml}
 <p style="margin:0;font-size:14px;color:#EDE8DC;line-height:1.7;">${brief.verdict||'No verdict.'}</p></div>
 
 <div style="font-family:monospace;font-size:11px;color:#C9921F;margin:28px 0 12px;letter-spacing:0.1em;">THESIS SCORECARD</div>
-<table width="100%" cellpadding="0" cellspacing="0">${thesisRows}</table>
+${thesisRows}
 
 <div style="font-family:monospace;font-size:11px;color:#C9921F;margin:28px 0 12px;letter-spacing:0.1em;">ACTIVE SIGNALS</div>
 <ul style="margin:0;padding:0 0 0 16px;">${signals}</ul>

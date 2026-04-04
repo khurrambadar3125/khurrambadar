@@ -56,19 +56,15 @@ function buildEmailHtml(brief, recipientEmail) {
     const t = brief[key] || { status: 'PENDING', reason: 'N/A' };
     const color = thesisColor(t.status);
     return `
-      <tr>
-        <td style="padding:10px 12px;border-bottom:1px solid rgba(201,146,31,0.12);font-family:Georgia,serif;font-size:14px;color:#EDE8DC;">
-          ${thesisLabel(key)}
-        </td>
-        <td style="padding:10px 12px;border-bottom:1px solid rgba(201,146,31,0.12);text-align:center;">
-          <span style="display:inline-block;padding:3px 10px;border-radius:4px;background:${color};color:#fff;font-family:'Courier New',monospace;font-size:12px;font-weight:bold;letter-spacing:0.05em;">
+      <div style="padding:12px 0;border-bottom:1px solid rgba(201,146,31,0.1);">
+        <div style="margin-bottom:6px;">
+          <span style="font-family:Georgia,serif;font-size:14px;color:#EDE8DC;">${thesisLabel(key)}</span>
+          <span style="display:inline-block;padding:2px 8px;border-radius:4px;background:${color};color:#fff;font-family:'Courier New',monospace;font-size:11px;font-weight:bold;letter-spacing:0.05em;margin-left:8px;vertical-align:middle;">
             ${(t.status || 'PENDING').toUpperCase()}
           </span>
-        </td>
-        <td style="padding:10px 12px;border-bottom:1px solid rgba(201,146,31,0.12);font-size:13px;color:#9ca3af;">
-          ${t.reason || ''}
-        </td>
-      </tr>`;
+        </div>
+        <div style="font-size:12px;color:#9ca3af;line-height:1.5;">${t.reason || ''}</div>
+      </div>`;
   }).join('');
 
   const signalItems = signals.length > 0
@@ -156,17 +152,15 @@ function buildEmailHtml(brief, recipientEmail) {
           <span style="font-family:Georgia,serif;font-size:18px;color:#EDE8DC;">${sp}</span>
         </td>
       </tr>
-      <tr>
-        <td style="padding:8px 8px 8px 0;">
-          <span style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;text-transform:uppercase;">War Status</span><br>
-          <span style="font-family:Georgia,serif;font-size:15px;color:#f59e0b;">${war}</span>
-        </td>
-        <td style="padding:8px 0 8px 8px;">
-          <span style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;text-transform:uppercase;">Warsh Status</span><br>
-          <span style="font-family:Georgia,serif;font-size:15px;color:#EDE8DC;">${warsh}</span>
-        </td>
-      </tr>
     </table>
+    <div style="padding:8px 0;">
+      <span style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;text-transform:uppercase;">War Status</span><br>
+      <span style="font-family:Georgia,serif;font-size:13px;color:#f59e0b;line-height:1.5;word-break:break-word;">${war}</span>
+    </div>
+    <div style="padding:8px 0;">
+      <span style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;text-transform:uppercase;">Warsh Status</span><br>
+      <span style="font-family:Georgia,serif;font-size:13px;color:#EDE8DC;line-height:1.5;word-break:break-word;">${warsh}</span>
+    </div>
   </div>
 
   <!-- SCENARIO PROBABILITIES -->
@@ -202,9 +196,7 @@ function buildEmailHtml(brief, recipientEmail) {
   <!-- THESIS SCORECARD -->
   <div style="padding:0 28px 20px;">
     <h2 style="margin:0 0 12px;font-family:'Courier New',monospace;font-size:13px;color:#C9921F;letter-spacing:0.12em;text-transform:uppercase;">Thesis Scorecard</h2>
-    <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
-      ${thesisRows}
-    </table>
+    ${thesisRows}
   </div>
 
   <!-- ACTIVE SIGNALS -->
