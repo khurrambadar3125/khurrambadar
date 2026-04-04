@@ -338,9 +338,16 @@ ${alertHtml}
 <div style="font-family:monospace;font-size:11px;color:#C9921F;margin:28px 0 12px;letter-spacing:0.1em;">HEADLINES</div>
 ${headlines}
 </div>
-<div style="padding:20px 28px;border-top:1px solid rgba(201,146,31,0.12);text-align:center;">
-<p style="margin:0 0 8px;font-size:11px;color:#6b7280;font-style:italic;">Educational only — not financial advice.</p>
+<div style="padding:16px 28px;border-top:1px solid rgba(201,146,31,0.12);text-align:center;">
+<p style="margin:0 0 10px;font-family:monospace;font-size:10px;color:#C9921F;letter-spacing:0.1em;">SHARE THIS BRIEF</p>
+<a href="https://wa.me/?text=${encodeURIComponent(`KRM Daily Brief — ${d}\nGold $${brief.gold_price||''} | Silver $${brief.silver_price||''} | DXY ${brief.dxy||''}\n\nSubscribe free: https://khurrambadar.com/daily`)}" style="display:inline-block;padding:6px 14px;margin:3px;background:#25D366;color:#fff;text-decoration:none;border-radius:5px;font-family:monospace;font-size:11px;font-weight:bold;">WhatsApp</a>
+<a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(`KRM Daily Brief — ${d}\nGold $${brief.gold_price||''} | Silver $${brief.silver_price||''} | DXY ${brief.dxy||''}\n\nSubscribe: https://khurrambadar.com/daily`)}" style="display:inline-block;padding:6px 14px;margin:3px;background:#1DA1F2;color:#fff;text-decoration:none;border-radius:5px;font-family:monospace;font-size:11px;font-weight:bold;">X / Twitter</a>
+<a href="https://khurrambadar.com/daily" style="display:inline-block;padding:6px 14px;margin:3px;background:rgba(201,146,31,0.15);color:#C9921F;text-decoration:none;border-radius:5px;font-family:monospace;font-size:11px;border:1px solid rgba(201,146,31,0.3);">View on Web</a>
+<p style="margin:8px 0 0;font-size:11px;color:#9ca3af;">Forward this email or share the link — <a href="https://khurrambadar.com/daily" style="color:#C9921F;">subscribe free</a></p>
+</div>
+<div style="padding:12px 28px;border-top:1px solid rgba(201,146,31,0.08);text-align:center;">
+<p style="margin:0 0 6px;font-size:11px;color:#6b7280;font-style:italic;">Educational only — not financial advice.</p>
 <a href="${unsubUrl}" style="color:#6b7280;font-size:11px;text-decoration:underline;">Unsubscribe</a>
-<br><a href="https://khurrambadar.com" style="color:#C9921F;font-size:12px;text-decoration:none;margin-top:8px;display:inline-block;">khurrambadar.com</a>
+<br><a href="https://khurrambadar.com" style="color:#C9921F;font-size:12px;text-decoration:none;margin-top:6px;display:inline-block;">khurrambadar.com</a>
 </div></div></body></html>`;
 }

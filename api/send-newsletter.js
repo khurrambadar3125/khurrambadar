@@ -221,8 +221,20 @@ function buildEmailHtml(brief, recipientEmail) {
     </table>
   </div>
 
+  <!-- SHARE -->
+  <div style="padding:20px 28px;border-top:1px solid rgba(201,146,31,0.15);text-align:center;">
+    <p style="margin:0 0 12px;font-family:'Courier New',monospace;font-size:11px;color:#C9921F;letter-spacing:0.12em;text-transform:uppercase;">Share This Brief</p>
+    <div style="margin:0 0 16px;">
+      <a href="https://wa.me/?text=${encodeURIComponent(`KRM Daily Brief — ${date}\\n\\nGold $${gold} | Silver $${silver} | DXY ${dxy} | Oil $${oil}\\n\\n${verdict.substring(0, 200)}...\\n\\nRead more & subscribe: https://khurrambadar.com/daily`)}" style="display:inline-block;padding:8px 16px;margin:4px;background:#25D366;color:#fff;text-decoration:none;border-radius:6px;font-family:'Courier New',monospace;font-size:12px;font-weight:bold;">WhatsApp</a>
+      <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(`KRM Daily Brief — ${date}\\nGold $${gold} | Silver $${silver} | DXY ${dxy}\\n\\nSubscribe free: https://khurrambadar.com/daily`)}" style="display:inline-block;padding:8px 16px;margin:4px;background:#1DA1F2;color:#fff;text-decoration:none;border-radius:6px;font-family:'Courier New',monospace;font-size:12px;font-weight:bold;">X / Twitter</a>
+      <a href="https://khurrambadar.com/daily" style="display:inline-block;padding:8px 16px;margin:4px;background:rgba(201,146,31,0.2);color:#C9921F;text-decoration:none;border-radius:6px;font-family:'Courier New',monospace;font-size:12px;font-weight:bold;border:1px solid rgba(201,146,31,0.3);">View on Web</a>
+    </div>
+    <p style="margin:0 0 4px;font-size:12px;color:#9ca3af;">Know someone who should read this? Forward this email or share the link above.</p>
+    <p style="margin:0 0 4px;font-size:12px;color:#C9921F;"><a href="https://khurrambadar.com/daily" style="color:#C9921F;text-decoration:underline;">Subscribe free at khurrambadar.com/daily</a></p>
+  </div>
+
   <!-- FOOTER -->
-  <div style="padding:24px 28px;border-top:1px solid rgba(201,146,31,0.15);text-align:center;">
+  <div style="padding:16px 28px;border-top:1px solid rgba(201,146,31,0.08);text-align:center;">
     <p style="margin:0 0 8px;font-size:12px;color:#6b7280;font-style:italic;">Educational only — not financial advice.</p>
     <p style="margin:0 0 12px;font-size:12px;">
       <a href="${unsubUrl}" style="color:#6b7280;text-decoration:underline;">Unsubscribe</a>
