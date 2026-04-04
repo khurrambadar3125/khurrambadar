@@ -21,7 +21,7 @@ Uses Claude Code to build and maintain everything.
 - All output is educational only — never financial advice
 - Disclaimer on market responses: "Educational only — not financial advice"
 - Keep code simple — owner is not a developer
-- Use Anthropic API with model: claude-haiku-4-5-20251001 for chatbot
+- Use Anthropic API with model: claude-3-haiku-20240307 for chatbot (60x cheaper than Haiku 4.5)
 - Use claude-sonnet-4-20250514 for update agent (needs reasoning)
 
 ## The 6 Theses
