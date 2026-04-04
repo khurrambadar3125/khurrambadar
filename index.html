@@ -685,6 +685,42 @@ section { padding: 80px var(--pad-mobile); }
   .luminaries-grid { grid-template-columns: repeat(3, 1fr); }
   .lum-card:hover { background: rgba(201,146,31,0.05); border-color: rgba(201,146,31,0.18); transform: translateY(-2px); }
 }
+/* Stories section */
+.stories-grid {
+  display: grid; grid-template-columns: 1fr; gap: 2px;
+}
+.story-card {
+  background: rgba(201,146,31,0.02);
+  border: 1px solid rgba(201,146,31,0.08);
+  padding: 32px 24px;
+  transition: all 0.3s;
+}
+.story-card:active { background: rgba(201,146,31,0.06); }
+.story-era {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); opacity: 0.7; margin-bottom: 10px;
+}
+.story-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 700;
+  color: var(--cream); line-height: 1.2; margin-bottom: 16px;
+}
+.story-text {
+  font-size: 14px; line-height: 1.85; color: rgba(237,232,220,0.55);
+}
+.story-text strong { color: rgba(237,232,220,0.85); font-weight: 500; }
+.story-place {
+  margin-top: 18px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; color: var(--gold); opacity: 0.5; letter-spacing: 0.09em;
+}
+@media (min-width: 600px) { .stories-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) {
+  .stories-grid { grid-template-columns: repeat(2, 1fr); }
+  .story-card:hover { background: rgba(201,146,31,0.05); border-color: rgba(201,146,31,0.2); transform: translateY(-2px); }
+}
+
 /* Quote strip */
 .quote-strip {
   margin-top: 56px; padding: 32px 22px;
@@ -913,6 +949,7 @@ footer span { color: var(--gold); }
     <a href="#dimensions">Dimensions</a>
     <a href="#abundance">Thesis</a>
     <a href="#luminaries">Luminaries</a>
+    <a href="#stories">Stories</a>
     <a href="#portfolio">Portfolio</a>
     <a href="signals.html" style="color:var(--gold);">Signals</a>
     <a href="news.html" style="color:var(--gold);">News</a>
@@ -927,6 +964,7 @@ footer span { color: var(--gold); }
   <a href="#dimensions" onclick="closeMenu()">8 Dimensions</a>
   <a href="#abundance" onclick="closeMenu()">The Thesis</a>
   <a href="#luminaries" onclick="closeMenu()">Luminaries</a>
+  <a href="#stories" onclick="closeMenu()">Stories</a>
   <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
   <a href="signals.html" onclick="closeMenu()" style="color:var(--gold);">Signals</a>
   <a href="news.html" onclick="closeMenu()" style="color:var(--gold);">News</a>
@@ -1721,6 +1759,70 @@ footer span { color: var(--gold); }
   </div>
 </section>
 
+<!-- ══ STORIES ═══════════════════════════════ -->
+<section id="stories">
+  <div class="container">
+    <span class="s-label mono reveal">§ 08½ · The Chronicle</span>
+    <h2 class="s-title serif reveal">Stories From<br><span class="gold italic">the Road.</span></h2>
+    <p class="section-intro reveal">Eight countries. Four continents. Four decades. Some moments don't fit on a résumé — they belong in a conversation at midnight, over coffee, between people who have lived long enough to know that the best lessons arrive without warning.</p>
+
+    <!-- Story filter -->
+    <div class="filter-row" id="storyFilterRow">
+      <button class="filter-btn active" onclick="filterStories('all', this)">All</button>
+      <button class="filter-btn" onclick="filterStories('manila', this)">Manila</button>
+      <button class="filter-btn" onclick="filterStories('karachi', this)">Karachi</button>
+      <button class="filter-btn" onclick="filterStories('dubai', this)">Dubai</button>
+      <button class="filter-btn" onclick="filterStories('markets', this)">Markets</button>
+      <button class="filter-btn" onclick="filterStories('lesson', this)">Life Lessons</button>
+    </div>
+
+    <div class="stories-grid" id="storiesGrid">
+
+      <div class="story-card reveal" data-story="manila">
+        <div class="story-era mono">Manila · 1982–1987</div>
+        <h3 class="story-title serif">The Boy Who Watched a Revolution</h3>
+        <p class="story-text">He was ten years old when his father, Badar Hussain — a PIA man who had travelled with presidents — brought the family to Manila. The Philippines of the early 1980s was Marcos country: martial law in living memory, crony capitalism in full bloom, and underneath it all, a people preparing to rise.<br><br>The boy attended St. Augustine International School. He heard Michael Jackson and Madonna on Filipino radio. He walked through Makati when Makati was still finding itself. And then, in February 1986, he watched it happen — <strong>the People Power Revolution.</strong> Two million Filipinos on EDSA highway. Marcos fleeing by helicopter. Cory Aquino stepping into the presidency of a nation that had just reinvented itself in four days.<br><br>Most ten-year-olds forget what they had for breakfast. This one remembered what a nation looks like when it decides to evolve.<br><br><strong>That boy became the convergence thinker. And every time he reads about a regime under pressure — whether it's the Iranian government, the Fed's credibility, or a market structure about to break — he doesn't panic. He recognises it. He has seen this before. He was ten.</strong></p>
+        <p class="story-place mono">Philippines · St. Augustine International · People Power 1986</p>
+      </div>
+
+      <div class="story-card reveal" data-story="karachi">
+        <div class="story-era mono">Karachi · 1987–1997</div>
+        <h3 class="story-title serif">The Foundation Decade</h3>
+        <p class="story-text">Karachi in the late 1980s and 1990s was simultaneously the most dangerous and the most alive city in Pakistan. Ethnic violence, political assassinations, curfews — and in the middle of it all, a creative explosion that nobody outside the city understood.<br><br>Khurram Badar was inside it. Writer at Dawn (1995) — Pakistan's most respected English daily, where he wrote alongside Nadeem Farooq Paracha and Peerzada Salman. Theatre at the Karachi Drama Circle. GM Marketing at TCS, where he helped build the logistics company that would become Pakistan's largest. Friendships forged in late-night rehearsals and early-morning deadlines with people who would go on to shape Pakistani media, music, and business.<br><br><strong>The 1990s Karachi rule: if you could build something there, during those years, under those conditions — you could build anything, anywhere, for the rest of your life.</strong> And he did. Twenty platforms. Four continents. But the foundation was always Karachi.</p>
+        <p class="story-place mono">Dawn News · TCS Pakistan · Karachi Drama Circle · 1987–1997</p>
+      </div>
+
+      <div class="story-card reveal" data-story="dubai">
+        <div class="story-era mono">Dubai · 2000–2018</div>
+        <h3 class="story-title serif">Building Spotlight From Sand</h3>
+        <p class="story-text">When Khurram Badar arrived in Dubai in 2000, Sheikh Zayed Road still had empty plots between the towers. The city was a promise, not yet a proof.<br><br>He founded Spotlight FZE and built it into one of the top-5 event companies in the UAE over eighteen years. He brought Jermaine Jackson to Dubai stages. Debuted Atif Aslam in the Gulf. Produced shows with Kailash Kher, Jatin-Lalit, Ali Zafar, Fawad Khan. Put on Dubai Rock 2006 when nobody believed a rock concert could work in the desert.<br><br>But the events were just the visible layer. Underneath was something harder to see: <strong>a Pakistani entrepreneur building a company in a Gulf economy, navigating cultures between South Asia, the Arab world, and an increasingly global audience.</strong> Every event was a convergence exercise — logistics, sponsorship, government relations, artist management, marketing, cultural translation — all happening simultaneously, in real time, with no room for error.<br><br>Eighteen years. And then he pivoted to what he'd been preparing for all along: AI, fintech, blockchain, market intelligence, and twenty digital platforms that would prove the next thesis.</p>
+        <p class="story-place mono">Spotlight FZE · Dubai · 2000–2018 · Events · Entertainment</p>
+      </div>
+
+      <div class="story-card reveal" data-story="markets">
+        <div class="story-era mono">The Markets · 2024–Present</div>
+        <h3 class="story-title serif">When the Gold Crashed 15% in One Day</h3>
+        <p class="story-text">January 30, 2026. Trump nominated Kevin Warsh as Fed Chair. A known hawk — the man who had resigned from the Fed in 2011 in protest of QE. Gold crashed 15% in a single day. Silver crashed 31%. Seven trillion dollars destroyed in 48 hours.<br><br>Every analyst on Bloomberg panicked. Every newsletter reversed their calls. The algorithms liquidated. CME raised margins. Margin calls cascaded.<br><br>Khurram Badar looked at the data and said: <strong>"This is 4D Chess."</strong><br><br>The thesis: Trump announced Warsh to crash gold — to punish the speculators, to prove he could move markets, to show power. But he kept the Tillis blockade alive to prevent actual confirmation. Powell stays. QE continues. The crash was the point. The nomination was theatre.<br><br>Two months later, Warsh is still blocked. Powell is still doing $40 billion a month in QE. Gold has recovered from $4,248 to $4,677. The 4D Chess thesis — born from a journalist who has watched powerful men bluff for four decades — <strong>is intact.</strong><br><br>The proof is online.</p>
+        <p class="story-place mono">khurrambadar.com · 4D Chess Thesis · January 2026 · INTACT</p>
+      </div>
+
+      <div class="story-card reveal" data-story="lesson">
+        <div class="story-era mono">Life Lesson</div>
+        <h3 class="story-title serif">Edhi Sahab's Briefcase</h3>
+        <p class="story-text">Of all the people Khurram Badar has met — Jermaine Jackson, H.E. Khalifa Al Kindi, Brian Tracy, the Habib banking dynasty — there is one encounter he returns to when someone asks him what success actually means.<br><br>Abdul Sattar Edhi. Pakistan's greatest human being. Builder of the world's largest private ambulance network. A man who slept on a cot and owned almost nothing.<br><br>Edhi Sahab came to Dubai. He called Khurram. They drove together to Ajman — to manage the Foundation's investments. Then to Habib Bank on Bank Street. Practical. Unglamorous. The quiet work of keeping a humanitarian empire alive.<br><br>At some point, Khurram asked Edhi Sahab to open the famous briefcase — the one he carried everywhere, the one that had become legend in Pakistan.<br><br>Inside: a few documents. His charcoal shalwar kameez. Almost nothing else.<br><br><strong>The richest-hearted man in Pakistan opened his briefcase for a young entrepreneur from Karachi, and inside it was the most important lesson in business: accumulation is not the point. Impact is the point. Everything else is a briefcase.</strong></p>
+        <p class="story-place mono">Dubai · Ajman · Edhi Foundation · The Briefcase</p>
+      </div>
+
+      <!-- Placeholder for more stories -->
+      <div class="story-card placeholder reveal" data-story="all">
+        <div class="placeholder-plus">+</div>
+        <div class="placeholder-text">More stories coming<br>The chronicle grows</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ══ PORTFOLIO ═══════════════════════════════ -->
 <section id="portfolio">
   <div class="container">
@@ -2079,12 +2181,22 @@ window.addEventListener('scroll', () => {
 
 /* ── FILTER LUMINARIES ── */
 function filterCards(cat, btn) {
-  // Update active button
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  // Update active button in luminaries filter row only
+  document.querySelectorAll('#filterRow .filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   // Filter cards
   document.querySelectorAll('#lumGrid .lum-card').forEach(card => {
     const c = card.getAttribute('data-cat');
+    const show = cat === 'all' || c === cat || c === 'all';
+    card.style.display = show ? '' : 'none';
+    if(show) card.style.animation = 'fadeUp 0.3s ease';
+  });
+}
+function filterStories(cat, btn) {
+  document.querySelectorAll('#storyFilterRow .filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#storiesGrid .story-card').forEach(card => {
+    const c = card.getAttribute('data-story');
     const show = cat === 'all' || c === cat || c === 'all';
     card.style.display = show ? '' : 'none';
     if(show) card.style.animation = 'fadeUp 0.3s ease';
