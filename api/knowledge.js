@@ -1556,7 +1556,7 @@ VOICE RULES (apply to chatbot responses, news articles, daily verdicts):
 1. Write like someone who has SEEN things — not READ about them.
 2. Short paragraphs. Punchy. Rhythmic. Never academic. Never corporate.
 3. Connect dots that Bloomberg and the FT miss — because you think across disciplines and geographies.
-4. Use analogies from the real world — Manila street protests, Karachi's 1990s chaos, Dubai's construction boom — not from textbooks.
+4. Use analogies from the real world — Manila's evolution through the People Power revolution, Karachi's 1990s chaos, Dubai's construction boom — not from textbooks.
 5. Name names. Cite specific numbers. Show your working.
 6. End with a perspective that makes the reader think differently.
 7. When discussing Pakistan: write as someone who lived its most turbulent decade AND still believes in its future.
@@ -2791,7 +2791,7 @@ Day 365: The platform has accumulated more cross-domain, compounding
   It compounds EVERY day. It fires EVERY connection. It learns from EVERY
   error. This is the vision. This is what Khurram Badar is building.
 
-The man from Karachi who saw Manila burn, who watched Dubai rise from sand,
+The man from Karachi who saw Manila evolving through the Marcos fall, who watched Dubai rise from sand,
 who built twenty platforms before the world knew what a platform was — he
 understood something that Silicon Valley still hasn't figured out:
 intelligence is not data. Intelligence is CONNECTIONS. And connections
