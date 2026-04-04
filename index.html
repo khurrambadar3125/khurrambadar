@@ -1766,12 +1766,16 @@ footer span { color: var(--gold); }
     <h2 class="s-title serif reveal">Stories From<br><span class="gold italic">the Road.</span></h2>
     <p class="section-intro reveal">Eight countries. Four continents. Four decades. Some moments don't fit on a résumé — they belong in a conversation at midnight, over coffee, between people who have lived long enough to know that the best lessons arrive without warning.</p>
 
-    <!-- Story filter -->
+    <!-- Story filter — follows the life geography -->
     <div class="filter-row" id="storyFilterRow">
       <button class="filter-btn active" onclick="filterStories('all', this)">All</button>
       <button class="filter-btn" onclick="filterStories('manila', this)">Manila</button>
       <button class="filter-btn" onclick="filterStories('karachi', this)">Karachi</button>
+      <button class="filter-btn" onclick="filterStories('london', this)">London</button>
+      <button class="filter-btn" onclick="filterStories('ksa', this)">Saudi Arabia</button>
+      <button class="filter-btn" onclick="filterStories('bahrain', this)">Bahrain</button>
       <button class="filter-btn" onclick="filterStories('dubai', this)">Dubai</button>
+      <button class="filter-btn" onclick="filterStories('singapore', this)">Singapore</button>
       <button class="filter-btn" onclick="filterStories('markets', this)">Markets</button>
       <button class="filter-btn" onclick="filterStories('lesson', this)">Life Lessons</button>
     </div>
@@ -1811,6 +1815,34 @@ footer span { color: var(--gold); }
         <h3 class="story-title serif">Edhi Sahab's Briefcase</h3>
         <p class="story-text">Of all the people Khurram Badar has met — Jermaine Jackson, H.E. Khalifa Al Kindi, Brian Tracy, the Habib banking dynasty — there is one encounter he returns to when someone asks him what success actually means.<br><br>Abdul Sattar Edhi. Pakistan's greatest human being. Builder of the world's largest private ambulance network. A man who slept on a cot and owned almost nothing.<br><br>Edhi Sahab came to Dubai. He called Khurram. They drove together to Ajman — to manage the Foundation's investments. Then to Habib Bank on Bank Street. Practical. Unglamorous. The quiet work of keeping a humanitarian empire alive.<br><br>At some point, Khurram asked Edhi Sahab to open the famous briefcase — the one he carried everywhere, the one that had become legend in Pakistan.<br><br>Inside: a few documents. His charcoal shalwar kameez. Almost nothing else.<br><br><strong>The richest-hearted man in Pakistan opened his briefcase for a young entrepreneur from Karachi, and inside it was the most important lesson in business: accumulation is not the point. Impact is the point. Everything else is a briefcase.</strong></p>
         <p class="story-place mono">Dubai · Ajman · Edhi Foundation · The Briefcase</p>
+      </div>
+
+      <div class="story-card reveal" data-story="london">
+        <div class="story-era mono">London · Early 1990s</div>
+        <h3 class="story-title serif">The City That Taught Him Finance</h3>
+        <p class="story-text">London in the early 1990s was post-Thatcher, pre-Blair — a city recalibrating itself between the old empire and the new Europe. The Square Mile was still the centre of gravity for global finance, and a young man from Karachi walked its streets absorbing everything.<br><br>It was brief. But brevity is sometimes the point. <strong>London gave Khurram Badar something Karachi couldn't: the understanding that money moves through institutions, and institutions are built by people who understand both the machinery and the culture around it.</strong><br><br>When he writes about the Bank of England, about Sterling, about OECD forecasts and UK growth downgrades — he is not reading from a textbook. He walked those streets. He felt the weight of a financial system that had been running for three centuries. And he understood, even then, that the future of finance would not be built in London. It would be built in the places London had overlooked.</p>
+        <p class="story-place mono">London · Finance · Early 1990s</p>
+      </div>
+
+      <div class="story-card reveal" data-story="ksa">
+        <div class="story-era mono">Saudi Arabia · 1998</div>
+        <h3 class="story-title serif">The Kingdom</h3>
+        <p class="story-text">Saudi Arabia in 1998 was a country between eras. Oil was at $12 a barrel — the lowest in a generation. The Kingdom was still decades away from Vision 2030, from MBS, from NEOM and the PIF's $700 billion ambitions. It was a quieter, more insular Saudi Arabia.<br><br>Khurram arrived and encountered something that would stay with him permanently: <strong>the scale of Gulf ambition, even when the money wasn't flowing.</strong> The infrastructure was already massive. The thinking was already generational. The Saudis built highways and cities for a future they could see but hadn't yet funded.<br><br>When Khurram writes about OPEC, about Aramco, about the petrodollar system and its cracks — he writes as someone who lived in the Kingdom when oil was $12 and everyone still believed the next boom was coming. They were right. It just took twenty-six years.</p>
+        <p class="story-place mono">Saudi Arabia · 1998 · The Kingdom Between Eras</p>
+      </div>
+
+      <div class="story-card reveal" data-story="bahrain">
+        <div class="story-era mono">Bahrain · Late 1999</div>
+        <h3 class="story-title serif">The Island of Bankers</h3>
+        <p class="story-text">Bahrain at the turn of the millennium was the financial hub of the Gulf — before Dubai claimed that title. The tiny island kingdom had more banks per square kilometre than anywhere in the Middle East. It was where the Gulf's money was managed, where Islamic finance was being reinvented, where the region's financial architecture was quietly being wired.<br><br><strong>For a young professional moving from Saudi Arabia to Bahrain, it was like moving from the factory floor to the control room.</strong> Saudi Arabia had the oil. Bahrain had the bankers who decided where the oil money went.<br><br>This was the formative exposure to Gulf banking that would later inform everything — from understanding ADIA and the Abu Dhabi sovereign wealth machine, to analysing the petrodollar system's vulnerabilities, to recognising that when Bahrain leads a UNSC Chapter VII resolution on Hormuz, it is not a small country punching above its weight. It is the control room asserting its relevance.</p>
+        <p class="story-place mono">Bahrain · Late 1999 · Gulf Finance · Islamic Banking</p>
+      </div>
+
+      <div class="story-card reveal" data-story="singapore">
+        <div class="story-era mono">Singapore · Malaysia · Qatar</div>
+        <h3 class="story-title serif">The Southeast Asian Circuit</h3>
+        <p class="story-text">The work travel years. Singapore's gleaming efficiency — a city-state that proved you could build a first-world economy in one generation if the governance was right. Malaysia's ambition — Mahathir's Multimedia Super Corridor, the Petronas Towers, a Muslim-majority nation betting on technology. Qatar's quiet accumulation — the Al Thani family turning a gas peninsula into the richest country per capita on earth.<br><br>These were not holidays. They were business — events, partnerships, client work that took Spotlight FZE across Southeast Asia and the broader GCC. <strong>Each city added a lens. Singapore taught efficiency. Malaysia taught ambition at scale. Qatar taught patience — the kind of patience that builds a World Cup bid over fifteen years.</strong><br><br>When Khurram analyses Asian markets, when he tracks the BOJ or reads Singapore's monetary policy or watches Qatar's LNG hub get struck by missiles in a war — he is not reading about distant places. He has walked those streets, sat in those meetings, and felt the rhythm of economies that think in decades, not quarters.</p>
+        <p class="story-place mono">Singapore · Malaysia · Qatar · Business Travel · Southeast Asia & GCC</p>
       </div>
 
       <!-- Placeholder for more stories -->
