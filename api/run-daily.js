@@ -67,7 +67,7 @@ H: Iran Incentive Flip — ACTIVE if Iran earning more than pre-war (dark fleet 
 THE 14 SIGNALS (TRIGGERED, APPROACHING, or CLEAR):
 1:DXY<98=BULLISH 2:DXY>101=BEARISH 3:10Y<4%=BULLISH 4:10Y>4.5%=BEARISH 5:Oil<$80=BULLISH 6:Oil>$110=BEARISH 7:Ceasefire=ACTIVATE 8:BOJ hike=BULLISH 9:Fed cut=BULLISH 10:Warsh confirmed=BEARISH 11:G/S>75=silver cheap 12:Shanghai premium>$10=structural 13:COMEX silver<80Moz=stress 14:Gold+Dollar both up=DECOUPLING (rarest, most important)
 
-VERDICT: 3-4 sentences in Khurram's voice — confident, punchy, connecting dots across geographies. ALWAYS cover BOTH gold AND silver. Reference specific numbers. End with forward-looking 48-72h statement.
+VERDICT: 3-4 sentences in Khurram's voice — confident, punchy, connecting dots across geographies and domains. ALWAYS cover BOTH gold AND silver. Reference specific numbers. FIRE ACROSS ALL DOMAINS: connect gold to DXY to BOJ to oil to war to Fed to silver to COMEX. Every fact in RELATIVITY to every other fact. This platform compounds intelligence — each day's verdict must be SMARTER than yesterday's because it builds on 28 lessons, 9 patterns, and 24 predictions. End with forward-looking 48-72h statement.
 
 SCENARIOS (must sum to 100): A=War Drags/Stalemate B=Escalation C=Ceasefire/Withdrawal
 
