@@ -38,23 +38,24 @@ Uses Claude Code to build and maintain everything.
 9: Fed cut BULLISH | 10: Warsh confirmed BEARISH | 11: G/S>75 silver cheap
 12: Shanghai premium>$10 structural | 13: COMEX silver<80Moz stress | 14: Gold+Dollar up = decoupling
 
-## Current Context (as of April 2, 2026)
-- BREAKING Apr 2: Trump's prime-time hawkish national address — vows to "hit Iran extremely hard" in 2-3 weeks, threatens power plants
-- Gold: ~$4,619 (-2.9% — peace rally REVERSED by hawkish speech)
-- Silver: ~$70.94 (-5.4% — punished harder, ratio expanding to 65.1:1)
-- DXY: ~100.07 (+0.5% — BACK ABOVE 100, war premium re-inflating)
-- Brent Oil: ~$107.87 (+6.6% — approaching Signal 6 threshold $110)
-- WTI: ~$106.49 (+6.4% — Trump speech drove oil surge)
-- 10Y Yield: ~4.381% (+6bp — yields rising on war/inflation fears)
-- S&P Futures: -1.25% (peace rally erased)
-- War: Day 33 — ESCALATION PHASE — April 6 Hormuz deadline 4 days away
-- Iran rejected 15-point plan, countered with 5 conditions
-- UK organizing 30+ nation summit April 3 for Hormuz diplomacy
-- BOJ: April hike to 1.0% expected by one-third of economists
-- ISM Prices: 78.3 (highest since June 2022 — STAGFLATION WARNING)
-- Signal 13 ACTIVE: COMEX registered silver 76.4M oz (below 80M threshold)
-- Thesis E (Peace Dividend): FADING — probability 10% before April 6
-- Warsh: STILL BLOCKED — Tillis holding all Fed confirmations
+## Current Context (as of April 4, 2026 — Good Friday, markets closed)
+- MARKETS CLOSED: Good Friday. Reopen Monday April 6 = Hormuz deadline day
+- NFP March: +178,000 (vs +59K expected — 3X BEAT). Higher for longer confirmed.
+- TWO US PLANES DOWN (April 3): F-15 in Iran + combat plane near Hormuz. Iran struck Gulf refineries.
+- Gold: ~$4,676 (holding $4,650-4,700 range)
+- Silver: ~$72.90 (-2.75% last session)
+- DXY: ~100.03 (war premium holding above 100)
+- Brent Oil: ~$109.03 (+7.78% — Signal 6 TRIGGERED above $110)
+- WTI: ~$111 (WTI > Brent RARE INVERSION = prolonged US involvement priced in)
+- 10Y Yield: ~4.345% (rising on strong NFP)
+- S&P: 6,583 (+0.11% last trade)
+- War: Day 35 — APRIL 6 DEADLINE 8 PM ET = markets reopen + deadline SAME DAY
+- UK 40-nation summit: US DID NOT ATTEND. Joint statement but no military escort.
+- Signal 6 TRIGGERED: Oil above $110
+- Signal 13 ACTIVE: COMEX registered silver 76.4M oz
+- Shanghai gold at DISCOUNT (-0.47%) — Signal 12 weakening
+- BOJ: April 28 hike to 1.0% increasingly expected
+- Warsh: Hearing targeted week of April 13. Powell term expires May 15.
 
 ## File Structure
 ```

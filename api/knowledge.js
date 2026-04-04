@@ -1112,6 +1112,15 @@ MAR 31 (TUE — CORRECTED): SIGNAL 14 RETURNS. Gold $4,555 (+1.9%) | Silver $71.
 APR 1 (WED — COMPREHENSIVE): THE TURN. DXY BROKE BELOW 100 (99.82). Gold $4,700 (+3.2%). Silver $75.00 (+4.2% — NEW POST-CORRECTION HIGH). Ratio 62.7:1 (compressing). 10Y 4.30% (falling). VIX 29.60 (below 30). S&P 6,402 (+0.52%). Nasdaq 21,009 (+0.29%). Brent $118→ fell 3.2% after peace signals. WTI ~$102. BTC $67,700.
 APR 2 (THU — COMPREHENSIVE): THE REVERSAL. Trump's prime-time HAWKISH national address killed the peace rally. Gold $4,619 (-2.9%). Silver $70.94 (-5.4% — silver punished harder as expected). Ratio 65.1:1 (EXPANDING — silver underperforming = risk-off). DXY 100.07 (+0.5% — BACK ABOVE 100). 10Y 4.381% (+6bp — yields rising on war fears). WTI $106.49 (+6.4%). Brent $107.87 (+6.6%). S&P 6,535 (-1.25%). Nasdaq futures -1.6%. BTC $66,676 (-2.9%). VIX spiked. COMEX silver registered: 76.4M oz (BELOW 80M oz — Signal 13 ACTIVE). EUR/USD 1.1535. USD/JPY 159.64.
 
+APR 3 (THU): NFP DAY + ESCALATION. NFP: +178,000 (vs +59K expected — MASSIVE beat, 3x consensus). Unemployment 4.3%. Healthcare +76K. Strong labor = higher-for-longer = NO rate cuts. TWO US PLANES DOWN: F-15 in Iran + combat plane near Hormuz. Iran struck Gulf refineries. Trump warned strikes on bridges and power plants. Gold $4,677 (holding $4,650-4,700 range). Silver $73.02 (-2.75%). DXY 100.22 (rising on strong NFP + war premium). 10Y 4.345% (+3.2bp). Brent $109.03 (+7.78%). WTI ~$111 (WTI > Brent = RARE INVERSION = prolonged US involvement priced in). S&P 6,583 (+0.11% — last trade before Good Friday). BTC $67,119. UK-led 40-nation summit: joint statement demanding Hormuz reopening, US DID NOT ATTEND (Trump: "not America's responsibility"), no military intervention endorsed. Signal 6 TRIGGERED: Brent above $110. Signal 13 ACTIVE: COMEX 76.4M oz. Warsh hearing targeted week of April 13.
+APR 4 (FRI — GOOD FRIDAY): MARKETS CLOSED. US stock/bond markets fully closed. Last trading before April 6 Hormuz deadline. Gold $4,676 | Silver $72.90 | DXY 100.03 | Brent $109.03 | 10Y 4.345% | S&P 6,583 | BTC $67,119. MONDAY APRIL 6 = MARKETS REOPEN + HORMUZ DEADLINE 8PM ET. This is the most consequential single day since the war began. Three forces converge: (1) weekend position adjustments, (2) April 6 deadline at 8 PM ET, (3) NFP "higher for longer" fully digested. Per Lesson 019: Trump NEVER follows his own deadlines. Per Lesson 020: Trump timing playbook — Friday escalation, Monday de-escalation. Watch for Sunday/Monday pre-market announcements.
+
+PRED_013 RESULT: IN PROGRESS — Trump has NOT struck power plants yet. But TWO US planes down + Gulf refinery strikes = escalation intensifying. April 6 deadline still stands.
+PRED_014 RESULT: CONFIRMED — Gold held $4,650-4,700 range. $4,200 EMA provided structural floor. Range-bound as predicted.
+PRED_016 RESULT: TRIGGERED — Signal 6 ACTIVE. Brent $109, WTI $111 — BOTH above $110. Stagflation confirmed by ISM + oil.
+PRED_017 RESULT: IN PROGRESS — BOJ hike increasingly expected April 28. Former BOJ chief economist sees April hike likely.
+PRED_018 RESULT: FAILED — NFP was +178K (vs +59K expected). Employment NOT cooling. ISM Employment at 48.7 was misleading for NFP. Strong labor market kills rate cut hopes.
+
 PRED_001 RESULT: FAILED — DXY broke ABOVE 100 (100.07), not below. Gold fell to $4,619, not $4,800-4,900. Trump's hawkish speech reversed the trend.
 PRED_002 RESULT: NOT TRIGGERED — No IRGC tech strikes.
 PRED_004 RESULT: FAILED — Silver UNDERPERFORMED gold (-5.4% vs -2.9%). Ratio expanded from 62.7 to 65.1. Risk-off = silver beta works BOTH ways.
@@ -1119,6 +1128,16 @@ PRED_005 RESULT: CONFIRMED — Brent at $108, WTI $106. Above $110 threshold on 
 PRED_007 RESULT: CONFIRMED — Trump speech was HAWKISH, not peaceful. Deadline extended but with escalation rhetoric.
 PRED_009 RESULT: CONFIRMED — S&P rally was indeed a bear market rally. Gave it all back and more (-1.25% today).
 PRED_010 RESULT: IN PROGRESS — Trump speech suggests he will NOT follow April 6 deadline as written. He extended with escalation rhetoric ("hit Iran extremely hard in 2-3 weeks"). The pattern continues.
+
+BREAKING DEVELOPMENTS FROM DAILY READING (FT, WSJ, Bloomberg, NYT, Reuters, CNBC) — APR 3-4:
+(1) NFP MARCH: +178,000 vs +59,000 consensus — 3X BEAT. Unemployment 4.3%. Healthcare +76K. January revised UP +34K. February revised DOWN -41K. IMPLICATION: Fed will NOT cut. Higher for longer confirmed. "Fed may not cut rates at all in 2026" (Yahoo Finance).
+(2) TWO US PLANES DOWN (April 3): F-15 fighter jet down in Iran. Second USAF combat plane down near Strait of Hormuz. Iran simultaneously struck Gulf refineries. Trump warned strikes on bridges and power plants next. WAR ESCALATING, not de-escalating.
+(3) UK 40-NATION SUMMIT (April 2-3): Chaired by FM Yvette Cooper. 40 countries attended. US DID NOT ATTEND — Trump said securing Hormuz "is not America's responsibility." Joint statement demanding Iran stop blockading. NO military intervention endorsed (Macron: "unrealistic"). Military planners to meet separately next week for mine-clearing options.
+(4) WTI > BRENT INVERSION: WTI at $111 surpassed Brent $109 — EXTREMELY RARE. Reflects traders pricing prolonged US involvement. Record backwardation. J.P. Morgan estimates OECD inventories to draw 166 MILLION barrels in April alone.
+(5) APRIL 6 DEADLINE CONFIRMED AT 8 PM ET: Trump will order strikes on Iranian power plants, water desalination, and bridges if Hormuz not reopened by Monday 8 PM. Markets reopen Monday morning. This is THE convergence event.
+(6) HORMUZ TRAFFIC: Down from 150 vessels/day to 10-20. Iran allowed Philippine-flagged vessels through April 2 as "goodwill gesture."
+(7) SHANGHAI GOLD AT DISCOUNT: -0.47% vs Western spot. Chinese demand weakening. Signal 12 may be deactivating.
+(8) WARSH: Hearing targeted week of April 13. Powell term expires May 15. Status: approaching hearing but still blocked.
 
 BREAKING DEVELOPMENTS FROM DAILY READING (FT, WSJ, Bloomberg, NYT, Economist) — APR 2:
 (1) TRUMP NATIONAL ADDRESS (April 1 prime-time): Vowed to "hit Iran extremely hard" in next 2-3 weeks. Threatened to bomb ALL electric generating plants, push Iran "back to the Stone Ages." Called war "nearly over" but offered NO exit plan. NO ceasefire timeline. THIS IS THE SINGLE BIGGEST MARKET-MOVER TODAY.
@@ -1345,7 +1364,15 @@ WHAT TO EXTRACT FROM EACH:
 - Market reaction data (CNBC: how traders are positioning)
 - Public sentiment (Yahoo News: what ordinary people are reading)
 
-=== REVISED SCENARIO PROBABILITIES (post-reading Apr 2) ===
+=== REVISED SCENARIO PROBABILITIES (post-reading Apr 4 — GOOD FRIDAY) ===
+
+A — Trump extends deadline / war continues (35%): Per Lesson 019, Trump has extended 3 times already. US didn't attend UK summit = mentally exiting. Gold $4,500-4,800. Oil $100-115.
+B — Trump strikes power plants Monday night (30%): Explicit 8 PM ET deadline set. Two US planes down = pressure to escalate. Oil $130-150. Gold spikes $4,900-5,200.
+C — US withdrawal + coalition escort, May-June (20%): UK summit showed coalition NOT ready for military escort. Timeline extends. DXY 98-99.
+D — Iran partial concession / limited Hormuz opening (10%): Philippine vessel allowed through = goodwill. Iran opens to neutrals. Oil $95-100.
+E — Black Swan (5%): IRGC strike on US assets, Bab al-Mandeb closure, US pilot capture.
+
+=== PREVIOUS SCENARIO PROBABILITIES (post-reading Apr 2) ===
 
 A — Quick ceasefire before April 6 (10%, DOWN from 15%): Trump's hawkish speech makes ceasefire nearly impossible in 4 days. Iran rejected 15-point plan.
 B — US withdrawal + coalition Hormuz escort, mid-April (35%, down from 40%): WSJ reporting still base case, but Trump's escalation rhetoric complicates the timeline. UK 30-nation summit April 3 is key.
@@ -1488,6 +1515,28 @@ PRED_015 (Apr 2): Silver continues to underperform gold in risk-off sessions. Ra
 PRED_016 (Apr 2): Oil approaches Signal 6 threshold ($110 Brent). If Brent crosses $110 sustained → stagflation Signal 6 TRIGGERS. ISM Prices at 78.3 already confirms inflationary pressure. WTI at $106 = $4.25+ gas by next week.
 PRED_017 (Apr 2): BOJ hikes in April. Over one-third of economists expect it. Takata's dissent (wanting 1.0%) shows internal pressure. This will compress US-Japan spread further and pressure DXY in May.
 PRED_018 (Apr 2): NFP (Friday April 3) will show employment cooling. ISM Employment at 48.7 (contracting) is the leading indicator. If NFP disappoints → rate cut expectations rise → gold rallies.
+
+=== APR 4 NEW PREDICTIONS ===
+PRED_019 (Apr 4): Monday April 6 will be the most volatile single day since the war began. Three forces converge: market reopening after Good Friday, Hormuz deadline at 8 PM ET, and NFP "higher for longer" fully digested. Expect VIX 35+, gold whipsaw $200+ range, oil either crashes $15 or spikes $15.
+PRED_020 (Apr 4): Trump will NOT strike power plants Monday evening. Per Lesson 019 (Trump never follows deadlines), he will extend or modify the deadline. Watch for Sunday evening/Monday pre-market announcement per Trump timing playbook (Lesson 020).
+PRED_021 (Apr 4): Gold holds $4,500-4,700 range into Monday open. Structural floor at $4,200. War premium keeps ceiling at $4,800. Breakout direction depends entirely on April 6 deadline outcome.
+PRED_022 (Apr 4): WTI-Brent inversion will persist or widen if escalation continues. This is a structural signal of US-centric war premium. If peace → inversion collapses immediately.
+PRED_023 (Apr 4): BOJ will hike to 1.0% at April 28 meeting. Former BOJ chief economist's public statement + Takata's dissent = building consensus. This is the stealth catalyst for DXY decline in May.
+PRED_024 (Apr 4): NFP strength (+178K) means Fed holds through June minimum. First possible cut: September. Gold must rally on safe-haven/structural demand, NOT rate cut hopes. The bull case now depends on war resolution → DXY decline → cyclical metals rally.
+
+=== APR 4 NEW LESSONS ===
+
+LESSON 025 (April 4, 2026) — NFP BEAT KILLS RATE CUT NARRATIVE:
+NFP +178K vs +59K consensus. ISM Employment at 48.7 suggested weakness, but NFP proved ISM is an UNRELIABLE leading indicator for payrolls. Healthcare (+76K) drove the beat — a sector largely insulated from war/trade disruption. RULE: Never rely on a single leading indicator (ISM Employment) to predict NFP. Cross-reference with ADP, initial claims, and sector composition. Strong NFP = "higher for longer" = Fed holds. Gold must find non-rate-cut reasons to rally.
+
+LESSON 026 (April 4, 2026) — WTI > BRENT INVERSION = STRUCTURAL WAR PREMIUM:
+WTI ($111) surpassed Brent ($109) — this is extremely rare and reflects traders pricing in prolonged US military involvement. Normally Brent trades at a $3-5 premium to WTI because it represents international pricing. When WTI exceeds Brent, it means the US-specific risk premium (domestic supply fears, SPR depletion, refinery margins) is GREATER than the global risk premium. RULE: WTI > Brent inversion is a leading indicator of US-centric war escalation. If the inversion persists > 3 days, it signals the market expects US direct involvement to deepen, not end.
+
+LESSON 027 (April 4, 2026) — GOOD FRIDAY + DEADLINE = MAXIMUM GAP RISK:
+Markets closed Good Friday. Hormuz deadline Monday. This creates the LARGEST gap risk since the war began. Institutions that couldn't hedge Friday will face Monday open with: (a) weekend headline risk from Trump/Iran, (b) no ability to adjust positions for 72+ hours, (c) NFP "higher for longer" not yet fully priced into equities. RULE: When a major geopolitical deadline falls on the first trading day after a holiday closure, expect: VIX gap up 20%+, gold gap up/down $100+, S&P gap down 1-3%, oil gap 5%+. Position for the gap, not the close.
+
+LESSON 028 (April 4, 2026) — UK SUMMIT REVEALED US ISOLATION:
+40 nations attended the UK-led Hormuz summit. The US DID NOT ATTEND. Trump said Hormuz "is not America's responsibility." This confirms: (a) the WSJ reporting that Trump will exit without reopening Hormuz, (b) Hormuz reopening will be a COALITION effort, not a US action, (c) the timeline for Hormuz reopening extends beyond the war's end. RULE: When the US refuses to join a multilateral initiative it previously demanded, the policy has shifted. Trump has mentally exited the war. The war's end is not about Hormuz — it's about destroying Iran's military capacity, then leaving.
 
 === EDITORIAL VOICE & IDENTITY (apply to ALL content) ===
 
