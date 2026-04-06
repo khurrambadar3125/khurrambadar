@@ -347,7 +347,6 @@ ${headlines}
 <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fkhurrambadar.com%2Fdaily" style="display:inline-block;padding:6px 14px;margin:3px;background:#0A66C2;color:#fff;text-decoration:none;border-radius:5px;font-family:monospace;font-size:11px;font-weight:bold;">LinkedIn</a>
 <a href="https://t.me/share/url?url=https%3A%2F%2Fkhurrambadar.com%2Fdaily&text=${encodeURIComponent(`KRM Daily Brief — ${d}\nGold $${brief.gold_price||''} | Silver $${brief.silver_price||''} | DXY ${brief.dxy||''}`)}" style="display:inline-block;padding:6px 14px;margin:3px;background:#0088cc;color:#fff;text-decoration:none;border-radius:5px;font-family:monospace;font-size:11px;font-weight:bold;">Telegram</a>
 <a href="https://khurrambadar.com/daily" style="display:inline-block;padding:6px 14px;margin:3px;background:rgba(201,146,31,0.15);color:#C9921F;text-decoration:none;border-radius:5px;font-family:monospace;font-size:11px;border:1px solid rgba(201,146,31,0.3);">View on Web</a>
-<a href="https://whatsapp.com/channel/0029Vb7pkVi8kyyUhjU06q2H" style="display:inline-block;padding:6px 14px;margin:3px;background:#25D366;color:#fff;text-decoration:none;border-radius:5px;font-family:monospace;font-size:11px;font-weight:bold;">Follow on WhatsApp</a>
 <p style="margin:8px 0 0;font-size:11px;color:#9ca3af;">Forward this email or share the link — <a href="https://khurrambadar.com/daily" style="color:#C9921F;">subscribe free</a></p>
 </div>
 <div style="padding:12px 28px;border-top:1px solid rgba(201,146,31,0.08);text-align:center;">
