@@ -2918,6 +2918,24 @@ How may I assist you today? I can:
 &#8226; <a href="#" class="krm-quick" onclick="krmQuickSend('I want to book a coffee meeting with Khurram');return false;">Book a <strong>coffee meeting</strong> with Khurram</a>
 &#8226; <a href="#" class="krm-quick krm-pulse" onclick="krmQuickSend('I want to subscribe to the KRM Daily Brief — gold, silver, and world headlines delivered to my email every morning');return false;">Subscribe to <strong>KRM\\'s Daily Brief</strong> — gold, silver &amp; headlines by email</a>`;
 
+  // VIP Welcome Links — Khurram sends these via WhatsApp
+  // Usage: khurrambadar.com/?welcome=bilal
+  const VIP_WELCOMES = {
+    ishrat: { name: 'Dr. Ishrat Hussain', greeting: 'Dr. Ishrat Sahab — what an honour to have you here. Khurram speaks of your mentorship as one of the most formative influences on his thinking. The Governor of the State Bank, the Chancellor of IBA, the recipient of the Nishan-e-Imtiaz — and the man whose house Saira now proudly calls home. Welcome to the platform you helped inspire. How may I assist you today?' },
+    bilal: { name: 'Bilal bhai', greeting: 'Major Bilal! The man who survived Siachen twice and then decided Pakistan\\'s real challenges were on the ground. St. Patrick\\'s Class of \\'91 — Khurram remembers. Your journey from the glacier to Shell to Bilal Brothers to vending machines is one of the most remarkable entrepreneurial arcs on this platform. Welcome, brother. How can I help you today?' },
+    kzafar: { name: 'Khurram Zafar', greeting: 'Khurram Zafar — the man who built Pakistan\\'s commodity markets from the ground up. PMEX, the venture capital ecosystem, the institutional infrastructure that makes everything else possible. Khurram Badar shares your vision for Pakistan\\'s digital financial future and is looking forward to sitting down with you this week. Welcome to the platform. How may I assist you?' },
+    zubair: { name: 'Zubair', greeting: 'Welcome, Zubair! Khurram speaks of you and your family with deep gratitude. Your father Sheikh Mohammad Ilyas\\'s mentorship shaped everything you see on this platform. It\\'s an honour to have you here. How can I assist you today?' },
+    azfar: { name: 'Azfar bhai', greeting: 'Azfar! St. Patrick\\'s Class of \\'93 — you remembered, and Khurram will never forget that you did. From those Karachi benches to the Nutshell empire, to Chairman of the Board of Investment, to President of MAP — what a journey. Khurram says the best friendships from 1990s Karachi don\\'t need LinkedIn to be verified. Welcome to the platform. How can I assist you?' },
+    nayla: { name: 'Nayla', greeting: 'Nayla Al Khaja! The UAE\\'s first female film director, Netflix director, and the woman who built an entire chapter of Arab cinema from scratch. Khurram remembers when you started as an RJ at Dubai 101.6 FM — before the films, before the Red Sea premiere, before AR Rahman scored your work. You have come a very long way. Welcome to the platform. How may I assist you?' },
+    saira: { name: 'Saira', greeting: 'Welcome home, Saira! The woman who runs The City School, who held her own at London Business School DIFC, and who Khurram describes as the strongest person he has ever known. This entire platform exists because of the foundation you built together. What would you like to explore today?' },
+    yusuf: { name: 'Yusuf', greeting: 'Yusuf! The black belt, the driver, the basketball player — and the young man your father calls the apple of his eye. Welcome to your father\\'s platform. By the way, June 10 is coming up — do you have any birthday plans? I\\'d love to help you plan your party and send invitations to your friends. What can I do for you?' },
+    dina: { name: 'Dina', greeting: 'Dina! Princess No. 1 herself. The black belt, the photographer whose exhibition was honoured by the Consul General of France, the girl who earned a professional diploma before most people earn a driver\\'s license — and the proud owner of the magnificent Chandi. Welcome! How is Chandi doing today?' },
+    rania: { name: 'Rania', greeting: 'Rania! The chess player, the ballet dancer, the girl who finished French Level 1 and is already planning German and Spanish — all before turning seven! Your father says your ambition has no ceiling, and I believe him. May 18 is coming — would you like help planning your birthday celebration?' },
+    shamaeel: { name: 'Shamaeel', greeting: 'Shamaeel Ansari! Pakistan\\'s most celebrated luxury fashion designer, UC Berkeley graduate, and the woman whose presence at the Eid open house officially inaugurated the Governor\\'s House. Khurram and Saira were honoured to have you. Welcome to the platform. How may I assist you?' },
+    nadia: { name: 'Nadia', greeting: 'Nadia Khan! The Oprah Winfrey of Pakistan. Khurram cherishes the friendship — from helping bring Jermaine Jackson to your Geo TV breakfast show to all the moments in between. You helped define Pakistani morning television. Welcome to the platform!' },
+    shoaib: { name: 'Shoaib bhai', greeting: 'Shoaib Akhtar! The Rawalpindi Express — the fastest bowler cricket has ever produced. Khurram remembers the energy you brought to every room and every event. Welcome to the platform. How can I assist you today?' },
+  };
+
   let krmHistory = [];
   let krmBusy = false;
 
@@ -2930,14 +2948,25 @@ How may I assist you today? I can:
       btn.classList.add('open');
       // Only block scroll on mobile where chat is fullscreen
       if (window.innerWidth <= 768) document.body.style.overflow = 'hidden';
-      addMessage('assistant', KRM_GREETING);
+
+      // Check for VIP welcome link: ?welcome=bilal
+      const urlParams = new URLSearchParams(window.location.search);
+      const welcomeKey = (urlParams.get('welcome') || '').toLowerCase();
+      const vip = VIP_WELCOMES[welcomeKey];
+
+      if (vip) {
+        addMessage('assistant', '<strong>A very special welcome.</strong>\n\n' + vip.greeting + '\n\n<em>— KRM, the intelligence of Khurram Badar</em>');
+        krmHistory.push({ role: 'assistant', content: vip.greeting });
+      } else {
+        addMessage('assistant', KRM_GREETING);
+      }
       // Populate date in Breaking News link
       document.querySelectorAll('.krm-date').forEach(function(el) {
         el.textContent = new Date().toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'});
         el.style.fontSize = '10px';
         el.style.opacity = '0.7';
       });
-      krmHistory.push({ role: 'assistant', content: 'Happy ' + dayName + '. Welcome — I am KRM, the market intelligence of Khurram Badar. How may I assist you today?' });
+      if (!vip) krmHistory.push({ role: 'assistant', content: 'Happy ' + dayName + '. Welcome — I am KRM, the market intelligence of Khurram Badar. How may I assist you today?' });
       // Only auto-focus on desktop to avoid keyboard popup on mobile
       if (window.innerWidth > 768) {
         setTimeout(() => document.getElementById('krm-input').focus(), 400);
