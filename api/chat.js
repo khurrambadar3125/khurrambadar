@@ -59,10 +59,24 @@ export default async function handler(req) {
       const needsKB = marketKeywords.some(kw => lastMsg.includes(kw));
 
       if (needsKB) {
-        // Full knowledge base for market/finance questions
-        body.system = body.system + '\n\nKNOWLEDGE BASE:\n' + KNOWLEDGE_BASE;
+        // Extract only the LIVE MARKET CONTEXT section to stay within rate limits
+        // Full KB is ~55K tokens — too large for Haiku 3's 50K/min rate limit
+        const liveIdx = KNOWLEDGE_BASE.indexOf('=== LIVE MARKET CONTEXT');
+        const dailyIdx = KNOWLEDGE_BASE.indexOf('=== DAILY SNAPSHOTS');
+        const signalIdx = KNOWLEDGE_BASE.indexOf('14-SIGNAL MATRIX');
+        const thesisIdx = KNOWLEDGE_BASE.indexOf('KHURRAM BADAR\'S 6 CORE THESES');
+        // Inject: theses + signals framework (compact) + live context (current prices + verdict)
+        let condensed = '';
+        if (thesisIdx > -1 && signalIdx > -1) {
+          condensed += KNOWLEDGE_BASE.substring(thesisIdx, Math.min(thesisIdx + 3000, KNOWLEDGE_BASE.length));
+        }
+        if (liveIdx > -1) {
+          condensed += '\n\n' + KNOWLEDGE_BASE.substring(liveIdx);
+        }
+        if (condensed.length > 0) {
+          body.system = body.system + '\n\nLIVE INTELLIGENCE:\n' + condensed;
+        }
       }
-      // Skip memory injection to reduce latency — memory is already in the KB
     }
 
     const res = await fetch('https://api.anthropic.com/v1/messages', {
