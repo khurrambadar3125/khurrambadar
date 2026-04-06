@@ -44,40 +44,48 @@ export default async function handler(req) {
     // Cap max_tokens to prevent abuse
     body.max_tokens = Math.min(body.max_tokens || 1024, 2048);
 
-    // Smart knowledge injection — only inject full KB for market/finance questions
-    if (body.system && typeof body.system === 'string') {
-      const lastMsg = (body.messages && body.messages.length > 0)
-        ? body.messages[body.messages.length - 1].content.toLowerCase() : '';
-      const marketKeywords = ['gold','silver','dxy','dollar','oil','fed','fomc','rate','yield',
-        'treasury','bond','market','trade','titan','signal','thesis','metals','copper',
-        'bitcoin','btc','crypto','eth','war','iran','ceasefire','inflation','deflation',
-        'recession','bull','bear','comex','lbma','price','chart','analysis','forecast',
-        'predict','invest','portfolio','risk','hedge','commodity','energy','wheat','corn',
-        'platinum','palladium','carry trade','boj','ecb','central bank','qe','qt',
-        'money print','liquidity','m2','vitalik','bilal','pmex','khurram zafar',
-        'proprietary','research','verdict','scorecard','signal'];
-      const needsKB = marketKeywords.some(kw => lastMsg.includes(kw));
+    // Convert system prompt to array format for prompt caching
+    // Block 1: Full Knowledge Base (CACHED — rarely changes, ~55K tokens)
+    // Block 2: System prompt from browser (identity, voice, VIP, live context)
+    // Caching means Block 1 is sent once, then read from cache at 90% discount
+    const systemText = (typeof body.system === 'string') ? body.system : '';
 
-      if (needsKB) {
-        // Extract only the LIVE MARKET CONTEXT section to stay within rate limits
-        // Full KB is ~55K tokens — too large for Haiku 3's 50K/min rate limit
-        const liveIdx = KNOWLEDGE_BASE.indexOf('=== LIVE MARKET CONTEXT');
-        const dailyIdx = KNOWLEDGE_BASE.indexOf('=== DAILY SNAPSHOTS');
-        const signalIdx = KNOWLEDGE_BASE.indexOf('14-SIGNAL MATRIX');
-        const thesisIdx = KNOWLEDGE_BASE.indexOf('KHURRAM BADAR\'S 6 CORE THESES');
-        // Inject: theses + signals framework (compact) + live context (current prices + verdict)
-        let condensed = '';
-        if (thesisIdx > -1 && signalIdx > -1) {
-          condensed += KNOWLEDGE_BASE.substring(thesisIdx, Math.min(thesisIdx + 3000, KNOWLEDGE_BASE.length));
-        }
-        if (liveIdx > -1) {
-          condensed += '\n\n' + KNOWLEDGE_BASE.substring(liveIdx);
-        }
-        if (condensed.length > 0) {
-          body.system = body.system + '\n\nLIVE INTELLIGENCE:\n' + condensed;
-        }
-      }
+    const lastMsg = (body.messages && body.messages.length > 0)
+      ? body.messages[body.messages.length - 1].content.toLowerCase() : '';
+    const marketKeywords = ['gold','silver','dxy','dollar','oil','fed','fomc','rate','yield',
+      'treasury','bond','market','trade','titan','signal','thesis','metals','copper',
+      'bitcoin','btc','crypto','eth','war','iran','ceasefire','inflation','deflation',
+      'recession','bull','bear','comex','lbma','price','chart','analysis','forecast',
+      'predict','invest','portfolio','risk','hedge','commodity','energy','wheat','corn',
+      'platinum','palladium','carry trade','boj','ecb','central bank','qe','qt',
+      'money print','liquidity','m2','vitalik','bilal','pmex','khurram zafar',
+      'proprietary','research','verdict','scorecard','signal'];
+    const needsKB = marketKeywords.some(kw => lastMsg.includes(kw));
+
+    // Build system as array for caching
+    const systemBlocks = [];
+
+    if (needsKB) {
+      // Block 1: Full Knowledge Base — CACHED (ephemeral, 5 min)
+      // After first call, this is read from cache at 0.1x cost and doesn't
+      // count against the input tokens/minute rate limit the same way
+      systemBlocks.push({
+        type: 'text',
+        text: 'FULL KNOWLEDGE BASE:\n' + KNOWLEDGE_BASE,
+        cache_control: { type: 'ephemeral' },
+      });
     }
+
+    // Block 2: System prompt (identity, voice, VIP recognition, live context)
+    if (systemText) {
+      systemBlocks.push({
+        type: 'text',
+        text: systemText,
+      });
+    }
+
+    // Replace string system with array system
+    body.system = systemBlocks.length > 0 ? systemBlocks : undefined;
 
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
