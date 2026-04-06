@@ -66,14 +66,61 @@ export default async function handler(req) {
     const systemBlocks = [];
 
     if (needsKB) {
-      // Block 1: Full Knowledge Base — CACHED (ephemeral, 5 min)
-      // After first call, this is read from cache at 0.1x cost and doesn't
-      // count against the input tokens/minute rate limit the same way
-      systemBlocks.push({
-        type: 'text',
-        text: 'FULL KNOWLEDGE BASE:\n' + KNOWLEDGE_BASE,
-        cache_control: { type: 'ephemeral' },
-      });
+      // Inject the INTELLIGENCE sections of KB (lessons, patterns, predictions,
+      // theses, signals, compounding engine, live context) but skip the verbose
+      // daily snapshots and historical narrative to stay under 50K token limit.
+      // The intelligence IS the value — not the raw daily logs.
+      let smartKB = '';
+
+      // 1. Thesis framework + signal matrix (~3K tokens)
+      const thesisStart = KNOWLEDGE_BASE.indexOf('15. DAILY MARKET INTELLIGENCE');
+      const thesisEnd = KNOWLEDGE_BASE.indexOf('16. BREAKING');
+      if (thesisStart > -1 && thesisEnd > -1) {
+        smartKB += KNOWLEDGE_BASE.substring(thesisStart, thesisEnd);
+      }
+
+      // 2. Lessons (all 30 — the accumulated rules, ~8K tokens)
+      const lessonStart = KNOWLEDGE_BASE.indexOf('LESSON 001');
+      const lessonEnd = KNOWLEDGE_BASE.indexOf('=== COMPLETE ASSESSMENT HISTORY');
+      if (lessonStart > -1) {
+        const end = lessonEnd > -1 ? lessonEnd : lessonStart + 20000;
+        smartKB += '\n\n' + KNOWLEDGE_BASE.substring(lessonStart, Math.min(end, lessonStart + 20000));
+      }
+
+      // 3. Patterns + Predictions (~4K tokens)
+      const patternStart = KNOWLEDGE_BASE.indexOf('=== PATTERNS DETECTED');
+      const evalStart = KNOWLEDGE_BASE.indexOf('=== EVALUATION RULES');
+      if (patternStart > -1) {
+        const end = evalStart > -1 ? evalStart + 2000 : patternStart + 8000;
+        smartKB += '\n\n' + KNOWLEDGE_BASE.substring(patternStart, Math.min(end, patternStart + 10000));
+      }
+
+      // 4. Compounding Intelligence Engine (~5K tokens)
+      const engineStart = KNOWLEDGE_BASE.indexOf('21. THE COMPOUNDING INTELLIGENCE ENGINE');
+      if (engineStart > -1) {
+        smartKB += '\n\n' + KNOWLEDGE_BASE.substring(engineStart, Math.min(engineStart + 12000, KNOWLEDGE_BASE.length));
+      }
+
+      // 5. Latest daily snapshots (last 5 days only, ~3K tokens)
+      const apr1Idx = KNOWLEDGE_BASE.indexOf('APR 1 (WED');
+      const predIdx = KNOWLEDGE_BASE.indexOf('PRED_001 RESULT');
+      if (apr1Idx > -1 && predIdx > -1) {
+        smartKB += '\n\nRECENT DAILY SNAPSHOTS:\n' + KNOWLEDGE_BASE.substring(apr1Idx, predIdx + 2000);
+      }
+
+      // 6. Scenario probabilities (latest, ~1K tokens)
+      const scenarioStart = KNOWLEDGE_BASE.indexOf('=== REVISED SCENARIO PROBABILITIES (post-reading Apr');
+      if (scenarioStart > -1) {
+        smartKB += '\n\n' + KNOWLEDGE_BASE.substring(scenarioStart, Math.min(scenarioStart + 2000, KNOWLEDGE_BASE.length));
+      }
+
+      if (smartKB.length > 0) {
+        systemBlocks.push({
+          type: 'text',
+          text: smartKB,
+          cache_control: { type: 'ephemeral' },
+        });
+      }
     }
 
     // Block 2: System prompt (identity, voice, VIP recognition, live context)
