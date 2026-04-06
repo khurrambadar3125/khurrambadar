@@ -1121,7 +1121,12 @@ APR 5 (SAT — EASTER WEEKEND): MARKETS CLOSED. Day 37 of war. BREAKING DEVELOPM
 (4) PAKISTAN-TURKEY-EGYPT MEDIATION: Working on compromise to bridge gap between US and Iran demands. Talks in Pakistan. Could be the real channel.
 (5) FIRE AT KUWAIT OIL COMPLEX: Al Jazeera reporting fire at Kuwait oil facility.
 Gold $4,686 | Silver $73.02-73.75 | DXY 100.19 | Brent $109 | WTI $111.54 | 10Y ~4.37% | S&P 6,583 (last close) | BTC $67,097.
-CRITICAL: Deadline shifted to TUESDAY, not Monday. Monday open = gap risk but NOT the deadline day. Tuesday is the new flashpoint. Trump timing playbook: escalation rhetoric on Easter weekend = weekend fear building → Monday morning de-escalation hint? Per Lesson 020 pattern: bad news drops weekend, good news drops Monday pre-market.
+CRITICAL: Deadline shifted to TUESDAY 8PM ET, not Monday. Monday open = gap risk but NOT the deadline day. Tuesday is the new flashpoint. Trump timing playbook: escalation rhetoric on Easter weekend = weekend fear building → Monday morning de-escalation hint? Per Lesson 020 pattern: bad news drops weekend, good news drops Monday pre-market.
+APR 6 (MON — MARKETS REOPEN): CEASEFIRE TALKS EMERGE. Gold $4,655 (-0.44%). Silver $72.25 (-0.89%). DXY 100.12 (+0.09%). Brent $109.54 (+0.47%). BTC $68,894 (+2.6%). S&P futures -0.1% (pared losses on ceasefire report).
+BREAKING — AXIOS: 45-DAY CEASEFIRE TALKS UNDERWAY. US, Iran, and Pakistan-Turkey-Egypt mediators discussing TWO-PHASE DEAL: Phase 1 = 45-day ceasefire (extendable). Phase 2 = permanent war end. Witkoff texting Iran FM Araghchi directly. BUT: sources say chances of deal in 48 hours "slim." Iran will NOT reopen Hormuz or give up enriched uranium for only 45 days — those are final-deal chips. S&P futures pared losses on the report.
+IRAN PARLIAMENT SPEAKER QALIBAF: If US strikes power plants, Iran will target Gulf and US-linked energy facilities. This is the ESCALATION-ESCALATION spiral scenario.
+TRUMP: Extended deadline by 20 hours to Tuesday 8 PM ET. Said "good chance" of deal. Lesson 019 confirmed for 4th time.
+S&P 500: Coming off BEST WEEK since November (+6%). Five-week losing streak snapped. But futures down Monday on deadline uncertainty.
 
 LESSON 029 (April 5, 2026) — TRUMP SHIFTED DEADLINE AGAIN (TUESDAY NOT MONDAY):
 Original deadline: April 6 (Monday) 8 PM ET. New deadline: TUESDAY "Power Plant Day." This is the FOURTH extension (Mar 23 → Mar 27 → Apr 6 → now Tuesday Apr 7). Lesson 019 is now confirmed 4 times. RULE: NEVER price Trump deadlines as real. The pattern is: deadline announced → fear builds → deadline passes → extension/modification → repeat. The real signal is when Trump STOPS setting deadlines. That means action is actually coming.

@@ -38,7 +38,7 @@ Uses Claude Code to build and maintain everything.
 9: Fed cut BULLISH | 10: Warsh confirmed BEARISH | 11: G/S>75 silver cheap
 12: Shanghai premium>$10 structural | 13: COMEX silver<80Moz stress | 14: Gold+Dollar up = decoupling
 
-## Current Context (as of April 5, 2026 — Easter Weekend, markets closed)
+## Current Context (as of April 6, 2026 — Markets reopen, deadline Tuesday)
 - MARKETS CLOSED: Good Friday. Reopen Monday April 6 = Hormuz deadline day
 - NFP March: +178,000 (vs +59K expected — 3X BEAT). Higher for longer confirmed.
 - TWO US PLANES DOWN (April 3): F-15 in Iran + combat plane near Hormuz. Iran struck Gulf refineries.
@@ -49,10 +49,12 @@ Uses Claude Code to build and maintain everything.
 - WTI: ~$111 (WTI > Brent RARE INVERSION = prolonged US involvement priced in)
 - 10Y Yield: ~4.345% (rising on strong NFP)
 - S&P: 6,583 (+0.11% last trade)
-- BREAKING: Trump shifted deadline to TUESDAY "Power Plant Day" — 4th extension (Lesson 019 confirmed)
-- US airman rescued after 36hr evasion in Iran. CIA deception op. Morale boost.
-- Iran rejected ultimatum: called Trump "helpless, nervous, unbalanced"
-- War: Day 37 — deadline now TUESDAY Apr 7, not Monday Apr 6
+- BREAKING AXIOS: 45-day ceasefire talks underway — US, Iran, Pakistan-Turkey-Egypt mediators
+- Two-phase deal: Phase 1 = 45-day ceasefire, Phase 2 = permanent end. Chances "slim" per sources.
+- Trump deadline extended to TUESDAY 8PM ET — 4th extension (Lesson 019 confirmed)
+- US airman rescued after 36hr evasion in Iran. CIA deception op.
+- Iran Qalibaf: will target Gulf energy if US strikes power plants
+- War: Day 38 — deadline TUESDAY Apr 7 8PM ET
 - UK 40-nation summit: US DID NOT ATTEND. Joint statement but no military escort.
 - Signal 6 TRIGGERED: Oil above $110
 - Signal 13 ACTIVE: COMEX registered silver 76.4M oz
