@@ -2463,22 +2463,20 @@ document.addEventListener('keydown', function(e) {
 /* ── KRM CHAT PANEL ── */
 #krm-chat-panel {
   position: fixed; z-index: 10000;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   width: 100%; height: 100%;
   max-width: 100%; max-height: 100%;
   background: #0a0c18;
   border: none; border-radius: 0;
-  display: flex; flex-direction: column;
+  display: none; flex-direction: column;
   overflow: hidden;
-  transform: translateY(100%); opacity: 0;
-  pointer-events: none;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
   /* iOS safe areas */
   padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  -webkit-transform: translateZ(0);
 }
 #krm-chat-panel.open {
-  transform: translateY(0); opacity: 1;
-  pointer-events: all;
+  display: flex;
 }
 
 /* ── CHAT HEADER ── */
@@ -2645,23 +2643,20 @@ document.addEventListener('keydown', function(e) {
 /* Desktop: constrain panel size instead of fullscreen */
 @media (min-width: 769px) {
   #krm-chat-panel {
-    inset: auto; bottom: 24px; right: 24px;
+    top: auto; left: auto; right: 24px; bottom: 24px;
     width: 420px; height: 620px;
     max-width: calc(100vw - 48px); max-height: calc(100vh - 48px);
     border: 1px solid rgba(201,146,31,0.25);
     border-radius: 12px;
     box-shadow: 0 16px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,146,31,0.1);
     padding-top: 0;
-    transform: scale(0.92) translateY(20px);
-  }
-  #krm-chat-panel.open {
-    transform: scale(1) translateY(0);
+    padding-bottom: 0;
   }
 }
 </style>
 
 <!-- Chat Button -->
-<button id="krm-chat-btn" onclick="krmToggleChat()" aria-label="Open KRM Chat">
+<button id="krm-chat-btn" onclick="krmToggleChat()" ontouchend="krmToggleChat()" aria-label="Open KRM Chat" style="-webkit-tap-highlight-color:transparent;touch-action:manipulation;">
   Ask<br>KRM
 </button>
 
@@ -2926,8 +2921,12 @@ How may I assist you today? I can:
   let krmHistory = [];
   let krmBusy = false;
 
-  // Open chat immediately on page load — all devices
-  window.addEventListener('load', function() {
+  // Open chat immediately on page load — all devices including iOS Safari
+  // Use DOMContentLoaded (fires earlier and more reliably on iOS than load)
+  let chatOpened = false;
+  function openChatOnLoad() {
+    if (chatOpened) return;
+    chatOpened = true;
     setTimeout(function() {
       const panel = document.getElementById('krm-chat-panel');
       const btn = document.getElementById('krm-chat-btn');
@@ -2959,7 +2958,14 @@ How may I assist you today? I can:
         setTimeout(() => document.getElementById('krm-input').focus(), 400);
       }
     }, 100);
-  });
+  }
+  // Try DOMContentLoaded first, fall back to load, fall back to immediate
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    openChatOnLoad();
+  } else {
+    document.addEventListener('DOMContentLoaded', openChatOnLoad);
+    window.addEventListener('load', openChatOnLoad); // fallback for iOS
+  }
 
   // Expose toggle
   window.krmToggleChat = function() {
