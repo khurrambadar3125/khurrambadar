@@ -2940,7 +2940,7 @@ How may I assist you today? I can:
       const vip = VIP_WELCOMES[welcomeKey];
 
       if (vip) {
-        addMessage('assistant', '<strong>A very special welcome.</strong>\n\n' + vip.greeting + '\n\n<em>— KRM, the intelligence of Khurram Badar</em>');
+        addMessage('assistant', vip.greeting);
         krmHistory.push({ role: 'assistant', content: vip.greeting });
       } else {
         addMessage('assistant', KRM_GREETING);
@@ -2992,13 +2992,11 @@ How may I assist you today? I can:
     div.className = 'krm-msg ' + role;
     div.innerHTML = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
     container.appendChild(div);
-    if (role === 'user') {
-      // User message: scroll to bottom so they see what they sent
-      container.scrollTop = container.scrollHeight;
-    } else {
-      // Assistant message: scroll to the TOP of the new message so reader starts from beginning
-      setTimeout(function() { div.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
-    }
+    // Always scroll so the NEW message starts at the TOP of the visible area
+    // This works for both user and assistant messages
+    setTimeout(function() {
+      container.scrollTop = div.offsetTop - container.offsetTop;
+    }, 50);
     return div;
   }
 
