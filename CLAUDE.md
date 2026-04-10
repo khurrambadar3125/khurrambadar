@@ -38,7 +38,7 @@ Uses Claude Code to build and maintain everything.
 9: Fed cut BULLISH | 10: Warsh confirmed BEARISH | 11: G/S>75 silver cheap
 12: Shanghai premium>$10 structural | 13: COMEX silver<80Moz stress | 14: Gold+Dollar up = decoupling
 
-## Current Context (as of April 8, 2026 — CEASEFIRE DAY)
+## Current Context (as of April 10, 2026 — Islamabad talks, fragile ceasefire)
 - MARKETS CLOSED: Good Friday. Reopen Monday April 6 = Hormuz deadline day
 - NFP March: +178,000 (vs +59K expected — 3X BEAT). Higher for longer confirmed.
 - TWO US PLANES DOWN (April 3): F-15 in Iran + combat plane near Hormuz. Iran struck Gulf refineries.

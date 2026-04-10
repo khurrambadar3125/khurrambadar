@@ -1139,6 +1139,12 @@ SIGNAL 1: APPROACHING — DXY 98.76 heading toward 98 threshold.
 SIGNAL 7: ACTIVATED — Ceasefire announced.
 PREDICTION RESULTS: PRED_021 CONFIRMED (gold held $4,500-4,700 range then broke up). PRED_024 CONFIRMED (gold rally on structural demand not rate cuts — but rate cut hopes now reviving on oil crash).
 
+APR 9 (THU): POST-CEASEFIRE CONSOLIDATION. Gold $4,766 (holding gains). Silver $75.22. DXY 98.81. Brent $95.92 (recovering from $92 crash). 10Y 4.289%. S&P 6,825 (+0.62%).
+APR 10 (FRI — ISLAMABAD TALKS DAY): FRAGILE CEASEFIRE. Gold $4,743 (-0.47%). Silver $75.17 (-0.07%). DXY 98.93 (+0.12%). Brent $97.46 (+1.61% — oil recovering as ceasefire doubts grow). 10Y 4.293%. S&P 6,825. BTC $71,931.
+ISLAMABAD TALKS: VP Vance leading US delegation. Pakistan PM Sharif hosting. Iran FM attending. Negotiating permanent end to conflict. Iran claims US violated 3 parts of 10-point agreement. Ghalibaf accused US of ceasefire violations. Iran suggests sea mines placed in Hormuz — offered alternative routes. Hormuz NOT meaningfully reopened despite ceasefire.
+LESSON 034 (April 10, 2026) — CEASEFIRE ≠ RESOLUTION. OIL RECOVERING:
+Brent bounced from $92.41 (ceasefire day) back to $97.46 (+5.5% in 2 days). The market initially crashed oil 15% on ceasefire euphoria, then reality set in: (a) Hormuz NOT meaningfully reopened, (b) 426 tankers still trapped, (c) sea mines reported, (d) Iran accusing US of violations. RULE: A ceasefire is NOT a peace deal. The initial euphoria trade reverses partially within 48-72 hours as reality catches up. The structural damage (supply chain, backlog, mines) takes weeks to unwind regardless of diplomatic status. Don't chase the initial crash — wait for the rebalance.
+
 LESSON 032 (April 8, 2026) — THE CEASEFIRE TRADE EXECUTES EXACTLY AS MODELED:
 Thesis E predicted: ceasefire → oil drops $15-20, DXY drops 2-3 points, gold initially dips then rebuilds, silver outperforms 2x. ACTUAL: oil -$16.86 (15.4%), DXY -0.91 to 98.76, gold +1.65%, silver +4.76% (2.9x gold's move). The exponential DXY-metals model (Lesson 010) is CONFIRMED in real-time — DXY dropping below 99 = gold above $4,700, silver above $76. The model WORKS. Silver's outperformance confirms ratio compression thesis — ratio heading from 64 toward 55-50 as predicted. RULE: When the modeled scenario executes, TRUST the model's next projection. DXY 98 → gold $4,800-5,000. DXY 96-97 → gold $5,500+, silver $100+.
 
