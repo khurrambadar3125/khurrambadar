@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#C9921F">
 <link rel="manifest" href="/manifest.json">
 <meta name="mobile-web-app-capable" content="yes">
 <title>Khurram Badar — One of the World's Foremost Convergence Thinkers | AI, ESG, Fintech, Markets</title>
@@ -61,13 +61,12 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;0,900;1,400;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;0,900;1,400;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 
 <style>
 /* ══════════════════════════════════════════════
    RESET & BASE — MOBILE FIRST
-   ssscript.app-inspired monochrome design
 ══════════════════════════════════════════════ */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -80,10 +79,10 @@ html {
   font-size: 16px;
 }
 body {
-  background: #000000;
-  color: #888888;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 400;
+  background: #070810;
+  color: #EDE8DC;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -97,61 +96,45 @@ button { font-family: inherit; cursor: pointer; }
    CSS VARIABLES
 ══════════════════════════════════════════════ */
 :root {
-  --black:  #000000;
-  --ink:    #0a0a0a;
-  --cream:  #ffffff;
+  --black:  #070810;
+  --ink:    #0C0E1A;
+  --cream:  #EDE8DC;
   --gold:   #C9921F;
-  --gold2:  #C9921F;
-  --muted:  #888888;
-  --muted2: #555555;
-  --rule:   rgba(255,255,255,0.06);
-  --glass:  rgba(0,0,0,0.80);
-  /* cards */
-  --card-bg: #0a0a0a;
-  --card-border: rgba(255,255,255,0.06);
-  --card-hover: #111111;
-  --glass-card: #0a0a0a;
-  --glass-border: rgba(255,255,255,0.06);
-  --glass-hover: #111111;
-  --glass-blur: none;
+  --gold2:  #F0B840;
+  --muted:  #5B6370;
+  --rule:   rgba(201,146,31,0.18);
+  --glass:  rgba(7,8,16,0.94);
   /* spacing */
   --pad-mobile: 20px;
   --pad-tablet: 40px;
   --pad-desk:   56px;
-  --section-gap: 100px;
 }
 
 /* ══════════════════════════════════════════════
    TYPOGRAPHY HELPERS
 ══════════════════════════════════════════════ */
-.serif { font-family: 'Inter', -apple-system, sans-serif; }
-.mono  { font-family: 'Inter', -apple-system, sans-serif; }
+.serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+.mono  { font-family: 'DM Mono', 'Courier New', monospace; }
 
 /* ══════════════════════════════════════════════
-   NAV — MINIMAL STICKY BAR
+   NAV — MOBILE HAMBURGER + DESKTOP LINKS
 ══════════════════════════════════════════════ */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  height: 60px;
+  height: 56px;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 var(--pad-mobile);
-  background: transparent;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  transition: background 0.3s ease;
-}
-nav.scrolled {
-  background: rgba(0,0,0,0.8);
+  background: var(--glass);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--rule);
 }
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 24px; font-weight: 700;
-  color: var(--gold); letter-spacing: 0.02em;
+  font-size: 20px; font-weight: 700;
+  color: var(--gold2); letter-spacing: 0.02em;
   flex-shrink: 0;
-  transition: color 0.3s;
 }
-.nav-logo:hover { opacity: 0.8; }
 /* Desktop links hidden on mobile */
 .nav-links {
   display: none;
@@ -165,8 +148,8 @@ nav.scrolled {
   padding: 8px;
 }
 .hamburger span {
-  display: block; width: 20px; height: 1.5px;
-  background: #888888; border-radius: 2px;
+  display: block; width: 22px; height: 1.5px;
+  background: var(--cream); border-radius: 2px;
   transition: all 0.3s ease;
   transform-origin: center;
 }
@@ -176,8 +159,10 @@ nav.scrolled {
 
 /* Mobile menu drawer */
 .nav-drawer {
-  position: fixed; top: 60px; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.98);
+  position: fixed; top: 56px; left: 0; right: 0; bottom: 0;
+  background: rgba(7,8,16,0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   z-index: 999;
   display: flex; flex-direction: column;
   padding: 40px var(--pad-mobile);
@@ -186,34 +171,28 @@ nav.scrolled {
 }
 .nav-drawer.open { transform: translateX(0); }
 .nav-drawer a {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px; font-weight: 500;
-  color: #ffffff; padding: 16px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 700;
+  color: var(--cream); padding: 14px 0;
+  border-bottom: 1px solid var(--rule);
   transition: color 0.2s;
-  letter-spacing: -0.01em;
 }
 .nav-drawer a:last-child { border-bottom: none; }
-.nav-drawer a:hover { color: #ffffff; }
+.nav-drawer a:hover { color: var(--gold); }
 
 /* ── TABLET+ NAV ── */
 @media (min-width: 768px) {
   nav { padding: 0 var(--pad-tablet); }
   .hamburger { display: none; }
   .nav-links {
-    display: flex; gap: 32px;
+    display: flex; gap: 28px;
   }
   .nav-links a {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px; font-weight: 500;
-    color: #888888;
-    transition: color 0.3s;
-    position: relative;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--cream); opacity: 0.75; transition: color 0.2s, opacity 0.2s;
   }
-  .nav-links a::after {
-    content: none;
-  }
-  .nav-links a:hover { color: #ffffff; }
+  .nav-links a:hover { color: var(--gold); opacity: 1; }
 }
 @media (min-width: 1024px) {
   nav { padding: 0 var(--pad-desk); }
@@ -222,253 +201,189 @@ nav.scrolled {
 /* ══════════════════════════════════════════════
    SECTION BASE
 ══════════════════════════════════════════════ */
-section { padding: var(--section-gap) var(--pad-mobile); }
-.container { max-width: 1000px; margin: 0 auto; }
+section { padding: 80px var(--pad-mobile); }
+.container { max-width: 1160px; margin: 0 auto; }
 .s-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: #555555; display: inline-block; margin-bottom: 20px;
-  padding: 0;
-  background: none;
-  border: none;
-  border-radius: 0;
-  font-weight: 500;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); display: block; margin-bottom: 12px;
 }
 .s-title {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(32px, 6vw, 44px);
-  font-weight: 700; line-height: 1.1; letter-spacing: -0.02em;
-  color: #ffffff; margin-bottom: 48px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 8vw, 64px);
+  font-weight: 900; line-height: 1.0; letter-spacing: -0.02em;
+  color: var(--cream); margin-bottom: 40px;
 }
-.s-rule { height: 1px; background: rgba(255,255,255,0.06); margin: 56px 0; }
+.s-rule { height: 1px; background: var(--rule); margin: 56px 0; }
 .gold { color: var(--gold); }
 .italic { font-style: italic; }
 
 @media (min-width: 768px) {
-  section { padding: 160px var(--pad-tablet); }
-  :root { --section-gap: 160px; }
+  section { padding: 100px var(--pad-tablet); }
 }
 @media (min-width: 1024px) {
-  section { padding: 160px var(--pad-desk); }
+  section { padding: 120px var(--pad-desk); }
 }
 
 /* ══════════════════════════════════════════════
-   HERO — CENTERED MODERN
+   HERO
 ══════════════════════════════════════════════ */
 #hero {
   min-height: 100vh;
-  min-height: 100dvh;
-  display: flex; flex-direction: column; justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 80px;
-  position: relative;
-  background: #000000;
-}
-#hero::before {
-  content: none;
+  min-height: -webkit-fill-available;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding-top: 80px;
+  padding-bottom: 48px;
+  background:
+    radial-gradient(ellipse 120% 60% at 100% 0%, rgba(36,85,164,0.08), transparent 60%),
+    radial-gradient(ellipse 100% 80% at 0% 100%, rgba(201,146,31,0.06), transparent 60%);
 }
 .hero-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: #555555; margin-bottom: 28px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px;
   opacity: 0; animation: riseIn 0.8s 0.2s forwards;
-  display: inline-block;
-  padding: 0;
-  background: none;
-  border: none;
-  border-radius: 0;
-  font-weight: 500;
 }
 .hero-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(56px, 14vw, 110px);
-  font-weight: 300; line-height: 0.9; letter-spacing: -0.03em;
-  color: #ffffff;
+  font-size: clamp(48px, 14vw, 120px);
+  font-weight: 300; line-height: 0.88; letter-spacing: -0.03em;
+  color: var(--cream);
   opacity: 0; animation: riseIn 0.8s 0.4s forwards;
 }
 .hero-name-b {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(56px, 14vw, 110px);
-  font-weight: 700; font-style: italic; line-height: 0.9;
+  font-size: clamp(48px, 14vw, 120px);
+  font-weight: 700; font-style: italic; line-height: 0.88;
   color: var(--gold); letter-spacing: -0.03em;
   opacity: 0; animation: riseIn 0.8s 0.55s forwards;
-  display: block; margin-bottom: 40px;
+  display: block; margin-bottom: 28px;
 }
 .hero-divider {
-  width: 48px; height: 1px;
-  background: rgba(255,255,255,0.15);
-  margin: 0 auto 32px;
+  width: 48px; height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin-bottom: 24px;
   opacity: 0; animation: riseIn 0.8s 0.7s forwards;
 }
 .hero-statement {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(16px, 3vw, 20px);
-  font-weight: 400; line-height: 1.7;
-  color: #888888; max-width: 580px;
-  margin: 0 auto;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(17px, 4.5vw, 28px);
+  font-weight: 300; line-height: 1.5;
+  color: var(--cream); max-width: 640px;
   opacity: 0; animation: riseIn 0.8s 0.85s forwards;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
-.hero-statement strong { color: #ffffff; font-weight: 600; font-style: normal; }
+.hero-statement strong { color: var(--gold); font-weight: 600; font-style: italic; }
 .hero-pills {
-  display: flex; flex-wrap: wrap; gap: 8px;
-  justify-content: center;
-  margin-bottom: 40px;
+  display: flex; flex-wrap: wrap; gap: 7px;
+  margin-bottom: 32px;
   opacity: 0; animation: riseIn 0.8s 1.0s forwards;
 }
 .pill {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase;
-  padding: 7px 16px;
-  border: 1px solid rgba(255,255,255,0.06);
-  background: #0a0a0a;
-  color: #555555;
-  border-radius: 100px;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-.pill:hover {
-  border-color: rgba(255,255,255,0.12);
-  color: #888888;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 5px 11px;
+  border: 1px solid var(--rule); color: var(--muted);
 }
 .hero-sign {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(14px, 3vw, 16px);
-  font-style: italic; color: #555555; line-height: 1.6;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(15px, 4vw, 20px);
+  font-style: italic; color: var(--gold); line-height: 1.5;
   opacity: 0; animation: riseIn 0.8s 1.15s forwards;
-}
-
-/* ══════════════════════════════════════════════
-   CARD BASE
-══════════════════════════════════════════════ */
-.glass-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  transition: border-color 0.3s ease;
-}
-.glass-card:hover {
-  border-color: rgba(255,255,255,0.12);
 }
 
 /* ══════════════════════════════════════════════
    CONVERGENCE
 ══════════════════════════════════════════════ */
-#convergence {
-  background: transparent;
-}
+#convergence { background: rgba(255,255,255,0.015); }
 .conv-big-q {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(24px, 5vw, 40px);
-  font-weight: 700; line-height: 1.15; color: #ffffff;
-  margin-bottom: 28px;
-  letter-spacing: -0.02em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 7vw, 52px);
+  font-weight: 600; line-height: 1.15; color: var(--cream);
+  margin-bottom: 24px;
 }
-.conv-big-q em { color: #ffffff; font-style: italic; font-family: 'Inter', sans-serif; }
+.conv-big-q em { color: var(--gold); font-style: italic; }
 .pull-quote {
-  border-left: 2px solid rgba(255,255,255,0.1);
-  padding: 20px 24px;
-  background: transparent;
-  border-radius: 0;
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(15px, 3vw, 18px);
-  font-style: italic; line-height: 1.6; color: #888888;
-  margin: 28px 0 36px;
+  border-left: 2px solid var(--gold);
+  padding: 16px 20px;
+  background: rgba(201,146,31,0.04);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 4vw, 20px);
+  font-style: italic; line-height: 1.5; color: var(--gold);
+  margin: 24px 0 32px;
 }
-.body-text { font-size: 16px; line-height: 1.8; color: #888888; margin-bottom: 18px; }
-.body-text strong { color: #ffffff; font-weight: 600; }
-.body-text em { color: #888888; font-style: italic; }
+.body-text { font-size: 15px; line-height: 1.9; color: rgba(237,232,220,0.72); margin-bottom: 16px; }
+.body-text strong { color: var(--cream); font-weight: 500; }
+.body-text em { color: var(--gold); font-style: italic; }
 
 @media (min-width: 900px) {
-  .conv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .conv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
 }
 
 /* ══════════════════════════════════════════════
-   8 DIMENSIONS — CARDS
+   8 DIMENSIONS
 ══════════════════════════════════════════════ */
-#dimensions {
-  background: transparent;
-}
+#dimensions { background: rgba(255,255,255,0.01); }
 .dim-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 2px;
 }
 .dim-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 32px;
-  border-radius: 16px;
-  transition: border-color 0.3s ease;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 28px 22px;
+  transition: background 0.3s;
+  /* iOS momentum scrolling fix */
   -webkit-overflow-scrolling: touch;
-  position: relative;
-  overflow: hidden;
 }
-.dim-card::before {
-  content: none;
-}
-.dim-card:active { background: var(--card-hover); }
+.dim-card:active { background: rgba(201,146,31,0.06); }
 .dim-num {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px; letter-spacing: 0.08em;
-  color: #555555; margin-bottom: 16px;
-  font-weight: 500; text-transform: uppercase;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.15em;
+  color: var(--gold); margin-bottom: 14px;
 }
 .dim-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 20px; font-weight: 700;
-  color: #ffffff; margin-bottom: 12px; line-height: 1.25;
-  letter-spacing: -0.02em;
+  color: var(--cream); margin-bottom: 10px; line-height: 1.2;
 }
-.dim-body { font-size: 14px; line-height: 1.75; color: #888888; }
-.dim-body strong { color: #cccccc; font-weight: 500; }
+.dim-body { font-size: 13px; line-height: 1.75; color: var(--muted); }
+.dim-body strong { color: rgba(237,232,220,0.75); font-weight: 400; }
 .dim-proof {
-  margin-top: 16px;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; letter-spacing: 0.04em; color: #555555;
+  margin-top: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.07em; color: var(--gold); opacity: 0.65;
 }
 @media (min-width: 600px) {
   .dim-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 1024px) {
   .dim-grid { grid-template-columns: repeat(4, 1fr); }
-  .dim-card:hover {
-    border-color: rgba(255,255,255,0.12);
-  }
+  .dim-card:hover { background: rgba(201,146,31,0.06); transform: translateY(-3px); }
 }
 
 /* ══════════════════════════════════════════════
    MARKETS
 ══════════════════════════════════════════════ */
-#markets {
-  background: transparent;
-}
-.ticker-list { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+#markets { background: linear-gradient(180deg, transparent, rgba(36,85,164,0.03)); }
+.ticker-list { display: flex; flex-direction: column; gap: 2px; margin-top: 28px; }
 .ticker-item {
-  padding: 24px;
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  border-radius: 16px;
-  transition: border-color 0.3s ease;
-}
-.ticker-item:hover {
-  border-color: rgba(255,255,255,0.12);
+  padding: 16px 18px;
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.02);
 }
 .ticker-name {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px; font-weight: 600; color: #ffffff;
-  letter-spacing: -0.01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 600; color: var(--cream);
 }
 .ticker-sub {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; color: #555555; margin-top: 3px; letter-spacing: 0.06em;
-  text-transform: uppercase; font-weight: 500;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; color: var(--muted); margin-top: 2px; letter-spacing: 0.08em;
 }
-.ticker-insight { font-size: 14px; color: #888888; margin-top: 8px; line-height: 1.6; }
+.ticker-insight { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
 @media (min-width: 900px) {
-  .markets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .markets-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
   .ticker-item { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
   .ticker-insight { text-align: right; max-width: 200px; margin-top: 0; }
 }
@@ -477,528 +392,432 @@ section { padding: var(--section-gap) var(--pad-mobile); }
    ABUNDANCE
 ══════════════════════════════════════════════ */
 #abundance {
-  background: transparent;
+  background: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(26,107,74,0.05), transparent 70%);
 }
 .pillars-grid {
-  display: grid; grid-template-columns: 1fr; gap: 16px;
+  display: grid; grid-template-columns: 1fr; gap: 2px;
 }
 .pillar-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-top: none;
-  padding: 32px;
-  border-radius: 16px;
-  transition: border-color 0.3s ease;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--rule);
+  border-top: 2px solid transparent;
+  padding: 28px 22px;
+  transition: all 0.3s;
 }
-.pillar-card:nth-child(1) { border-top: none; }
-.pillar-card:nth-child(2) { border-top: none; }
-.pillar-card:nth-child(3) { border-top: none; }
-.pillar-card:nth-child(4) { border-top: none; }
-.pillar-icon { font-size: 28px; margin-bottom: 16px; }
+.pillar-card:nth-child(1) { border-top-color: #2455A4; }
+.pillar-card:nth-child(2) { border-top-color: var(--gold); }
+.pillar-card:nth-child(3) { border-top-color: #1A6B4A; }
+.pillar-card:nth-child(4) { border-top-color: #9B3A1C; }
+.pillar-icon { font-size: 26px; margin-bottom: 14px; }
 .pillar-name {
-  font-family: 'Inter', sans-serif;
-  font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 12px;
-  letter-spacing: -0.02em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 21px; font-weight: 700; color: var(--cream); margin-bottom: 10px;
 }
-.pillar-body { font-size: 14px; line-height: 1.75; color: #888888; }
+.pillar-body { font-size: 13px; line-height: 1.75; color: var(--muted); }
 .pillar-prop {
-  margin-top: 18px; padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  font-family: 'Inter', sans-serif;
-  font-size: 14px; font-style: italic; color: #666666; line-height: 1.5;
+  margin-top: 16px; padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-style: italic; color: var(--gold); line-height: 1.5;
 }
 .abundance-closer {
-  margin-top: 56px;
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(16px, 3vw, 20px); font-weight: 500;
-  line-height: 1.6; color: #cccccc;
-  padding: 36px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
+  margin-top: 48px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 5vw, 30px); font-weight: 600;
+  line-height: 1.4; color: var(--cream);
 }
-.abundance-closer em { color: #888888; font-style: italic; font-family: 'Inter', sans-serif; }
+.abundance-closer em { color: var(--gold); font-style: italic; }
 @media (min-width: 600px) {
   .pillars-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 1024px) {
   .pillars-grid { grid-template-columns: repeat(4, 1fr); }
-  .pillar-card:hover {
-    border-color: rgba(255,255,255,0.12);
-  }
+  .pillar-card:hover { background: rgba(201,146,31,0.05); transform: translateY(-3px); }
 }
 
 /* ══════════════════════════════════════════════
    ESG
 ══════════════════════════════════════════════ */
-#esg {
-  background: transparent;
-}
-.esg-facts { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+#esg { background: rgba(255,255,255,0.015); }
+.esg-facts { display: flex; flex-direction: column; gap: 2px; margin-top: 28px; }
 .esg-fact {
-  display: grid; grid-template-columns: 80px 1fr; gap: 16px;
-  padding: 24px;
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
+  display: grid; grid-template-columns: 80px 1fr; gap: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.02);
   align-items: center;
-  border-radius: 16px;
-  transition: border-color 0.3s ease;
-}
-.esg-fact:hover {
-  border-color: rgba(255,255,255,0.12);
 }
 .esg-fact-date {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px; letter-spacing: 0.06em; color: #555555;
-  line-height: 1.5; font-weight: 600;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em; color: var(--gold);
+  line-height: 1.5;
 }
-.esg-fact-text { font-size: 14px; color: #888888; line-height: 1.65; }
+.esg-fact-text { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
 @media (min-width: 900px) {
-  .esg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .esg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
   .esg-facts { margin-top: 0; }
 }
 
 /* ══════════════════════════════════════════════
    SCHOOL / CURRICULUM
 ══════════════════════════════════════════════ */
-#school {
-  background: transparent;
-}
+#school { background: linear-gradient(180deg, transparent, rgba(201,146,31,0.02)); }
 .school-hero {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(17px, 3.5vw, 24px); font-weight: 500;
-  line-height: 1.5; color: #cccccc; max-width: 700px;
-  margin-bottom: 48px;
-  letter-spacing: -0.01em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 5vw, 32px); font-weight: 600;
+  line-height: 1.35; color: var(--cream); max-width: 680px;
+  margin-bottom: 40px;
 }
-.school-hero em { color: #ffffff; font-style: italic; font-family: 'Inter', sans-serif; }
+.school-hero em { color: var(--gold); font-style: italic; }
 .tracks-grid {
-  display: grid; grid-template-columns: 1fr; gap: 12px;
+  display: grid; grid-template-columns: 1fr; gap: 2px;
 }
 .track-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 32px;
-  border-radius: 16px;
-  transition: border-color 0.3s ease;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--rule);
+  padding: 24px 20px;
+  transition: background 0.3s;
 }
-.track-card:active { background: var(--card-hover); }
+.track-card:active { background: rgba(201,146,31,0.06); }
 .track-num {
-  font-family: 'Inter', sans-serif; font-size: 12px;
-  letter-spacing: 0.08em; color: #555555; margin-bottom: 10px;
-  font-weight: 500; text-transform: uppercase;
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.15em; color: var(--gold); margin-bottom: 8px;
 }
 .track-name {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 8px;
-  letter-spacing: -0.02em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 700; color: var(--cream); margin-bottom: 6px;
 }
-.track-domains { font-size: 13px; color: #888888; line-height: 1.7; }
+.track-domains { font-size: 12px; color: var(--muted); line-height: 1.7; }
 @media (min-width: 600px) {
   .tracks-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 1024px) {
   .tracks-grid { grid-template-columns: repeat(3, 1fr); }
-  .track-card:hover {
-    border-color: rgba(255,255,255,0.12);
-  }
+  .track-card:hover { background: rgba(201,146,31,0.06); }
 }
 .school-platform {
-  margin-top: 36px; padding: 32px;
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  border-radius: 16px;
+  margin-top: 32px; padding: 24px 22px;
+  border: 1px solid var(--rule);
+  background: rgba(201,146,31,0.04);
 }
 .platform-label {
-  font-family: 'Inter', sans-serif; font-size: 12px;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: #555555; margin-bottom: 12px; font-weight: 500;
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 10px;
 }
-.platform-text { font-size: 14px; line-height: 1.8; color: #888888; }
+.platform-text { font-size: 14px; line-height: 1.8; color: rgba(237,232,220,0.72); }
 @media (min-width: 900px) {
-  .school-platform { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .school-platform { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 }
 
 /* ══════════════════════════════════════════════
    PAKISTAN
 ══════════════════════════════════════════════ */
 #pakistan {
-  background: transparent;
+  background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(36,85,164,0.07), transparent 70%);
   text-align: center;
 }
 .pak-stat {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(64px, 18vw, 120px);
-  font-weight: 800; line-height: 1; color: #ffffff; margin-bottom: 8px;
-  letter-spacing: -0.04em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(56px, 18vw, 100px);
+  font-weight: 700; line-height: 1; color: var(--gold); margin-bottom: 8px;
 }
 .pak-stat-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: #555555; margin-bottom: 36px; font-weight: 500;
+  font-family: 'DM Mono', monospace;
+  font-size: 9.5px; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 32px;
 }
 .pak-manifesto {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(16px, 3.5vw, 22px); font-weight: 400;
-  line-height: 1.7; color: #cccccc; margin-bottom: 36px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 5vw, 26px); font-weight: 300;
+  line-height: 1.6; color: var(--cream); margin-bottom: 32px;
   max-width: 740px; margin-left: auto; margin-right: auto;
 }
-.pak-manifesto strong { color: #ffffff; font-weight: 600; font-style: normal; }
+.pak-manifesto strong { color: var(--gold); font-weight: 600; font-style: italic; }
 .future-pillars {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
-  margin-top: 28px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 2px;
+  margin-top: 24px;
 }
 .fp {
-  padding: 10px 18px;
-  border: 1px solid rgba(255,255,255,0.06);
-  background: #0a0a0a;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase;
-  color: #555555;
-  border-radius: 100px;
-  transition: all 0.3s;
-  font-weight: 500;
-}
-.fp:hover {
-  border-color: rgba(255,255,255,0.12);
-  color: #888888;
+  padding: 10px 14px;
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.02);
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--muted);
 }
 
 /* ══════════════════════════════════════════════
    PORTFOLIO
 ══════════════════════════════════════════════ */
-#portfolio {
-  background: transparent;
-}
-.port-table { display: flex; flex-direction: column; gap: 12px; }
+#portfolio { background: rgba(255,255,255,0.015); }
+.port-table { display: flex; flex-direction: column; gap: 2px; }
 .port-row {
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  border-radius: 16px;
-  overflow: hidden;
-  transition: border-color 0.3s ease;
-}
-.port-row:hover {
-  border-color: rgba(255,255,255,0.12);
+  border: 1px solid var(--rule);
+  background: rgba(255,255,255,0.02);
 }
 .port-cat {
-  padding: 14px 20px;
-  background: rgba(255,255,255,0.02);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  font-family: 'Inter', sans-serif; font-size: 12px;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: #555555; font-weight: 500;
+  padding: 12px 16px;
+  background: rgba(201,146,31,0.05);
+  border-bottom: 1px solid var(--rule);
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold);
 }
 .port-domains {
-  padding: 16px 20px;
-  display: flex; flex-wrap: wrap; gap: 8px;
+  padding: 14px 16px;
+  display: flex; flex-wrap: wrap; gap: 7px;
 }
 .port-tag {
-  font-family: 'Inter', sans-serif; font-size: 12px;
-  color: #666666;
-  padding: 5px 12px;
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 8px;
-  transition: all 0.2s;
-}
-.port-tag:hover {
-  border-color: rgba(255,255,255,0.12);
-  color: #888888;
+  font-family: 'DM Mono', monospace; font-size: 10.5px;
+  color: rgba(237,232,220,0.5);
+  padding: 3px 8px; border: 1px solid rgba(255,255,255,0.07);
 }
 @media (min-width: 768px) {
   .port-row { display: grid; grid-template-columns: 160px 1fr; }
-  .port-cat { border-bottom: none; border-right: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; }
+  .port-cat { border-bottom: none; border-right: 1px solid var(--rule); display: flex; align-items: center; }
 }
 .port-count {
-  margin-top: 56px; text-align: center;
-  font-family: 'Inter', sans-serif;
-  font-size: 96px; font-weight: 800; color: #ffffff; line-height: 1;
-  letter-spacing: -0.04em;
+  margin-top: 36px; text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px; font-weight: 900; color: var(--gold); line-height: 1;
 }
 .port-count-sub {
-  font-family: 'Inter', sans-serif; font-size: 12px;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: #555555; margin-top: 8px; text-align: center;
-  font-weight: 500;
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted); margin-top: 6px; text-align: center;
 }
 
 /* ══════════════════════════════════════════════
    LUMINARIES / THE CONSTELLATION
 ══════════════════════════════════════════════ */
 #luminaries {
-  background: transparent;
+  background:
+    radial-gradient(ellipse 100% 50% at 0% 0%, rgba(201,146,31,0.04), transparent 60%),
+    radial-gradient(ellipse 80% 60% at 100% 100%, rgba(36,85,164,0.03), transparent 60%);
 }
 .section-intro {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(15px, 3vw, 18px);
-  font-weight: 400;
-  color: #666666;
-  max-width: 660px; line-height: 1.7;
-  margin-bottom: 44px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(15px, 4vw, 20px);
+  font-weight: 300; font-style: italic;
+  color: rgba(237,232,220,0.58);
+  max-width: 640px; line-height: 1.7;
+  margin-bottom: 40px;
 }
 /* Filter tabs — horizontally scrollable on mobile */
 .filter-row {
-  display: flex; gap: 8px; flex-wrap: nowrap;
-  overflow-x: auto; padding-bottom: 14px; margin-bottom: 36px;
+  display: flex; gap: 6px; flex-wrap: nowrap;
+  overflow-x: auto; padding-bottom: 12px; margin-bottom: 32px;
   scrollbar-width: none; -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
 }
 .filter-row::-webkit-scrollbar { display: none; }
 .filter-btn {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;
-  padding: 8px 18px; flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,0.06);
-  background: #0a0a0a;
-  color: #555555;
-  transition: all 0.3s; border-radius: 100px;
-  white-space: nowrap; font-weight: 500;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 7px 14px; flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: transparent; color: var(--muted);
+  transition: all 0.2s; border-radius: 2px;
+  white-space: nowrap;
 }
 .filter-btn.active, .filter-btn:active {
-  border-color: rgba(255,255,255,0.15);
-  color: #ffffff; background: #111111;
+  border-color: rgba(201,146,31,0.4);
+  color: var(--gold); background: rgba(201,146,31,0.06);
 }
 /* Cards */
 .luminaries-grid {
-  display: grid; grid-template-columns: 1fr; gap: 16px;
+  display: grid; grid-template-columns: 1fr; gap: 2px;
 }
 .lum-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 32px;
-  border-radius: 16px;
-  transition: border-color 0.3s ease;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 26px 20px;
+  transition: all 0.3s;
 }
-.lum-card:active { background: var(--card-hover); }
+.lum-card:active { background: rgba(201,146,31,0.05); }
 .card-tag {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
-  margin-bottom: 14px; display: inline-block;
-  padding: 0; border-radius: 0;
-  font-weight: 500;
+  font-family: 'DM Mono', monospace;
+  font-size: 8px; letter-spacing: 0.16em; text-transform: uppercase;
+  margin-bottom: 12px; display: inline-block;
+  padding: 3px 8px; border-radius: 2px;
 }
-.tag-music    { color: #555555; background: transparent; }
-.tag-gov      { color: #555555; background: transparent; }
-.tag-business { color: #555555; background: transparent; }
-.tag-media    { color: #555555; background: transparent; }
-.tag-sport    { color: #555555; background: transparent; }
-.tag-humanity { color: #555555; background: transparent; }
-.tag-film     { color: #555555; background: transparent; }
+.tag-music    { color: #E8A030; background: rgba(232,160,48,0.08); }
+.tag-gov      { color: #60A8D0; background: rgba(96,168,208,0.08); }
+.tag-business { color: #80C080; background: rgba(128,192,128,0.08); }
+.tag-media    { color: #D070A0; background: rgba(208,112,160,0.08); }
+.tag-sport    { color: #70B8A0; background: rgba(112,184,160,0.08); }
+.tag-humanity { color: #C09060; background: rgba(192,144,96,0.08); }
+.tag-film     { color: #A080C8; background: rgba(160,128,200,0.08); }
 .lum-name {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 20px; font-weight: 700;
-  color: #ffffff; line-height: 1.15; margin-bottom: 4px;
-  letter-spacing: -0.02em;
+  color: var(--cream); line-height: 1.1; margin-bottom: 3px;
 }
 .lum-role {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; letter-spacing: 0.04em;
-  color: #555555; margin-bottom: 14px; text-transform: uppercase;
-  font-weight: 500;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.09em;
+  color: var(--muted); margin-bottom: 12px; text-transform: uppercase;
 }
-.lum-story { font-size: 14px; line-height: 1.8; color: #888888; }
-.lum-story strong { color: #cccccc; font-weight: 600; }
+.lum-story { font-size: 13px; line-height: 1.75; color: rgba(237,232,220,0.58); }
+.lum-story strong { color: rgba(237,232,220,0.82); font-weight: 500; }
 .lum-year {
-  margin-top: 16px;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; color: #555555; letter-spacing: 0.04em;
+  margin-top: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; color: var(--gold); opacity: 0.6; letter-spacing: 0.09em;
 }
 /* placeholder card */
 .lum-card.placeholder {
-  border: 1px dashed rgba(255,255,255,0.08);
-  background: transparent;
+  border: 1px dashed rgba(201,146,31,0.18);
+  background: rgba(201,146,31,0.02);
   display: flex; flex-direction: column;
   justify-content: center; align-items: center;
-  text-align: center; min-height: 200px;
-  border-radius: 16px;
+  text-align: center; min-height: 180px;
 }
-.placeholder-plus { font-size: 28px; opacity: 0.2; margin-bottom: 12px; color: #555555; }
+.placeholder-plus { font-size: 24px; opacity: 0.35; margin-bottom: 10px; }
 .placeholder-text {
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
-  color: #555555; font-weight: 500;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--muted);
 }
 @media (min-width: 600px) { .luminaries-grid { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) {
   .luminaries-grid { grid-template-columns: repeat(3, 1fr); }
-  .lum-card:hover {
-    border-color: rgba(255,255,255,0.12);
-  }
+  .lum-card:hover { background: rgba(201,146,31,0.05); border-color: rgba(201,146,31,0.18); transform: translateY(-2px); }
 }
 /* Stories section */
 .stories-grid {
-  display: grid; grid-template-columns: 1fr; gap: 16px;
+  display: grid; grid-template-columns: 1fr; gap: 2px;
 }
 .story-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  padding: 36px 32px;
-  border-radius: 16px;
-  transition: border-color 0.3s ease;
+  background: rgba(201,146,31,0.02);
+  border: 1px solid rgba(201,146,31,0.08);
+  padding: 32px 24px;
+  transition: all 0.3s;
 }
-.story-card:active { background: var(--card-hover); }
+.story-card:active { background: rgba(201,146,31,0.06); }
 .story-era {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-  color: #555555; margin-bottom: 12px; font-weight: 500;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--gold); opacity: 0.7; margin-bottom: 10px;
 }
 .story-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 22px; font-weight: 700;
-  color: #ffffff; line-height: 1.25; margin-bottom: 18px;
-  letter-spacing: -0.02em;
+  color: var(--cream); line-height: 1.2; margin-bottom: 16px;
 }
 .story-text {
-  font-size: 14px; line-height: 1.85; color: #888888;
+  font-size: 14px; line-height: 1.85; color: rgba(237,232,220,0.55);
 }
-.story-text strong { color: #cccccc; font-weight: 600; }
+.story-text strong { color: rgba(237,232,220,0.85); font-weight: 500; }
 .story-place {
-  margin-top: 20px;
-  font-family: 'Inter', sans-serif;
-  font-size: 11px; color: #555555; letter-spacing: 0.04em;
+  margin-top: 18px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; color: var(--gold); opacity: 0.5; letter-spacing: 0.09em;
 }
 @media (min-width: 600px) { .stories-grid { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) {
   .stories-grid { grid-template-columns: repeat(2, 1fr); }
-  .story-card:hover {
-    border-color: rgba(255,255,255,0.12);
-  }
+  .story-card:hover { background: rgba(201,146,31,0.05); border-color: rgba(201,146,31,0.2); transform: translateY(-2px); }
 }
 
 /* Quote strip */
 .quote-strip {
-  margin-top: 64px; padding: 40px 32px;
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  border-left: 2px solid rgba(255,255,255,0.1);
-  border-radius: 0 16px 16px 0;
+  margin-top: 56px; padding: 32px 22px;
+  border: 1px solid var(--rule);
+  background: rgba(201,146,31,0.03);
+  border-left: 3px solid var(--gold);
 }
 .quote-strip .qt {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(16px, 3.5vw, 22px);
-  font-weight: 500; line-height: 1.6; color: #cccccc;
-  margin-bottom: 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 5vw, 26px);
+  font-weight: 300; font-style: italic; line-height: 1.5; color: var(--cream);
+  margin-bottom: 20px;
 }
-.quote-strip .qt em { color: #888888; font-style: italic; font-family: 'Inter', sans-serif; font-weight: 500; }
-.quote-strip .qb { font-size: 14px; line-height: 1.85; color: #888888; }
-.quote-strip .qb strong { color: #ffffff; font-weight: 600; }
+.quote-strip .qt em { color: var(--gold); font-style: normal; font-weight: 600; }
+.quote-strip .qb { font-size: 14px; line-height: 1.85; color: rgba(237,232,220,0.6); }
+.quote-strip .qb strong { color: var(--cream); font-weight: 500; }
 @media (min-width: 900px) {
-  .quote-strip { padding: 52px 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .quote-strip { padding: 48px 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
   .quote-strip .qt { margin-bottom: 0; }
 }
 
 /* ══════════════════════════════════════════════
    LEGACY — MENTORS + WRITING
 ══════════════════════════════════════════════ */
-#legacy {
-  background: transparent;
-}
-.mentors-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 56px; }
+#legacy { background: linear-gradient(180deg, transparent, rgba(201,146,31,0.02)); }
+.mentors-list { display: flex; flex-direction: column; gap: 2px; margin-bottom: 48px; }
 .mentor {
-  padding: 32px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-left: 2px solid rgba(255,255,255,0.1);
-  border-radius: 0 16px 16px 0;
-  transition: border-color 0.3s ease;
-}
-.mentor:hover {
-  border-color: rgba(255,255,255,0.12);
-  border-left-color: rgba(255,255,255,0.15);
+  padding: 22px 18px; background: rgba(255,255,255,0.02);
+  border-left: 2px solid var(--gold); border: 1px solid var(--rule);
+  border-left: 2px solid var(--gold);
 }
 .mentor-name {
-  font-family: 'Inter', sans-serif;
-  font-size: 20px; font-weight: 700;
-  color: #ffffff; margin-bottom: 4px;
-  letter-spacing: -0.02em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 700; font-style: italic;
+  color: var(--cream); margin-bottom: 3px;
 }
 .mentor-info {
-  font-family: 'Inter', sans-serif; font-size: 12px;
-  letter-spacing: 0.06em; color: #555555; margin-bottom: 10px; font-weight: 500;
-  text-transform: uppercase;
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.1em; color: var(--gold); margin-bottom: 8px;
 }
-.mentor-lesson { font-size: 14px; color: #888888; line-height: 1.75; }
+.mentor-lesson { font-size: 13px; color: var(--muted); line-height: 1.7; }
 .writing-quote {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(22px, 5vw, 36px); font-weight: 700;
-  line-height: 1.3; color: #ffffff; margin-bottom: 28px;
-  letter-spacing: -0.02em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 6vw, 36px); font-weight: 300; font-style: italic;
+  line-height: 1.35; color: var(--cream); margin-bottom: 24px;
 }
-.writing-quote strong { color: #ffffff; font-weight: 700; }
-.pub-cards { display: flex; flex-direction: column; gap: 12px; }
+.writing-quote strong { color: var(--gold); font-style: normal; font-weight: 700; }
+.pub-cards { display: flex; flex-direction: column; gap: 2px; }
 .pub-card {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 24px;
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  border-radius: 16px;
-  transition: border-color 0.3s ease;
-}
-.pub-card:hover {
-  border-color: rgba(255,255,255,0.12);
+  padding: 16px 18px;
+  border: 1px solid var(--rule); background: rgba(255,255,255,0.02);
 }
 .pub-name {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px; font-weight: 600; color: #ffffff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px; font-weight: 700; color: var(--cream);
 }
-.pub-sub { font-family: 'Inter', sans-serif; font-size: 11px; color: #555555; margin-top: 3px; font-weight: 500; }
-.pub-years { font-family: 'Inter', sans-serif; font-size: 11px; color: #555555; letter-spacing: 0.04em; font-weight: 500; }
+.pub-sub { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); margin-top: 2px; }
+.pub-years { font-family: 'DM Mono', monospace; font-size: 9.5px; color: var(--gold); letter-spacing: 0.09em; }
 
 /* ══════════════════════════════════════════════
    CONTACT
 ══════════════════════════════════════════════ */
 #contact {
-  background: transparent;
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(201,146,31,0.04), transparent 70%);
   text-align: center;
 }
 .conn-title {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(28px, 6vw, 44px);
-  font-weight: 700; line-height: 1.15;
-  color: #ffffff; margin-bottom: 24px;
-  letter-spacing: -0.02em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(24px, 7vw, 52px);
+  font-weight: 700; font-style: italic; line-height: 1.15;
+  color: var(--cream); margin-bottom: 20px;
 }
-.conn-title strong { color: #ffffff; }
-.conn-subtitle { font-size: 16px; color: #888888; max-width: 580px; margin: 0 auto 40px; line-height: 1.8; }
+.conn-title strong { color: var(--gold); font-style: normal; }
+.conn-subtitle { font-size: 14px; color: var(--muted); max-width: 560px; margin: 0 auto 36px; line-height: 1.8; }
 .conn-links {
-  display: flex; flex-direction: column; gap: 12px;
-  align-items: center; margin-bottom: 56px;
+  display: flex; flex-direction: column; gap: 10px;
+  align-items: center; margin-bottom: 48px;
 }
 .conn-link {
-  font-family: 'Inter', sans-serif; font-size: 14px; letter-spacing: 0;
-  padding: 12px 28px;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: transparent;
-  color: #888888; text-decoration: none;
-  transition: all 0.3s; width: 100%; max-width: 320px;
+  font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em;
+  padding: 14px 24px; border: 1px solid var(--rule);
+  color: var(--cream); text-decoration: none;
+  transition: all 0.2s; width: 100%; max-width: 320px;
   display: block; text-align: center;
-  border-radius: 10px;
-  font-weight: 500;
-}
-.conn-link:hover {
-  border-color: rgba(255,255,255,0.25);
-  color: #ffffff;
 }
 .conn-link.primary {
-  background: var(--gold);
-  color: #ffffff;
-  border-color: transparent; font-weight: 500;
-  box-shadow: none;
+  background: var(--gold); color: var(--black);
+  border-color: var(--gold); font-weight: 500;
 }
-.conn-link.primary:hover {
-  opacity: 0.9;
-}
-.conn-link:active { background: var(--gold); color: #ffffff; border-color: var(--gold); }
+.conn-link:active { background: var(--gold); color: var(--black); border-color: var(--gold); }
 .signature {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(14px, 3vw, 16px); font-style: normal;
-  color: #666666; line-height: 1.8; max-width: 620px; margin: 0 auto;
-  padding: 36px;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(14px, 4vw, 18px); font-style: italic;
+  color: var(--muted); line-height: 1.8; max-width: 600px; margin: 0 auto;
 }
-.signature strong { color: #ffffff; }
+.signature strong { color: var(--gold); font-style: normal; }
 @media (min-width: 600px) {
   .conn-links { flex-direction: row; flex-wrap: wrap; justify-content: center; }
   .conn-link { width: auto; }
@@ -1008,79 +827,77 @@ section { padding: var(--section-gap) var(--pad-mobile); }
    FOOTER
 ══════════════════════════════════════════════ */
 footer {
-  padding: 32px var(--pad-mobile);
-  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 24px var(--pad-mobile);
+  border-top: 1px solid var(--rule);
   text-align: center;
 }
 footer p {
-  font-family: 'Inter', sans-serif; font-size: 12px;
-  letter-spacing: 0.04em; color: #555555; margin-bottom: 4px;
-  font-weight: 500;
+  font-family: 'DM Mono', monospace; font-size: 9.5px;
+  letter-spacing: 0.1em; color: var(--muted); margin-bottom: 4px;
 }
-footer span { color: #888888; }
+footer span { color: var(--gold); }
 .legal-links {
-  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px;
-  margin-top: 14px;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 16px;
+  margin-top: 12px;
 }
 .legal-links a {
-  font-family: 'Inter', sans-serif; font-size: 11px;
-  letter-spacing: 0.04em; text-transform: uppercase;
-  color: #444444; font-weight: 500;
-  transition: all 0.3s; border-bottom: 1px solid transparent;
+  font-family: 'DM Mono', monospace; font-size: 8.5px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted); opacity: 0.7;
+  transition: all 0.2s; border-bottom: 1px solid transparent;
 }
-.legal-links a:hover { color: #888888; border-color: rgba(255,255,255,0.1); }
+.legal-links a:hover { color: var(--gold); opacity: 1; border-color: rgba(201,146,31,0.3); }
 
 /* ── LEGAL OVERLAY ── */
 .legal-overlay {
   position: fixed; inset: 0; z-index: 11000;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.85); backdrop-filter: blur(10px);
   display: none; align-items: center; justify-content: center;
   padding: 20px;
 }
 .legal-overlay.open { display: flex; }
 .legal-content {
-  background: #0a0a0a;
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 16px;
+  background: #0a0c18;
+  border: 1px solid rgba(201,146,31,0.2);
+  border-radius: 12px;
   max-width: 680px; width: 100%;
   max-height: 80vh; overflow-y: auto;
-  padding: 36px 32px;
-  scrollbar-width: thin; scrollbar-color: rgba(255,255,255,0.1) transparent;
+  padding: 32px 28px;
+  scrollbar-width: thin; scrollbar-color: rgba(201,146,31,0.2) transparent;
 }
 .legal-content::-webkit-scrollbar { width: 4px; }
-.legal-content::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+.legal-content::-webkit-scrollbar-thumb { background: rgba(201,146,31,0.2); border-radius: 2px; }
 .legal-content h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 22px; font-weight: 700; color: #ffffff;
-  margin-bottom: 10px; letter-spacing: -0.02em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 700; color: var(--cream);
+  margin-bottom: 8px;
 }
 .legal-content .legal-label {
-  font-family: 'Inter', sans-serif; font-size: 12px;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: #555555; margin-bottom: 20px; display: block; font-weight: 500;
+  font-family: 'DM Mono', monospace; font-size: 9px;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 20px; display: block;
 }
 .legal-content p, .legal-content li {
-  font-size: 13px; line-height: 1.8; color: #888888;
+  font-size: 12.5px; line-height: 1.8; color: rgba(237,232,220,0.65);
   margin-bottom: 12px;
 }
-.legal-content strong { color: #cccccc; }
+.legal-content strong { color: rgba(237,232,220,0.85); }
 .legal-content ul { padding-left: 18px; margin-bottom: 12px; }
 .legal-content h4 {
-  font-family: 'Inter', sans-serif; font-size: 12px;
-  letter-spacing: 0.06em; text-transform: uppercase;
-  color: #555555; margin: 20px 0 8px; font-weight: 500;
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); margin: 20px 0 8px; opacity: 0.8;
 }
 .legal-close {
   position: sticky; top: 0; float: right;
-  width: 34px; height: 34px; border: none; border-radius: 8px;
-  background: #111111; color: #555555;
+  width: 32px; height: 32px; border: none; border-radius: 6px;
+  background: rgba(255,255,255,0.05); color: var(--muted);
   font-size: 18px; cursor: pointer; z-index: 1;
-  transition: all 0.2s;
 }
-.legal-close:hover { background: #222222; color: #ffffff; }
+.legal-close:hover { background: rgba(255,255,255,0.1); color: var(--cream); }
 @media (min-width: 768px) {
   footer {
-    padding: 32px var(--pad-tablet);
+    padding: 24px var(--pad-tablet);
     display: flex; justify-content: space-between; align-items: center;
     text-align: left;
   }
@@ -1091,28 +908,18 @@ footer span { color: #888888; }
    REVEAL ANIMATIONS
 ══════════════════════════════════════════════ */
 @keyframes riseIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(18px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 .reveal {
-  opacity: 0; transform: translateY(20px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal.in { opacity: 1; transform: none; }
-.d1 { transition-delay: 0.1s; }
-.d2 { transition-delay: 0.2s; }
-.d3 { transition-delay: 0.3s; }
-.d4 { transition-delay: 0.4s; }
-
-/* Staggered reveal for grid children */
-.dim-grid .reveal:nth-child(1) { transition-delay: 0.05s; }
-.dim-grid .reveal:nth-child(2) { transition-delay: 0.1s; }
-.dim-grid .reveal:nth-child(3) { transition-delay: 0.15s; }
-.dim-grid .reveal:nth-child(4) { transition-delay: 0.2s; }
-.dim-grid .reveal:nth-child(5) { transition-delay: 0.25s; }
-.dim-grid .reveal:nth-child(6) { transition-delay: 0.3s; }
-.dim-grid .reveal:nth-child(7) { transition-delay: 0.35s; }
-.dim-grid .reveal:nth-child(8) { transition-delay: 0.4s; }
+.d1 { transition-delay: 0.08s; }
+.d2 { transition-delay: 0.16s; }
+.d3 { transition-delay: 0.24s; }
+.d4 { transition-delay: 0.32s; }
 
 /* ══════════════════════════════════════════════
    SCROLL TO TOP
@@ -1120,32 +927,16 @@ footer span { color: #888888; }
 #scrolltop {
   position: fixed; bottom: 24px; right: 20px; z-index: 500;
   width: 44px; height: 44px;
-  background: #0a0a0a;
-  border: 1px solid rgba(255,255,255,0.06);
-  color: #888888;
+  background: rgba(201,146,31,0.15);
+  border: 1px solid rgba(201,146,31,0.3);
+  color: var(--gold);
   font-size: 16px; display: flex; align-items: center; justify-content: center;
   cursor: pointer; border-radius: 50%;
-  opacity: 0; transition: all 0.3s;
+  opacity: 0; transition: opacity 0.3s;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 #scrolltop.visible { opacity: 1; }
-#scrolltop:hover {
-  border-color: rgba(255,255,255,0.12);
-  color: #ffffff;
-}
-
-/* ══════════════════════════════════════════════
-   GLOW EFFECTS — removed for clean monochrome
-══════════════════════════════════════════════ */
-.s-title .gold {
-  text-shadow: none;
-}
-
-/* ══════════════════════════════════════════════
-   SECTION DIVIDERS — subtle lines between sections
-══════════════════════════════════════════════ */
-section + section {
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
 </style>
 </head>
 <body>
@@ -1232,9 +1023,9 @@ section + section {
         <p class="body-text" style="font-size:15px;line-height:1.85;">Today: <strong>Mr. TCS AI</strong> — a five-language AI chatbot for Pakistan's largest logistics company, replacing Salesforce. <strong>STRATEMA AM GmbH</strong> — a $110 million solar hydroponic campus for Masdar, Silal, and Alpha Dhabi. <strong>The New World Navigator</strong> — a $49 education programme teaching ESG, Web3, fintech, blockchain, tokenization, AI, and geopolitics to a generation that universities forgot to prepare. <strong><a href="https://newworld.education" style="color:var(--gold);">newworld.education</a></strong> — one of the world's first fully autonomous AI education platforms, KG to A-Level. And <strong>khurrambadar.com</strong> — the market intelligence brain that compounds its intelligence every single day.</p>
         <p class="body-text" style="font-size:15px;line-height:1.85;">Mentored by Abdul Sattar Edhi, HD Habib, Dr. Ishrat Hussain. Published in Dawn (1995) and Gulf News (2002). GM Marketing at TCS Pakistan. Theatre at the Karachi Drama Circle. ESG advisory under UAE Climate Law. Environmentalist. Climate finance specialist. Blockchain pioneer. Father of three — a black belt, a photographer, and a chess player.</p>
       </div>
-      <div class="reveal d3" style="border-left:2px solid rgba(255,255,255,0.1);padding-left:20px;">
-        <p style="font-family:'Inter',sans-serif;font-size:16px;font-style:italic;color:#cccccc;line-height:1.6;margin:0;">Eight countries. Four continents. Four decades. One mind that sees how all the parts connect — and builds the proof online.</p>
-        <p style="font-family:'Inter',sans-serif;font-size:12px;letter-spacing:0.06em;color:#555555;margin-top:12px;text-transform:uppercase;font-weight:500;">Manila · Karachi · London · Saudi Arabia · Bahrain · Dubai · Singapore · Pakistan</p>
+      <div class="reveal d3" style="border-left:3px solid var(--gold);padding-left:20px;">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--cream);line-height:1.6;margin:0;">Eight countries. Four continents. Four decades. One mind that sees how all the parts connect — and builds the proof online.</p>
+        <p style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;color:var(--gold);margin-top:12px;text-transform:uppercase;">Manila · Karachi · London · Saudi Arabia · Bahrain · Dubai · Singapore · Pakistan</p>
       </div>
     </div>
   </div>
@@ -1476,56 +1267,56 @@ section + section {
     </div>
 
     <!-- ══ NEW WORLD NAVIGATOR ══ -->
-    <div style="margin-top:64px;padding-top:48px;border-top:1px solid rgba(255,255,255,0.06);">
+    <div style="margin-top:64px;padding-top:48px;border-top:1px solid rgba(201,146,31,0.15);">
       <span class="s-label mono reveal">§ 06½ · The Signature Programme</span>
       <h2 class="s-title serif reveal" style="margin-bottom:8px;">The New World<br><span class="gold italic">Navigator.</span></h2>
       <p class="section-intro reveal" style="max-width:700px;">The world changed. The curriculum didn't. Fintech is a $340 billion industry and most universities don't teach it. Blockchain created $2 trillion in value and most business schools call it "crypto." ESG compliance is now law in the UAE, the EU, and California — and most companies still don't know what Scope 3 emissions means. Climate finance will unlock $130 trillion by 2050. Tokenization will digitise $16 trillion in real-world assets by 2030.<br><br><strong>The New World Navigator is the education the world forgot to build.</strong></p>
 
       <div style="display:grid;grid-template-columns:1fr;gap:2px;margin:32px 0;">
 
-        <div class="track-card reveal" style="border-left:2px solid rgba(255,255,255,0.1);background:transparent;">
-          <p class="track-num mono">THE PROBLEM</p>
-          <p style="font-size:14px;line-height:1.75;color:#888888;">A generation is entering the workforce without understanding the architecture of the economy they'll inherit. They hear "blockchain" and think speculation. They hear "ESG" and think greenwashing. They hear "tokenization" and think it doesn't affect them. <strong style="color:#cccccc;">It does. Their careers, their investments, their companies, their nations — all of it runs on rails they've never been taught.</strong> The New World Navigator teaches those rails.</p>
+        <div class="track-card reveal" style="border-left:3px solid #C9921F;background:rgba(201,146,31,0.04);">
+          <p class="track-num mono" style="color:#C9921F;">THE PROBLEM</p>
+          <p style="font-size:14px;line-height:1.75;color:rgba(237,232,220,0.65);">A generation is entering the workforce without understanding the architecture of the economy they'll inherit. They hear "blockchain" and think speculation. They hear "ESG" and think greenwashing. They hear "tokenization" and think it doesn't affect them. <strong style="color:rgba(237,232,220,0.85);">It does. Their careers, their investments, their companies, their nations — all of it runs on rails they've never been taught.</strong> The New World Navigator teaches those rails.</p>
         </div>
 
-        <div class="track-card reveal" style="border-left:2px solid rgba(255,255,255,0.1);background:transparent;">
-          <p class="track-num mono">THE SOLUTION — $49</p>
+        <div class="track-card reveal" style="border-left:3px solid #22c55e;">
+          <p class="track-num mono" style="color:#22c55e;">THE SOLUTION — $49</p>
           <h3 class="track-name serif">7 Modules. One Navigator. Every Rail of the New Economy.</h3>
           <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px;">
-            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
-              <span style="font-family:'Inter',sans-serif;font-size:12px;color:#555555;letter-spacing:0.06em;font-weight:500;text-transform:uppercase;">MODULE 1</span>
-              <p style="font-size:15px;color:#ffffff;margin:4px 0 2px;font-family:'Inter',sans-serif;font-weight:600;">ESG & Climate Finance</p>
-              <p style="font-size:12px;color:#555555;">UAE Decree-Law No. 11/2024 · EU CBAM · Scope 1/2/3 · Carbon markets · Green bonds $600B+ · SBTi · $130T climate opportunity</p>
+            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="font-family:'DM Mono',monospace;font-size:10px;color:#C9921F;letter-spacing:0.1em;">MODULE 1</span>
+              <p style="font-size:15px;color:#EDE8DC;margin:4px 0 2px;font-family:'Cormorant Garamond',serif;font-weight:600;">ESG & Climate Finance</p>
+              <p style="font-size:12px;color:rgba(237,232,220,0.5);">UAE Decree-Law No. 11/2024 · EU CBAM · Scope 1/2/3 · Carbon markets · Green bonds $600B+ · SBTi · $130T climate opportunity</p>
             </div>
-            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
-              <span style="font-family:'Inter',sans-serif;font-size:12px;color:#555555;letter-spacing:0.06em;font-weight:500;text-transform:uppercase;">MODULE 2</span>
-              <p style="font-size:15px;color:#ffffff;margin:4px 0 2px;font-family:'Inter',sans-serif;font-weight:600;">Web3 & Blockchain</p>
-              <p style="font-size:12px;color:#555555;">Ethereum post-Merge · Smart contracts · DAOs · DeFi TVL $80B+ · NFTs beyond art · Layer 2 scaling · Consensus mechanisms</p>
+            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="font-family:'DM Mono',monospace;font-size:10px;color:#C9921F;letter-spacing:0.1em;">MODULE 2</span>
+              <p style="font-size:15px;color:#EDE8DC;margin:4px 0 2px;font-family:'Cormorant Garamond',serif;font-weight:600;">Web3 & Blockchain</p>
+              <p style="font-size:12px;color:rgba(237,232,220,0.5);">Ethereum post-Merge · Smart contracts · DAOs · DeFi TVL $80B+ · NFTs beyond art · Layer 2 scaling · Consensus mechanisms</p>
             </div>
-            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
-              <span style="font-family:'Inter',sans-serif;font-size:12px;color:#555555;letter-spacing:0.06em;font-weight:500;text-transform:uppercase;">MODULE 3</span>
-              <p style="font-size:15px;color:#ffffff;margin:4px 0 2px;font-family:'Inter',sans-serif;font-weight:600;">Fintech & Digital Banking</p>
-              <p style="font-size:12px;color:#555555;">Open banking · BNPL · Neobanks · Payment rails · UPI 100B+ txns · Stripe $70B · Stablecoins > Visa volume · CBDCs</p>
+            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="font-family:'DM Mono',monospace;font-size:10px;color:#C9921F;letter-spacing:0.1em;">MODULE 3</span>
+              <p style="font-size:15px;color:#EDE8DC;margin:4px 0 2px;font-family:'Cormorant Garamond',serif;font-weight:600;">Fintech & Digital Banking</p>
+              <p style="font-size:12px;color:rgba(237,232,220,0.5);">Open banking · BNPL · Neobanks · Payment rails · UPI 100B+ txns · Stripe $70B · Stablecoins > Visa volume · CBDCs</p>
             </div>
-            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
-              <span style="font-family:'Inter',sans-serif;font-size:12px;color:#555555;letter-spacing:0.06em;font-weight:500;text-transform:uppercase;">MODULE 4</span>
-              <p style="font-size:15px;color:#ffffff;margin:4px 0 2px;font-family:'Inter',sans-serif;font-weight:600;">Tokenization & Digital Assets</p>
-              <p style="font-size:12px;color:#555555;">RWA tokenization $16T by 2030 (BCG) · Security tokens · Fractional ownership · Real estate on-chain · FutureTokenization.com</p>
+            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="font-family:'DM Mono',monospace;font-size:10px;color:#C9921F;letter-spacing:0.1em;">MODULE 4</span>
+              <p style="font-size:15px;color:#EDE8DC;margin:4px 0 2px;font-family:'Cormorant Garamond',serif;font-weight:600;">Tokenization & Digital Assets</p>
+              <p style="font-size:12px;color:rgba(237,232,220,0.5);">RWA tokenization $16T by 2030 (BCG) · Security tokens · Fractional ownership · Real estate on-chain · FutureTokenization.com</p>
             </div>
-            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
-              <span style="font-family:'Inter',sans-serif;font-size:12px;color:#555555;letter-spacing:0.06em;font-weight:500;text-transform:uppercase;">MODULE 5</span>
-              <p style="font-size:15px;color:#ffffff;margin:4px 0 2px;font-family:'Inter',sans-serif;font-weight:600;">AI & The New Machine Age</p>
-              <p style="font-size:12px;color:#555555;">Foundation models · Agentic AI · MCP/A2A protocols · Enterprise AI $37B · Humanoid robotics · Energy crisis · Quantum computing</p>
+            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="font-family:'DM Mono',monospace;font-size:10px;color:#C9921F;letter-spacing:0.1em;">MODULE 5</span>
+              <p style="font-size:15px;color:#EDE8DC;margin:4px 0 2px;font-family:'Cormorant Garamond',serif;font-weight:600;">AI & The New Machine Age</p>
+              <p style="font-size:12px;color:rgba(237,232,220,0.5);">Foundation models · Agentic AI · MCP/A2A protocols · Enterprise AI $37B · Humanoid robotics · Energy crisis · Quantum computing</p>
             </div>
-            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
-              <span style="font-family:'Inter',sans-serif;font-size:12px;color:#555555;letter-spacing:0.06em;font-weight:500;text-transform:uppercase;">MODULE 6</span>
-              <p style="font-size:15px;color:#ffffff;margin:4px 0 2px;font-family:'Inter',sans-serif;font-weight:600;">Macro Markets & Precious Metals</p>
-              <p style="font-size:12px;color:#555555;">DXY mechanics · Gold as Tier-1 capital · Silver industrial thesis · COMEX vs Shanghai · Central bank buying · The 14 Signals</p>
+            <div style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="font-family:'DM Mono',monospace;font-size:10px;color:#C9921F;letter-spacing:0.1em;">MODULE 6</span>
+              <p style="font-size:15px;color:#EDE8DC;margin:4px 0 2px;font-family:'Cormorant Garamond',serif;font-weight:600;">Macro Markets & Precious Metals</p>
+              <p style="font-size:12px;color:rgba(237,232,220,0.5);">DXY mechanics · Gold as Tier-1 capital · Silver industrial thesis · COMEX vs Shanghai · Central bank buying · The 14 Signals</p>
             </div>
             <div style="padding:12px 0;">
-              <span style="font-family:'Inter',sans-serif;font-size:12px;color:#555555;letter-spacing:0.06em;font-weight:500;text-transform:uppercase;">MODULE 7</span>
-              <p style="font-size:15px;color:#ffffff;margin:4px 0 2px;font-family:'Inter',sans-serif;font-weight:600;">Geopolitics & Global Trade</p>
-              <p style="font-size:12px;color:#555555;">US-China tech war · CHIPS Act · De-dollarisation · BRICS+ · Gulf Vision 2030 · India Viksit Bharat · Pakistan digital opportunity</p>
+              <span style="font-family:'DM Mono',monospace;font-size:10px;color:#C9921F;letter-spacing:0.1em;">MODULE 7</span>
+              <p style="font-size:15px;color:#EDE8DC;margin:4px 0 2px;font-family:'Cormorant Garamond',serif;font-weight:600;">Geopolitics & Global Trade</p>
+              <p style="font-size:12px;color:rgba(237,232,220,0.5);">US-China tech war · CHIPS Act · De-dollarisation · BRICS+ · Gulf Vision 2030 · India Viksit Bharat · Pakistan digital opportunity</p>
             </div>
           </div>
         </div>
@@ -1533,22 +1324,22 @@ section + section {
 
       <!-- Two tracks: Gen Z + Corporate -->
       <div style="display:grid;grid-template-columns:1fr;gap:2px;margin:24px 0;">
-        <div class="track-card reveal" style="border-left:2px solid rgba(255,255,255,0.1);background:transparent;">
-          <p class="track-num mono">TRACK A — GEN Z & STUDENTS</p>
+        <div class="track-card reveal" style="border-left:3px solid #3b82f6;background:rgba(59,130,246,0.04);">
+          <p class="track-num mono" style="color:#3b82f6;">TRACK A — GEN Z & STUDENTS</p>
           <h3 class="track-name serif">The Career That Doesn't Exist Yet</h3>
-          <p style="font-size:13px;line-height:1.75;color:#888888;">You're 18-28. Your university taught you accounting but not tokenization. Economics but not DeFi. Business but not climate compliance. The fastest-growing careers in 2026 — ESG analyst, blockchain developer, climate finance specialist, tokenization architect, AI agent builder — didn't exist when your professors wrote their syllabi. <strong style="color:#cccccc;">The New World Navigator gives you the vocabulary, the frameworks, and the confidence to walk into any interview in fintech, Web3, ESG, or AI and speak the language fluently.</strong> $49. Seven modules. The career your university forgot to prepare you for.</p>
+          <p style="font-size:13px;line-height:1.75;color:rgba(237,232,220,0.58);">You're 18-28. Your university taught you accounting but not tokenization. Economics but not DeFi. Business but not climate compliance. The fastest-growing careers in 2026 — ESG analyst, blockchain developer, climate finance specialist, tokenization architect, AI agent builder — didn't exist when your professors wrote their syllabi. <strong style="color:rgba(237,232,220,0.82);">The New World Navigator gives you the vocabulary, the frameworks, and the confidence to walk into any interview in fintech, Web3, ESG, or AI and speak the language fluently.</strong> $49. Seven modules. The career your university forgot to prepare you for.</p>
         </div>
-        <div class="track-card reveal" style="border-left:2px solid rgba(255,255,255,0.1);background:transparent;">
-          <p class="track-num mono">TRACK B — CORPORATES & PROFESSIONALS</p>
+        <div class="track-card reveal" style="border-left:3px solid #f59e0b;background:rgba(245,158,11,0.04);">
+          <p class="track-num mono" style="color:#f59e0b;">TRACK B — CORPORATES & PROFESSIONALS</p>
           <h3 class="track-name serif">Compliance Is Coming. Are You Ready?</h3>
-          <p style="font-size:13px;line-height:1.75;color:#888888;">UAE Decree-Law No. 11 of 2024 has a May 2026 compliance deadline. EU CBAM went live January 2026. California's SB 253 requires Scope 1-3 disclosure. CSRD affects 50,000+ European companies. Your board is asking about ESG. Your investors are asking about carbon. Your clients are asking about tokenization. <strong style="color:#cccccc;">The New World Navigator gives your team the fluency to navigate mandatory compliance, identify climate finance opportunities, and understand the digital asset revolution before your competitors do.</strong> Team licensing available. Certificates of completion. DIFC Innovation Hub aligned.</p>
+          <p style="font-size:13px;line-height:1.75;color:rgba(237,232,220,0.58);">UAE Decree-Law No. 11 of 2024 has a May 2026 compliance deadline. EU CBAM went live January 2026. California's SB 253 requires Scope 1-3 disclosure. CSRD affects 50,000+ European companies. Your board is asking about ESG. Your investors are asking about carbon. Your clients are asking about tokenization. <strong style="color:rgba(237,232,220,0.82);">The New World Navigator gives your team the fluency to navigate mandatory compliance, identify climate finance opportunities, and understand the digital asset revolution before your competitors do.</strong> Team licensing available. Certificates of completion. DIFC Innovation Hub aligned.</p>
         </div>
       </div>
 
       <!-- The ecosystem -->
-      <div class="track-card reveal" style="text-align:center;">
-        <p class="track-num mono">THE ECOSYSTEM</p>
-        <p style="font-size:14px;line-height:1.75;color:#888888;max-width:600px;margin:0 auto;">The New World Navigator lives inside a constellation of 20+ digital platforms — each one a deep-dive into a specific domain. <a href="https://futuretokenization.com" style="color:#C9921F;">FutureTokenization.com</a> for digital assets. <a href="https://planet2050.com" style="color:#C9921F;">Planet2050.com</a> for sustainability. <a href="https://defianything.com" style="color:#C9921F;">DeFiAnything.com</a> for decentralized finance. <a href="https://createagent.ai" style="color:#C9921F;">CreateAgent.ai</a> for AI agents. Every platform feeds into the Navigator. The Navigator connects them all.<br><br>Alongside this, <a href="https://newworld.education" style="color:#C9921F;font-weight:bold;">newworld.education</a> — one of the world's first fully autonomous AI education platforms, KG to A-Level, founded by Khurram Badar — provides the foundation for the next generation. The Navigator is where they graduate to.<br><br><strong style="color:#cccccc;">From kindergarten to the C-Suite. One ecosystem. One vision. The new world, taught by someone who built it.</strong></p>
+      <div class="track-card reveal" style="text-align:center;background:rgba(201,146,31,0.04);border:1px solid rgba(201,146,31,0.15);">
+        <p class="track-num mono" style="color:#C9921F;">THE ECOSYSTEM</p>
+        <p style="font-size:14px;line-height:1.75;color:rgba(237,232,220,0.65);max-width:600px;margin:0 auto;">The New World Navigator lives inside a constellation of 20+ digital platforms — each one a deep-dive into a specific domain. <a href="https://futuretokenization.com" style="color:#C9921F;">FutureTokenization.com</a> for digital assets. <a href="https://planet2050.com" style="color:#C9921F;">Planet2050.com</a> for sustainability. <a href="https://defianything.com" style="color:#C9921F;">DeFiAnything.com</a> for decentralized finance. <a href="https://createagent.ai" style="color:#C9921F;">CreateAgent.ai</a> for AI agents. Every platform feeds into the Navigator. The Navigator connects them all.<br><br>Alongside this, <a href="https://newworld.education" style="color:#C9921F;font-weight:bold;">newworld.education</a> — one of the world's first fully autonomous AI education platforms, KG to A-Level, founded by Khurram Badar — provides the foundation for the next generation. The Navigator is where they graduate to.<br><br><strong style="color:rgba(237,232,220,0.85);">From kindergarten to the C-Suite. One ecosystem. One vision. The new world, taught by someone who built it.</strong></p>
       </div>
 
     </div>
@@ -1709,7 +1500,7 @@ section + section {
       </div>
 
       <!-- ══ DUBAI ROCK 2006 ══ -->
-      <div class="lum-card reveal" data-cat="music" style="grid-column:1/-1;border-left:2px solid rgba(255,255,255,0.1);">
+      <div class="lum-card reveal" data-cat="music" style="grid-column:1/-1;border-left:3px solid #E8A030;background:rgba(232,160,48,0.04);">
         <span class="card-tag tag-music">Concert Production</span>
         <h3 class="lum-name serif">Dubai Rock 2006</h3>
         <p class="lum-role mono">Conceived, Produced & Executed Solely by Khurram Badar · Dubai</p>
@@ -1766,7 +1557,7 @@ section + section {
       </div>
 
       <!-- ══ BOLLYWOOD NITE 2007 ══ -->
-      <div class="lum-card reveal" data-cat="film" style="grid-column:1/-1;border-left:2px solid rgba(255,255,255,0.1);">
+      <div class="lum-card reveal" data-cat="film" style="grid-column:1/-1;border-left:3px solid #A080C8;background:rgba(160,128,200,0.04);">
         <span class="card-tag tag-film">Concert Production</span>
         <h3 class="lum-name serif">Bollywood Nite 2007</h3>
         <p class="lum-role mono">Co-produced with Jatin-Lalit · Dubai Media City Amphitheatre</p>
@@ -1936,7 +1727,7 @@ section + section {
       <!-- Placeholder -->
       <!-- ═══ THE 80s — PHILIPPINES ERA ═══ -->
 
-      <div class="lum-card reveal" data-cat="humanity" style="grid-column:1/-1;border-left:2px solid rgba(255,255,255,0.1);">
+      <div class="lum-card reveal" data-cat="humanity" style="grid-column:1/-1;border-left:3px solid #C9921F;background:rgba(201,146,31,0.04);">
         <span class="card-tag tag-humanity">Family</span>
         <h3 class="lum-name serif">Badar Hussain</h3>
         <p class="lum-role mono">Father · PIA Career 1974–2005 · Travelled with Presidents & Prime Ministers · 50+ Countries</p>
@@ -2048,7 +1839,7 @@ section + section {
 
       <!-- ═══ 2010–PRESENT — THE MENTORS ═══ -->
 
-      <div class="lum-card reveal" data-cat="business" style="grid-column:1/-1;border-left:2px solid rgba(255,255,255,0.1);">
+      <div class="lum-card reveal" data-cat="business" style="grid-column:1/-1;border-left:3px solid #C9921F;background:rgba(201,146,31,0.04);">
         <span class="card-tag tag-business">Mentor & Visionary</span>
         <h3 class="lum-name serif">Sheikh Mohammad Ilyas (SMI)</h3>
         <p class="lum-role mono">Real Estate Visionary · Philanthropist · Mentor to Khurram · Dubai · Father of Zubair & Zakariya</p>
@@ -2313,32 +2104,32 @@ section + section {
 
 <!-- ══ LIVE TICKER ═════════════════════════════ -->
 <div id="live-ticker" style="
-  background: #0a0a0a;
-  border-top: 1px solid rgba(255,255,255,0.06);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  padding: 12px 0;
+  background: rgba(201,146,31,0.04);
+  border-top: 1px solid rgba(201,146,31,0.15);
+  border-bottom: 1px solid rgba(201,146,31,0.15);
+  padding: 10px 0;
   overflow: hidden;
   white-space: nowrap;
 ">
   <div id="ticker-track" style="
     display: inline-flex; gap: 32px; animation: ticker-scroll 30s linear infinite;
-    font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.04em;
-    color: #555555; padding: 0 20px; font-weight: 500;
+    font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.08em;
+    color: var(--muted); padding: 0 20px;
   ">
     <span id="tk-gold">GOLD <span style="color:var(--gold)">loading...</span></span>
-    <span style="color:#3f3f46;">|</span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
     <span id="tk-silver">SILVER <span style="color:var(--gold)">loading...</span></span>
-    <span style="color:#3f3f46;">|</span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
     <span id="tk-btc">BTC <span style="color:var(--gold)">loading...</span></span>
-    <span style="color:#3f3f46;">|</span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
     <span id="tk-sp500">S&amp;P 500 <span style="color:var(--gold)">loading...</span></span>
-    <span style="color:#3f3f46;">|</span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
     <span id="tk-gold2">GOLD <span style="color:var(--gold)">loading...</span></span>
-    <span style="color:#3f3f46;">|</span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
     <span id="tk-silver2">SILVER <span style="color:var(--gold)">loading...</span></span>
-    <span style="color:#3f3f46;">|</span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
     <span id="tk-btc2">BTC <span style="color:var(--gold)">loading...</span></span>
-    <span style="color:#3f3f46;">|</span>
+    <span style="color:rgba(201,146,31,0.2);">|</span>
     <span id="tk-sp5002">S&amp;P 500 <span style="color:var(--gold)">loading...</span></span>
   </div>
 </div>
@@ -2570,7 +2361,7 @@ document.getElementById('drawer').addEventListener('click', function(e){
 /* ── SCROLL REVEAL ── */
 const revealObs = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
-}, { threshold: 0.05, rootMargin: '0px 0px -60px 0px' });
+}, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
 /* ── SCROLL TO TOP ── */
@@ -2579,12 +2370,10 @@ window.addEventListener('scroll', () => {
   scrollBtn.classList.toggle('visible', window.scrollY > 400);
 }, { passive: true });
 
-/* ── NAV SHRINK + SCROLLED STATE ── */
+/* ── NAV SHRINK ── */
 const navEl = document.querySelector('nav');
 window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY > 60;
-  navEl.style.height = scrolled ? '52px' : '60px';
-  navEl.classList.toggle('scrolled', scrolled);
+  navEl.style.height = window.scrollY > 60 ? '48px' : '56px';
 }, { passive: true });
 
 /* ── FILTER LUMINARIES ── */
@@ -3255,13 +3044,13 @@ How may I assist you today? I can:
     div.className = 'krm-msg assistant';
     div.innerHTML = `
       <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
-        <a href="${links.gcalUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(201,146,31,0.12);border:1px solid rgba(201,146,31,0.3);border-radius:8px;color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;">
+        <a href="${links.gcalUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(201,146,31,0.12);border:1px solid rgba(201,146,31,0.3);border-radius:8px;color:var(--gold);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;">
           &#128197; Add to Google Calendar
         </a>
-        <a href="${links.waUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.25);border-radius:8px;color:#25d366;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;">
+        <a href="${links.waUrl}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.25);border-radius:8px;color:#25d366;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;">
           &#128172; Confirm via WhatsApp
         </a>
-        <a href="${links.mailUrl}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:var(--cream);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;">
+        <a href="${links.mailUrl}" style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;color:var(--cream);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;">
           &#9993; Send via Email
         </a>
       </div>`;
