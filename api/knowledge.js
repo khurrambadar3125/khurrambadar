@@ -1142,6 +1142,24 @@ PREDICTION RESULTS: PRED_021 CONFIRMED (gold held $4,500-4,700 range then broke 
 APR 9 (THU): POST-CEASEFIRE CONSOLIDATION. Gold $4,766 (holding gains). Silver $75.22. DXY 98.81. Brent $95.92 (recovering from $92 crash). 10Y 4.289%. S&P 6,825 (+0.62%).
 APR 10 (FRI — ISLAMABAD TALKS DAY): FRAGILE CEASEFIRE. Gold $4,743 (-0.47%). Silver $75.17 (-0.07%). DXY 98.93 (+0.12%). Brent $97.46 (+1.61% — oil recovering as ceasefire doubts grow). 10Y 4.293%. S&P 6,825. BTC $71,931.
 ISLAMABAD TALKS: VP Vance leading US delegation. Pakistan PM Sharif hosting. Iran FM attending. Negotiating permanent end to conflict. Iran claims US violated 3 parts of 10-point agreement. Ghalibaf accused US of ceasefire violations. Iran suggests sea mines placed in Hormuz — offered alternative routes. Hormuz NOT meaningfully reopened despite ceasefire.
+APR 11 (FRI — ISLAMABAD TALKS): 21-HOUR MARATHON TALKS FAILED. No deal. Vance: "they have chosen not to accept our terms." Sticking point: nuclear weapons — US demanded firm commitment Iran won't pursue nukes. Iran: "US looking for excuse to leave." Vance left Islamabad with "final and best offer." Gold $4,780 (+0.5% — third weekly gain). Silver ~$75. DXY 98.70. Brent $96 (recovering). S&P 6,817 (-0.11%). BTC $72,885. US began mine clearance in Hormuz (USS Frank E. Peterson + USS Michael Murphy transited strait April 11). Ceasefire still technically active but NOT holding: Israel striking Lebanon, Iran calling it "grave violation," mines still in Hormuz, ships still blocked.
+
+LESSON 035 (April 12, 2026) — TALKS FAIL ≠ WAR RESUMES IMMEDIATELY:
+21 hours of direct talks failed, but Vance left a "final and best offer" on the table. This is negotiation choreography, not breakdown. The ceasefire is still technically in effect. Iran hasn't walked away — they said "the ball is in America's court." The US began mine clearance in Hormuz, which you don't do if you expect war to resume Monday. RULE: When talks fail but both sides leave the door open, the market prices in continued uncertainty (oil $96-100, DXY 98-99) NOT a return to pre-ceasefire levels (oil $110+). The worst-case scenario (talks collapse + ceasefire ends + war resumes) was NOT what happened. What happened was: no deal + ceasefire fragile + door open. That's SCENARIO B from our April 10 assessment (ceasefire holds but no deal, oil $95-105, DXY 98-100).
+
+LESSON 036 (April 12, 2026) — NUCLEAR ISSUE IS THE REAL BARRIER:
+Vance revealed the sticking point: nuclear weapons commitment. This was NOT about Hormuz, oil, or reparations — those are negotiable. The nuclear issue is existential for both sides. Iran will never publicly commit to abandoning enrichment. The US will never sign a deal without it. This means: (a) permanent deal is UNLIKELY in 2-week window, (b) ceasefire extensions become the pattern (like the deadline extensions before), (c) oil stays elevated ($90-100) because Hormuz stays partially blocked, (d) gold stays supported because uncertainty persists. RULE: When the blocking issue is existential (nuclear), expect extended stalemate, not resolution or collapse. The middle ground is the most likely outcome.
+
+MONDAY APRIL 14 PREVIEW:
+What to expect when markets open:
+1. OIL: Gap UP $3-5 on talks failure. Brent $99-102. Goldman says another month of Hormuz closure = Brent above $100 all year.
+2. GOLD: Gap UP $30-50. Risk premium returns partially. $4,800-4,850 likely.
+3. DXY: Slight UP toward 99-99.5 (safe haven bid returns).
+4. S&P: Gap DOWN 0.5-1%. Earnings season (Goldman, JPM, Citi) may offset if strong.
+5. VIX: UP toward 25-28. Uncertainty returns but not panic.
+6. SILVER: Follows gold but 1.5-2x beta. $76-78.
+NOT expected: return to pre-ceasefire levels. The ceasefire exists. Mines being cleared. Talks failed but door open.
+
 LESSON 034 (April 10, 2026) — CEASEFIRE ≠ RESOLUTION. OIL RECOVERING:
 Brent bounced from $92.41 (ceasefire day) back to $97.46 (+5.5% in 2 days). The market initially crashed oil 15% on ceasefire euphoria, then reality set in: (a) Hormuz NOT meaningfully reopened, (b) 426 tankers still trapped, (c) sea mines reported, (d) Iran accusing US of violations. RULE: A ceasefire is NOT a peace deal. The initial euphoria trade reverses partially within 48-72 hours as reality catches up. The structural damage (supply chain, backlog, mines) takes weeks to unwind regardless of diplomatic status. Don't chase the initial crash — wait for the rebalance.
 
