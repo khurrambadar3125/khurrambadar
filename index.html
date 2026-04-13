@@ -2222,8 +2222,196 @@ footer span { color: var(--gold); }
 })();
 </script>
 
+<!-- ══ BLOOMBERG-STYLE MARKET BAR (fixed bottom) ══ -->
+<div id="market-bar">
+  <div id="market-bar-inner">
+    <div class="mb-item"><span class="mb-label">GOLD</span> <span id="mb-gold" class="mb-val">--</span></div>
+    <div class="mb-item"><span class="mb-label">SILVER</span> <span id="mb-silver" class="mb-val">--</span></div>
+    <div class="mb-item"><span class="mb-label">DXY</span> <span id="mb-dxy" class="mb-val">--</span></div>
+    <div class="mb-item"><span class="mb-label">OIL</span> <span id="mb-oil" class="mb-val">--</span></div>
+    <div class="mb-item"><span class="mb-label">10Y</span> <span id="mb-10y" class="mb-val">--</span></div>
+    <div class="mb-item"><span class="mb-label">S&amp;P</span> <span id="mb-sp" class="mb-val">--</span></div>
+  </div>
+</div>
+
+<!-- ══ HEADLINES PANEL (right side, desktop only) ══ -->
+<div id="headlines-panel">
+  <div class="hl-header">HEADLINES</div>
+  <div id="hl-list">
+    <div class="hl-item hl-loading">Loading headlines...</div>
+  </div>
+  <div class="hl-footer"><a href="/daily" style="color:var(--gold);font-size:10px;font-family:'DM Mono',monospace;letter-spacing:0.1em;text-decoration:none;">VIEW DAILY BRIEF →</a></div>
+</div>
+
+<style>
+/* ══ MARKET BAR ══ */
+#market-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: rgba(7,8,16,0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(201,146,31,0.2);
+  padding: 0;
+  height: 36px;
+}
+#market-bar-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; height: 100%;
+  max-width: 900px; margin: 0 auto;
+}
+.mb-item {
+  display: flex; align-items: center; gap: 6px;
+  padding: 0 14px;
+  border-right: 1px solid rgba(201,146,31,0.1);
+  height: 100%;
+}
+.mb-item:last-child { border-right: none; }
+.mb-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em;
+  color: var(--muted); text-transform: uppercase;
+}
+.mb-val {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px; font-weight: 500;
+  color: var(--cream);
+}
+.mb-up { color: #4CAF50 !important; }
+.mb-down { color: #E74C3C !important; }
+@media (max-width: 768px) {
+  #market-bar-inner { gap: 0; overflow-x: auto; justify-content: flex-start; padding: 0 8px; }
+  .mb-item { padding: 0 8px; flex-shrink: 0; }
+  .mb-label { font-size: 8px; }
+  .mb-val { font-size: 10px; }
+}
+
+/* ══ HEADLINES PANEL ══ */
+#headlines-panel {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #headlines-panel {
+    display: flex; flex-direction: column;
+    position: fixed; top: 70px; right: 0; z-index: 999;
+    width: 300px;
+    background: rgba(7,8,16,0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 1px solid rgba(201,146,31,0.15);
+    border-bottom: 1px solid rgba(201,146,31,0.15);
+    border-radius: 0 0 0 12px;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+  }
+}
+.hl-header {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; letter-spacing: 0.14em;
+  color: var(--gold); padding: 14px 16px 10px;
+  border-bottom: 1px solid rgba(201,146,31,0.12);
+  font-weight: 600;
+}
+.hl-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(201,146,31,0.06);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.hl-item:hover { background: rgba(201,146,31,0.06); }
+.hl-source {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.08em;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.hl-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-weight: 600;
+  color: var(--cream); line-height: 1.35;
+}
+.hl-loading {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; color: var(--muted);
+}
+.hl-footer {
+  padding: 10px 16px;
+  text-align: center;
+  border-top: 1px solid rgba(201,146,31,0.1);
+}
+.hl-verdict {
+  padding: 14px 16px;
+  background: rgba(201,146,31,0.04);
+  border-bottom: 1px solid rgba(201,146,31,0.1);
+}
+.hl-verdict-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.1em;
+  color: var(--gold); margin-bottom: 6px;
+}
+.hl-verdict-text {
+  font-size: 12px; color: var(--cream);
+  line-height: 1.5; opacity: 0.8;
+}
+
+/* Push page content so it doesn't hide behind market bar */
+body { padding-bottom: 40px; }
+/* Push chat panel above market bar on desktop */
+@media (min-width: 769px) {
+  #krm-chat-panel { bottom: 44px !important; }
+  #krm-chat-btn { bottom: 48px !important; }
+}
+</style>
+
+<script>
+// Headlines + Market Bar — pull from daily brief API
+(function() {
+  async function loadBrief() {
+    try {
+      var r = await fetch('/api/daily-brief');
+      if (!r.ok) return;
+      var d = await r.json();
+
+      // Market bar
+      function setMB(id, val, prefix) {
+        var el = document.getElementById(id);
+        if (el && val) el.textContent = (prefix || '') + Number(val).toLocaleString('en-US', {maximumFractionDigits: 2});
+      }
+      setMB('mb-gold', d.gold_price, '$');
+      setMB('mb-silver', d.silver_price, '$');
+      setMB('mb-dxy', d.dxy);
+      setMB('mb-oil', d.oil_brent, '$');
+      setMB('mb-10y', d.ten_year_yield);
+      setMB('mb-sp', d.sp500);
+
+      // Headlines
+      var hlList = document.getElementById('hl-list');
+      if (hlList && d.headlines && d.headlines.length > 0) {
+        var html = '';
+        for (var i = 0; i < d.headlines.length; i++) {
+          var h = d.headlines[i];
+          html += '<a href="' + (h.url || '#') + '" target="_blank" class="hl-item" style="text-decoration:none;display:block;">';
+          html += '<div class="hl-source">' + (h.source || '') + '</div>';
+          html += '<div class="hl-text">' + (h.headline || '') + '</div>';
+          html += '</a>';
+        }
+        // Add verdict snippet
+        if (d.verdict) {
+          html += '<div class="hl-verdict">';
+          html += '<div class="hl-verdict-label">TODAY\'S VERDICT</div>';
+          html += '<div class="hl-verdict-text">' + d.verdict.substring(0, 200) + '...</div>';
+          html += '</div>';
+        }
+        hlList.innerHTML = html;
+      }
+    } catch(e) {}
+  }
+  setTimeout(loadBrief, 1500);
+  setInterval(loadBrief, 300000); // refresh every 5 minutes
+})();
+</script>
+
 <!-- ══ FOOTER ═════════════════════════════════ -->
-<footer>
+<footer style="margin-bottom:0;">
   <p>© 2025–2026 <span>Khurram Badar</span>. All rights reserved.</p>
   <p class="mono">The New World</p>
   <p class="mono">khurrambrother.com</p>
