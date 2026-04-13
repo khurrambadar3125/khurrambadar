@@ -2250,9 +2250,9 @@ footer span { color: var(--gold); }
   background: rgba(7,8,16,0.98);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-top: 2px solid rgba(201,146,31,0.35);
+  border-top: 2px solid rgba(201,146,31,0.4);
   padding: 0;
-  height: 56px;
+  height: 70px;
 }
 #market-bar-inner {
   display: flex; align-items: center; justify-content: center;
@@ -2268,42 +2268,27 @@ footer span { color: var(--gold); }
 .mb-item:last-child { border-right: none; }
 .mb-label {
   font-family: 'DM Mono', monospace;
-  font-size: 10px; letter-spacing: 0.1em;
+  font-size: 11px; letter-spacing: 0.1em;
   color: var(--gold); text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
 }
 .mb-val {
   font-family: 'DM Mono', monospace;
-  font-size: 14px; font-weight: 700;
+  font-size: 18px; font-weight: 700;
   color: #fff;
 }
 .mb-up { color: #4CAF50 !important; }
 .mb-down { color: #E74C3C !important; }
 @media (max-width: 768px) {
-  #market-bar-inner { gap: 0; overflow-x: auto; justify-content: flex-start; padding: 0 4px; }
-  .mb-item { padding: 0 7px; flex-shrink: 0; }
-  .mb-label { font-size: 9px; }
-  .mb-val { font-size: 12px; font-weight: 700; }
+  #market-bar-inner { gap: 0; overflow-x: auto; justify-content: flex-start; padding: 0 6px; }
+  .mb-item { padding: 0 10px; flex-shrink: 0; }
+  .mb-label { font-size: 10px; font-weight: 600; }
+  .mb-val { font-size: 15px; font-weight: 700; }
 }
 
-/* ══ HEADLINES PANEL ══ */
+/* ══ HEADLINES PANEL — shown inside chat on all devices ══ */
 #headlines-panel {
   display: none;
-}
-@media (min-width: 1024px) {
-  #headlines-panel {
-    display: flex; flex-direction: column;
-    position: fixed; top: 64px; right: 0; z-index: 999;
-    width: 320px;
-    background: rgba(7,8,16,0.95);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-left: 2px solid rgba(201,146,31,0.25);
-    border-bottom: 1px solid rgba(201,146,31,0.15);
-    border-radius: 0 0 0 12px;
-    max-height: calc(100vh - 110px);
-    overflow-y: auto;
-  }
 }
 .hl-header {
   font-family: 'DM Mono', monospace;
@@ -2358,8 +2343,8 @@ footer span { color: var(--gold); }
 body { padding-bottom: 40px; }
 /* Push chat panel above market bar on desktop */
 @media (min-width: 769px) {
-  #krm-chat-panel { bottom: 60px !important; }
-  #krm-chat-btn { bottom: 64px !important; }
+  #krm-chat-panel { bottom: 74px !important; }
+  #krm-chat-btn { bottom: 78px !important; }
 }
 </style>
 
@@ -2450,12 +2435,33 @@ body { padding-bottom: 40px; }
     } catch(e) {}
   }
 
-  // Start: brief first (fast), then live prices, then refresh
+  // Inject headlines into chat as a message
+  async function injectHeadlinesInChat() {
+    try {
+      var r = await fetch('/api/daily-brief');
+      if (!r.ok) return;
+      var d = await r.json();
+      if (!d.headlines || d.headlines.length === 0) return;
+      var msg = '<div style="font-family:DM Mono,monospace;font-size:9px;letter-spacing:0.12em;color:rgba(201,146,31,0.7);margin-bottom:8px;">TODAY\'S HEADLINES</div>';
+      for (var i = 0; i < d.headlines.length; i++) {
+        var h = d.headlines[i];
+        msg += '<div style="margin-bottom:8px;"><span style="font-family:DM Mono,monospace;font-size:9px;color:rgba(201,146,31,0.5);text-transform:uppercase;">' + (h.source || '') + '</span><br>';
+        msg += '<a href="' + (h.url || '#') + '" target="_blank" style="color:#EDE8DC;text-decoration:none;font-size:13px;line-height:1.3;">' + (h.headline || '') + '</a></div>';
+      }
+      if (d.verdict) {
+        msg += '<div style="margin-top:10px;padding-top:8px;border-top:1px solid rgba(201,146,31,0.1);font-size:11px;color:rgba(237,232,220,0.6);line-height:1.4;">' + d.verdict.substring(0, 150) + '...</div>';
+      }
+      if (typeof addMessage === 'function') addMessage('assistant', msg);
+    } catch(e) {}
+  }
+
+  // Start: brief first (fast), then live prices, then headlines in chat
   setTimeout(function() {
     loadBrief();
     fetchLivePrices();
-    setInterval(fetchLivePrices, 60000);   // live prices every 60 seconds
-    setInterval(loadBrief, 300000);         // brief every 5 minutes
+    setTimeout(injectHeadlinesInChat, 2000); // after chat opens
+    setInterval(fetchLivePrices, 60000);
+    setInterval(loadBrief, 300000);
   }, 1000);
 })();
 </script>
@@ -2713,7 +2719,7 @@ document.addEventListener('keydown', function(e) {
 /* ── KRM CHAT PANEL ── */
 #krm-chat-panel {
   position: fixed; z-index: 10000;
-  top: 60px; left: 0; right: 0; bottom: 56px;
+  top: 60px; left: 0; right: 0; bottom: 70px;
   width: 100%;
   max-width: 100%;
   background: #0a0c18;
