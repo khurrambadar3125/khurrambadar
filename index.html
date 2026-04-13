@@ -2246,7 +2246,7 @@ footer span { color: var(--gold); }
 <style>
 /* ══ MARKET BAR ══ */
 #market-bar {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 10001;
   background: rgba(7,8,16,0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -2663,16 +2663,13 @@ document.addEventListener('keydown', function(e) {
 /* ── KRM CHAT PANEL ── */
 #krm-chat-panel {
   position: fixed; z-index: 10000;
-  top: 0; left: 0; right: 0; bottom: 0;
-  width: 100%; height: 100%;
-  max-width: 100%; max-height: 100%;
+  top: 60px; left: 0; right: 0; bottom: 36px;
+  width: 100%;
+  max-width: 100%;
   background: #0a0c18;
   border: none; border-radius: 0;
   display: none; flex-direction: column;
   overflow: hidden;
-  /* iOS safe areas */
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
   -webkit-transform: translateZ(0);
 }
 #krm-chat-panel.open {
@@ -2849,9 +2846,9 @@ document.addEventListener('keydown', function(e) {
 /* Desktop: constrain panel size instead of fullscreen */
 @media (min-width: 769px) {
   #krm-chat-panel {
-    top: auto; left: auto; right: 24px; bottom: 24px;
+    top: auto; left: auto; right: 24px; bottom: 44px;
     width: 420px; height: 620px;
-    max-width: calc(100vw - 48px); max-height: calc(100vh - 48px);
+    max-width: calc(100vw - 48px); max-height: calc(100vh - 90px);
     border: 1px solid rgba(201,146,31,0.25);
     border-radius: 12px;
     box-shadow: 0 16px 64px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,146,31,0.1);
@@ -3156,7 +3153,7 @@ I am the market brain of <strong>Khurram Badar</strong>. Ask me anything.
       panel.classList.add('open');
       btn.classList.add('open');
       // Only block scroll on mobile where chat is fullscreen
-      if (window.innerWidth <= 768) document.body.style.overflow = 'hidden';
+      // Chat no longer fullscreen on mobile — market bar always visible below
 
       // Check for VIP welcome link: ?welcome=bilal
       const urlParams = new URLSearchParams(window.location.search);
@@ -3197,7 +3194,7 @@ I am the market brain of <strong>Khurram Badar</strong>. Ask me anything.
     const isOpen = panel.classList.toggle('open');
     btn.classList.toggle('open', isOpen);
     // Only block scroll on mobile where chat is fullscreen
-    document.body.style.overflow = (isOpen && window.innerWidth <= 768) ? 'hidden' : '';
+    // No overflow hidden — market bar always visible
     if (isOpen && window.innerWidth > 768) {
       setTimeout(() => document.getElementById('krm-input').focus(), 300);
     }
