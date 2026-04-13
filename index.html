@@ -2357,43 +2357,18 @@ body { padding-bottom: 40px; }
     if (el && val) el.textContent = (prefix || '') + Number(val).toLocaleString('en-US', {maximumFractionDigits: 2});
   }
 
-  // LIVE PRICES: Gold + Silver from free API (updates every 60s)
+  // LIVE PRICES: All from /api/prices server proxy (Yahoo + GoldAPI + CoinGecko + Binance)
   async function fetchLivePrices() {
-    // Source 1: Gold-API.com (free, no key, CORS enabled)
     try {
-      var r = await fetch('https://api.gold-api.com/price/XAU');
-      if (r.ok) {
-        var d = await r.json();
-        if (d.price) setMB('mb-gold', d.price, '$');
-      }
-    } catch(e) {}
-    try {
-      var r2 = await fetch('https://api.gold-api.com/price/XAG');
-      if (r2.ok) {
-        var d2 = await r2.json();
-        if (d2.price) setMB('mb-silver', d2.price, '$');
-      }
-    } catch(e) {}
-
-    // Source 2: CoinGecko for BTC (free, CORS enabled)
-    try {
-      var r3 = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
-      if (r3.ok) {
-        var d3 = await r3.json();
-        // Update S&P ticker slot with BTC since we have it live
-      }
-    } catch(e) {}
-
-    // Source 3: Our prices proxy
-    try {
-      var r4 = await fetch('/api/prices?v=' + Date.now());
-      if (r4.ok) {
-        var d4 = await r4.json();
-        if (d4.gold && !document.getElementById('mb-gold').textContent.includes('$')) {
-          setMB('mb-gold', d4.gold.price, '$');
-        }
-        if (d4.silver) setMB('mb-silver', d4.silver.price, '$');
-      }
+      var r = await fetch('/api/prices?v=' + Date.now());
+      if (!r.ok) return;
+      var d = await r.json();
+      if (d.gold && d.gold.price) setMB('mb-gold', d.gold.price, '$');
+      if (d.silver && d.silver.price) setMB('mb-silver', d.silver.price, '$');
+      if (d.dxy && d.dxy.price) setMB('mb-dxy', d.dxy.price);
+      if (d.oil && d.oil.price) setMB('mb-oil', d.oil.price, '$');
+      if (d.yield10y && d.yield10y.price) setMB('mb-10y', d.yield10y.price);
+      if (d.sp500 && d.sp500.price) setMB('mb-sp', d.sp500.price);
     } catch(e) {}
   }
 
@@ -2404,14 +2379,7 @@ body { padding-bottom: 40px; }
       if (!r.ok) return;
       var d = await r.json();
 
-      // Fill market bar with daily brief data (DXY, Oil, 10Y, S&P always from brief)
-      setMB('mb-dxy', d.dxy);
-      setMB('mb-oil', d.oil_brent, '$');
-      setMB('mb-10y', d.ten_year_yield);
-      setMB('mb-sp', d.sp500);
-      // Fallback for gold/silver if live API failed
-      if (document.getElementById('mb-gold').textContent === '--') setMB('mb-gold', d.gold_price, '$');
-      if (document.getElementById('mb-silver').textContent === '--') setMB('mb-silver', d.silver_price, '$');
+      // Market bar is handled by fetchLivePrices() from /api/prices — no stale brief data
 
       // Headlines
       var hlList = document.getElementById('hl-list');

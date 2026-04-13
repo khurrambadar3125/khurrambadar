@@ -20,6 +20,9 @@ export default async function handler(req) {
     silver: null,
     btc: null,
     sp500: null,
+    oil: null,
+    dxy: null,
+    yield10y: null,
     updated: new Date().toISOString(),
   };
 
@@ -128,9 +131,82 @@ export default async function handler(req) {
     }
   } catch (e) {}
 
-  // S&P fallback — last known value (updated daily via market updates)
-  if (!prices.sp500) {
-    prices.sp500 = { price: 6402, change: 0.52, estimated: true };
+  // OIL (Brent) — Yahoo Finance server-side
+  try {
+    const r = await fetch(
+      'https://query1.finance.yahoo.com/v8/finance/chart/BZ=F?interval=1d&range=1d',
+      { signal: AbortSignal.timeout(3000) }
+    );
+    if (r.ok) {
+      const d = await r.json();
+      const meta = d && d.chart && d.chart.result && d.chart.result[0] && d.chart.result[0].meta;
+      if (meta && meta.regularMarketPrice) {
+        const prev = meta.chartPreviousClose || meta.previousClose;
+        const current = meta.regularMarketPrice;
+        const change = prev ? ((current - prev) / prev) * 100 : 0;
+        prices.oil = { price: Math.round(current * 100) / 100, change: Math.round(change * 100) / 100 };
+      }
+    }
+  } catch (e) {}
+
+  // DXY (Dollar Index) — Yahoo Finance server-side
+  try {
+    const r = await fetch(
+      'https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?interval=1d&range=1d',
+      { signal: AbortSignal.timeout(3000) }
+    );
+    if (r.ok) {
+      const d = await r.json();
+      const meta = d && d.chart && d.chart.result && d.chart.result[0] && d.chart.result[0].meta;
+      if (meta && meta.regularMarketPrice) {
+        const prev = meta.chartPreviousClose || meta.previousClose;
+        const current = meta.regularMarketPrice;
+        const change = prev ? ((current - prev) / prev) * 100 : 0;
+        prices.dxy = { price: Math.round(current * 100) / 100, change: Math.round(change * 100) / 100 };
+      }
+    }
+  } catch (e) {}
+
+  // 10Y Yield — Yahoo Finance server-side
+  try {
+    const r = await fetch(
+      'https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?interval=1d&range=1d',
+      { signal: AbortSignal.timeout(3000) }
+    );
+    if (r.ok) {
+      const d = await r.json();
+      const meta = d && d.chart && d.chart.result && d.chart.result[0] && d.chart.result[0].meta;
+      if (meta && meta.regularMarketPrice) {
+        const prev = meta.chartPreviousClose || meta.previousClose;
+        const current = meta.regularMarketPrice;
+        const change = prev ? ((current - prev) / prev) * 100 : 0;
+        prices.yield10y = { price: Math.round(current * 1000) / 1000, change: Math.round(change * 100) / 100 };
+      }
+    }
+  } catch (e) {}
+
+  // Fallbacks from daily brief if Yahoo failed
+  if (!prices.sp500 || !prices.oil || !prices.dxy) {
+    try {
+      const briefUrl = (process.env.KV_REST_API_URL || '');
+      const briefToken = (process.env.KV_REST_API_TOKEN || '');
+      if (briefUrl && briefToken) {
+        const r = await fetch(briefUrl + '/get/kbai:daily-brief', {
+          headers: { Authorization: 'Bearer ' + briefToken },
+          signal: AbortSignal.timeout(3000),
+        });
+        if (r.ok) {
+          const raw = await r.json();
+          const brief = typeof raw.result === 'string' ? JSON.parse(raw.result) : raw.result;
+          if (brief) {
+            if (!prices.sp500 && brief.sp500) prices.sp500 = { price: brief.sp500, change: null, estimated: true };
+            if (!prices.oil && brief.oil_brent) prices.oil = { price: brief.oil_brent, change: null, estimated: true };
+            if (!prices.dxy && brief.dxy) prices.dxy = { price: brief.dxy, change: null, estimated: true };
+            if (!prices.yield10y && brief.ten_year_yield) prices.yield10y = { price: brief.ten_year_yield, change: null, estimated: true };
+          }
+        }
+      }
+    } catch (e) {}
   }
 
   return new Response(JSON.stringify(prices), {
