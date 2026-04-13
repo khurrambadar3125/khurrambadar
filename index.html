@@ -120,14 +120,14 @@ button { font-family: inherit; cursor: pointer; }
    NAV — MOBILE HAMBURGER + DESKTOP LINKS
 ══════════════════════════════════════════════ */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 10002;
   height: 56px;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0 var(--pad-mobile);
-  background: var(--glass);
+  background: rgba(7,8,16,0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 2px solid rgba(201,146,31,0.25);
 }
 .nav-logo {
   font-family: 'Cormorant Garamond', serif;
@@ -2252,7 +2252,7 @@ footer span { color: var(--gold); }
   -webkit-backdrop-filter: blur(12px);
   border-top: 2px solid rgba(201,146,31,0.35);
   padding: 0;
-  height: 44px;
+  height: 56px;
 }
 #market-bar-inner {
   display: flex; align-items: center; justify-content: center;
@@ -2358,8 +2358,8 @@ footer span { color: var(--gold); }
 body { padding-bottom: 40px; }
 /* Push chat panel above market bar on desktop */
 @media (min-width: 769px) {
-  #krm-chat-panel { bottom: 44px !important; }
-  #krm-chat-btn { bottom: 48px !important; }
+  #krm-chat-panel { bottom: 60px !important; }
+  #krm-chat-btn { bottom: 64px !important; }
 }
 </style>
 
@@ -2664,7 +2664,7 @@ document.addEventListener('keydown', function(e) {
 /* ── KRM CHAT PANEL ── */
 #krm-chat-panel {
   position: fixed; z-index: 10000;
-  top: 60px; left: 0; right: 0; bottom: 44px;
+  top: 60px; left: 0; right: 0; bottom: 56px;
   width: 100%;
   max-width: 100%;
   background: #0a0c18;
@@ -3097,7 +3097,7 @@ WHAT TO WATCH:
   // Dynamic greeting based on day of week
   const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   const dayName = days[new Date().getDay()];
-  const KRM_GREETING = `<strong>KRM</strong> — the market brain of <strong>Khurram Badar</strong>. Ask me anything.
+  const KRM_GREETING = `<strong>KRM</strong> — Market Brain of <strong>Khurram Badar</strong> — Ask me anything
 
 <div style="margin:12px 0 8px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:rgba(201,146,31,0.6);text-transform:uppercase;">Markets & Data</div>
 <a href="#" class="krm-quick krm-pulse" onclick="krmQuickSend('Give me today\\'s market snapshot: gold, silver, DXY, oil, yields, S&P. Include active signals and thesis scorecard.');return false;">Markets</a>
