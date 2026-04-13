@@ -5,42 +5,93 @@
     {
       "source": "/(.*).html",
       "headers": [
-        { "key": "Cache-Control", "value": "s-maxage=60, stale-while-revalidate=300" }
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=60, stale-while-revalidate=300"
+        }
       ]
     },
     {
       "source": "/api/prices",
       "headers": [
-        { "key": "Cache-Control", "value": "s-maxage=30, stale-while-revalidate=60" }
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=30, stale-while-revalidate=60"
+        }
       ]
     },
     {
       "source": "/api/chat",
       "headers": [
-        { "key": "Cache-Control", "value": "no-store" }
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
       ]
     },
     {
       "source": "/sitemap.xml",
       "headers": [
-        { "key": "Cache-Control", "value": "s-maxage=3600" }
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=3600"
+        }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/api/chat", "destination": "/api/chat.js" },
-    { "source": "/api/knowledge", "destination": "/api/knowledge.js" },
-    { "source": "/api/update", "destination": "/api/update.js" },
-    { "source": "/api/prices", "destination": "/api/prices.js" },
-    { "source": "/api/memory", "destination": "/api/memory.js" },
-    { "source": "/api/news", "destination": "/api/news.js" },
-    { "source": "/api/subscribe", "destination": "/api/subscribe.js" },
-    { "source": "/api/unsubscribe", "destination": "/api/unsubscribe.js" },
-    { "source": "/api/daily-brief", "destination": "/api/daily-brief.js" },
-    { "source": "/api/update-brief", "destination": "/api/update-brief.js" },
-    { "source": "/api/send-newsletter", "destination": "/api/send-newsletter.js" },
-    { "source": "/api/run-daily", "destination": "/api/run-daily.js" },
-    { "source": "/daily", "destination": "/daily.html" }
+    {
+      "source": "/api/chat",
+      "destination": "/api/chat.js"
+    },
+    {
+      "source": "/api/knowledge",
+      "destination": "/api/knowledge.js"
+    },
+    {
+      "source": "/api/update",
+      "destination": "/api/update.js"
+    },
+    {
+      "source": "/api/prices",
+      "destination": "/api/prices.js"
+    },
+    {
+      "source": "/api/memory",
+      "destination": "/api/memory.js"
+    },
+    {
+      "source": "/api/news",
+      "destination": "/api/news.js"
+    },
+    {
+      "source": "/api/subscribe",
+      "destination": "/api/subscribe.js"
+    },
+    {
+      "source": "/api/unsubscribe",
+      "destination": "/api/unsubscribe.js"
+    },
+    {
+      "source": "/api/daily-brief",
+      "destination": "/api/daily-brief.js"
+    },
+    {
+      "source": "/api/update-brief",
+      "destination": "/api/update-brief.js"
+    },
+    {
+      "source": "/api/send-newsletter",
+      "destination": "/api/send-newsletter.js"
+    },
+    {
+      "source": "/api/run-daily",
+      "destination": "/api/run-daily.js"
+    },
+    {
+      "source": "/daily",
+      "destination": "/daily.html"
+    }
   ],
   "crons": [
     {
@@ -59,5 +110,6 @@
       "path": "/api/run-daily",
       "schedule": "15 6 * * *"
     }
-  ]
+  ],
+  "ignoreCommand": "bash .vercel-ignore-build.sh"
 }
