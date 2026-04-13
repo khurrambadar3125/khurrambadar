@@ -2247,12 +2247,12 @@ footer span { color: var(--gold); }
 /* ══ MARKET BAR ══ */
 #market-bar {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 10001;
-  background: rgba(7,8,16,0.95);
+  background: rgba(7,8,16,0.98);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(201,146,31,0.2);
+  border-top: 2px solid rgba(201,146,31,0.35);
   padding: 0;
-  height: 36px;
+  height: 44px;
 }
 #market-bar-inner {
   display: flex; align-items: center; justify-content: center;
@@ -2268,21 +2268,22 @@ footer span { color: var(--gold); }
 .mb-item:last-child { border-right: none; }
 .mb-label {
   font-family: 'DM Mono', monospace;
-  font-size: 9px; letter-spacing: 0.1em;
-  color: var(--muted); text-transform: uppercase;
+  font-size: 10px; letter-spacing: 0.1em;
+  color: var(--gold); text-transform: uppercase;
+  font-weight: 500;
 }
 .mb-val {
   font-family: 'DM Mono', monospace;
-  font-size: 12px; font-weight: 500;
-  color: var(--cream);
+  font-size: 14px; font-weight: 700;
+  color: #fff;
 }
 .mb-up { color: #4CAF50 !important; }
 .mb-down { color: #E74C3C !important; }
 @media (max-width: 768px) {
-  #market-bar-inner { gap: 0; overflow-x: auto; justify-content: flex-start; padding: 0 8px; }
-  .mb-item { padding: 0 8px; flex-shrink: 0; }
-  .mb-label { font-size: 8px; }
-  .mb-val { font-size: 10px; }
+  #market-bar-inner { gap: 0; overflow-x: auto; justify-content: flex-start; padding: 0 4px; }
+  .mb-item { padding: 0 7px; flex-shrink: 0; }
+  .mb-label { font-size: 9px; }
+  .mb-val { font-size: 12px; font-weight: 700; }
 }
 
 /* ══ HEADLINES PANEL ══ */
@@ -2292,12 +2293,12 @@ footer span { color: var(--gold); }
 @media (min-width: 1024px) {
   #headlines-panel {
     display: flex; flex-direction: column;
-    position: fixed; top: 70px; right: 0; z-index: 999;
-    width: 300px;
-    background: rgba(7,8,16,0.92);
+    position: fixed; top: 64px; right: 0; z-index: 999;
+    width: 320px;
+    background: rgba(7,8,16,0.95);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-left: 1px solid rgba(201,146,31,0.15);
+    border-left: 2px solid rgba(201,146,31,0.25);
     border-bottom: 1px solid rgba(201,146,31,0.15);
     border-radius: 0 0 0 12px;
     max-height: calc(100vh - 110px);
@@ -2663,7 +2664,7 @@ document.addEventListener('keydown', function(e) {
 /* ── KRM CHAT PANEL ── */
 #krm-chat-panel {
   position: fixed; z-index: 10000;
-  top: 60px; left: 0; right: 0; bottom: 36px;
+  top: 60px; left: 0; right: 0; bottom: 44px;
   width: 100%;
   max-width: 100%;
   background: #0a0c18;
@@ -3096,9 +3097,7 @@ WHAT TO WATCH:
   // Dynamic greeting based on day of week
   const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   const dayName = days[new Date().getDay()];
-  const KRM_GREETING = `<strong>KRM Intelligence</strong> — Happy ${dayName}.
-
-I am the market brain of <strong>Khurram Badar</strong>. Ask me anything.
+  const KRM_GREETING = `<strong>KRM</strong> — the market brain of <strong>Khurram Badar</strong>. Ask me anything.
 
 <div style="margin:12px 0 8px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;color:rgba(201,146,31,0.6);text-transform:uppercase;">Markets & Data</div>
 <a href="#" class="krm-quick krm-pulse" onclick="krmQuickSend('Give me today\\'s market snapshot: gold, silver, DXY, oil, yields, S&P. Include active signals and thesis scorecard.');return false;">Markets</a>
