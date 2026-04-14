@@ -43,9 +43,8 @@ export default async function handler(req) {
     });
   }
 
-  const goldApiHeaders = { headers: { 'x-access-token': 'goldapi-demo', 'Content-Type': 'application/json' } };
-
   // Fire EVERY independent fetch in parallel — 7 requests, ~single round-trip
+  // (goldapi.io demo token is dead — switched to api.gold-api.com which is free + keyless)
   const [
     goldRaw,
     silverRaw,
@@ -55,8 +54,8 @@ export default async function handler(req) {
     dxyRaw,
     yield10yRaw,
   ] = await Promise.all([
-    fetchJSON('https://www.goldapi.io/api/XAU/USD', goldApiHeaders, 4000),
-    fetchJSON('https://www.goldapi.io/api/XAG/USD', goldApiHeaders, 4000),
+    fetchJSON('https://api.gold-api.com/price/XAU', {}, 4000),
+    fetchJSON('https://api.gold-api.com/price/XAG', {}, 4000),
     fetchJSON(
       'https://api.coingecko.com/api/v3/simple/price?ids=pax-gold,bitcoin&vs_currencies=usd&include_24hr_change=true',
       { headers: { Accept: 'application/json' } },
@@ -79,19 +78,19 @@ export default async function handler(req) {
     updated: new Date().toISOString(),
   };
 
-  // GOLD — GoldAPI primary
+  // GOLD — api.gold-api.com primary (free, keyless, CORS-enabled)
   if (goldRaw?.price) {
     prices.gold = {
       price: Math.round(goldRaw.price * 100) / 100,
-      change: goldRaw.chp != null ? Math.round(goldRaw.chp * 100) / 100 : null,
+      change: null, // api.gold-api.com doesn't return 24h change
     };
   }
 
-  // SILVER — GoldAPI primary
+  // SILVER — api.gold-api.com primary
   if (silverRaw?.price) {
     prices.silver = {
       price: Math.round(silverRaw.price * 100) / 100,
-      change: silverRaw.chp != null ? Math.round(silverRaw.chp * 100) / 100 : null,
+      change: null,
     };
   }
 
