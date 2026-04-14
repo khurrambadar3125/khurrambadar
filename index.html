@@ -17,6 +17,7 @@
 <meta name="author" content="Khurram Badar">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="https://khurrambadar.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0c18'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='22' font-weight='700' fill='%23C9921F' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Khurram Badar — One of the World's Foremost Convergence Thinkers">
@@ -24,10 +25,15 @@
 <meta property="og:url" content="https://khurrambadar.com/">
 <meta property="og:site_name" content="Khurram Badar">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://khurrambadar.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Khurram Badar — Convergence Thinker, KRM Market Intelligence">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Khurram Badar — One of the World's Foremost Convergence Thinkers">
 <meta name="twitter:description" content="AI, ESG, Fintech, Precious Metals Market Intelligence. One of the world's foremost Convergence Thinkers.">
+<meta name="twitter:image" content="https://khurrambadar.com/og.png">
 <!-- Structured Data -->
 <script type="application/ld+json">
 {
@@ -978,8 +984,7 @@ footer span { color: var(--gold); }
 <section id="hero">
   <div class="container">
     <p class="hero-label mono">The New World</p>
-    <h1 class="hero-name serif">Khurram</h1>
-    <span class="hero-name-b serif">Badar.</span>
+    <h1 class="hero-name serif">Khurram<span class="hero-name-b serif">Badar.</span></h1>
     <div class="hero-divider"></div>
     <p class="hero-statement serif">
       An AI Innovator who's seen every major wave —
@@ -2387,7 +2392,7 @@ body { padding-bottom: 40px; }
         var html = '';
         for (var i = 0; i < d.headlines.length; i++) {
           var h = d.headlines[i];
-          html += '<a href="' + (h.url || '#') + '" target="_blank" class="hl-item" style="text-decoration:none;display:block;">';
+          html += '<a href="' + (h.url || '#') + '" target="_blank" rel="noopener noreferrer" class="hl-item" style="text-decoration:none;display:block;">';
           html += '<div class="hl-source">' + (h.source || '') + '</div>';
           html += '<div class="hl-text">' + (h.headline || '') + '</div>';
           html += '</a>';
@@ -2414,7 +2419,7 @@ body { padding-bottom: 40px; }
       for (var i = 0; i < d.headlines.length; i++) {
         var h = d.headlines[i];
         msg += '<div style="margin-bottom:8px;"><span style="font-family:DM Mono,monospace;font-size:9px;color:rgba(201,146,31,0.5);text-transform:uppercase;">' + (h.source || '') + '</span><br>';
-        msg += '<a href="' + (h.url || '#') + '" target="_blank" style="color:#EDE8DC;text-decoration:none;font-size:13px;line-height:1.3;">' + (h.headline || '') + '</a></div>';
+        msg += '<a href="' + (h.url || '#') + '" target="_blank" rel="noopener noreferrer" style="color:#EDE8DC;text-decoration:none;font-size:13px;line-height:1.3;">' + (h.headline || '') + '</a></div>';
       }
       if (d.verdict) {
         msg += '<div style="margin-top:10px;padding-top:8px;border-top:1px solid rgba(201,146,31,0.1);font-size:11px;color:rgba(237,232,220,0.6);line-height:1.4;">' + d.verdict.substring(0, 150) + '...</div>';
