@@ -169,7 +169,7 @@ nav {
   background: rgba(7,8,16,0.98);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  z-index: 999;
+  z-index: 10003;
   display: flex; flex-direction: column;
   padding: 40px var(--pad-mobile);
   transform: translateX(100%);
@@ -2585,6 +2585,15 @@ function toggleMenu() {
   h.classList.toggle('open');
   d.classList.toggle('open');
   document.body.style.overflow = d.classList.contains('open') ? 'hidden' : '';
+  // When opening the menu, close the chat panel so the drawer isn't buried behind it
+  if (d.classList.contains('open')) {
+    const chatPanel = document.getElementById('krm-chat-panel');
+    const chatBtn = document.getElementById('krm-chat-btn');
+    if (chatPanel && chatPanel.classList.contains('open')) {
+      chatPanel.classList.remove('open');
+      if (chatBtn) chatBtn.classList.remove('open');
+    }
+  }
 }
 function closeMenu() {
   document.getElementById('ham').classList.remove('open');
