@@ -1424,6 +1424,14 @@ footer span { color: var(--gold); }
         <p class="lum-year mono">Dubai · Abu Dhabi · 2005–2006</p>
       </div>
 
+      <div class="lum-card reveal" data-cat="business">
+        <span class="card-tag tag-business">Business · Dubai Pakistani Community</span>
+        <h3 class="lum-name serif">Muhammad Rashid Ashraf</h3>
+        <p class="lum-role mono">Dubai Elite · Pakistani Community Pillar · 2005–2006</p>
+        <p class="lum-story">One of Dubai's elite. A man who witnessed the original transformation of the city — from trading post to global metropolis — and moved, quietly, among its makers. Within the Pakistani community in Dubai, Muhammad Rashid Ashraf is one of the movers and shakers: the kind of figure whose name opens rooms, whose introductions carry weight, and whose presence is felt more than it is announced.<br><br><strong>During 2005 and 2006, Rashid Ashraf helped Khurram Badar a great deal</strong> — in the years when Khurram was building Spotlight FZE and navigating the Gulf's upper rooms. That help is not forgotten. In a city where relationships are currency, Rashid Ashraf extended his to Khurram at a moment when it mattered most.</p>
+        <p class="lum-year mono">Dubai · 2005–2006 · Pakistani Community</p>
+      </div>
+
       <div class="lum-card reveal d2" data-cat="music">
         <span class="card-tag tag-music">Music · Debut</span>
         <h3 class="lum-name serif">Atif Aslam</h3>
@@ -3158,6 +3166,7 @@ WHAT TO WATCH:
     shamaeel: { name: 'Shamaeel', greeting: 'Shamaeel Ansari! Pakistan\'s most celebrated luxury fashion designer, UC Berkeley graduate, and the woman whose presence at the Eid open house officially inaugurated the Governor\'s House. Khurram and Saira were honoured to have you. Welcome to the platform. How may I assist you?' },
     nadia: { name: 'Nadia', greeting: 'Nadia Khan! The Oprah Winfrey of Pakistan. Khurram cherishes the friendship — from helping bring Jermaine Jackson to your Geo TV breakfast show to all the moments in between. You helped define Pakistani morning television. Welcome to the platform!' },
     shoaib: { name: 'Shoaib bhai', greeting: 'Shoaib Akhtar! The Rawalpindi Express — the fastest bowler cricket has ever produced. Khurram remembers the energy you brought to every room and every event. Welcome to the platform. How can I assist you today?' },
+    rashid: { name: 'Rashid Sahab', greeting: 'Rashid Sahab — Muhammad Rashid Ashraf. What an honour to have you on this platform.\n\nKhurram speaks of you with genuine warmth and gratitude. During 2005, 2006 and 2007 — the years Khurram was building Spotlight FZE and navigating Dubai\'s upper rooms — you helped him enormously. You were Khurram\'s go-to for guidance and advice. In a city where relationships are currency, yours was the one he turned to when it mattered most.\n\nYou are one of Dubai\'s elite, a witness to the city\'s original transformation, and one of the movers and shakers of the Pakistani community here. None of that needs saying — it is simply known. Welcome, Rashid Sahab. How may I assist you today?' },
   };
 
   let krmHistory = [];
@@ -3318,7 +3327,7 @@ WHAT TO WATCH:
     'contact': 'Khurram Badar is available on:\n\n**Pakistan:** +92 326 2266682 (WhatsApp active)\n**Dubai:** +971 55 6239111 (WhatsApp active)\n**Email:** khurrambadar@gmail.com\n**Website:** khurrambadar.com\n\nWhatsApp is open on both numbers. What would you like to discuss with Khurram?',
     'phone': null, 'number': null, 'whatsapp': null, 'email': null, 'reach': null,
     // About
-    'who is khurram': "Khurram Badar is One of the world's foremost Convergence Thinkers. 30+ years of C-Suite leadership across 8 countries — Philippines in the 1980s, Karachi 1987-1997, London, Saudi Arabia, Bahrain, and Dubai since 2000. He founded Spotlight FZE — a top-5 event company in Dubai for 18 years. He's an AI innovator, ESG advisor, fintech and blockchain expert, clean energy dealmaker, and a published journalist (Dawn News 1995, Gulf News 2002). A journalist from the last century still writing in the present century.\n\n20+ digital platforms built. Mentored by Abdul Sattar Edhi, HD Habib, and Dr. Ishrat Hussain. He brought Jermaine Jackson, Atif Aslam, Kailash Kher, and Jatin-Lalit to Gulf stages.\n\nWhat aspect of his work interests you most?",
+    'who is khurram': "Khurram Badar is One of the world's foremost Convergence Thinkers. 30+ years of C-Suite leadership across 8 countries — Philippines in the 1980s, Karachi 1987-1997, London, Saudi Arabia, Bahrain, and Dubai since 2000. He founded Spotlight FZE — a top-5 event company in Dubai for 18 years. He's an AI innovator, ESG advisor, fintech and blockchain expert, clean energy dealmaker, and a published journalist (Dawn News 1995, Gulf News 2002). A journalist from the last century still writing in the present century.\n\n20+ digital platforms built.\n\nWhat aspect of his work interests you most?",
     'about': null, 'tell me about': null, 'background': null,
     // Expertise
     'expertise': "Khurram operates across 8 dimensions of convergence:\n\n**AI & Enterprise Innovation** — Mr. TCS AI platform (5 languages, replacing Salesforce), CreateAgent.ai, RoboticTakeover.com\n**ESG & Climate** — UAE Federal Decree-Law No 11 compliance, GHG Protocol, EU CBAM 2026\n**Fintech & Web3** — DAO, NFT, DeFi, stablecoins, Layer 2. 20+ domain portfolio.\n**Precious Metals & Macro** — Proprietary DXY-gold-silver research. 6 theses, 14 signals.\n**Clean Energy** — STRATEMA AM GmbH $110M solar hydroponic campus for Masdar/Silal/Alpha Dhabi\n**Pakistan AI Education** — 100 million youth under 15. New World Curriculum.\n**Space Economy** — AI + robots + solar + reusable rockets abundance thesis\n**Journalism** — Dawn News 1995, Gulf News 2002. Still writing.\n\nWhich area would you like to explore deeper?",
@@ -3365,6 +3374,27 @@ WHAT TO WATCH:
     input.style.height = 'auto';
     addMessage('user', text);
     krmHistory.push({ role: 'user', content: text });
+
+    // Name-based VIP detection — fires once on first identifying message
+    if (!window._krmVipFired) {
+      const lower = text.toLowerCase();
+      const nameTriggers = [
+        { keys: ['rashid ashraf', 'muhammad rashid', 'muhammed rashid', 'mohammad rashid', 'rashid sahab', 'rashid bhai'], vip: 'rashid' },
+      ];
+      for (const t of nameTriggers) {
+        if (t.keys.some(function(k) { return lower.indexOf(k) !== -1; })) {
+          const v = VIP_WELCOMES[t.vip];
+          if (v) {
+            window._krmVipFired = true;
+            setTimeout(function() {
+              krmHistory.push({ role: 'assistant', content: v.greeting });
+              addMessage('assistant', v.greeting);
+            }, 400);
+            return;
+          }
+        }
+      }
+    }
 
     // Check pre-cached responses first — instant, no API call
     const cached = getCachedResponse(text);
