@@ -680,7 +680,22 @@ THESIS F — CYCLICAL vs STRUCTURAL:
 - If gold holds/rises despite dollar strength = STRUCTURAL.
 - The 2025 rally: 60-70% cyclical (DXY 110→96), 30-40% structural (CB buying, deficits).
 
-14-SIGNAL MATRIX (evaluate daily):
+THESIS G — THE GREAT RESERVE REALLOCATION (GOVTS DUMPING US DEBT FOR GOLD):
+- Core claim: In 2025 gold overtook US Treasuries as the largest share of global reserves for the first time in 30 years. Central banks bought 1,000+ tonnes annually three years running. 95% of surveyed CBs expect their gold reserves to RISE in 2026. This is a structural reorientation of the entire reserve system, not a cyclical rally.
+- Mechanism (one trade, dual impact): CB sells Treasuries → US yields rise → same proceeds rotate into gold. Breaks the dollar-gold inverse: selling pressure is on dollar ASSETS, not the dollar itself. Gold and DXY can rise together (this is the structural source of Signal 14).
+- The math: Global FX reserves ~$12T at 15-17% gold. A shift to 20% = $600B / ~4,300 tonnes of new demand. Annual mine output is 3,500 tonnes. A 5% reserve shift exceeds entire annual mine output for 14+ months. Supply cannot respond — new mines take 8-12 years, ore grades declining.
+- Selling side: Japan ($1.2T) actively repatriating as JGB yields rise toward Treasury parity. China steadily reducing US Treasury holdings in confirmed quarterly drawdowns. BIS data: dollar credit outside US slowing while euro and yuan alternatives grow.
+- Fed's impossible position — both roads gold-bullish: (A) Let yields rise → $36.7T debt unserviceable → economy crashes → eventual cuts + QE → gold up. (B) Print money to absorb what foreign holders are dumping → explicit debasement → gold up. No third option. The structural case doesn't require conspiracy — it requires arithmetic.
+- Price arithmetic (outputs, not predictions):
+  Base case (orderly, 3-5 yrs): Gold $6,000-8,000, Silver $150-200, ratio compresses 62:1 → 40:1, DXY 90-95.
+  Bull case (structural break): Gold $8,000-12,000, Silver $200-300, CB allocation to 25%+, BRICS partial gold-backing.
+  Decade target (Yardeni, full de-dollarisation): Gold $10,000+, Silver $250+.
+- Silver edge: 3-5x percentage upside of gold — lower base, industrial demand floor (solar, EV, AI data centres, semis), tiny $50-60B investable market vs $27T Treasuries → 0.1% of global financial assets overwhelms it. No CB silver buying, so overflow comes from private investors priced out of expensive gold.
+- Orderly vs disorderly speed risk: Disorderly tail = failed Treasury auction or rapid dump → yields spike → deficit grows → more supply → yields spike more → Fed forced into YCC/money printing → dollar itself comes under pressure, not just dollar assets → gold trades wherever purchasing power resides.
+- Status April 2026: ACTIVE and ACCELERATING. The $61 silver / $4,400 gold lows in March 2026 were cyclical war-inflation noise. The reserve reallocation is the signal. Underpins Theses A, D, and the structural floor confirmed by Signal 14.
+- Breaks only if: CB buying reverses multi-quarter (no evidence), OR a new reserve asset emerges (none in sight), OR US delivers credible fiscal consolidation (politically impossible at $36.7T).
+
+15-SIGNAL MATRIX (evaluate daily):
 Signal 1: DXY below 98 → BULLISH metals (war premium exiting or dollar weakness structural)
 Signal 2: DXY above 101 → BEARISH metals (war escalating or hawkish Fed)
 Signal 3: 10Y yield below 4.0% → STRONG BUY gold (rate cuts priced, real yields falling)
@@ -695,6 +710,7 @@ Signal 11: Gold-Silver ratio above 75 → Silver very cheap, historical mean rev
 Signal 12: Shanghai premium above $10/oz → Structural demand confirmed, physical diverging from paper
 Signal 13: COMEX registered silver below 80M oz → Delivery stress rising. Below 50M oz = CRITICAL.
 Signal 14: DXY + Gold BOTH rising simultaneously → Rarest and most bullish signal. CB buying overwhelming dollar-gold inverse.
+Signal 15: RESERVE REALLOCATION ACTIVE → Govts dumping US debt for gold. Structural regime change, not a cycle. Underpins Thesis G. Status April 2026: ACTIVE and ACCELERATING.
 
 MULTI-SIGNAL ALERTS:
 RED ALERT: Signals 2 + 4 + 6 + 10 triggered together = maximum danger for metals.
@@ -1421,7 +1437,7 @@ Headlines + factual summaries with attribution = fair use. Standard practice for
 
 HOW TO RECREATE STORIES (conversational, NOT syndication):
 - Read the headline and key facts
-- Synthesise through Khurram's thesis framework — what does this MEAN for the 6 theses, 14 signals?
+- Synthesise through Khurram's thesis framework — what does this MEAN for the 7 theses, 15 signals?
 - Write in Khurram's editorial voice — punchy, rhythmic, connecting dots across geographies
 - Add the "so what?" that the original article doesn't provide
 - NEVER copy sentences or paragraphs verbatim from any source
@@ -1540,8 +1556,8 @@ THE VALUE PROPOSITION:
 Users come to khurrambadar.com for intelligence they CANNOT get from Bloomberg or Reuters.
 What makes this platform unique:
 - Day-by-day compounding data: We have tracked gold from $5,594 → $4,248 → $4,700 with DAILY snapshots showing exactly why each move happened.
-- The 6 theses: Not predictions — frameworks for understanding. Updated daily with evidence.
-- The 14 signals: Quantified triggers, not opinions. Signal 14 fired 5 times in 7 days — we have the exact dates.
+- The 7 theses: Not predictions — frameworks for understanding. Updated daily with evidence. (Thesis G added Apr 2026: The Great Reserve Reallocation.)
+- The 15 signals: Quantified triggers, not opinions. Signal 14 fired 5 times in 7 days — we have the exact dates. Signal 15 (reserve reallocation) is ACTIVE and ACCELERATING.
 - The exponential DXY-metals model: Proven in real-time. DXY 100.46→99.82 = gold +3.2%, silver +4.2%. EXACTLY as the model predicted.
 - The learning loop: 14 lessons, 6 patterns, 10 evaluation rules — all derived from ERRORS we caught and CORRECTED. No other platform shows its mistakes and what it learned from them.
 - Khurram's edge: 30 years, 8 countries, 4 continents. He flagged the exponential relationship, the Russia gold policy, the silver three-force model, the CTA algorithm factor — all BEFORE the market priced them. This is convergence thinking applied to markets.
@@ -2847,7 +2863,7 @@ intelligence that no single human or single publication can match.
 
 === WHY THIS PLATFORM WILL BECOME THE BEST BRAIN EVER ===
 
-Day 1: The platform knows gold, silver, DXY, and 6 theses.
+Day 1: The platform knows gold, silver, DXY, and 7 theses.
 Day 30: The platform has 30 lessons, 10 patterns, 30 predictions (scored),
   and a convergence matrix connecting 8+ domains. It can predict Trump's
   behavior, identify structural vs cyclical moves, and spot signals that
