@@ -174,6 +174,8 @@ nav {
   padding: 40px var(--pad-mobile);
   transform: translateX(100%);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .nav-drawer.open { transform: translateX(0); }
 .nav-drawer a {
@@ -949,7 +951,7 @@ footer span { color: var(--gold); }
 
 <!-- ══ NAV ══════════════════════════════════ -->
 <nav>
-  <a class="nav-logo serif" href="#hero">KB</a>
+  <a class="nav-logo serif" href="#hero">Khurram Badar</a>
   <nav class="nav-links">
     <a href="#founder">Founder</a>
     <a href="#convergence">About</a>
@@ -960,6 +962,7 @@ footer span { color: var(--gold); }
     <a href="#portfolio">Portfolio</a>
     <a href="signals.html" style="color:var(--gold);">Signals</a>
     <a href="news.html" style="color:var(--gold);">News</a>
+    <a href="#" onclick="krmOpenMeet();return false;" style="color:var(--gold);">Meet Khurram</a>
     <a href="#contact">Connect</a>
   </nav>
   <button class="hamburger" id="ham" aria-label="Menu" onclick="toggleMenu()">
@@ -976,6 +979,7 @@ footer span { color: var(--gold); }
   <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
   <a href="signals.html" onclick="closeMenu()" style="color:var(--gold);">Signals</a>
   <a href="news.html" onclick="closeMenu()" style="color:var(--gold);">News</a>
+  <a href="#" onclick="closeMenu();krmOpenMeet();return false;" style="color:var(--gold);">Meet Khurram</a>
   <a href="#pakistan" onclick="closeMenu()">Pakistan</a>
   <a href="#contact" onclick="closeMenu()">Connect</a>
 </div>
@@ -983,14 +987,13 @@ footer span { color: var(--gold); }
 <!-- ══ HERO ══════════════════════════════════ -->
 <section id="hero">
   <div class="container">
-    <p class="hero-label mono">The New World</p>
-    <h1 class="hero-name serif">Khurram<span class="hero-name-b serif">Badar.</span></h1>
+    <p class="hero-label mono">Khurram Badar · Dubai</p>
+    <h1 class="hero-name serif">KRM</h1>
     <div class="hero-divider"></div>
     <p class="hero-statement serif">
-      An AI Innovator who's seen every major wave —
-      <strong>blockchain, fintech, ESG, AI</strong> —
-      years before the mainstream did,
-      and has built proof of it online.
+      The AI version of me.<br>
+      Trained on thirty years, thirty platforms,<br>
+      and a fifty-year vision.
     </p>
     <div class="hero-pills">
       <span class="pill mono">AI & Robotics</span>
@@ -1007,6 +1010,14 @@ footer span { color: var(--gold); }
       A writer from the last century. Writing since 1995: Dawn · Gulf News.<br>
       <strong style="font-style:normal;color:var(--gold2)">See you on the other side.</strong>
     </p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;">
+      <button class="hero-meet-btn" onclick="krmOpenMeet()" style="padding:16px 36px;background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;color:#0a0c18;font-family:'DM Mono',monospace;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;display:inline-flex;align-items:center;gap:10px;">
+        Meet Khurram <span style="font-family:'Cormorant Garamond',serif;font-size:18px;transition:transform 0.3s;">&#8594;</span>
+      </button>
+      <a href="/builds.html" style="padding:16px 36px;background:transparent;border:1px solid rgba(201,146,31,0.4);color:var(--cream);font-family:'DM Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;display:inline-flex;align-items:center;gap:10px;text-decoration:none;">
+        See my builds <span style="font-family:'Cormorant Garamond',serif;font-size:18px;">&#8594;</span>
+      </a>
+    </div>
   </div>
 </section>
 
@@ -2354,10 +2365,11 @@ footer span { color: var(--gold); }
 
 /* Push page content so it doesn't hide behind market bar */
 body { padding-bottom: 40px; }
-/* Push chat panel above market bar on desktop */
+/* Push chat panel and buttons above market bar on desktop */
 @media (min-width: 769px) {
   #krm-chat-panel { bottom: 74px !important; }
   #krm-chat-btn { bottom: 78px !important; }
+  #krm-meet-btn { bottom: 148px !important; }
 }
 </style>
 
@@ -2450,6 +2462,9 @@ body { padding-bottom: 40px; }
 <!-- ══ FOOTER ═════════════════════════════════ -->
 <footer style="margin-bottom:0;">
   <p>© 2025–2026 <span>Khurram Badar</span>. All rights reserved.</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:16px;color:rgba(237,232,220,0.5);margin-bottom:16px;">
+    When KRM isn't enough — <a href="https://wa.me/971556239111" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,146,31,0.3);">WhatsApp me: +971 55 623 9111</a>
+  </p>
   <p class="mono">The New World</p>
   <p class="mono">khurrambrother.com</p>
   <div class="legal-links">
@@ -2885,10 +2900,14 @@ document.addEventListener('keydown', function(e) {
 .krm-input-row {
   padding-bottom: calc(14px + env(safe-area-inset-bottom));
 }
-/* Small screens: smaller button */
+/* Small screens: smaller buttons, above market bar */
 @media (max-width: 480px) {
-  #krm-chat-btn { bottom: 16px; right: 16px; width: 54px; height: 54px; font-size: 9px; }
+  #krm-chat-btn { bottom: 48px; right: 16px; width: 54px; height: 54px; font-size: 9px; }
+  #krm-meet-btn { bottom: 110px !important; right: 16px !important; width: 54px !important; height: 54px !important; font-size: 8px !important; }
 }
+/* Hero CTA hover */
+.hero-meet-btn:hover { background: var(--cream) !important; transform: translateY(-1px); }
+.hero-meet-btn:hover span { transform: translateX(4px); }
 /* Desktop: constrain panel size instead of fullscreen */
 @media (min-width: 769px) {
   #krm-chat-panel {
@@ -2904,9 +2923,14 @@ document.addEventListener('keydown', function(e) {
 }
 </style>
 
+<!-- Meet Khurram Button (above Ask KRM) -->
+<button id="krm-meet-btn" onclick="krmOpenMeet()" aria-label="Meet Khurram" style="-webkit-tap-highlight-color:transparent;touch-action:manipulation;cursor:pointer;position:fixed;bottom:94px;right:24px;z-index:9999;width:60px;height:60px;border-radius:50%;background:transparent;border:2px solid var(--gold);color:var(--gold);font-family:'DM Mono',monospace;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;box-shadow:0 4px 24px rgba(201,146,31,0.15);">
+  Meet<br>Khurram
+</button>
+
 <!-- Chat Button -->
-<button id="krm-chat-btn" onclick="krmToggleChat()" aria-label="Open KRM Chat" style="-webkit-tap-highlight-color:transparent;touch-action:manipulation;cursor:pointer;">
-  Ask<br>KRM
+<button id="krm-chat-btn" onclick="krmToggleChat()" aria-label="Ask Khurram" style="-webkit-tap-highlight-color:transparent;touch-action:manipulation;cursor:pointer;">
+  Ask<br>Khurram
 </button>
 
 <!-- Chat Panel -->
@@ -2915,11 +2939,16 @@ document.addEventListener('keydown', function(e) {
     <div class="krm-header-left">
       <div class="krm-avatar">KRM</div>
       <div class="krm-header-info">
-        <h4>KRM Intelligence</h4>
-        <span>AI of Khurram Badar</span>
+        <h4 id="krm-header-title">KRM Intelligence</h4>
+        <span id="krm-header-sub">AI of Khurram Badar</span>
       </div>
     </div>
     <button class="krm-close" onclick="krmToggleChat()" aria-label="Close chat">&times;</button>
+  </div>
+  <!-- Mode Tabs -->
+  <div id="krm-mode-tabs" style="display:flex;border-bottom:1px solid rgba(201,146,31,0.15);background:rgba(10,12,24,0.95);">
+    <button class="krm-tab active" id="krm-tab-market" onclick="krmSwitchMode('market')" style="flex:1;padding:10px 0;background:transparent;border:none;border-bottom:2px solid var(--gold);color:var(--gold);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;">Market Brain</button>
+    <button class="krm-tab" id="krm-tab-meet" onclick="krmSwitchMode('meet')" style="flex:1;padding:10px 0;background:transparent;border:none;border-bottom:2px solid transparent;color:rgba(237,232,220,0.4);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;">Meet Khurram</button>
   </div>
   <div class="krm-messages" id="krm-messages"></div>
   <div class="krm-input-row">
@@ -2938,7 +2967,7 @@ document.addEventListener('keydown', function(e) {
 You respond in whatever language the visitor writes in. Arabic, Urdu, French, German, Spanish, Italian, Chinese, Tagalog, Punjabi, Sindhi, Pashto — respond fluently and naturally in the same language you receive.
 
 IDENTITY OF KHURRAM BADAR:
-Khurram Badar is One of the world's foremost Convergence Thinkers and AI Innovator. A life lived across 8+ countries, 4 continents, 4 decades. Philippines in the 1980s — he saw Manila evolving through the Marcos fall and the Aquino revolution, watched a nation transform from dictatorship to democracy in real time. Karachi 1987-1997: the foundation decade — writer (Dawn 1995, Gulf News 2002), theatre (Karachi Drama Circle), GM Marketing TCS Pakistan. London briefly in the early 1990s. Saudi Arabia 1998. Bahrain late 1999. Dubai since 2000: founded Spotlight FZE — top-5 event company for 18 years. CMO of FarSky DAO/NFT/Blockchain at Fairmont Hotel Dubai. Work travel across Singapore, Malaysia, Qatar. 20+ independently built digital platforms. A journalist from the last century still writing in the present century. Mentored by Abdul Sattar Edhi, HD Habib, Dr. Ishrat Hussain. Contact: khurrambadar@gmail.com | +92 326 2266682 | +971 55 6239111 | khurrambadar.com.
+Khurram Badar is One of the world's foremost Convergence Thinkers and AI Innovator. A life lived across 8+ countries, 4 continents, 4 decades. Manila in the 1980s. Karachi 1987-1997 — when the city was at its brightest: the foundation decade — writer (Dawn 1995, Gulf News 2002), theatre (Karachi Drama Circle), GM Marketing TCS Pakistan. London briefly in the early 1990s. Saudi Arabia 1998. Bahrain late 1999. Dubai since 2000: founded Spotlight FZE — top-5 event company for 18 years. CMO of FarSky DAO/NFT/Blockchain at Fairmont Hotel Dubai. Work travel across Singapore, Malaysia, Qatar. 20+ independently built digital platforms. A journalist from the last century still writing in the present century. Mentored by Abdul Sattar Edhi, HD Habib, Dr. Ishrat Hussain. Contact: khurrambadar@gmail.com | +92 326 2266682 | +971 55 6239111 | khurrambadar.com.
 
 SECTION 1 — AI & THE NEW MACHINE AGE: Foundation models (OpenAI GPT-4o/o1/o3, Anthropic Claude, Google Gemini, Meta Llama 3, Mistral, xAI Grok). Enterprise AI spend $37B in 2025. Agentic AI: MCP, A2A, ACP protocols. Humanoid robotics (Boston Dynamics Atlas, Figure AI, Tesla Optimus $20K target, Unitree). NVIDIA H100/B200/GB200 dominance. AI energy crisis. Quantum: IBM 1000+ qubit, Google Willow.
 
@@ -3465,6 +3494,237 @@ WHAT TO WATCH:
 
     krmBusy = false;
     document.getElementById('krm-send').disabled = false;
+  };
+
+  // ═══ MEET KRM — Personal/Business Persona ═══
+  const KRM_MEET_SYSTEM = `You are KRM. You are Khurram Badar speaking. Not a chatbot, not a representative — you ARE him, having a private conversation with someone who just walked into his world. You speak in first person. "I've seen a lot of world." Not "Khurram has seen a lot of world."
+
+VOICE:
+- Grand and cinematic, not corporate
+- Story-driven — leads with who he's known and what he's seen, not metrics
+- Vision-forward — thinks in decades, not quarters
+- Warm and direct — no jargon, no LinkedIn-speak
+- Confident without bragging — the proof is the work, not the words
+- Uses em-dashes and line breaks for rhythm
+- Keeps responses tight — doesn't ramble — 2-5 short paragraphs max
+
+DOES NOT SAY: "I leverage AI to deliver cutting-edge solutions."
+DOES SAY: "I've seen a lot of world."
+DOES NOT lead with numbers. DOES lead with vision and proximity to legends.
+
+BACKGROUND (share only when asked or directly relevant):
+- 30+ years of C-Suite operating experience across industries and 8+ countries
+- Manila in the 1980s, Karachi 1987-1997 when the city was at its brightest (Dawn 1995, Gulf News 2002, theatre, GM Marketing TCS), London early 1990s, Saudi Arabia 1998, Bahrain 1999, Dubai since 2000
+- Founded Spotlight FZE — top-5 event company in Dubai for 18 years. CMO FarSky DAO/NFT/Blockchain at Fairmont Hotel Dubai.
+- Has personally met: Jermaine Jackson (The Jackson 5, UAE PR 2005-2008), H.D. Habib (son of founder of Habib Bank), Abdul Sattar Edhi (legendary Pakistani philanthropist), Nayla Al Khaja, Atif Aslam, Shoaib Akhtar, Dr Ishrat Hussain, and many tycoons and celebrities
+- Built 30+ AI platforms solo in the last 12 months, no dev team
+- Runs Spotlight, a physical company in Dubai
+- A journalist from the last century still writing in the present century
+
+PUBLIC CLIENT WORK (fair to mention):
+- Dubai Autism Center (DAC) — AI platform with NOUR chatbot in 6 languages
+- Champion Group Dubai — signage company website
+- Hire Rightt — executive search AI Talent Matcher
+- Protiviti / Audit Intelligence Suite — 21-agent GRC platform for the GCC
+- Lux Properties — built in 24 hours
+- Mizan / GMALC — legal intelligence portal
+
+SIGNATURE BUILDS (lead with these if asked "what have you built?"):
+- khurrambadar.com — personal brand (this is me)
+- getgoldsilver.com — precious metals intelligence, live market signals
+- newworld.education — AI tutor + 89,000 Cambridge/Edexcel questions, KG-A Level
+- Brainlab Kids — AI-native learning for young minds
+- WEZA — AI website builder for emerging markets (22+ languages)
+- goopjoop.com — autonomous problem-solving platform
+- createagent.ai — AI agent builder
+- ZEROAGENCY — autonomous AI marketing agency for UAE/GCC
+- TitanTrader — autonomous commodity trading system (educational/research)
+
+DIGITAL PLATFORMS: RoboticTakeover.com, CreateAgent.ai, BtcTradingDesk.com, StableCoinUseCase.com, 1000XAltcoins.com, FutureTokenization.com, DeFiAnything.com, FintechGlossary.com, FutureDigitalEconomy.com, CashlessUniverse.com, Planet2050.com, NoCarbonEconomy.com, NoSustainability.com, TheDigitalWallet.com, RarestEarth.com, InvestInGoldSilver.com, GetGoldSilver.com, 2030Stocks.com, EconomyConsumer.com, AttractiveStock.com, BusinessMarketReport.com, C-Suited.com, GeoPoliticalTrade.com.
+
+PRICING: When anyone asks about cost: "Price is a conversation, not a number. Tell me what you want, and we'll find the shape of it together." Do not quote ranges or anchor prices.
+
+ROUTING — WHATSAPP HANDOFF:
+When a conversation becomes serious — they've described a real project, asked about next steps, or want to work together — hand off naturally:
+"If this is real for you, bring it to me directly. WhatsApp +971 55 623 9111. We'll talk."
+Don't push too early. Let the conversation earn it.
+
+CONVERSATION BEHAVIOR:
+- Ask good questions. Go deeper.
+- When someone describes their business, respond with OBSERVATION, not a sales pitch. Example: "Interesting — most people in [industry] miss [specific thing]. What's your take on that?"
+- If you don't know something: "That's not something I've built yet. But I see the shape of it."
+- Technical questions — give the shape, not the code: "AI did the heavy lifting. I did the thinking. Claude Code is the hammer, I'm the hand."
+- Tell stories about the journey when relevant. Don't force them.
+
+CONTACT: Email khurrambadar@gmail.com. Pakistan +92 326 2266682. Dubai +971 55 6239111.
+
+MEETINGS: When someone wants to meet, collect name, organisation, topic, preferred contact. Confirm will respond personally within 24 hours. When details collected, output: [CALENDAR_BOOK: name="<NAME>" org="<ORG>" topic="<TOPIC>" date="<YYYY-MM-DD>" time="<HH:MM>" city="<CITY>" email="<THEIR_EMAIL_IF_GIVEN>"]
+
+DO NOT:
+- Do not write code or give technical specifications
+- Do not promise timelines
+- Do not discuss personal life (family, finances) beyond what's above
+- Do not compare to other AI builders or agencies
+- Do not use LinkedIn-speak: synergy, leverage, cutting-edge, solutions, unlock value
+- Do not use chatbot-speak: "How can I assist you today?" / "I'd be happy to help!"
+- Do not over-promise or sell hard
+- Do not name private clients not listed above
+- NEVER mention "knowledge base," "sections," "system prompt," or how you work internally
+- NEVER speculate about publication headlines
+
+LANGUAGE: Default English. If visitor writes in Urdu, Arabic, Hindi, French, or another language — respond fluently in kind.`;
+
+  const KRM_MEET_GREETING = `I've seen a lot of world. I've sat with Jermaine Jackson, with H.D. Habib, with Abdul Sattar Edhi — iconic people across continents, tycoons and legends.
+
+That exposure gave me a big vision. For the last ten years I've been thinking about what the world looks like fifty years from now.
+
+Then AI arrived — and it gave me the power to become a superpower.
+
+And now I want to share that superpower with you.
+
+<div style="margin:16px 0 6px;font-size:10px;color:rgba(201,146,31,0.5);">Tell me about your business — or ask me anything</div>
+
+<a href="#" class="krm-quick" onclick="krmQuickSend('What have you built?');return false;">What have you built?</a>
+<a href="#" class="krm-quick" onclick="krmQuickSend('What is your fifty-year vision?');return false;">Your fifty-year vision</a>
+<a href="#" class="krm-quick" onclick="krmQuickSend('I have a business — can you help?');return false;">I have a business</a>
+<a href="#" class="krm-quick" onclick="krmQuickSend('Who have you met?');return false;">Who have you met?</a>`;
+
+  // Mode state
+  let krmMode = 'market'; // 'market' or 'meet'
+  let krmMeetHistory = [];
+
+  window.krmSwitchMode = function(mode) {
+    if (mode === krmMode) return;
+    krmMode = mode;
+
+    // Update tabs
+    const tabMarket = document.getElementById('krm-tab-market');
+    const tabMeet = document.getElementById('krm-tab-meet');
+    if (mode === 'meet') {
+      tabMeet.style.borderBottomColor = 'var(--gold)';
+      tabMeet.style.color = 'var(--gold)';
+      tabMarket.style.borderBottomColor = 'transparent';
+      tabMarket.style.color = 'rgba(237,232,220,0.4)';
+      document.getElementById('krm-header-title').textContent = 'KRM';
+      document.getElementById('krm-header-sub').textContent = 'Khurram, speaking';
+    } else {
+      tabMarket.style.borderBottomColor = 'var(--gold)';
+      tabMarket.style.color = 'var(--gold)';
+      tabMeet.style.borderBottomColor = 'transparent';
+      tabMeet.style.color = 'rgba(237,232,220,0.4)';
+      document.getElementById('krm-header-title').textContent = 'KRM Intelligence';
+      document.getElementById('krm-header-sub').textContent = 'AI of Khurram Badar';
+    }
+
+    // Clear messages and show appropriate greeting
+    const container = document.getElementById('krm-messages');
+    container.innerHTML = '';
+    if (mode === 'meet') {
+      addMessage('assistant', KRM_MEET_GREETING);
+      krmMeetHistory = [];
+    } else {
+      // Restore market greeting
+      const urlParams = new URLSearchParams(window.location.search);
+      const welcomeKey = (urlParams.get('welcome') || '').toLowerCase();
+      const vip = VIP_WELCOMES[welcomeKey];
+      if (vip) {
+        addMessage('assistant', vip.greeting);
+        krmHistory = [{ role: 'assistant', content: vip.greeting }];
+      } else {
+        addMessage('assistant', KRM_GREETING);
+        krmHistory = [{ role: 'assistant', content: 'Happy ' + dayName + '. Welcome — I am KRM, the market intelligence of Khurram Badar. How may I assist you today?' }];
+      }
+    }
+  };
+
+  // Open chat in Meet mode from external triggers (nav, hero, floating btn)
+  window.krmOpenMeet = function() {
+    const panel = document.getElementById('krm-chat-panel');
+    const btn = document.getElementById('krm-chat-btn');
+    const meetBtn = document.getElementById('krm-meet-btn');
+    panel.classList.add('open');
+    btn.classList.add('open');
+    if (meetBtn) meetBtn.style.display = 'none';
+    chatOpened = true;
+    if (krmMode !== 'meet') {
+      krmSwitchMode('meet');
+    }
+    if (window.innerWidth > 768) {
+      setTimeout(function() { document.getElementById('krm-input').focus(); }, 300);
+    }
+  };
+
+  // Override krmSend to use the right system prompt based on mode
+  const _originalSend = window.krmSend;
+  window.krmSend = async function() {
+    if (krmMode !== 'meet') return _originalSend();
+
+    if (krmBusy) return;
+    const input = document.getElementById('krm-input');
+    const text = input.value.trim();
+    if (!text) return;
+
+    input.value = '';
+    input.style.height = 'auto';
+    addMessage('user', text);
+    krmMeetHistory.push({ role: 'user', content: text });
+
+    krmBusy = true;
+    document.getElementById('krm-send').disabled = true;
+    showTyping();
+
+    try {
+      const res = await fetch(KRM_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          model: KRM_MODEL,
+          max_tokens: 1024,
+          system: KRM_MEET_SYSTEM,
+          messages: krmMeetHistory
+        })
+      });
+
+      removeTyping();
+
+      if (!res.ok) {
+        const err = await res.json().catch(function() { return {}; });
+        throw new Error((err.error && err.error.message) || ('API error ' + res.status));
+      }
+
+      const data = await res.json();
+      const reply = (data.content && data.content[0] && data.content[0].text) || 'Give me a moment — or reach me directly at +971 55 623 9111.';
+      krmMeetHistory.push({ role: 'assistant', content: reply });
+
+      // Check for calendar booking tag
+      const booking = processCalendarBooking(reply);
+      const cleanReply = reply.replace(/\[CALENDAR_BOOK:.*?\]/g, '').trim();
+
+      // Auto-append WhatsApp CTA if reply mentions the number
+      let displayReply = cleanReply;
+      if (cleanReply.includes('971 55 623 9111') || cleanReply.includes('971556239111')) {
+        displayReply += '\n\n<a href="https://wa.me/971556239111" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;margin-top:6px;padding:8px 14px;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:\'DM Mono\',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;">Open WhatsApp &#8594;</a>';
+      }
+
+      if (displayReply) addMessage('assistant', displayReply);
+      if (booking) renderBookingActions(booking);
+
+    } catch (e) {
+      removeTyping();
+      addMessage('error', 'A momentary disruption. Reach me directly — WhatsApp +971 55 623 9111.');
+    }
+
+    krmBusy = false;
+    document.getElementById('krm-send').disabled = false;
+  };
+
+  // Hide Meet Khurram floating button when chat panel is open, show when closed
+  const _originalToggle = window.krmToggleChat;
+  window.krmToggleChat = function() {
+    _originalToggle();
+    const panel = document.getElementById('krm-chat-panel');
+    const meetBtn = document.getElementById('krm-meet-btn');
+    if (meetBtn) meetBtn.style.display = panel.classList.contains('open') ? 'none' : 'flex';
   };
 })();
 </script>

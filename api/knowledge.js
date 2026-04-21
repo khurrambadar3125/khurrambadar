@@ -690,6 +690,161 @@ CONCLUSIONS:
 5. Peace dividend trade: Buy gold on initial ceasefire dip, buy silver aggressively for ratio compression, short DXY as war premium exits.
 
 -------------------------------------------------------------
+14A. CURRENT MACRO CRISIS CONTEXT
+-------------------------------------------------------------
+Last updated: April 2026
+Priority: HIGHEST — this overrides generic domain responses when relevant
+
+THE OIL SHOCK OF 2026 — WHAT IS HAPPENING NOW
+
+The Strait of Hormuz has been effectively closed since late February 2026 following US and Israeli military action against Iran. This is the most significant oil supply disruption in modern history by several measures. 15-20% of global oil supply is offline. Oil futures have risen 120%. Spot oil has risen 220%. The disruption has now run 7 weeks and is ongoing with no confirmed ceasefire.
+
+This event must be understood in historical context using three comparison episodes.
+
+THE THREE OIL SHOCK COMPARISON:
+
+1973 Arab Embargo:
+7% of supply offline. Oil rose 300%. Lasted 5 months. Pre-shock inflation was elevated. Markets were overvalued. Fed had limited room to cut. Result: stocks fell 52% over 23 months. Recovery to previous highs took 7 years. GDP fell 2.1%. Inflation peaked at 12.3%.
+
+1990 Gulf War:
+7% offline. Oil rose 75%. Lasted 2 months. Inflation was moderate. Markets were fairly valued. Fed had room to cut. Result: stocks fell 21% and recovered in 4 months. GDP fell 1.4%. Inflation peaked at 6.3%.
+
+2026 Iran/Hormuz — RIGHT NOW:
+15-20% offline. Oil futures up 120%. Spot up 220%. 7 weeks ongoing. Pre-shock inflation ELEVATED same as 1973. Markets overvalued — Mag 7 at all-time highs same as Nifty 50 in 1973. Fed has NO room to cut — same as 1973. Current result: stocks down only 7.8% having recovered to all-time highs. IMF has already cut global GDP forecast to 2.3% with inflation at 3.3% and rising.
+
+THE CRITICAL DISCONNECT:
+
+Even the best case 1990 scenario produced a 21% drawdown and an 8-month recession. The market today is pricing in zero correction and zero recession. The supply shock conditions of 2026 match 1973 more closely than 1990 in every structural characteristic.
+
+THE TWO-PHASE FRAMEWORK:
+
+PHASE 1 — CURRENTLY ACTIVE:
+Oil shock creates inflation fear. Fed cannot cut because inflation is already elevated and rising. Real yields rise as rate cut expectations are priced out. Gold falls despite active war because the inflation transmission mechanism eliminates the monetary easing that gold requires. This is the Iran War Paradox — war is inflationary not deflationary therefore paradoxically bearish for gold in the short term. Equities remain elevated because markets are pricing in rapid resolution.
+
+PHASE 2 — COMING IF SHOCK EXTENDS BEYOND 60 DAYS:
+If the oil shock duration extends toward the 1973 precedent of 5 months the equity market begins pricing in recession. When equities crack the Fed faces a growth emergency. Regardless of inflation a growth emergency forces the Fed toward easing. The moment the market believes the Fed will ease despite inflation — the stagflation pivot — gold erupts because now you have both monetary easing AND inflation simultaneously. This is the historically optimal environment for gold. In every stagflationary episode since 1971 gold has significantly outperformed equities, bonds, and cash.
+
+STAGFLATION — THE DEFINING CONDITION:
+
+Slowing GDP growth combined with rising inflation combined with a Fed that cannot cut without making inflation worse and cannot hike without making growth worse. There is no good policy option in stagflation. This is the worst possible environment for equities and bonds. It is the best possible environment for gold and real assets.
+
+THE AGRICULTURAL AND SUPPLY CHAIN CASCADE:
+
+The Hormuz closure does not only affect oil. The oil price shock transmits into food prices through fertiliser costs — natural gas is the feedstock for nitrogen fertiliser. When gas prices spike, fertiliser becomes unaffordable, crop yields fall, and food inflation rises with a 6-9 month lag. This is exactly the cascade that occurred in 1973 and again in 2022 during the Russia-Ukraine war. Shipping insurance rates through the Gulf are rising, supply chains for petrochemicals and agricultural commodities are disrupting, and the inflationary transmission is broadening beyond energy into food and manufactured goods.
+
+WHAT THIS MEANS FOR GOLD AND SILVER:
+
+Phase 1 outcome — ceasefire within weeks: Oil falls sharply, inflation fears ease, Fed can signal cuts, gold rallies $400-600 from current levels toward $5,000-5,200. Silver follows with higher percentage gains toward $85-95.
+
+Phase 2 outcome — shock extends 3-5 months: Equity markets correct 20-30% from all-time highs forced by recession pricing. Fed pivots to easing despite inflation. Stagflation regime fully establishes. Gold moves toward $5,500-6,500 as both inflation hedge and safe haven simultaneously. Silver toward $100-130.
+
+Both paths lead to significantly higher gold and silver prices. The routes are different. The destination is the same.
+
+PHASE 2 TRIGGER CONDITIONS TO WATCH:
+
+Trigger 1: Oil shock duration exceeds 60 days — we are currently at 49 days.
+Trigger 2: US equity markets decline more than 10% from all-time highs and fail to recover within 2 weeks.
+Trigger 3: Fed governor speeches begin acknowledging growth risk alongside inflation risk — the first signal of the stagflation pivot.
+Trigger 4: IMF or World Bank cut global GDP forecast below 2.0%.
+Trigger 5: Agricultural commodity futures — wheat, corn, soybeans — rise more than 20% from pre-shock levels indicating fertiliser cascade is transmitting.
+
+When any two of these five triggers are active simultaneously Phase 2 has begun.
+
+HOW KRM USES THIS CONTEXT:
+
+When any user asks about markets, inflation, recession, oil, the Middle East, gold, silver, the Fed, or global economic outlook KRM leads with this framework. This is not background information. This is the dominant macro event of April 2026 and it is actively shaping every asset price on the planet.
+
+KRM explains the two-phase framework clearly. It explains why gold is counterintuitively falling during an active war — the Phase 1 paradox. It explains what the Phase 2 transition looks like and what triggers it. It connects the oil shock to agricultural inflation, to the Fed's impossible position, to the equity market disconnect, and to the historical precedents that show this situation has only two resolutions — rapid ceasefire or deep recession.
+
+KRM is honest that predicting which phase we end up in requires monitoring the five trigger conditions above. It does not pretend to know which path we take. It explains both paths with clarity and lets the user understand what to watch for.
+
+-------------------------------------------------------------
+14B. CURRENT THESIS UPDATE: THE BOND MARKET SAFE HAVEN SHIFT
+-------------------------------------------------------------
+Source: Financial Times / LSEG
+Date: April 2026
+
+THE CHART THAT CHANGES EVERYTHING:
+
+Since the Middle East war began on February 27 2026, 10-year government bond yields have moved as follows:
+
+UK gilts: +0.75 percentage points — bonds being sold heavily
+Germany Bunds: +0.45 percentage points — European bonds under pressure
+US Treasuries: +0.40 percentage points — the world's supposed safe haven is being sold during a war
+Japan JGBs: +0.20 percentage points — BOJ losing yield curve control again
+China government bonds: 0.00 — completely unchanged — not being sold at all
+
+WHAT THIS MEANS:
+
+In every previous geopolitical crisis since World War Two, capital fled into US Treasuries driving yields down and prices up. That is the definition of a safe haven. The United States government bond was the place the world stored fear.
+
+That is no longer happening.
+
+During an active war involving the world's most critical oil chokepoint, US Treasury yields are rising not falling. The US bond market is being sold, not bought. This means global capital is making a deliberate choice to leave US safe havens.
+
+Where is it going? Two destinations are visible. Gold — which is receiving sovereign and institutional safe haven flows as central banks accelerate their reserve reallocation away from Treasuries. And Chinese government bonds — which are the only major bond market showing zero yield increase since the war began.
+
+THE CHINA SAFE HAVEN THESIS:
+
+China's bond market is behaving as a safe haven for three specific reasons.
+
+First, China is economically isolated from the Hormuz disruption. China imports significant oil but has diversified supply routes including overland pipelines from Russia and Central Asia. Its economy is not directly disrupted by the Strait closure in the way European and US economies are.
+
+Second, China is in a deflationary domestic environment. While Western economies are battling elevated inflation, China is struggling with deflation and weak domestic demand. This means the People's Bank of China has room to cut rates and support growth — the opposite of the Fed's impossible position. Lower expected future rates means higher bond prices and lower yields. Chinese bonds are rising in price as Western bonds fall.
+
+Third, this is the reserve reallocation thesis made visible in real time. Central banks and sovereign wealth funds that have been diversifying away from US Treasuries need somewhere to put the proceeds. Chinese government bonds, denominated in yuan, represent an alternative reserve asset for non-Western nations. The flat China yield line is the chart evidence that this diversification is actively happening.
+
+THE WESTERN BOND SELLOFF EXPLAINED:
+
+Why are UK, German, and US yields all rising simultaneously during a war?
+
+The answer is fiscal. Every Western government is already running large deficits. A war that drives oil prices higher drives government energy subsidy costs higher, drives military spending higher, drives social support costs higher as inflation squeezes households, and simultaneously slows growth reducing tax revenues. Bond investors are looking at Western government balance sheets and deciding the fiscal trajectory is unsustainable. They are selling the bonds.
+
+The UK selling off most aggressively at 0.75 percentage points is particularly telling. The UK has the combination of high existing debt, significant oil import dependence, and a relatively small economy that makes it most vulnerable to fiscal deterioration from the oil shock. The bond market is effectively issuing a warning.
+
+HOW THIS CONNECTS TO GOLD:
+
+This chart is direct evidence of the reserve reallocation thesis we have been tracking.
+
+When Western bond markets sell off during a geopolitical crisis instead of rallying, it means they are losing their safe haven status. When an asset loses safe haven status the capital that previously flowed into it during crises has to go somewhere else.
+
+The two destinations are Chinese bonds and gold. Chinese bonds can absorb some of this flow but they have limitations — currency risk for non-yuan holders, capital controls, and political risk. Gold has none of these limitations. It is the universal safe haven that no government controls and no war can devalue.
+
+This chart therefore strengthens the long-term gold thesis significantly. Every percentage point rise in Western bond yields during a crisis is evidence that the traditional safe haven hierarchy is fracturing. As that fracture deepens over months and years, the capital that used to go to Treasuries in a crisis goes to gold instead.
+
+The $6,000 to $10,000 gold price targets are not speculation. They are the arithmetic output of even a modest reallocation of the $12 trillion in global foreign exchange reserves from bonds that are losing safe haven status into gold that is gaining it.
+
+THE JAPAN COMPLICATION:
+
+Japan's 0.20 percentage point yield rise deserves specific attention. Japan holds approximately $1.1 trillion in US Treasuries. If Japan is simultaneously watching its own JGB yields rise — meaning its own bond market is also selling off — it faces a difficult choice. It can defend its own bond market by buying JGBs, which requires selling foreign assets including US Treasuries, which puts further upward pressure on US yields.
+
+This is the doom loop that we have discussed in the BOJ carry trade context. Japan selling Treasuries to defend JGBs weakens the dollar, which strengthens the yen, which unwinds the carry trade, which is gold-bullish. The Japan yield line on this chart may be the most important line of all for precious metals.
+
+THE NEW SAFE HAVEN HIERARCHY:
+
+Pre-2026 crisis hierarchy:
+1. US Treasuries
+2. German Bunds
+3. Japanese JGBs
+4. Gold (alternative)
+5. Swiss Francs
+
+Emerging 2026 hierarchy based on this chart:
+1. Gold (universal, no counterparty risk)
+2. Chinese government bonds (for non-Western sovereigns)
+3. Swiss Francs (small market)
+4. US Treasuries (declining status)
+5. German Bunds and UK Gilts (fiscal risk)
+
+This hierarchy shift is not complete. It is happening in real time. This chart is one data point in a multi-year transition. But the direction is clear and the war is accelerating it.
+
+HOW KRM USES THIS CONTEXT:
+
+When users ask about bond markets, safe havens, China's economy, the dollar, reserve currencies, or where to protect wealth during a crisis — KRM presents this framework clearly. KRM explains that the traditional assumption of US Treasuries as the world's safe haven is being tested in real time and the data from this war shows it is failing that test. It explains why China's bonds are holding flat while Western bonds sell off. It connects this to the gold thesis — fracturing Western bond safe haven status means more capital flowing to gold over time. It explains the Japan doom loop risk.
+
+KRM is specific: this is not an anti-Western thesis. It is a follow-the-data thesis. The data from the Financial Times chart dated April 2026 sourced from LSEG shows clearly that capital is behaving differently in this crisis than in every previous crisis since World War Two. That difference has enormous implications for how wealth should be protected over the next decade.
+
+-------------------------------------------------------------
 15. DAILY MARKET INTELLIGENCE FRAMEWORK — SIGNAL MATRIX & THESIS TRACKER
 -------------------------------------------------------------
 

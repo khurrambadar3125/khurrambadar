@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Builds — Khurram Badar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0e1a;
+    --brass: #c9a961;
+    --brass-soft: #a68a4f;
+    --cream: #f4ede3;
+    --cream-dim: #c9c2b6;
+    --cream-fade: #8a8478;
+    --line: rgba(201, 169, 97, 0.15);
+    --line-hover: rgba(201, 169, 97, 0.45);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { min-height: 100%; }
+  body {
+    font-family: 'Manrope', sans-serif;
+    background: var(--ink);
+    color: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.8 0 0 0 0 0.7 0 0 0 0 0.5 0 0 0 0.15 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    opacity: 0.35;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    z-index: 0;
+  }
+  main { position: relative; z-index: 1; }
+
+  nav {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    background: rgba(10,14,26,0.88);
+    backdrop-filter: blur(12px);
+    z-index: 10;
+  }
+  .nav-back {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--brass); }
+  .nav-back .arrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    transition: transform 0.3s;
+  }
+  .nav-back:hover .arrow { transform: translateX(-4px); }
+  .nav-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--cream);
+  }
+
+  .hero {
+    padding: 80px 24px 40px;
+    text-align: center;
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .hero-eyebrow {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--brass);
+    font-weight: 500;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.1s forwards;
+  }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(48px, 11vw, 88px);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    margin-bottom: 22px;
+    opacity: 0;
+    animation: fadeUp 1s 0.25s forwards;
+  }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(17px, 4vw, 22px);
+    color: var(--cream-dim);
+    line-height: 1.55;
+    max-width: 620px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeUp 1s 0.4s forwards;
+  }
+  .hero-sub em { color: var(--brass); font-style: italic; }
+  .hero-divider {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, transparent, var(--brass), transparent);
+    margin: 40px auto 0;
+    opacity: 0;
+    animation: fadeIn 1.2s 0.6s forwards;
+  }
+
+  .section-title {
+    max-width: 1280px;
+    margin: 48px auto 0;
+    padding: 0 24px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--brass);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .section-title::before,
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+  @media (min-width: 720px) {
+    .section-title { padding: 0 40px; }
+  }
+
+  .grid {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 24px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media (min-width: 720px) {
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 28px 40px 0; }
+  }
+  @media (min-width: 1100px) {
+    .grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  }
+
+  .card {
+    background: rgba(26, 34, 56, 0.35);
+    border: 1px solid var(--line);
+    padding: 28px 26px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.35s ease;
+    opacity: 0;
+    animation: fadeUp 0.8s forwards;
+    animation-delay: 0.3s;
+    min-height: 320px;
+  }
+  .card:hover {
+    border-color: var(--line-hover);
+    background: rgba(26, 34, 56, 0.5);
+    transform: translateY(-2px);
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 40px;
+    height: 1px;
+    background: var(--brass);
+  }
+
+  .card-tag {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--brass);
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  .card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.005em;
+    margin-bottom: 6px;
+    color: var(--cream);
+  }
+  .card-domain {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--cream-fade);
+    margin-bottom: 18px;
+    font-weight: 400;
+  }
+  .card-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.55;
+    color: var(--cream-dim);
+    margin-bottom: 28px;
+    flex: 1;
+  }
+  .card-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--line);
+    background: transparent;
+  }
+  .btn-visit {
+    color: var(--brass);
+    border-color: var(--brass-soft);
+  }
+  .btn-visit:hover {
+    background: var(--brass);
+    color: var(--ink);
+  }
+  .btn-ask {
+    color: var(--cream-dim);
+  }
+  .btn-ask:hover {
+    color: var(--cream);
+    border-color: var(--brass-soft);
+  }
+  .btn .arrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 60px 24px 48px;
+    text-align: center;
+    background: var(--ink);
+    position: relative;
+    margin-top: 60px;
+  }
+  .footer-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--cream-dim);
+    margin-bottom: 28px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.45;
+  }
+  .footer-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--brass);
+    color: var(--ink);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+  .footer-cta:hover {
+    background: var(--cream);
+    transform: translateY(-1px);
+  }
+  .footer-cta .arrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+  }
+  .footer-whatsapp {
+    margin-top: 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: rgba(237,232,220,0.5);
+  }
+  .footer-whatsapp a {
+    color: var(--brass);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201, 169, 97, 0.3);
+  }
+  .footer-meta {
+    margin-top: 36px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cream-fade);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+
+<nav>
+  <a href="/" class="nav-back"><span class="arrow">←</span>Back</a>
+  <div class="nav-mark">Khurram Badar</div>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">The Work</div>
+  <h1 class="hero-title">My Builds</h1>
+  <p class="hero-sub">Eleven platforms live. A hundred in the pipeline. Each one its own world — distinct identity, distinct purpose, built from scratch. <em>Click a card. Visit it, or ask me about it.</em></p>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- ===== THE LAB ===== -->
+<div class="section-title">The Lab</div>
+<section class="grid">
+
+  <div class="card">
+    <div class="card-tag">Personal Brand</div>
+    <div class="card-name">khurrambadar.com</div>
+    <div class="card-domain">khurrambadar.com</div>
+    <div class="card-desc">My home on the web. The Convergence Thinker. An AI innovator, writer, and builder who saw the future before the mainstream. You're already inside it.</div>
+    <div class="card-actions">
+      <a href="https://khurrambadar.com" target="_blank" class="btn btn-visit">Visit <span class="arrow">→</span></a>
+      <a href="/?ask=khurrambadar" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-tag">The Studio</div>
+    <div class="card-name">Khurram's Lab</div>
+    <div class="card-domain">spotlightdubai.com</div>
+    <div class="card-desc">The studio behind every world. Twenty-plus years of Spotlight, now an AI innovation lab. Eleven platforms live. A hundred in the pipeline. One mind, infinite worlds.</div>
+    <div class="card-actions">
+      <a href="https://spotlightdubai.com" target="_blank" class="btn btn-visit">Visit <span class="arrow">→</span></a>
+      <a href="/?ask=spotlight" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== INTELLIGENCE ===== -->
+<div class="section-title">Intelligence</div>
+<section class="grid">
+
+  <div class="card">
+    <div class="card-tag">GRC · KSA · Audit</div>
+    <div class="card-name">Audit Intelligence Suite</div>
+    <div class="card-domain">Built for KSA and the GCC</div>
+    <div class="card-desc">Thirty-plus AI-powered audit tools. SAMA, NCA, ZATCA, Vision 2030. Full Arabic support. The entire kingdom's regulatory landscape in one platform.</div>
+    <div class="card-actions">
+      <a href="/?ask=audit-intelligence" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-tag">Economy · Consumer · Media</div>
+    <div class="card-name">Economy Consumer</div>
+    <div class="card-domain">Where macro meets the everyday</div>
+    <div class="card-desc">Where economy meets the everyday consumer. Insights on markets, spending, and how people actually live and buy — translated out of central bank language.</div>
+    <div class="card-actions">
+      <a href="/?ask=economy-consumer" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-tag">LegalTech · AI · Compliance</div>
+    <div class="card-name">Legal Matter Experts AI</div>
+    <div class="card-domain">For the modern legal professional</div>
+    <div class="card-desc">AI-powered legal intelligence. Smart legal analysis, compliance insights, expert guidance — built for lawyers who want their hours back.</div>
+    <div class="card-actions">
+      <a href="/?ask=legal-matter-experts" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== EDUCATION ===== -->
+<div class="section-title">Education &amp; Kids</div>
+<section class="grid">
+
+  <div class="card">
+    <div class="card-tag">Education · AI Tutor</div>
+    <div class="card-name">NewWorld Education</div>
+    <div class="card-domain">newworld.education</div>
+    <div class="card-desc">Every child deserves a world-class tutor. Starky — AI tutor for KG to A Levels. Eighty-nine thousand Cambridge and Edexcel questions. Sixteen languages. Twenty-four hours, seven days.</div>
+    <div class="card-actions">
+      <a href="https://newworld.education" target="_blank" class="btn btn-visit">Visit <span class="arrow">→</span></a>
+      <a href="/?ask=newworld" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-tag">Kids · Neuroscience</div>
+    <div class="card-name">BrainLab Kids</div>
+    <div class="card-domain">brainlabkids.com</div>
+    <div class="card-desc">A laboratory where children discover the most fascinating machine they'll ever own — their own mind. Thirty-six experiments. Opens on my daughter Rania's day.</div>
+    <div class="card-actions">
+      <a href="https://brainlabkids.com" target="_blank" class="btn btn-visit">Visit <span class="arrow">→</span></a>
+      <a href="/?ask=brainlabkids" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-tag">Kids · Community · Karachi</div>
+    <div class="card-name">Kids Play Club</div>
+    <div class="card-domain">kidsplayclub.com</div>
+    <div class="card-desc">A play club for kids. A peace-of-mind club for mums. DHA Karachi's first members-only drop-off playroom — founded by my wife Saira. Built by me.</div>
+    <div class="card-actions">
+      <a href="https://kidsplayclub.com" target="_blank" class="btn btn-visit">Visit <span class="arrow">→</span></a>
+      <a href="/?ask=kidsplayclub" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== AI, ASSETS & FRONTIER ===== -->
+<div class="section-title">AI, Assets &amp; Frontier</div>
+<section class="grid">
+
+  <div class="card">
+    <div class="card-tag">Precious Metals · Markets</div>
+    <div class="card-name">GetGoldSilver</div>
+    <div class="card-domain">getgoldsilver.com</div>
+    <div class="card-desc">Precious metals intelligence. Live gold and silver signals, macro analysis, and the reserve reallocation thesis — all autonomous, all real-time.</div>
+    <div class="card-actions">
+      <a href="https://getgoldsilver.com" target="_blank" class="btn btn-visit">Visit <span class="arrow">→</span></a>
+      <a href="/?ask=getgoldsilver" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-tag">Digital Assets · Tokenization</div>
+    <div class="card-name">Future Tokenization</div>
+    <div class="card-domain">futuretokenization.com</div>
+    <div class="card-desc">The world's digital asset codex. A nineteen-trillion-dollar revolution, mapped. RWAs, stablecoins, CBDCs — and a Digital Czar who knows the whole landscape.</div>
+    <div class="card-actions">
+      <a href="https://futuretokenization.com" target="_blank" class="btn btn-visit">Visit <span class="arrow">→</span></a>
+      <a href="/?ask=futuretokenization" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-tag">No-Code · AI Agents</div>
+    <div class="card-name">CreateAgent.ai</div>
+    <div class="card-domain">createagent.ai</div>
+    <div class="card-desc">Build and deploy AI agents with words — no code required. Any workflow, any industry, any scale. A factory for the people who don't have factories.</div>
+    <div class="card-actions">
+      <a href="https://createagent.ai" target="_blank" class="btn btn-visit">Visit <span class="arrow">→</span></a>
+      <a href="/?ask=createagent" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-tag">Metaverse · ESG · 2050</div>
+    <div class="card-name">BuildMyMetaverse</div>
+    <div class="card-domain">buildmymetaverse.com</div>
+    <div class="card-desc">The first metaverse was early. Build yours right. The world's first ESG-scored Mirrorworld builder — for the self, the brand, the nation. Real 3D. Real carbon math.</div>
+    <div class="card-actions">
+      <a href="https://buildmymetaverse.com" target="_blank" class="btn btn-visit">Visit <span class="arrow">→</span></a>
+      <a href="/?ask=buildmymetaverse" class="btn btn-ask">Ask Khurram <span class="arrow">→</span></a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-line">Seen enough? There's a version of me waiting to talk.</div>
+  <a href="/" class="footer-cta">Meet Khurram <span class="arrow">→</span></a>
+  <div class="footer-whatsapp">When KRM isn't enough — <a href="https://wa.me/971556239111" target="_blank" rel="noopener">WhatsApp me: +971 55 623 9111</a></div>
+  <div class="footer-meta">Dubai · Karachi · Everywhere</div>
+</footer>
+
+</main>
+
+</body>
+</html>
